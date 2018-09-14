@@ -3,9 +3,6 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import Toolbar from '@/components/Toolbar.vue';
-	import Footer from '@/components/Footer.vue';
-
 	// App is your main component, it will contain your application with `router-view`
 	export default Vue.extend({
 		name: 'App'

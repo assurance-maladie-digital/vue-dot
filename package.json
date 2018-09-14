@@ -1,14 +1,22 @@
 {
 	"name": "@cnamts/vue-dot",
-	"version": "0.1.0",
-	"private": true,
+	"version": "0.1.1",
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
+		"build-bundle": "vue-cli-service build --target lib --name vue-dot ./src/components/index.ts",
 		"lint": "vue-cli-service lint",
 		"test:unit": "vue-cli-service test:unit",
 		"test:e2e": "vue-cli-service test:e2e"
 	},
+	"main": "./dist/vue-dot.common.js",
+	"files": [
+		"dist/*",
+		"src/*",
+		"public/*",
+		"*.json",
+		"*.js"
+	],
 	"dependencies": {
 		"vue": "^2.5.16",
 		"vuetify": "^1.1.3"
