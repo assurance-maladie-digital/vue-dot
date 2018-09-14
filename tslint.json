@@ -18,7 +18,6 @@
 		"semicolon": [true, "always"],
 		"space-before-function-paren": [true, "never"],
 		"trailing-comma": [true, "never"],
-		"no-shadowed-variable": false,
-		"no-console": [true, "log"]
+		"no-shadowed-variable": false
 	}
 }

@@ -3,20 +3,17 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	// App is your main component, it will contain your application with `router-view`
 	export default Vue.extend({
 		name: 'App'
 	});
 </script>
 
 <style lang="scss">
-	html
-	{
+	html {
 		overflow: hidden;
 	}
 
-	*
-	{
+	* {
 		$transparent: rgba(0, 0, 0, 0);
 
 		max-width: 100%;
@@ -33,13 +30,11 @@
 	}
 
 	html,
-	body
-	{
+	body {
 		font-size: 100%;
 	}
 
-	body
-	{
+	body {
 		min-height: 100vh;
 		line-height: 1.25;
 	}
@@ -56,13 +51,11 @@
 
 	a,
 	input,
-	button
-	{
+	button {
 		transition: .25s;
 	}
 
-	.sr-only
-	{
+	.sr-only {
 		position: absolute !important;
 		top: 0;
 		left: -999px;
@@ -73,11 +66,9 @@
 		clip: rect(1px, 1px, 1px, 1px);
 	}
 
-	.v-ripple__container
-	{
+	.v-ripple__container {
 		&,
-		& *
-		{
+		& * {
 			max-width: none;
 		}
 	}
