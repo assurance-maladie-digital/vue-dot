@@ -1,9 +1,11 @@
 import Vue from 'vue';
 
-import SvgIcon from '@/components/SvgIcon.vue';
+import SvgIcon from './SvgIcon.vue';
+import LangBtn from './LangBtn.vue';
 
 const Components: any = {
-	SvgIcon
+	SvgIcon,
+	LangBtn
 };
 
 Object.keys(Components).forEach((name: string) => {
