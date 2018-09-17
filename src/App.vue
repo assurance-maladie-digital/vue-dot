@@ -39,13 +39,11 @@
 		line-height: 1.25;
 	}
 
-	input
-	{
+	input {
 		appearance: none;
 	}
 
-	ul
-	{
+	ul {
 		list-style: none;
 	}
 

@@ -1,6 +1,6 @@
 {
 	"name": "@cnamts/vue-dot",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
@@ -26,7 +26,6 @@
 		"@types/jest": "^23.3.2",
 		"@vue/cli-plugin-babel": "^3.0.1",
 		"@vue/cli-plugin-e2e-nightwatch": "^3.0.1",
-		"@vue/cli-plugin-pwa": "^3.0.1",
 		"@vue/cli-plugin-typescript": "^3.0.1",
 		"@vue/cli-plugin-unit-jest": "^3.0.1",
 		"@vue/cli-service": "^3.0.1",
@@ -95,7 +94,7 @@
 		]
 	},
 	"author": "Dylan Broussard <deraw@outlook.fr>",
-	"description": "CNAMTS Vue.js official component library",
+	"description": "Official CNAMTS component library",
 	"gitHooks": {
 		"pre-commit": "lint-staged"
 	},
