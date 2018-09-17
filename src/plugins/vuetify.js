@@ -6,6 +6,9 @@ import {
 	VMenu,
 	VBtn,
 	VList,
+	VTextField,
+	VDatePicker,
+	VIcon,
 	transitions
 } from 'vuetify';
 
@@ -17,6 +20,9 @@ Vue.use(Vuetify, {
 		VMenu,
 		VBtn,
 		VList,
+		VTextField,
+		VDatePicker,
+		VIcon,
 		transitions
 	},
 	theme: {
