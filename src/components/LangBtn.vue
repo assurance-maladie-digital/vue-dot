@@ -1,21 +1,17 @@
 <template>
 	<v-menu
 		class="menu-depth"
+		allow-overflow
 	>
 		<v-btn
 			slot="activator"
-			:aria-label="`${label} ${languages[currentLangUsed]}`"
+			:aria-label="`${label} ${languages[currentLangUsed].nativeName}`"
 			flat
 		>
-			<img
-				:src="`/img/flags/${currentLangUsed}.svg`"
-				class="current-flag"
-				alt=""
-			>
 			<span
 				v-if="$vuetify.breakpoint.mdAndUp"
 				class="ml-2"
-			>{{ languages[currentLangUsed] }}</span>
+			>{{ languages[currentLangUsed].nativeName }}</span>
 			<SvgIcon
 				size="10px"
 				class="ml-2"
@@ -24,7 +20,7 @@
 		</v-btn>
 		<v-list v-if="languages">
 			<v-list-tile
-				v-for="(title, lang, index) in languages"
+				v-for="(item, lang, index) in languages"
 				:key="index"
 				avatar
 			>
@@ -33,15 +29,7 @@
 					class="ma-0"
 					@click="changeLang(lang)"
 				>
-					<v-list-tile-avatar>
-						<img
-							:src="`/img/flags/${lang}.svg`"
-							class="flag-img"
-							alt=""
-						>
-					</v-list-tile-avatar>
-
-					<v-list-tile-title>{{ title }}</v-list-tile-title>
+					<v-list-tile-title>{{ item.name }}</v-list-tile-title>
 				</v-btn>
 			</v-list-tile>
 		</v-list>
@@ -51,12 +39,14 @@
 <script lang="ts">
 	import Vue from 'vue';
 
+	import languages from 'languages';
+
 	export default Vue.extend({
 		name: 'LangBtn',
 		props: {
 			availableLanguages: {
-				type: [Object, Array],
-				required: true
+				type: [Object, Array, String],
+				default: '*'
 			},
 			callback: {
 				type: Function,
@@ -73,21 +63,22 @@
 		},
 		computed: {
 			languages(): object {
-				const data: any = {};
+				let data: any = {};
 
-				this.availableLanguages.forEach((lang: string) => {
-					data[lang] = this.languagesData[lang];
-				});
+				if (this.availableLanguages !== '*') {
+					this.availableLanguages.forEach((lang: string) => {
+						data[lang] = this.languagesData[lang];
+					});
+				} else {
+					data = this.languagesData;
+				}
 
 				return data;
 			}
 		},
-		data(): any {
+		data(this: any): any {
 			return {
-				languagesData: {
-					fr: 'Français',
-					en: 'English'
-				},
+				languagesData: this.getLanguagesWithData(),
 				currentLangUsed: this.currentLang
 			};
 		},
@@ -95,6 +86,15 @@
 			changeLang(lang: string): void {
 				this.callback(lang);
 				this.currentLangUsed = lang;
+			},
+			getLanguagesWithData(): object[] {
+				const data: any = {};
+				languages.getAllLanguageCode().forEach((lang: string) => {
+					const obj = languages.getLanguageInfo(lang);
+					data[lang] = obj;
+				});
+
+				return data;
 			}
 		}
 	});
@@ -103,6 +103,11 @@
 <style lang="scss" scoped>
 	.v-avatar img {
 		border-radius: 0%;
+	}
+
+	.v-menu .v-menu__content {
+		overflow: auto;
+		max-height: 75vh;
 	}
 
 	.v-list {
