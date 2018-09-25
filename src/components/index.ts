@@ -4,14 +4,14 @@ import SvgIcon from './SvgIcon.vue';
 import LangBtn from './LangBtn.vue';
 import BirthDatePicker from './BirthDatePicker.vue';
 
-const Components: any = {
+const components: any = {
 	SvgIcon,
 	LangBtn,
 	BirthDatePicker
 };
 
-Object.keys(Components).forEach((name: string) => {
-	Vue.component(name, Components[name]);
+Object.keys(components).forEach((name: string) => {
+	Vue.component(name, components[name]);
 });
 
-export default Components;
+export default components;

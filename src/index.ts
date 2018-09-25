@@ -1,4 +1,7 @@
-import '@/components';
-import '@/directives';
+import components from '@/components';
+import directives from '@/directives';
 
-export default {};
+export default {
+	components,
+	directives
+};
