@@ -24,6 +24,14 @@
 		"type": "git",
 		"url": "https://github.com/assurance-maladie-digital/vue-dot"
 	},
+	"keywords": [
+		"vue",
+		"vuejs2",
+		"vue-cli",
+		"component-library",
+		"cnam",
+		"vue-dot"
+	],
 	"homepage": "https://github.com/assurance-maladie-digital/vue-dot/blob/master/README.md",
 	"dependencies": {
 		"languages": "^0.1.3",

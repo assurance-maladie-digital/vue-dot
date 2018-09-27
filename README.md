@@ -4,6 +4,8 @@ Official CNAM component library.
 
 ## As Easy as 1, 2, 3
 
+### Install
+
 ``` bash
 yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 ```
