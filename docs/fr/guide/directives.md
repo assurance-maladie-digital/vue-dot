@@ -1,10 +1,10 @@
-# Directives <Badge text="prochaine-version" type="error"/>
+# Directives <Badge text="1.3.0+"/>
 
 VueDot fournit des directives communes et utiles qui manquent dans Vue.js ou des outils tels que Vuetify.
 
 Vous pouvez [en apprendre plus à propos des directives](https://fr.vuejs.org/v2/guide/custom-directive.html) dans la documentation Vue.js.
 
-## v-debounce <Badge text="1.3.0+"/>
+## v-debounce
 
 La directive `v-debounce` vous permet de reporter une mise à jour de `v-model` sur un champ `input` avec une durée spécifiée en millisecondes.
 
@@ -20,11 +20,27 @@ Si aucun argument n'es fournit, le délai par défaut est `500ms`.
 Vous pouvez utiliser la fonction `debounce` depuis `@/functions/debounce` dans vos scripts.
 ::: -->
 
-### Demo <Badge text="WIP" type="error"/>
+#### Composants personnalisés
+
+Le problème lors de l'utilisation de composants personnalisés comme `input`, est que l'on ne peut pas utiliser les modificateurs sur` v-model`.
+Pour faire face à cela,il faut passer un callback à la directive et définir le délai avec un modificateur.
+
+Exemple avec `v-text-field` de Vuetify (voir la démo pour tout le code):
+
+``` html
+<v-text-field
+    :value="message"
+    label="Type here"
+    v-debounce.1000="setValue"
+    @change="setValue"
+/>
+```
+
+### Démo
 <br>
 <CodePen
 	id="GXegXL"
-	:height="250"
+	:height="370"
 	title="v-debounce"
 />
 
