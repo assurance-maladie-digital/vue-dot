@@ -1,3 +1,10 @@
+## v1.3.2 (27-09-2018)
+
+### [Docs]
+
+Update documentation with new translations and lot of fixes.
+Fix deploy script.
+
 ## v1.3.1 (27-09-2018)
 
 ### [Package]
