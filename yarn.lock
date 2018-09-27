@@ -663,13 +663,6 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@cnamts/vue-dot@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@cnamts/vue-dot/-/vue-dot-1.2.0.tgz#be4a05051efef7ddfa710982a4fb3716f6406833"
-  dependencies:
-    vue "^2.5.17"
-    vuetify "^1.2.3"
-
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@intervolga/optimize-cssnano-plugin/-/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"
@@ -10148,7 +10141,7 @@ vuepress@^0.14.4:
     webpackbar "^2.6.1"
     workbox-build "^3.1.0"
 
-vuetify@^1.2.3, vuetify@^1.2.4:
+vuetify@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.4.tgz#b03a634791b1627e7aab89ed4651a5cd1ea2f211"
 
