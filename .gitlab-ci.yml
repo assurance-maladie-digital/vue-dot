@@ -17,4 +17,4 @@ cache:
 # https://facebook.github.io/jest/docs/troubleshooting.html#compatibility-issues
 docs:build:
   script:
-	- npm run docs:build
+    - npm run docs:build
