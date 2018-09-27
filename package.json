@@ -24,6 +24,7 @@
 		"type": "git",
 		"url": "https://github.com/assurance-maladie-digital/vue-dot"
 	},
+	"homepage": "https://github.com/assurance-maladie-digital/vue-dot/blob/master/README.md",
 	"dependencies": {
 		"languages": "^0.1.3",
 		"vue": "^2.5.17",
