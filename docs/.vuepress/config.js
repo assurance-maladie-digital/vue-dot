@@ -1,4 +1,5 @@
 module.exports = {
+	base: '/vue-dot/',
 	evergreen: true,
 	head: [
 		[
@@ -37,6 +38,10 @@ module.exports = {
 						link: 'https://www.npmjs.com/package/@cnamts/vue-dot'
 					},
 					{
+						text: 'Changelog',
+						link: 'https://github.com/assurance-maladie-digital/vue-dot/blob/master/CHANGELOG.md'
+					},
+					{
 						text: 'Gitlab',
 						link: 'https://git.digital.cnamts.fr/broussard-57951/vue-dot/'
 					},
@@ -70,6 +75,10 @@ module.exports = {
 					{
 						text: 'NPM',
 						link: 'https://www.npmjs.com/package/@cnamts/vue-dot'
+					},
+					{
+						text: 'Changelog',
+						link: 'https://github.com/assurance-maladie-digital/vue-dot/blob/master/CHANGELOG.md'
 					},
 					{
 						text: 'Gitlab',
