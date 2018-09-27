@@ -3,7 +3,7 @@ home: true
 heroImage: /vue.js.svg
 actionText: Démarrer →
 actionLink: /guide/
-footer: Sous license MIT | Copyright © 2018-ajourd'hui CNAM
+footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
 ---
 
 <div class="features">
@@ -13,7 +13,7 @@ footer: Sous license MIT | Copyright © 2018-ajourd'hui CNAM
 	</div>
 	<div class="feature">
 		<h2>Robuste</h2>
-		<p>Chaque partie de la librairie est passée à travers une vérification de syntaxe, les tests sont obligatoires dans le but d'aider les autres développeurs et d'assurer la consistence, et nous demandons au moins deux traductions (fr, en).</p>
+		<p>Chaque partie de la librairie est passée à travers une vérification de syntaxe, les tests sont obligatoires dans le but d'aider les autres développeurs et d'assurer la consistence, et nous demandons au moins deux traductions (fr et en).</p>
 	</div>
 	<div class="feature">
 		<h2>Pour vous</h2>
@@ -31,7 +31,7 @@ yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 
 #### Charger
 
-``` ts
+``` ts{3}
 // main.ts
 import Vue from 'vue';
 import '@cnamts/vue-dot';

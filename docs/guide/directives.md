@@ -52,7 +52,7 @@ We need to improve this directive so it can be used with any event, do not fear 
 
 It's using the `debounce` function from `@/functions/debounce`, which takes as parameters a callback and a time value. This function returns a function that contains a `setTimeout`, and each time this returned function is called, it clears the previous `setTimeout`, so when the event fires multiple times, the callback is only called once.
 
-For the directive itself, when it's inserted, it checks if the interval has been updated and do not perform anything if this isn't the case. If the test passes, we set a callback for the `oninput` event on the element with the `debounce` function, and send it a callback that dispatch the `change` event.<br>
+For the directive itself, when it's inserted, it finds the input, get the interval, then checks if it has been updated and do not perform anything if this isn't the case. If the test passes, we set a callback for the `oninput` event on the element with the `debounce` function, and send it a callback that dispatch the `change` event, or execute the callback passed as parameter.<br>
 It's why, even with the `lazy` modifier on `v-model`, input still updates without blur.
 
 ## Roadmap

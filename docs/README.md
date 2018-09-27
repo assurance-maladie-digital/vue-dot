@@ -13,7 +13,7 @@ footer: MIT Licensed | Copyright © 2018-present CNAM
 	</div>
 	<div class="feature">
 		<h2>Robust</h2>
-		<p>Each part of the library is passed through linting, tests are mandatory in order to help others developers and ensure consistency, and we ask for at least two translations (en, fr).</p>
+		<p>Each part of the library is passed through linting, tests are mandatory in order to help others developers and ensure consistency, and we ask for at least two translations (en and fr).</p>
 	</div>
 	<div class="feature">
 		<h2>For you</h2>
@@ -31,7 +31,7 @@ yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 
 #### Load
 
-``` ts
+``` ts{3}
 // main.ts
 import Vue from 'vue';
 import '@cnamts/vue-dot';
@@ -41,7 +41,7 @@ new Vue({
 }).$mount('#app');
 ```
 
-#### Your're done!
+#### You're done!
 
 ``` bash
 # run your project

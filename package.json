@@ -99,7 +99,7 @@
 		]
 	},
 	"author": "Dylan Broussard <deraw@outlook.fr>",
-	"description": "Official CNAMTS component library",
+	"description": "Official CNAM component library",
 	"gitHooks": {
 		"pre-commit": "lint-staged"
 	},

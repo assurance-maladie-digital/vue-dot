@@ -13,7 +13,7 @@ module.exports = {
 		'/': {
 			lang: 'en',
 			title: 'VueDot',
-			description: 'Official CNAM components library',
+			description: 'Official CNAM component library',
 		},
 		'/fr/': {
 			lang: 'fr-FR',

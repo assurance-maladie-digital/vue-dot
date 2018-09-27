@@ -5,7 +5,7 @@
 
 ## SvgIcon
 
-The component `SvgIcon` is meant to replace the Vuetify `v-icon`, which uses a font icon, and extends his fonctionnalities.
+The component `SvgIcon` is meant to replace the Vuetify `v-icon`, which uses a font icon, and to extends his fonctionnalities.
 
 ### Usage
 
@@ -94,7 +94,7 @@ We recommend a size of 24 pixels, and to optimize your icon with [SVGOMG](https:
 <br>
 <CodePen
 	id="yxRJOO"
-	title="test"
+	title="SvgIcon"
 />
 
 ### Todo
