@@ -13,11 +13,13 @@ The component `SvgIcon` is meant to replace the Vuetify `v-icon`, which uses a f
 <SvgIcon icon="home" />
 ```
 
+See [demo](#demo).
+
 #### Color
 
 Default value is `currentColor`, which means current value of `color` property.
 
-The value can be any valid CSS color, some exemples:
+The value can be any valid CSS color, some examples:
 
 - `#4edb4e`
 - `#000`
@@ -74,13 +76,10 @@ You can add `light` or `dark` attributes to use Vuetify theme classes:
 
 #### Custom icons
 
-One missing fonctionnality of `v-icon`, is custom icons, here there are:
+One missing functionality of `v-icon`, is custom icons, here there are:
 
-``` html
-<SvgIcon
-    icon="home"
-    dark
->
+``` html{2,3,4}
+<SvgIcon>
     <svg viewBox="0 0 24 24">
         <path d="M4.6 2.8l9.2 9.2-9.2 9.2L7.4 24l12-12-12-12z" />
     </svg>
@@ -104,10 +103,13 @@ We need to add more icons, to have the complete set from [Flaticon](https://www.
 
 ### How It Works
 
-It's using the `debounce` function from `@/functions/debounce`, which takes as parameters a callback and a time value. This function returns a function that contains a `setTimeout`, and each time this returned function is called, it clears the previous `setTimeout`, so when the event fires multiple times, the callback is only called once.
+This is simple component, which use props and default slot. If there is nothing passed to the slot it will look over all the know icons to find the value of the `icon` prop. It also uses dynamic class and style binding to override default styles.
 
-For the directive itself, when it's inserted, it checks if the interval has been updated and do not perform anything if this isn't the case. If the test passes, we set a callback for the `oninput` event on the element with the `debounce` function, and send it a callback that dispatch the `change` event.<br>
-It's why, even with the `lazy` modifier on `v-model`, input still updates without blur.
+#### SVG over font icon
+
+Check this [article on CSS-Tricks](https://css-tricks.com/icon-fonts-vs-svg/) for a full comparaison of techniques.
+
+To resume, SVG is more **performant**, **easy to use**, **accessible**, and offers a **better quality** due to vectors.
 
 ## Roadmap
 
