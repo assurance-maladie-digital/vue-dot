@@ -1,3 +1,10 @@
+## v1.3.3 (27-09-2018)
+
+### [Docs]
+
+Fix repo link.
+Fix deploy script.
+
 ## v1.3.2 (27-09-2018)
 
 ### [Docs]
