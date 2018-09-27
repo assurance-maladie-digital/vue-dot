@@ -42,8 +42,8 @@ module.exports = {
 						link: 'https://github.com/assurance-maladie-digital/vue-dot/blob/master/CHANGELOG.md'
 					},
 					{
-						text: 'Gitlab',
-						link: 'https://git.digital.cnamts.fr/broussard-57951/vue-dot/'
+						text: 'Github',
+						link: 'https://github.com/assurance-maladie-digital/vue-dot'
 					},
 					{
 						text: 'Vue.js',
@@ -81,8 +81,8 @@ module.exports = {
 						link: 'https://github.com/assurance-maladie-digital/vue-dot/blob/master/CHANGELOG.md'
 					},
 					{
-						text: 'Gitlab',
-						link: 'https://git.digital.cnamts.fr/broussard-57951/vue-dot/'
+						text: 'Github',
+						link: 'https://github.com/assurance-maladie-digital/vue-dot'
 					},
 					{
 						text: 'Vue.js',
