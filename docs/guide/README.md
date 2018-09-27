@@ -22,7 +22,7 @@ new Vue({
 }).$mount('#app');
 ```
 
-### Your're done!
+### You're done!
 
 ``` bash
 # run your project
