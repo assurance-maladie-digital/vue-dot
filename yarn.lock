@@ -10141,9 +10141,9 @@ vuepress@^0.14.4:
     webpackbar "^2.6.1"
     workbox-build "^3.1.0"
 
-vuetify@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.4.tgz#b03a634791b1627e7aab89ed4651a5cd1ea2f211"
+vuetify@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.5.tgz#91578367709b20e406f2cdc7a164dfd70df954d9"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
