@@ -2,15 +2,21 @@
 	<div>
 		<v-text-field
 			v-model="computedDateFormatted"
-			label="Date de naissance"
+			:label="label"
 			@input="menu = false"
 			mask="##/##/####"
 			hint="Format JJ/MM/AAAA"
 			persistent-hint
 			@blur="date = parseDate(dateFormatted)"
 			return-masked-value
+
+			:autofocus="autofocus"
+			:background-color="backgroundColor"
+			:box="box"
+			:browser-autocomplete="browserAutocomplete"
 		>
 			<v-btn
+				v-if="!appendIcon"
 				icon
 				slot="prepend"
 				@click="menu = true"
@@ -21,6 +27,24 @@
 					color="#808080"
 				/>
 			</v-btn>
+			<v-btn
+				v-else-if="appendIcon && appendIconCb"
+				icon
+				slot="prepend"
+				@click="appendIconCb"
+				class="ma-0"
+			>
+				<SvgIcon
+					:icon="appendIcon"
+					:color="appendIconColor"
+				/>
+			</v-btn>
+			<SvgIcon
+				v-else
+				slot="prepend"
+				:icon="appendIcon"
+				:color="appendIconColor"
+			/>
 		</v-text-field>
 		<v-menu
 			ref="menu"
@@ -38,8 +62,8 @@
 			<v-date-picker
 				ref="picker"
 				v-model="date"
-				:max="new Date().toISOString().substr(0, 10)"
-				min="1950-01-01"
+				:max="birthdate ? new Date().toISOString().substr(0, 10) : null"
+				:min="birthdate ? '1950-01-01' : null"
 				@change="save"
 				no-title
 				locale="fr"
@@ -52,13 +76,51 @@
 	import Vue from 'vue';
 
 	export default Vue.extend({
-		name: 'LangBtn',
-		data(): any {
+		name: 'DatePicker',
+		data() {
 			return {
 				date: '',
 				menu: false,
 				dateFormatted: ''
 			};
+		},
+		props: {
+			label: {
+				type: String,
+				default: 'Date'
+			},
+			birthdate: {
+				type: Boolean,
+				default: false
+			},
+			appendIcon: {
+				type: String,
+				default: undefined
+			},
+			appendIconColor: {
+				type: String,
+				default: '#808080'
+			},
+			appendIconCb: {
+				type: Function,
+				default: null
+			},
+			autofocus: {
+				type: Boolean,
+				default: false
+			},
+			backgroundColor: {
+				type: String,
+				default: undefined
+			},
+			box: {
+				type: Boolean,
+				default: false
+			},
+			browserAutocomplete: {
+				type: String,
+				default: undefined
+			}
 		},
 		computed: {
 			computedDateFormatted: {
@@ -70,10 +132,14 @@
 				}
 			}
 		},
+		model: {
+			prop: 'model',
+			event: 'change'
+		},
 		watch: {
 			menu(val: string) {
-				if (val) {
-					this.$nextTick(() => (this.$refs.picker.activePicker = 'YEAR'));
+				if (this.birthdate && val) {
+					this.$nextTick(() => ((this.$refs.picker as any).activePicker = 'YEAR'));
 				}
 			},
 			date(val: string) {
@@ -84,10 +150,10 @@
 			}
 		},
 		methods: {
-			save(date: string) {
-				this.$refs.menu.save(date);
+			save(date: string): void {
+				(this.$refs.menu as any).save(date);
 			},
-			formatDate(date: any) {
+			formatDate(date: string): string {
 				if (!date) {
 					return '';
 				}
@@ -96,7 +162,7 @@
 
 				return `${day}/${month}/${year}`;
 			},
-			parseDate(date: any) {
+			parseDate(date: string): string | null {
 				if (!date) {
 					return null;
 				}
@@ -111,6 +177,3 @@
 		}
 	});
 </script>
-
-<style lang="scss" scoped>
-</style>

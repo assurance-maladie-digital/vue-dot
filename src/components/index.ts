@@ -2,12 +2,12 @@ import Vue from 'vue';
 
 import SvgIcon from './SvgIcon.vue';
 import LangBtn from './LangBtn.vue';
-import BirthDatePicker from './BirthDatePicker.vue';
+import DatePicker from './DatePicker.vue';
 
 const components: any = {
 	SvgIcon,
 	LangBtn,
-	BirthDatePicker
+	DatePicker
 };
 
 Object.keys(components).forEach((name: string) => {
