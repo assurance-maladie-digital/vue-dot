@@ -9,6 +9,7 @@ import {
 	VTextField,
 	VDatePicker,
 	VIcon,
+	VDivider,
 	transitions
 } from 'vuetify';
 
@@ -23,6 +24,7 @@ Vue.use(Vuetify, {
 		VTextField,
 		VDatePicker,
 		VIcon,
+		VDivider,
 		transitions
 	}
 });

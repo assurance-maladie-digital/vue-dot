@@ -4,26 +4,53 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>img/icons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>img/icons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="194x194" href="<%= BASE_URL %>img/icons/favicon-194x194.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="<%= BASE_URL %>img/icons/android-chrome-192x192.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>img/icons/favicon-16x16.png">
-		<link rel="manifest" href="<%= BASE_URL %>site.webmanifest">
-		<link rel="mask-icon" href="<%= BASE_URL %>img/icons/safari-pinned-tab.svg" color="#000000">
 		<link rel="shortcut icon" href="<%= BASE_URL %>favicon.ico">
-		<meta name="apple-mobile-web-app-title" content="P&acirc;tisserie Broussard">
-		<meta name="application-name" content="P&acirc;tisserie Broussard">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="msapplication-TileImage" content="<%= BASE_URL %>img/icons/mstile-144x144.png">
-		<meta name="msapplication-config" content="<%= BASE_URL %>browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-title" content="VueDot">
+		<meta name="application-name" content="VueDot">
+		<meta name="theme-color" content="#fefefe">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">
-		<title>Pâtisserie Broussard</title>
+		<title>Playground | VueDot</title>
+		<noscript>
+			<style>
+				* {
+					max-width: 100%;
+					margin: 0;
+					padding: 0;
+					border: 0;
+					font-family: sans-serif;
+					box-sizing: border-box;
+					word-break: break-word;
+					hyphens: auto;
+					-moz-osx-font-smoothing: grayscale;
+				}
+
+				html,
+				body {
+					font-size: 100%;
+				}
+
+				body {
+					display: flex;
+					min-height: 100vh;
+					line-height: 1.25;
+				}
+
+				noscript {
+					flex: 1;
+					padding: 25px;
+					display: flex;
+				}
+
+				p {
+					margin: auto;
+					border-bottom: 1px solid;
+				}
+			</style>
+		</noscript>
 	</head>
 	<body>
 		<noscript>
-			<strong>We're sorry but hello-world doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+			<p>Hey! This cannot work without JavaScript enabled!</p>
 		</noscript>
 		<div id="app"></div>
 		<!-- built files will be auto injected -->
