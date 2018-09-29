@@ -24,7 +24,7 @@
 			>
 				<SvgIcon
 					icon="calendar"
-					color="#808080"
+					:color="appendIconColor"
 				/>
 			</v-btn>
 			<v-btn
