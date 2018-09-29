@@ -1,5 +1,6 @@
 module.exports = {
 	base: '/vue-dot/',
+	serviceWorker: true,
 	evergreen: true,
 	head: [
 		[
@@ -7,6 +8,76 @@ module.exports = {
 			{
 				async: 'true',
 				src: 'https://static.codepen.io/assets/embed/ei.js'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				type: 'image/png',
+				sizes: '180x180',
+				href: '/apple-touch-icon.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				type: 'image/png',
+				sizes: '32x32',
+				href: '/favicon-32x32.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				type: 'image/png',
+				sizes: '16x16',
+				href: '/favicon-16x16.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'manifest',
+				href: '/site.webmanifest'
+			}
+		],
+		[
+			'meta',
+			{
+				rel: 'mask-icon',
+				href: '/safari-pinned-tab.svg',
+				color: '#435466'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'apple-mobile-web-app-title',
+				content: 'VueDot'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'application-name',
+				content: 'VueDot'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-TileColor',
+				content: '#fefefe'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'theme-color',
+				content: '#fefefe'
 			}
 		]
 	],
