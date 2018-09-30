@@ -93,7 +93,7 @@ Nous vous recommandons une taille de 24 pixels et d'optimiser votre icône avec 
 ### Démo
 <br>
 <CodePen
-	id="yxRJOO"
+	id="oagJaV"
 	title="SvgIcon"
 />
 

@@ -39,7 +39,7 @@ Exemple avec `v-text-field` de Vuetify (voir la démo pour tout le code):
 ### Démo
 <br>
 <CodePen
-	id="GXegXL"
+	id="Jmowqx"
 	:height="370"
 	title="v-debounce"
 />
