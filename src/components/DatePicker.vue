@@ -20,7 +20,7 @@
 				icon
 				slot="prepend"
 				@click="menu = true"
-				class="ma-0"
+				class="ma-0 activator-icon"
 			>
 				<SvgIcon
 					icon="calendar"
@@ -32,7 +32,7 @@
 				icon
 				slot="prepend"
 				@click="appendIconCb"
-				class="ma-0"
+				class="ma-0 activator-icon"
 			>
 				<SvgIcon
 					:icon="appendIcon"
@@ -44,6 +44,7 @@
 				slot="prepend"
 				:icon="appendIcon"
 				:color="appendIconColor"
+				class="activator-icon"
 			/>
 		</v-text-field>
 		<v-menu
@@ -51,13 +52,14 @@
 			:close-on-content-click="false"
 			v-model="menu"
 			:nudge-right="30"
-			:nudge-bottom="50"
+			:nudge-bottom="5"
 			lazy
 			transition="scale-transition"
 			offset-y
 			full-width
 			min-width="290px"
 			offset-overflow
+			attach="activator-icon"
 		>
 			<v-date-picker
 				ref="picker"
