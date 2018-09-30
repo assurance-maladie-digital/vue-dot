@@ -2,11 +2,7 @@
 	<div>
 		<v-text-field
 			v-model="computedDateFormatted"
-			:label="label"
 			@input="menu = false"
-			mask="##/##/####"
-			hint="Format JJ/MM/AAAA"
-			persistent-hint
 			@blur="date = parseDate(dateFormatted)"
 			return-masked-value
 
@@ -14,6 +10,23 @@
 			:background-color="backgroundColor"
 			:box="box"
 			:browser-autocomplete="browserAutocomplete"
+			:color="color"
+			:counter="counter"
+			:dark="dark"
+			:disabled="disabled"
+			:dont-fill-mask-blanks="dontFillMaskBlanks"
+			:flat="flat"
+			:full-width="fullWidth"
+			:height="height"
+			:hide-details="hideDetails"
+			:hint="hint"
+			:label="label"
+			:light="light"
+			:loading="loading"
+			mask="##/##/####"
+			:outline="outline"
+			:persistent-hint="persistentHint"
+			:placeholder="placeholder"
 		>
 			<v-btn
 				v-if="!appendIcon"
@@ -87,14 +100,6 @@
 			};
 		},
 		props: {
-			label: {
-				type: String,
-				default: 'Date'
-			},
-			birthdate: {
-				type: Boolean,
-				default: false
-			},
 			appendIcon: {
 				type: String,
 				default: undefined
@@ -115,11 +120,79 @@
 				type: String,
 				default: undefined
 			},
+			birthdate: {
+				type: Boolean,
+				default: false
+			},
 			box: {
 				type: Boolean,
 				default: false
 			},
 			browserAutocomplete: {
+				type: String,
+				default: undefined
+			},
+			color: {
+				type: String,
+				default: 'primary'
+			},
+			counter: {
+				type: [Boolean, Number, String],
+				default: undefined
+			},
+			dark: {
+				type: Boolean,
+				default: false
+			},
+			disabled: {
+				type: Boolean,
+				default: false
+			},
+			dontFillMaskBlanks: {
+				type: Boolean,
+				default: false
+			},
+			flat: {
+				type: Boolean,
+				default: false
+			},
+			fullWidth: {
+				type: Boolean,
+				default: false
+			},
+			height: {
+				type: [Number, String],
+				default: undefined
+			},
+			hideDetails: {
+				type: Boolean,
+				default: false
+			},
+			hint: {
+				type: String,
+				default: 'Format JJ/MM/AAAA'
+			},
+			label: {
+				type: String,
+				default: 'Date'
+			},
+			light: {
+				type: Boolean,
+				default: false
+			},
+			loading: {
+				type: [Boolean, String],
+				default: false
+			},
+			outline: {
+				type: Boolean,
+				default: false
+			},
+			persistentHint: {
+				type: Boolean,
+				default: true
+			},
+			placeholder: {
 				type: String,
 				default: undefined
 			}
