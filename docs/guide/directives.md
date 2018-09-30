@@ -1,4 +1,4 @@
-# Directives <Badge text="1.3.0+"/>
+# Directives
 
 VueDot is providing common and useful directives that are missing in Vue.js or tools such as Vuetify.
 
