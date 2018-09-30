@@ -54,7 +54,3 @@ Nous utilisons la function `debounce` de `@/functions/debounce`, qui prend comme
 
 Pour la directive elle-même, lorsqu'elle est insérée, elle trouve le champ, obtient l'intervalle, puis vérifie s'il a été mis à jour et n'effectue rien si ce n'est pas le cas. Si le test réussit, nous définissons un callback pour l'événement `oninput` sur l'élément avec la fonction `debounce`, et lui envoyons un callback qui envoie l'événement `change`, ou excécutons le callback passé en paramètre.<br>
 C'est pourquoi, même avec le modificateur `lazy` sur `v-model`, le champ input est toujours mis à jour sans perte de focus.
-
-## Roadmap
-
-Pas de nouvelles directives prévues, mais dites-nous ce dont vous avez besoin !

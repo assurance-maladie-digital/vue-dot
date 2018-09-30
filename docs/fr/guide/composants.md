@@ -110,13 +110,3 @@ C'est un composant simple, qui utilise des propriétés et un emplacement par d�
 Consultez cet [article sur CSS-Tricks](https://css-tricks.com/icon-fonts-vs-svg/) pour une comparaison complète des techniques.
 
 Pour résumé, SVG est plus **performant**, **facile à utiliser**, **accessible**, et offre une **meilleure qualitée** grâce aux vecteurs.
-
-## Roadmap
-
-De nouveaux composants sont en développement :
-
-- `ListField`: affiche un tableau de clés/valeurs
-- `FileUpload`
-- `DownloadFile`
-
-N'hésitez pas à nous parler de vos besoins !

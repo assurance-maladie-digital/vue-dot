@@ -54,7 +54,3 @@ It's using the `debounce` function from `@/functions/debounce`, which takes as p
 
 For the directive itself, when it's inserted, it finds the input, get the interval, then checks if it has been updated and do not perform anything if this isn't the case. If the test passes, we set a callback for the `oninput` event on the element with the `debounce` function, and send it a callback that dispatch the `change` event, or execute the callback passed as parameter.<br>
 It's why, even with the `lazy` modifier on `v-model`, input still updates without blur.
-
-## Roadmap
-
-No new directives planned yet, but tell us what you need!

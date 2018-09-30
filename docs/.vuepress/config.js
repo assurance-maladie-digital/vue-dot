@@ -129,7 +129,8 @@ module.exports = {
 							children: [
 								'',
 								'components',
-								'directives'
+								'directives',
+								'roadmap'
 							]
 						}
 					]
@@ -168,7 +169,8 @@ module.exports = {
 							children: [
 								'',
 								'composants',
-								'directives'
+								'directives',
+								'roadmap'
 							]
 						}
 					]

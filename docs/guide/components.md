@@ -110,13 +110,3 @@ This is simple component, which use props and default slot. If there is nothing 
 Check this [article on CSS-Tricks](https://css-tricks.com/icon-fonts-vs-svg/) for a full comparaison of techniques.
 
 To resume, SVG is more **performant**, **easy to use**, **accessible**, and offers a **better quality** due to vectors.
-
-## Roadmap
-
-There are new components in development:
-
-- `ListField`: displays an array of keys/values
-- `FileUpload`
-- `DownloadFile`
-
-Don't hesitate to tell us about your needs!
