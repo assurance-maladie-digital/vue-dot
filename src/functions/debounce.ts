@@ -1,4 +1,4 @@
-export default function debounce(callback: any, time: any) {
+export default function debounce(callback: (args: any) => void, time: number): () => void {
 	let interval: any;
 	return () => {
 		clearTimeout(interval);

@@ -1,13 +1,17 @@
 import debounceFn from '@/functions/debounce';
 
 const debounce = {
-	inserted(el: any, binding: any) {
+	inserted(el: HTMLInputElement, binding: any) {
 		if (el.tagName !== 'INPUT') {
-			el = el.querySelector('input');
+			const input = el.querySelector('input');
+
+			if (input) {
+				el = input;
+			}
 		}
 
 		const modifiers = Object.keys(binding.modifiers);
-		const value = modifiers.length > 0 ? modifiers[0] : binding.value;
+		const value: string = modifiers.length > 0 ? modifiers[0] : binding.value;
 
 		if (value !== binding.oldValue) { // change debounce only if interval has changed
 			el.oninput = debounceFn(() => {
