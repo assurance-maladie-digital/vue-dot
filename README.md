@@ -5,13 +5,13 @@ Official CNAM component library.
 <p align="center">
 	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
 		<img
-			src="https://img.shields.io/npm/v/@cnamts/vue-dot.svg"
+			src="https://img.shields.io/npm/v/@cnamts/vue-dot.svg?style=flat-square"
 			alt="NPM Version"
 		>
 	</a>
 	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
 		<img
-			src="https://img.shields.io/npm/dw/@cnamts/vue-dot.svg"
+			src="https://img.shields.io/npm/dw/@cnamts/vue-dot.svg?style=flat-square"
 			alt="NPM Downloads"
 		>
 	</a>
