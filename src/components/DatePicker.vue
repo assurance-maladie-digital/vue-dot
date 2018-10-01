@@ -4,7 +4,6 @@
 			v-model="computedDateFormatted"
 			@input="menu = false"
 			@blur="date = parseDate(dateFormatted)"
-			return-masked-value
 
 			:autofocus="autofocus"
 			:background-color="backgroundColor"
@@ -23,10 +22,23 @@
 			:label="label"
 			:light="light"
 			:loading="loading"
-			mask="##/##/####"
+			:mask="maskValue"
 			:outline="outline"
 			:persistent-hint="persistentHint"
 			:placeholder="placeholder"
+			:prefix="prefix"
+			:readonly="readonly"
+			:return-masked-value="returnMaskedValue"
+			:reverse="reverse"
+			:single-line="singleLine"
+			:solo="solo"
+			:solo-inverted="soloInverted"
+			:success="success"
+			:success-messages="successMessages"
+			:suffix="suffix"
+			:type="type"
+			:validate-on-blur="validateOnBlur"
+			:value="value"
 		>
 			<v-btn
 				v-if="!appendIcon"
@@ -64,24 +76,50 @@
 			ref="menu"
 			:close-on-content-click="false"
 			v-model="menu"
-			:nudge-right="30"
-			:nudge-bottom="5"
+			:nudge-right="40"
+			:nudge-bottom="55"
 			lazy
 			transition="scale-transition"
 			offset-y
 			full-width
 			min-width="290px"
 			offset-overflow
-			attach="activator-icon"
+			attach=".activator-icon"
 		>
 			<v-date-picker
 				ref="picker"
 				v-model="date"
-				:max="birthdate ? new Date().toISOString().substr(0, 10) : null"
-				:min="birthdate ? '1950-01-01' : null"
-				@change="save"
-				no-title
-				locale="fr"
+				@input="save"
+
+				:allowed-dates="allowedDates"
+				:color="color"
+				:dark="dark"
+				:day-format="dayFormat"
+				:event-color="eventColor"
+				:events="events"
+				:first-day-of-week="firstDayOfWeek"
+				:full-width="fullWidth"
+				:header-color="headerColor"
+				:header-date-format="headerDateFormat"
+				:landscape="landscape"
+				:light="light"
+				:locale="locale"
+				:max="max"
+				:min="min"
+				:multiple="multiple"
+				:next-icon="nextIcon"
+				:no-title="noTitle"
+				:picker-date="pickerDate"
+				:prev-icon="prevIcon"
+				:reactive="reactive"
+				:readonly="readonly"
+				:scrollable="scrollable"
+				:show-current="showCurrent"
+				:title-date-format="titleDateFormat"
+				:value="value"
+				:width="width"
+				:year-format="yearFormat"
+				:year-icon="yearIcon"
 			/>
 		</v-menu>
 	</div>
@@ -90,16 +128,93 @@
 <script lang="ts">
 	import Vue from 'vue';
 
+	import dayjs from 'dayjs';
+
 	export default Vue.extend({
 		name: 'DatePicker',
 		data() {
 			return {
-				date: '',
+				date: this.value || '',
 				menu: false,
-				dateFormatted: ''
+				dateFormatted: '',
+				dayjsLocales: [ // All supported locales of dayjs
+					'bg',
+					'ca',
+					'da',
+					'de',
+					'es',
+					'fa',
+					'fi',
+					'fr',
+					'hr',
+					'hu',
+					'id',
+					'it',
+					'ja',
+					'ka',
+					'ko',
+					'nb',
+					'nl',
+					'nn',
+					'pl',
+					'pt-br',
+					'ro',
+					'ru',
+					'sk',
+					'sr-cyrl',
+					'sr',
+					'sv',
+					'th',
+					'tr',
+					'zh-cn',
+					'zh-tw'
+				]
 			};
 		},
 		props: {
+			// shared
+			color: {
+				type: String,
+				default: 'primary'
+			},
+			birthdate: {
+				type: Boolean,
+				default: false
+			},
+			dark: {
+				type: Boolean,
+				default: false
+			},
+			fullWidth: {
+				type: Boolean,
+				default: false
+			},
+			readonly: {
+				type: Boolean,
+				default: false
+			},
+			value: {
+				default: undefined
+			},
+			light: {
+				type: Boolean,
+				default: false
+			},
+			dateFormat: {
+				type: String,
+				default: 'DD/MM/YYYY'
+			},
+			dateFormatReturn: {
+				type: String,
+				default(this: any): any {
+					return this.dateFormat;
+				}
+			},
+			locale: {
+				type: String,
+				default: 'fr-fr'
+			},
+			// input
 			appendIcon: {
 				type: String,
 				default: undefined
@@ -120,10 +235,6 @@
 				type: String,
 				default: undefined
 			},
-			birthdate: {
-				type: Boolean,
-				default: false
-			},
 			box: {
 				type: Boolean,
 				default: false
@@ -132,17 +243,9 @@
 				type: String,
 				default: undefined
 			},
-			color: {
-				type: String,
-				default: 'primary'
-			},
 			counter: {
 				type: [Boolean, Number, String],
 				default: undefined
-			},
-			dark: {
-				type: Boolean,
-				default: false
 			},
 			disabled: {
 				type: Boolean,
@@ -153,10 +256,6 @@
 				default: false
 			},
 			flat: {
-				type: Boolean,
-				default: false
-			},
-			fullWidth: {
 				type: Boolean,
 				default: false
 			},
@@ -176,13 +275,13 @@
 				type: String,
 				default: 'Date'
 			},
-			light: {
-				type: Boolean,
-				default: false
-			},
 			loading: {
 				type: [Boolean, String],
 				default: false
+			},
+			mask: {
+				type: String,
+				default: undefined
 			},
 			outline: {
 				type: Boolean,
@@ -195,6 +294,143 @@
 			placeholder: {
 				type: String,
 				default: undefined
+			},
+			prefix: {
+				type: String,
+				default: undefined
+			},
+			returnMaskedValue: {
+				type: Boolean,
+				default: true
+			},
+			reverse: {
+				type: Boolean,
+				default: false
+			},
+			singleLine: {
+				type: Boolean,
+				default: false
+			},
+			solo: {
+				type: Boolean,
+				default: false
+			},
+			soloInverted: {
+				type: Boolean,
+				default: false
+			},
+			success: {
+				type: Boolean,
+				default: false
+			},
+			successMessages: {
+				type: [String, Array, Object],
+				default: () => []
+			},
+			suffix: {
+				type: String,
+				default: undefined
+			},
+			type: {
+				type: String,
+				default: 'text'
+			},
+			validateOnBlur: {
+				type: Boolean,
+				default: false
+			},
+			// date picker
+			allowedDates: {
+				type: Function,
+				default: null
+			},
+			dayFormat: {
+				type: Function,
+				default: null
+			},
+			eventColor: {
+				type: [String, Function, Object],
+				default: 'warning'
+			},
+			events: {
+				type: [Array, Function, Object],
+				default: null
+			},
+			firstDayOfWeek: {
+				type: [String, Number],
+				default: 1
+			},
+			headerColor: {
+				type: String,
+				default: undefined
+			},
+			headerDateFormat: {
+				type: Function,
+				default: null
+			},
+			landscape: {
+				type: Boolean,
+				default: false
+			},
+			max: {
+				type: String,
+				default(this: any): any {
+					return this.birthdate ? new Date().toISOString().substr(0, 10) : undefined;
+				}
+			},
+			min: {
+				type: String,
+				default(this: any): any {
+					return this.birthdate ? '1950-01-01' : undefined;
+				}
+			},
+			multiple: {
+				type: Boolean,
+				default: false
+			},
+			nextIcon: {
+				type: String,
+				default: '$vuetify.icons.next'
+			},
+			noTitle: {
+				type: Boolean,
+				default: true
+			},
+			pickerDate: {
+				type: String,
+				default: undefined
+			},
+			prevIcon: {
+				type: String,
+				default: '$vuetify.icons.prev'
+			},
+			reactive: {
+				type: Boolean,
+				default: false
+			},
+			scrollable: {
+				type: Boolean,
+				default: false
+			},
+			showCurrent: {
+				type: [Boolean, String],
+				default: true
+			},
+			titleDateFormat: {
+				type: Function,
+				default: null
+			},
+			width: {
+				type: [Number, String],
+				default: 300
+			},
+			yearFormat: {
+				type: Function,
+				default: null
+			},
+			yearIcon: {
+				type: String,
+				default: undefined
 			}
 		},
 		computed: {
@@ -205,11 +441,63 @@
 				set(value: string) {
 					this.dateFormatted = value;
 				}
+			},
+			maskValue(): string {
+				if (this.mask === undefined) {
+					const dayjsFormats = [
+						'YYYY',
+						'YY',
+						'M',
+						'MM',
+						'MMM',
+						'MMMM',
+						'D',
+						'DD',
+						'd',
+						'dd',
+						'ddd',
+						'dddd',
+						'H',
+						'HH',
+						'h',
+						'hh',
+						'm',
+						'mm',
+						's',
+						'ss',
+						'SSS',
+						'Z',
+						'ZZ',
+						'A',
+						'a',
+						'Q',
+						'Do',
+						'k',
+						'kk',
+						'X',
+						'x'
+					];
+
+					const sorted = dayjsFormats.sort((a: string, b: string) => b.length - a.length || a.localeCompare(b));
+					// match any of formats once
+					const regexp = new RegExp((sorted.join('|')), 'g');
+
+					return this.dateFormat.replace(regexp, (match: string): string => {
+						return match.replace(/./g, '#');
+					});
+				} else {
+					return this.mask;
+				}
 			}
 		},
 		model: {
 			prop: 'model',
 			event: 'change'
+		},
+		created() {
+			this.loadLocale();
+			this.dateFormatted = this.value ? this.formatDate(this.date) : '';
+			this.$emit('change', this.formatDateForReturn(this.date));
 		},
 		watch: {
 			menu(val: string) {
@@ -221,33 +509,85 @@
 				this.dateFormatted = this.formatDate(this.date);
 			},
 			computedDateFormatted() {
-				this.$emit('change', this.computedDateFormatted);
+				this.$emit('change', this.formatDateForReturn(this.date));
+			},
+			locale(val: string) {
+				this.loadLocale();
 			}
 		},
 		methods: {
+			// Save the date, see https://vuetifyjs.com/en/components/date-pickers#example-date-dialog-and-menu
 			save(date: string): void {
 				(this.$refs.menu as any).save(date);
 			},
+			// Format the date with `dateFormat` (default 'DD/MM/YYYY')
 			formatDate(date: string): string {
 				if (!date) {
 					return '';
 				}
 
-				const [year, month, day] = date.split('-');
-
-				return `${day}/${month}/${year}`;
+				return dayjs(date).format(this.dateFormat);
 			},
+			// Format the date with `dateFormatReturn` (default `dateFormat` or 'DD/MM/YYYY')
+			// this allows to have a basic format for input and an enhanced one for return
+			formatDateForReturn(date: string): string {
+				if (!date) {
+					return '';
+				}
+
+				return dayjs(date).format(this.dateFormatReturn);
+			},
+			// From `formatDate` to `YYYY-MM-DD` when input focus is lost
 			parseDate(date: string): string | null {
 				if (!date) {
 					return null;
 				}
 
+				// Check if ISO format
 				if (!date.match(/^(0?\d|[12]\d|3[01])\/(0?\d|1[012])\/((?:19|20)\d{2})$/)) {
 					return null;
 				}
 
 				const [day, month, year] = date.split('/');
 				return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+			},
+			checkIfLocaleNeeded(format: string): boolean {
+				return !!format.match(/MMM|MM|dddd|ddd|dd|A|a|Do/gm);
+			},
+			loadLocale(): void {
+				// Check if we need locale for `formatDate` or `formatDateReturn`
+				if (this.checkIfLocaleNeeded(this.dateFormat) || this.checkIfLocaleNeeded(this.dateFormatReturn)) {
+					// We want to load only locales from dayjs that really exists
+					// but the locale can be any ISO 8601 string
+
+					const longLocales: string[] = [];
+
+					// search for existing locales in dayjs than are not `xx` format
+					this.dayjsLocales.map((el: string) => {
+						if (el.length > 2) {
+							longLocales.push(el);
+						}
+					});
+
+					let locale: string;
+
+					// If the locale is a long one that exists in dayjs, use it
+					if (longLocales && longLocales.includes(this.locale)) {
+						locale = this.locale;
+					} else {
+						// else, if locale is `xx-yy` format, shorten to `xx`
+						locale = this.locale.length === 5 ? this.locale.substring(3) : this.locale;
+					}
+
+					// If the locale really exists, load it
+					if (this.dayjsLocales.includes(locale)) {
+						import(`dayjs/locale/${locale}`).then((e) => {
+							dayjs.locale(locale);
+							// Emit change event to refresh date with new locale
+							this.$emit('change', this.formatDateForReturn(this.date));
+						});
+					}
+				}
 			}
 		}
 	});

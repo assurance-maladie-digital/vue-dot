@@ -22,8 +22,11 @@
 				v-model="date"
 				birthdate
 				append-icon-color="#3eaf7c"
+				value="1998-09-14"
+				color="#3eaf7c"
+				date-format-return="Le dddd D MMMM YYYY"
 			/>
-			<p class="ma-0 mt-2">Date: {{ date }}</p>
+			<p class="ma-0 mt-2 result">Date: {{ date }}</p>
 			<!-- <LangBtn
 				:availableLanguages="['en', 'fr']"
 				@updatedLanguage="log"
@@ -46,7 +49,7 @@
 				v-debounce.1000="setText"
 				@change="setText"
 			></v-text-field>
-			<p class="ma-0">Debounced text: {{ text }}</p>
+			<p class="ma-0 result">Debounced text: {{ text }}</p>
 		</div>
 	</v-app>
 </template>
@@ -60,7 +63,7 @@
 		name: 'App',
 		data() {
 			return {
-				date: '',
+				date: '14/09/1998',
 				text: ''
 			};
 		},
@@ -182,5 +185,11 @@
 		padding: 5px 0;
 		font-size: 1rem;
 		border-bottom: 1px solid #3eaf7c;
+	}
+
+	.result {
+		color: #3eaf7c;
+		font-size: .9rem;
+		font-weight: 700;
 	}
 </style>
