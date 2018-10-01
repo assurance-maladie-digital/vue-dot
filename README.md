@@ -2,6 +2,28 @@
 
 Official CNAM component library.
 
+<p align="center">
+	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
+		<img
+			src="https://img.shields.io/npm/v/@cnamts/vue-dot.svg"
+			alt="NPM Version"
+		>
+	</a>
+	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
+		<img
+			src="https://img.shields.io/npm/dw/@cnamts/vue-dot.svg"
+			alt="NPM Downloads"
+		>
+	</a>
+	<a
+		href="https://github.com/assurance-maladie-digital/vue-dot/blob/master/LICENSE">
+		<img
+			src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"
+			alt="License"
+		>
+	</a>
+</p>
+
 ## As Easy as 1, 2, 3
 
 ### Install
