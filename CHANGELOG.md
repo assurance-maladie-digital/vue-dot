@@ -1,35 +1,118 @@
-## v1.3.4 (27-09-2018)
+## [v1.3.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.3...v1.3.4) (27-09-2018)
 
-### [Docs]
+### Documentation
 
-Fix repo homepage.
+* Fix repo homepage.
 
-## v1.3.3 (27-09-2018)
+## [v1.3.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.2...v1.3.3) (27-09-2018)
 
-### [Docs]
+### Documentation
 
-Fix repo link.
-Fix deploy script.
+* Update repo link and fix deploy script.
 
-## v1.3.2 (27-09-2018)
+## [v1.3.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.1...v1.3.2) (27-09-2018)
 
-### [Docs]
+### Documentation
 
-Update documentation with new translations and lot of fixes.
-Fix deploy script.
+* Update documentation with new translations and lot of fixes (typos and presentation):
+	* Add guide README
+	* CNAMTS -> CNAM
+	* Update `v-debounce` to match new features
+	* FR translation for `SvgIcon`
+	* Add Changelog link
+* Fix deploy script.
 
-## v1.3.1 (27-09-2018)
+## [v1.3.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0...v1.3.1) (27-09-2018)
 
-### [Package]
+### Bug fixes
 
-Fix `v-debounce` directive with custom components.
+* Fix `v-debounce` directive with custom components.
 
-### [Docs]
+### Documentation
 
-Update components and directives.
+* Update directives to match fixes and components to match actual code.
 
-## v1.3.0 (26-09-2018)
+## [v1.3.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0) (26-09-2018)
 
-### [Package]
+### New features
 
-Make directives available.
+* Update `LangBtn` to get languages data from [languages](https://www.npmjs.com/package/languages) and update styles.
+* Publish directives :tada:
+
+### Package
+
+* Add MIT license
+
+### Documentation
+
+* :tada: Add [VuePress](https://vuepress.vuejs.org/) for documentation.
+
+## [v1.2.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.1.1...v1.2.0) (18-09-2018)
+
+### New features
+
+* Add `v-debounce` directive.
+
+## [v1.1.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.1.0...v1.1.1) (17-09-2018)
+
+### New features
+
+* Add PWA files (icons, etc).
+
+### Bug fixes
+
+* Fix NPM description.
+* Remove unused PWA plugin.
+* Remove custom Vuetify theme.
+
+## [v1.1.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.0.1...v1.1.0) (17-09-2018)
+
+### New features
+
+* Add `BirthDatePciker`.
+* Add calendar icon in `SvgIcon`.
+* Add README
+
+## [v1.0.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.0.0...v1.0.1) (17-09-2018)
+
+### Bug fixes
+
+* :ambulance: Fix missing build for NPM.
+
+## [v1.0.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.4...v1.0.0) (17-09-2018)
+
+### New features
+
+* Add `LangBtn`.
+
+## [v0.1.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.3...v0.1.4) (14-09-2018)
+
+### New features
+
+* Add more icons to `SvgIcon`.
+
+## [v0.1.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.2...v0.1.3) (14-09-2018)
+
+### Development
+
+* Add ESLint.
+
+## [v0.1.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.1...v0.1.2) (14-09-2018)
+
+### Development
+
+* Don't extract CSS.
+
+## [v0.1.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.0...v0.1.1) (14-09-2018)
+
+### New features
+
+* Add `SvgIcon`.
+
+### Development
+
+* Add build command and NPM infos for publishing.
+
+## [v0.1.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.0.0...v0.1.0) (14-08-2018)
+
+* :tada: Initial commit!
