@@ -47,6 +47,25 @@
 
 * :tada: Add [VuePress](https://vuepress.vuejs.org/) for documentation.
 
+## :warning: [v1.3.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.3...v1.3.0-beta.4) (26-09-2018)
+
+* Build for NPM with local modifications.
+
+## :warning: [v1.3.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.2...v1.3.0-beta.3) (26-09-2018)
+
+* Build for NPM.
+
+## :warning: [v1.3.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.1...v1.3.0-beta.2) (26-09-2018)
+
+* Build for NPM.
+
+## :warning: [v1.3.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0-beta.1) (26-09-2018)
+
+* Update `LangBtn`.
+* Add MIT License.
+* Add [VuePress](https://vuepress.vuejs.org/).
+* Test exporting directives.
+
 ## [v1.2.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.1.1...v1.2.0) (18-09-2018)
 
 ### New features
