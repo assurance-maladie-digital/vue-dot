@@ -1,4 +1,4 @@
-<h1 align="center">
+<p align="center">
 	<a
 		href="#"
 		target="_blank"
@@ -10,9 +10,9 @@
 			alt="VueDot"
 		>
 	</a>
-</h1>
+</p>
 
-<p align="center">CNAM – Vue dot</p>
+<h1 align="center">CNAM – Vue dot</h1>
 
 <p align="center">Official CNAM component library.</p>
 
