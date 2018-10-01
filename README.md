@@ -58,7 +58,7 @@ new Vue({
 }).$mount('#app');
 ```
 
-### You're done!
+### You're done! 🎉
 
 ``` bash
 # run your project
@@ -67,6 +67,10 @@ yarn serve # OR your own command
 
 It automatically load all components and directives of the library and made them available globally.
 
-## Documentation
+## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)
 
-See full documentation on [Github Pages](https://assurance-maladie-digital.github.io/vue-dot/).
+See [documentation](https://assurance-maladie-digital.github.io/vue-dot/).
+
+## License
+
+VueDot is licensed under a [MIT  License](./LICENSE).
