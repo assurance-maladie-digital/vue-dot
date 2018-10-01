@@ -110,7 +110,7 @@ module.exports = {
 					},
 					{
 						text: 'Changelog',
-						link: 'https://github.com/assurance-maladie-digital/vue-dot/blob/master/CHANGELOG.md'
+						link: 'https://github.com/assurance-maladie-digital/vue-dot/releases'
 					},
 					{
 						text: 'Github',
@@ -150,7 +150,7 @@ module.exports = {
 					},
 					{
 						text: 'Changelog',
-						link: 'https://github.com/assurance-maladie-digital/vue-dot/blob/master/CHANGELOG.md'
+						link: 'https://github.com/assurance-maladie-digital/vue-dot/releases'
 					},
 					{
 						text: 'Github',
