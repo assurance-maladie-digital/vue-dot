@@ -13,3 +13,9 @@ There are new components in development:
 ## Directives
 
 No new directives planned yet, but tell us what you need!
+
+## 🛰️ Developer life
+
+- Contribution guide
+- True deploy script (publish on NPM, publish docs, Github release, commit and changelog)
+- 100% test coverage
