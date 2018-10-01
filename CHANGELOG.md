@@ -1,3 +1,7 @@
+### [v1.4.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.4...v1.4.0-beta.1) (01-10-2018)
+
+* This beta is for testing DatePicker.
+
 ## [v1.3.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.3...v1.3.4) (27-09-2018)
 
 ### Documentation
@@ -47,19 +51,19 @@
 
 * :tada: Add [VuePress](https://vuepress.vuejs.org/) for documentation.
 
-## :warning: [v1.3.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.3...v1.3.0-beta.4) (26-09-2018)
+### [v1.3.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.3...v1.3.0-beta.4) (26-09-2018)
 
 * Build for NPM with local modifications.
 
-## :warning: [v1.3.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.2...v1.3.0-beta.3) (26-09-2018)
+### [v1.3.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.2...v1.3.0-beta.3) (26-09-2018)
 
 * Build for NPM.
 
-## :warning: [v1.3.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.1...v1.3.0-beta.2) (26-09-2018)
+### [v1.3.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.1...v1.3.0-beta.2) (26-09-2018)
 
 * Build for NPM.
 
-## :warning: [v1.3.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0-beta.1) (26-09-2018)
+### [v1.3.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0-beta.1) (26-09-2018)
 
 * Update `LangBtn`.
 * Add MIT License.
