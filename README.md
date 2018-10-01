@@ -1,6 +1,6 @@
 <p align="center">
 	<a
-		href="#"
+		href="https://assurance-maladie-digital.github.io/vue-dot/"
 		target="_blank"
 		rel="noopener noreferrer"
 	>
