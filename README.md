@@ -1,6 +1,20 @@
 # CNAM – Vue dot
 
-Official CNAM component library.
+<p align="center">
+	<a
+		href="#"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<img
+			width="280"
+			src="./docs/.vuepress/public/vue.js.svg"
+			alt="VueDot"
+		>
+	</a>
+</p>
+
+<p align="center">Official CNAM component library.</p>
 
 <p align="center">
 	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
