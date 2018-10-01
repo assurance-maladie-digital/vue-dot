@@ -1,6 +1,4 @@
-# CNAM – Vue dot
-
-<p align="center">
+<h1 align="center">
 	<a
 		href="#"
 		target="_blank"
@@ -12,7 +10,9 @@
 			alt="VueDot"
 		>
 	</a>
-</p>
+</h1>
+
+<p align="center">CNAM – Vue dot</p>
 
 <p align="center">Official CNAM component library.</p>
 
