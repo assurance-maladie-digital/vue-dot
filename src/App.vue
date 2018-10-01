@@ -55,6 +55,7 @@
 </template>
 
 <script lang="ts">
+	// This is a playground, it is not tested because it isn't a part of the library
 	import Vue from 'vue';
 
 	import CodePen from '../docs/.vuepress/components/CodePen.vue';
