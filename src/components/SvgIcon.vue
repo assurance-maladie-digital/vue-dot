@@ -5,9 +5,7 @@
 			'medium': medium,
 			'small': small,
 			'x-large': xLarge,
-			'custom-color': color || dark || light,
-			'theme--dark': dark,
-			'theme--light': light
+			'custom-color': color,
 		}"
 		:style="{
 			color,
@@ -294,15 +292,7 @@
 				type: String,
 				default: 'currentColor'
 			},
-			dark: {
-				type: Boolean,
-				default: false
-			},
 			large: {
-				type: Boolean,
-				default: false
-			},
-			light: {
 				type: Boolean,
 				default: false
 			},

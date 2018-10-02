@@ -63,17 +63,6 @@ Custom size:
 />
 ```
 
-#### Theme
-
-You can add `light` or `dark` attributes to use Vuetify theme classes:
-
-``` html{3}
-<SvgIcon
-    icon="home"
-    dark
-/>
-```
-
 #### Custom icons
 
 One missing functionality of `v-icon`, is custom icons, here there are:
