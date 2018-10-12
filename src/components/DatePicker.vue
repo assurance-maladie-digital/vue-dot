@@ -128,10 +128,15 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import dayjs from 'dayjs';
+	import * as dayjs from 'dayjs';
+
+	import SvgIcon from '@/components/SvgIcon.vue';
 
 	export default Vue.extend({
 		name: 'DatePicker',
+		components: {
+			SvgIcon
+		},
 		data() {
 			return {
 				date: this.value || '',
@@ -172,7 +177,7 @@
 			};
 		},
 		props: {
-			// shared
+			// Shared
 			color: {
 				type: String,
 				default: 'primary'
@@ -214,7 +219,7 @@
 				type: String,
 				default: 'fr-fr'
 			},
-			// input
+			// Input
 			appendIcon: {
 				type: String,
 				default: undefined
@@ -339,7 +344,7 @@
 				type: Boolean,
 				default: false
 			},
-			// date picker
+			// Date picker
 			allowedDates: {
 				type: Function,
 				default: null
@@ -479,7 +484,7 @@
 					];
 
 					const sorted = dayjsFormats.sort((a: string, b: string) => b.length - a.length || a.localeCompare(b));
-					// match any of formats once
+					// Match any of formats once
 					const regexp = new RegExp((sorted.join('|')), 'g');
 
 					return this.dateFormat.replace(regexp, (match: string): string => {
@@ -530,7 +535,7 @@
 			},
 			// Format the date with `dateFormatReturn` (default `dateFormat` or 'DD/MM/YYYY')
 			// this allows to have a basic format for input and an enhanced one for return
-			formatDateForReturn(date: string): string {
+			formatDateForReturn(this: any, date: string): string {
 				if (!date) {
 					return '';
 				}
@@ -543,7 +548,7 @@
 					return null;
 				}
 
-				// Check if ISO format
+				// Check if it's ISO format
 				if (!date.match(/^(0?\d|[12]\d|3[01])\/(0?\d|1[012])\/((?:19|20)\d{2})$/)) {
 					return null;
 				}
@@ -554,7 +559,7 @@
 			checkIfLocaleNeeded(format: string): boolean {
 				return !!format.match(/MMM|MM|dddd|ddd|dd|A|a|Do/gm);
 			},
-			loadLocale(): void {
+			loadLocale(this: any): void {
 				// Check if we need locale for `formatDate` or `formatDateReturn`
 				if (this.checkIfLocaleNeeded(this.dateFormat) || this.checkIfLocaleNeeded(this.dateFormatReturn)) {
 					// We want to load only locales from dayjs that really exists
@@ -562,7 +567,7 @@
 
 					const longLocales: string[] = [];
 
-					// search for existing locales in dayjs than are not `xx` format
+					// Search for existing locales in dayjs than are not `xx` format
 					this.dayjsLocales.map((el: string) => {
 						if (el.length > 2) {
 							longLocales.push(el);
