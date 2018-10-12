@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 import SvgIcon from './SvgIcon.vue';
 import LangBtn from './LangBtn.vue';
 import DatePicker from './DatePicker.vue';
@@ -10,8 +8,8 @@ const components: any = {
 	DatePicker
 };
 
-Object.keys(components).forEach((name: string) => {
-	Vue.component(name, components[name]);
-});
-
-export default components;
+export default (Vue: any) => {
+	Object.keys(components).forEach((name: string) => {
+		Vue.component(name, components[name]);
+	});
+};

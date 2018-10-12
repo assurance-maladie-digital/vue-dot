@@ -5,6 +5,12 @@ import '@/directives';
 import './plugins/vuetify';
 import App from './App.vue';
 
+import VueDot from './';
+
+Vue.use(VueDot, {
+	ameli: true
+});
+
 Vue.config.productionTip = false;
 
 new Vue({
