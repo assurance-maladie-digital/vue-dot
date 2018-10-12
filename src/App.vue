@@ -1,6 +1,7 @@
 <template>
 	<v-app class="pa-5 white">
 		<h1 class="mb-3">VueDot</h1>
+
 		<h2 class="mb-3">Components</h2>
 		<div class="ml-3">
 			<h3 class="mb-1">
@@ -22,16 +23,20 @@
 				v-model="date"
 				birthdate
 				append-icon-color="#3eaf7c"
-				value="1998-09-14"
 				color="#3eaf7c"
+				date-format="DD/MM/YYYY"
 				date-format-return="Le dddd D MMMM YYYY"
 			/>
 			<p class="ma-0 mt-2 result">Date: {{ date }}</p>
-			<!-- <LangBtn
-				:availableLanguages="['en', 'fr']"
-				@updatedLanguage="log"
-			/> -->
+			<v-divider class="my-3" />
+			<h3 class="mb-3">LangBtn</h3>
+			<LangBtn
+				v-model="lang"
+				:available-languages="['en', 'fr']"
+			/>
+			<p class="ma-0 result">Lang: {{ lang }}</p>
 		</div>
+
 		<h2 class="my-3">Directives</h2>
 		<div class="ml-3">
 			<h3 class="mb-3">v-debounce</h3>
@@ -51,6 +56,45 @@
 			></v-text-field>
 			<p class="ma-0 result">Debounced text: {{ text }}</p>
 		</div>
+
+		<h2 class="my-3">Ameli</h2>
+		<div class="ml-3">
+			<h3 class="mb-3">Color theme</h3>
+			<ul v-if="colors">
+				<li
+					v-for="(colorObj, index) in colors"
+					:key="index"
+					class="mt-4"
+				>
+					<h4>{{ index }}</h4>
+					<ul v-if="colorObj">
+						<li
+							v-for="(color, index) in colorObj"
+							:key="index"
+							class="mt-2"
+						>
+							<span class="color-label">{{ index }}</span>
+							<SvgIcon
+								:color="color"
+								class="color-square"
+							>
+								<svg
+									width="10"
+									height="10"
+									viewBox="0 0 24 24"
+								>
+									<rect
+										width="24"
+										height="24"
+									/>
+								</svg>
+							</SvgIcon>
+							{{ color }}
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</v-app>
 </template>
 
@@ -60,12 +104,16 @@
 
 	import CodePen from '../docs/.vuepress/components/CodePen.vue';
 
+	import colors from '@/helpers/ameliColors';
+
 	export default Vue.extend({
 		name: 'App',
 		data() {
 			return {
 				date: '14/09/1998',
-				text: ''
+				text: '',
+				lang: 'en',
+				colors
 			};
 		},
 		methods: {
@@ -192,5 +240,14 @@
 		color: #3eaf7c;
 		font-size: .9rem;
 		font-weight: 700;
+	}
+
+	.color-square {
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+	}
+
+	.color-label {
+		width: 100px;
+		display: inline-block;
 	}
 </style>
