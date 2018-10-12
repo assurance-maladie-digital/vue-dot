@@ -31,10 +31,12 @@ yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 
 #### Charger
 
-``` ts{3}
+``` ts{3,5}
 // main.ts
 import Vue from 'vue';
-import '@cnamts/vue-dot';
+import VueDot from '@cnamts/vue-dot';
+
+Vue.use(VueDot);
 
 new Vue({
     render: (h) => h(App)

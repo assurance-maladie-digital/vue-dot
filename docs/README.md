@@ -21,7 +21,7 @@ footer: MIT Licensed | Copyright © 2018-present CNAM
 	</div>
 </div>
 
-### As Easy as 1, 2, 3
+### As easy as 1, 2, 3
 
 #### Install
 
@@ -31,10 +31,12 @@ yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 
 #### Load
 
-``` ts{3}
+``` ts{3,5}
 // main.ts
 import Vue from 'vue';
-import '@cnamts/vue-dot';
+import VueDot from '@cnamts/vue-dot';
+
+Vue.use(VueDot);
 
 new Vue({
     render: (h) => h(App)
