@@ -29,6 +29,18 @@ new Vue({
 yarn serve # OU votre propre commande
 ```
 
+### CDN
+<br>
+Charger Vue, puis Vuetify et enfin VueDot:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@1.2.6/vuetify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cnamts/vue-dot@1.4.0/dist/vue-dot.umd.min.js"></script>
+```
+
+Cela va charger automatiquement tous les composants de Vuetify et VueDot.
+
 ## Équipe principale
 
 <ul>

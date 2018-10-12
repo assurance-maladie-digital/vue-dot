@@ -12,10 +12,12 @@ yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 
 ### Load
 
-``` ts{3}
+``` ts{3,5}
 // main.ts
 import Vue from 'vue';
-import '@cnamts/vue-dot';
+import VueDot from '@cnamts/vue-dot';
+
+Vue.use(VueDot);
 
 new Vue({
     render: (h) => h(App)
@@ -28,6 +30,18 @@ new Vue({
 # run your project
 yarn serve # OR your own command
 ```
+
+### CDN
+<br>
+Load Vue, then Vuetify and finally VueDot:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@1.2.6/vuetify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cnamts/vue-dot@1.4.0/dist/vue-dot.umd.min.js"></script>
+```
+
+It will load automatically all the components from Vuetify and VueDot.
 
 ## Core team
 
