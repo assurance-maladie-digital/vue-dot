@@ -44,10 +44,6 @@ Exemple avec `v-text-field` de Vuetify (voir la démo pour tout le code):
 	title="v-debounce"
 />
 
-### À faire
-
-Nous devons améliorer cette directive pour pouvoir l'utiliser avec n'importe quel événement, ne craignez pas de nous aider à ce sujet!
-
 ### Comment ça fonctionne
 
 Nous utilisons la function `debounce` de `@/functions/debounce`, qui prend comme paramètres un callback et une valeur de temps. Cette fonction retourne une function qui contient un `setTimeout`, et chaque fois que cette fonction retournée est appelée, elle efface le précédent `setTimeout`, ainsin lorsque l'événement se déclenche plusieurs fois, le callback n'est appelé qu'une seule fois.
