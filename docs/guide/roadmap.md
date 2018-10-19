@@ -14,8 +14,14 @@ There are new components in development:
 
 No new directives planned yet, but tell us what you need!
 
+## Themes
+
+Create (customizable) themes and expose Vuetify through the library.
+
 ## 🛰️ Developer life
 
 - Contribution guide
 - True deploy script (publish on NPM, publish docs, Github release, commit and changelog)
-- 100% test coverage
+- Typings TypeScript
+- Use new a-la-carte Vuetify loader
+- 100% tests coverage
