@@ -86,6 +86,14 @@ Nous vous recommandons une taille de 24 pixels et d'optimiser votre icône avec 
 	title="SvgIcon"
 />
 
+### API
+<br>
+<CodePen
+	id="yRjRmr"
+	:height="800"
+	title="SvgIcon API"
+/>
+
 ### À faire
 
 Nous devons ajouter plus d'icônes pour avoir l'ensemble complet de [Flaticon](https://www.flaticon.com/packs/material-design/1).
@@ -98,4 +106,4 @@ C'est un composant simple, qui utilise des propriétés et un emplacement par d�
 
 Consultez cet [article sur CSS-Tricks](https://css-tricks.com/icon-fonts-vs-svg/) pour une comparaison complète des techniques.
 
-Pour résumé, SVG est plus **performant**, **facile à utiliser**, **accessible**, et offre une **meilleure qualitée** grâce aux vecteurs.
+Pour résumer, SVG est plus **performant**, **facile à utiliser**, **accessible**, et offre une **meilleure qualitée** grâce aux vecteurs.

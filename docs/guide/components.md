@@ -86,6 +86,14 @@ We recommend a size of 24 pixels, and to optimize your icon with [SVGOMG](https:
 	title="SvgIcon"
 />
 
+### API
+<br>
+<CodePen
+	id="qJYJod"
+	:height="800"
+	title="SvgIcon API"
+/>
+
 ### Todo
 
 We need to add more icons, to have the complete set from [Flaticon](https://www.flaticon.com/packs/material-design/1).

@@ -536,6 +536,10 @@
 				type: String,
 				default: 'currentColor'
 			},
+			icon: {
+				type: String,
+				default: undefined
+			},
 			large: {
 				type: Boolean,
 				default: false
@@ -555,10 +559,6 @@
 			xLarge: {
 				type: Boolean,
 				default: false
-			},
-			icon: {
-				type: String,
-				default: ''
 			}
 		}
 	});
