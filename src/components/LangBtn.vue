@@ -31,7 +31,6 @@
 			:round="round"
 			:small="small"
 			:tag="tag"
-			:target="target"
 			:top="top"
 			:type="type"
 			:value="btnValue"
@@ -208,10 +207,6 @@
 			tag: {
 				type: String,
 				default: 'button'
-			},
-			target: {
-				type: String,
-				default: undefined
 			},
 			top: {
 				type: Boolean,
