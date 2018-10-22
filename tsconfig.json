@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"module": "esnext",
+		"module": "CommonJS",
 		"strict": true,
 		"jsx": "preserve",
 		"importHelpers": true,
@@ -11,7 +11,11 @@
 		"baseUrl": ".",
 		"types": [
 			"node",
-			"jest"
+			"jest",
+			"shelljs",
+			"figlet",
+			"inquirer",
+			"semver"
 		],
 		"paths": {
 			"@/*": [
@@ -27,6 +31,7 @@
 		]
 	},
 	"include": [
+		"scripts/**/*.ts",
 		"src/**/*.ts",
 		"src/**/*.tsx",
 		"src/**/*.vue",
