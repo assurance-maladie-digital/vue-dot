@@ -1,14 +1,15 @@
+// tslint:disable:max-line-length
+
 import * as clear from 'clear';
 clear();
 
 import header from './helper/header';
 header();
 
-import chalk, { log, xLog } from './helper/chalk';
+import chalk, { log, xLog, colors } from './helper/chalk';
 
 log(chalk.white.bold(`✨  New release`));
 process.stdout.write('\n');
-
 
 import * as shell from 'shelljs';
 import * as inquirer from 'inquirer';
@@ -109,8 +110,10 @@ function verifyBranch(version: any) {
 }
 
 function confirmVersion(version: any) {
-	shell.echo(`Releasing ${version} on ${branch}`);
-	shell.echo(`Tag: ${tag}`);
+	process.stdout.write('\n');
+	shell.echo(chalk.hex(colors.primary)(`Releasing ${chalk.bold(version)} on ${chalk.bold(branch)}`));
+	shell.echo(chalk.hex(colors.primary)(`Tag: ${chalk.bold(tag)}`));
+	process.stdout.write('\n');
 
 	return inquirer.prompt({
 		type: 'confirm',
@@ -123,18 +126,12 @@ function confirmVersion(version: any) {
 
 function lint() {
 	const { spawnSync } = require('child_process');
-	const child = spawnSync('yarn', ['lint'], { stdio: 'inherit' });
-
-	// shell.exec('npm run test');
+	spawnSync('yarn', ['lint'], { stdio: 'inherit' });
 }
 
 function release(version: any) {
-	// process.env.npm_config_commit_hooks = 'false';
-
-	// shell.exec(`yarn version --new-version ${version}`);
-
 	const { spawnSync } = require('child_process');
-	const child = spawnSync('yarn', ['version', '--new-version', version, '--no-commit-hooks'], { stdio: 'inherit' });
+	spawnSync('yarn', ['version', '--new-version', version, '--no-commit-hooks'], { stdio: 'inherit' });
 	// shell.exec(`git push --no-verify --follow-tags`)
 
 	// if (branch === 'master') {
@@ -153,41 +150,105 @@ function release(version: any) {
 
 function build() {
 	const { spawnSync } = require('child_process');
-	const child = spawnSync('yarn', ['build-bundle'], { stdio: 'inherit' });
+	spawnSync('yarn', ['build-bundle'], { stdio: 'inherit' });
 }
 
 function changelog(version: any) {
-	const versions = shell.exec('yarn info @cnamts/vue-dot versions', { silent: true })
-	.toString().replace(/^\s+|\s+$/g, '');
-	const previousVersion = versions[versions.length - 1];
+	const versions: any = shell.exec('yarn info @cnamts/vue-dot versions --json', { silent: true });
+	const versionsArray = JSON.parse(versions.stdout).data;
+	const previousVersion = versionsArray[versionsArray.length - 1];
 
-	// tslint:disable:max-line-length
-	const data = `
-### [v${version}](https://github.com/assurance-maladie-digital/vue-dot/compare/v${previousVersion}...v${version}) (01-10-2018)
-	`;
+	const today = new Date();
 
-	log('test');
-	prepend('./CHANGELOG.md', data, (error: any) => log(error));
+	const dd: string = today.getDate().toString().padStart(2, '0');
+	const mm: string = (today.getMonth() + 1).toString().padStart(2, '0'); // January is 0
+	const yyyy: string = today.getFullYear().toString();
+
+	const date = `${dd}-${mm}-${yyyy}`;
+
+	inquirer.prompt({
+		type: 'editor',
+		name: 'changelog',
+		message: 'Tell what changed in this version:',
+		default: '### No changes specified.'
+	})
+	.then((answers: any) => {
+		log(answers.changelog);
+
+		const data = `### [v${version}](https://github.com/assurance-maladie-digital/vue-dot/compare/v${previousVersion}...v${version}) (${date})
+
+${answers.changelog}
+`;
+
+		prepend('./CHANGELOG.md', data, (error: any) => {
+			if (error) {
+				log(error);
+			}
+		});
+	});
 }
+
+// function githubRelease(version: any) {
+// 	const email = shell.exec('git config user.email', { silent: true }).toString().replace(/^\s+|\s+$/g, '');
+
+// 	const { spawnSync } = require('child_process');
+// 	spawnSync('curl', ['-u', `"deraw-"`, 'https://api.github.com'], { stdio: 'inherit' });
+
+// 	const https = require('https');
+
+// 	const options = {
+// 		hostname: 'api.github.com',
+// 		path: '/repos/assurance-maladie-digital/vue-dot/releases/1',
+// 		method: 'POST',
+// 		headers: {
+// 			'Content-Type': 'application/json',
+// 		}
+// 	};
+
+// 	const req = https.request(options, (res: any) => {
+// 		console.log('Status: ' + res.statusCode);
+// 		console.log('Headers: ' + JSON.stringify(res.headers));
+// 		res.setEncoding('utf8');
+// 		res.on('data', function(body: any) {
+// 			console.log('Body: ' + body);
+// 		});
+// 	});
+// 	req.on('error', function(e: any) {
+// 		console.log('problem with request: ' + e.message);
+// 	});
+// 	// write data to request body
+// 	req.write(`
+// 	{
+// 		"tag_name": "v${version}",
+// 		"target_commitish": "master",
+// 		"name": "v${version}",
+// 		"body": "Description of the release",
+// 		"draft": false,
+// 		"prerelease": ${tag === 'master' ? 'false' : 'true'}
+// 	}
+// 	`);
+// 	req.end();
+// }
 
 function publish() {
 	const { spawnSync } = require('child_process');
-	const child = spawnSync('yarn', ['publish', '--access', 'public', '--tag', tag], { stdio: 'inherit' });
+	spawnSync('yarn', ['publish', '--access', 'public', '--tag', tag], { stdio: 'inherit' });
 }
 
 function deployDocs() {
 	const { spawnSync } = require('child_process');
-	const child = spawnSync('./deploy.sh', { stdio: 'inherit' });
+	spawnSync('./deploy.sh', { stdio: 'inherit' });
 }
 
 promptForVersion()
 .then(verifyBranch)
 .then(confirmVersion)
 .then((version) => {
-	lint();
-	build();
-	changelog(version);
-	release(version);
-	publish();
-	deployDocs();
+	// lint();
+	// build();
+	// changelog(version);
+	// release(version);
+	// publish();
+	// githubRelease(version);
+	// deployDocs();
 });
