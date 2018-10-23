@@ -257,11 +257,11 @@ promptForVersion()
 .then(verifyBranch)
 .then(confirmVersion)
 .then((version) => {
-	// lint();
-	// build();
-	// changelog(version);
+	lint();
+	build();
+	changelog(version);
 	release(version);
-	// publish();
+	publish();
 	// githubRelease(version);
-	// deployDocs();
+	deployDocs();
 });
