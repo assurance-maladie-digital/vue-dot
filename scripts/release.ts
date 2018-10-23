@@ -1,44 +1,54 @@
 // tslint:disable:max-line-length
 
+// Clear console
 import * as clear from 'clear';
 clear();
 
+// Display header…
 import header from './helper/header';
 header();
 
 import chalk, { log, xLog, colors } from './helper/chalk';
 
+// …and the purpose of the script
 log(chalk.white.bold(`✨  New release`));
 process.stdout.write('\n');
 
+// Imports
 import * as shell from 'shelljs';
 import * as inquirer from 'inquirer';
 import * as semver from 'semver';
 import * as prepend from 'prepend';
 
+// Exit on error
 shell.set('-e');
 
+// Check for git and yarn
 if (!shell.which('git')) {
 	xLog('this script requires git', 'error');
 	shell.exit(1);
 }
 
-if (!shell.which('npm')) {
-	xLog('this script requires npm', 'error');
+if (!shell.which('yarn')) {
+	xLog('this script requires yarn', 'error');
 	shell.exit(1);
 }
 
+// Get some infos
 const branch = shell.exec('git symbolic-ref --short HEAD', { silent: true }).toString().replace(/^\s+|\s+$/g, '');
 const latest = shell.exec('yarn info @cnamts/vue-dot version', { silent: true }).toString().replace(/^\s+|\s+$/g, '');
 const latestGit = shell.exec('git describe --abbrev=0 --tags', { silent: true }).toString().replace(/^\s+|\s+$/g, '');
-
-let tag: any;
 
 log(`
 Current branch is ${chalk.cyan(branch)}.
 Last git version (from the current location) was ${chalk.cyan(latestGit)}.
 Latest npm version is ${chalk.cyan(latest)}.
 `);
+
+// Publish tag
+let tag: any;
+
+// Functions
 
 function createVersionOption(name: any) {
 	const prerelease = (semver.prerelease(latestGit) || [])[0];
@@ -102,8 +112,8 @@ function verifyBranch(version: any) {
 			name: 'yes',
 			message: 'Do you want to continue',
 			default: false
-		}).
-		then((answers: any) => answers.yes ? version : shell.exit(1));
+		})
+		.then((answers: any) => answers.yes ? version : shell.exit(1));
 	}
 
 	return Promise.resolve(version);
@@ -130,8 +140,11 @@ function lint() {
 }
 
 function release(version: any) {
+	shell.exec('yarn config set version-git-message "🔖 v%s"', { silent: true });
+
 	const { spawnSync } = require('child_process');
 	spawnSync('yarn', ['version', '--new-version', version, '--no-commit-hooks'], { stdio: 'inherit' });
+
 	// shell.exec(`git push --no-verify --follow-tags`)
 
 	// if (branch === 'master') {
@@ -247,7 +260,7 @@ promptForVersion()
 	// lint();
 	// build();
 	// changelog(version);
-	// release(version);
+	release(version);
 	// publish();
 	// githubRelease(version);
 	// deployDocs();
