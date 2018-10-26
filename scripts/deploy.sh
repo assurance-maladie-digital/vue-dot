@@ -15,6 +15,6 @@ git add -A
 git commit -m '🚀 Deploy'
 
 # push
-git push -f https://github.com/assurance-maladie-digital/vue-dot.git master:gh-pages
+git push https://github.com/assurance-maladie-digital/vue-dot.git master:gh-pages
 
 cd -

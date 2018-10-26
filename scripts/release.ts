@@ -260,7 +260,7 @@ function publish() {
 
 function deployDocs() {
 	const { spawnSync } = require('child_process');
-	spawnSync('./deploy.sh', { stdio: 'inherit' });
+	spawnSync('./scripts/deploy.sh', { stdio: 'inherit' });
 }
 
 promptForVersion()
