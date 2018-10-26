@@ -1,3 +1,27 @@
+### [v1.4.0-beta.7](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.6...v1.4.0-beta.7) (12-10-2018)
+
+* Beta version.
+
+### [v1.4.0-beta.6](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.5...v1.4.0-beta.6) (12-10-2018)
+
+* Beta version.
+
+### [v1.4.0-beta.5](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.4...v1.4.0-beta.5) (12-10-2018)
+
+* Beta version.
+
+### [v1.4.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.3...v1.4.0-beta.4) (02-10-2018)
+
+* Beta version.
+
+### [v1.4.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.2...v1.4.0-beta.3) (02-10-2018)
+
+* Beta version.
+
+### [v1.4.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.1...v1.4.0-beta.2) (02-10-2018)
+
+* Beta version.
+
 ### [v1.4.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.4...v1.4.0-beta.1) (01-10-2018)
 
 * This beta is for testing DatePicker.
