@@ -147,7 +147,7 @@ function release(version: any) {
 	const { spawnSync } = require('child_process');
 	spawnSync('yarn', ['version', '--new-version', version, '--no-commit-hooks'], { stdio: 'inherit' });
 
-	shell.exec(`git push --no-verify --follow-tags`);
+	spawnSync('git', ['push', '--no-verify', '--follow-tags'], { stdio: 'inherit' });
 
 	// if (branch === 'master') {
 	// 	shell.exec('git checkout dev')
