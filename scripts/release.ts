@@ -135,6 +135,8 @@ function confirmVersion(version: any) {
 }
 
 function lint() {
+	process.stdout.write('\n');
+
 	const { spawnSync } = require('child_process');
 	spawnSync('yarn', ['lint'], { stdio: 'inherit' });
 }
@@ -145,7 +147,7 @@ function release(version: any) {
 	const { spawnSync } = require('child_process');
 	spawnSync('yarn', ['version', '--new-version', version, '--no-commit-hooks'], { stdio: 'inherit' });
 
-	// shell.exec(`git push --no-verify --follow-tags`)
+	shell.exec(`git push --no-verify --follow-tags`);
 
 	// if (branch === 'master') {
 	// 	shell.exec('git checkout dev')
@@ -179,26 +181,34 @@ function changelog(version: any) {
 
 	const date = `${dd}-${mm}-${yyyy}`;
 
-	inquirer.prompt({
-		type: 'editor',
-		name: 'changelog',
-		message: 'Tell what changed in this version:',
-		default: '### No changes specified.'
-	})
-	.then((answers: any) => {
-		log(answers.changelog);
+	const prompt = (lang: string) => {
+		const link = `https://github.com/assurance-maladie-digital/vue-dot/compare/v${previousVersion}...v${version}`;
+		log(chalk.cyan(link));
 
-		const data = `### [v${version}](https://github.com/assurance-maladie-digital/vue-dot/compare/v${previousVersion}...v${version}) (${date})
+		return inquirer.prompt({
+			type: 'editor',
+			name: 'changelog',
+			message: `Tell what changed in this version${lang === 'fr' ? ' in French ' : ''}:`,
+			default: lang === 'fr' ? '### Pas de changement spécifié.' : '### No changes specified.'
+		})
+		.then((answers: any) => {
+			const data =
+`### [v${version}](${link}) (${date})
 
 ${answers.changelog}
 `;
+			const file = lang === 'fr' ? './gh-docs/fr/CHANGELOG.md' : './CHANGELOG.md';
 
-		prepend('./CHANGELOG.md', data, (error: any) => {
-			if (error) {
-				log(error);
-			}
+			prepend(file, data, (error: any) => {
+				if (error) {
+					log(error);
+				}
+			});
 		});
-	});
+	};
+
+	prompt('en')
+	.then(() => prompt('fr'));
 }
 
 // function githubRelease(version: any) {
