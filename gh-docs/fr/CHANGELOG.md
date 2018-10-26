@@ -1,167 +1,165 @@
-Translations: [Français](./gh-docs/fr/CHANGELOG.md)
-
 ### [v1.4.0-beta.7](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.6...v1.4.0-beta.7) (12-10-2018)
 
-* Beta version.
+* Version bêta.
 
 ### [v1.4.0-beta.6](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.5...v1.4.0-beta.6) (12-10-2018)
 
-* Beta version.
+* Version bêta.
 
 ### [v1.4.0-beta.5](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.4...v1.4.0-beta.5) (12-10-2018)
 
-* Beta version.
+* Version bêta.
 
 ### [v1.4.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.3...v1.4.0-beta.4) (02-10-2018)
 
-* Beta version.
+* Version bêta.
 
 ### [v1.4.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.2...v1.4.0-beta.3) (02-10-2018)
 
-* Beta version.
+* Version bêta.
 
 ### [v1.4.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.1...v1.4.0-beta.2) (02-10-2018)
 
-* Beta version.
+* Version bêta.
 
 ### [v1.4.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.4...v1.4.0-beta.1) (01-10-2018)
 
-* Testing `DatePicker`.
+* test du `DatePicker`.
 
 ## [v1.3.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.3...v1.3.4) (27-09-2018)
 
 ### Documentation
 
-* Fix repo homepage.
+* Correction de la page d'acceuil du *repo*.
 
 ## [v1.3.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.2...v1.3.3) (27-09-2018)
 
 ### Documentation
 
-* Update repo link and fix deploy script.
+* Mise à jour du lien vers le *repo* et correction du script de déploiement.
 
 ## [v1.3.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.1...v1.3.2) (27-09-2018)
 
 ### Documentation
 
-* Update documentation with new translations and lot of fixes (typos and presentation):
-	* Add guide page
+* Mise à jour de la documentation avec de nouvelles traductions et beaucoup de correctifs (orthographe et présentation):
+	* Ajout de la page guide
 	* CNAMTS -> CNAM
-	* Update `v-debounce` to match new features
-	* FR translation for `SvgIcon`
-	* Add CHANGELOG link
-* Fix deploy script.
+	* Mise à jour de `v-debounce` pour correspondre aux nouvelles fonctionnalités
+	* Traductions FR pour `SvgIcon`
+	* Ajout d'un lien vers le *CHANGELOG*
+* Correction du script de déploiement.
 
 ## [v1.3.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0...v1.3.1) (27-09-2018)
 
-### Bug fixes
+### Correction de bugs
 
-* Fix `v-debounce` directive with custom components.
+* Correction de la directive `v-debounce` avec les composants personnalisés.
 
 ### Documentation
 
-* Update directives documentation to match fixes and components one to match actual code.
+* Mise à jour de la documentation des directives pour correspondre aux corrections et de celle des composants pour correspondre au code actuel.
 
 ## [v1.3.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0) (26-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Update `LangBtn` to get languages data from [languages](https://www.npmjs.com/package/languages) and update styles.
-* Publish directives 🎉.
+* Mise à jour de `LangBtn` pour obtenir les langues de [languages](https://www.npmjs.com/package/languages) et mise à jour des styles.
+* Publication des directives.
 
 ### Package
 
-* Add MIT license.
+* Ajout de la licence MIT.
 
 ### Documentation
 
-* 🎉 Add [VuePress](https://vuepress.vuejs.org/) for documentation.
+* 🎉 Ajout de [VuePress](https://vuepress.vuejs.org/) pour la documentation.
 
 ### [v1.3.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.3...v1.3.0-beta.4) (26-09-2018)
 
-* Build for NPM with local modifications.
+* Build pour NPM avec une modification locale.
 
 ### [v1.3.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.2...v1.3.0-beta.3) (26-09-2018)
 
-* Build for NPM.
+* Build pour NPM.
 
 ### [v1.3.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.1...v1.3.0-beta.2) (26-09-2018)
 
-* Build for NPM.
+* Build pour NPM.
 
 ### [v1.3.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0-beta.1) (26-09-2018)
 
-* Update `LangBtn`.
-* Add MIT License.
-* Add [VuePress](https://vuepress.vuejs.org/).
-* Test exporting directives.
+* Mise à jour de `LangBtn`.
+* Ajout de la licence MIT.
+* Ajout de [VuePress](https://vuepress.vuejs.org/).
+* Test d'exportation des directives.
 
 ## [v1.2.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.1.1...v1.2.0) (18-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Add `v-debounce` directive.
+* Ajout de la directive `v-debounce`.
 
 ## [v1.1.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.1.0...v1.1.1) (17-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Add PWA files (icons, etc).
+* Ajout des fichiers PWA (icônes, etc).
 
-### Bug fixes
+### Correction de bugs
 
-* Fix NPM description.
-* Remove unused PWA plugin.
-* Remove custom Vuetify theme.
+* Correction de la description NPM.
+* Suppresion du plugin non utilisé PWA.
+* Suppresion du thème personnalisé Vuetify.
 
 ## [v1.1.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.0.1...v1.1.0) (17-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Add `BirthDatePciker`.
-* Add calendar icon in `SvgIcon`.
-* Add README.
+* Ajout de `BirthDatePciker`.
+* Ajout de l'icône *calendar* à `SvgIcon`.
+* Ajout du README
 
 ## [v1.0.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.0.0...v1.0.1) (17-09-2018)
 
-### Bug fixes
+### Correction de bugs
 
-* 🚑 Fix missing build for NPM.
+* 🚑 Correction du *build* manquant pour NPM.
 
 ## [v1.0.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.4...v1.0.0) (17-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Add `LangBtn`.
+* Ajout de `LangBtn`.
 
 ## [v0.1.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.3...v0.1.4) (14-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Add more icons to `SvgIcon`.
+* Ajout de plus d'icônes à `SvgIcon`.
 
 ## [v0.1.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.2...v0.1.3) (14-09-2018)
 
-### Development
+### Développement
 
-* Add ESLint.
+* Ajout d'ESLint.
 
 ## [v0.1.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.1...v0.1.2) (14-09-2018)
 
-### Development
+### Développement
 
-* Don't extract CSS.
+* Pas d'extraction du CSS.
 
 ## [v0.1.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.0...v0.1.1) (14-09-2018)
 
-### New features
+### Nouvelles fonctionnalités
 
-* Add `SvgIcon`.
+* Ajout de `SvgIcon`.
 
-### Development
+### Développement
 
-* Add build command and NPM infos for publishing.
+* Ajout de la commande *build* et d'informations NPM pour la publication.
 
 ## [v0.1.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.0.0...v0.1.0) (14-08-2018)
 
-* 🎉 Initial commit!
+* 🎉 *Commit* initial !

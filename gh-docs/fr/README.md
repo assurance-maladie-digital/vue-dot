@@ -1,5 +1,3 @@
-Translations: [Français](./gh-docs/fr/README.md)
-
 <p align="center">
 	<a
 		href="https://assurance-maladie-digital.github.io/vue-dot/"
@@ -16,7 +14,7 @@ Translations: [Français](./gh-docs/fr/README.md)
 
 <h1 align="center">CNAM – Vue dot</h1>
 
-<p align="center">Official CNAM component library.</p>
+<p align="center">Bibliothèque de composants officielle de la CNAM.</p>
 
 <p align="center">
 	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
@@ -40,15 +38,15 @@ Translations: [Français](./gh-docs/fr/README.md)
 	</a>
 </p>
 
-## As Easy as 1, 2, 3
+## Aussi simple que 1, 2, 3
 
-### Install
+### Installer
 
 ``` bash
-yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
+yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 ```
 
-### Load
+### Charger
 
 ```ts
 // main.ts
@@ -62,19 +60,18 @@ new Vue({
 }).$mount('#app');
 ```
 
-### You're done! 🎉
+### Et voilà ! 🎉
 
 ``` bash
-# run your project
-yarn serve # OR your own command
+# lancer votre projet
+yarn serve # OU votre propre commande
 ```
-
-It automatically load all components and directives of the library and made them available globally.
+Cela va charger automatiquement tous les composants et les directives de la librairie et les rendre disponnibles globalement.
 
 ## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)
 
-See [documentation](https://assurance-maladie-digital.github.io/vue-dot/).
+Voir la [documentation](https://assurance-maladie-digital.github.io/vue-dot/).
 
 ## License
 
-VueDot is licensed under a [MIT  License](./LICENSE).
+VueDot est sous [licence MIT](./LICENSE).

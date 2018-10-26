@@ -1,3 +1,5 @@
+Translations: [Français](./gh-docs/fr/CONTRIBUTING.md)
+
 # Contributing to Vue Dot
 
 🎉 First off, thanks for taking the time to contribute!
@@ -30,7 +32,7 @@ You can look for issues labelled with `help-wanted` if you're not sure where to 
 
 ### Local development
 
-To start the developement server, use the following command:
+To start the development server, use the following command:
 
 ```bash
 yarn serve
@@ -62,12 +64,13 @@ yarn docs:dev
 
 See [VuePress](https://vuepress.vuejs.org/guide/) for help.
 
-### 🚨 Other commands should be executed only on master
+### 🚨 Other commands should be executed only on master branch
 
-## Stylguide
+## Styleguide
 
-### Git Commit Messages
+### Git commit messages
 
+* Use English language
 * Use the present tense ("Add feature" not "Added feature")
 * Use the imperative mood ("Move cursor to…" not "Moves cursor to…")
 * Start the commit message with an applicable emoji from [Gitmoji](https://gitmoji.carloscuesta.me/)
@@ -101,4 +104,3 @@ The configuration is based on the [recommended configuration](https://github.com
 * **space-before-function-paren**: `never`
 * **trailing-comma**: `never`
 * **no-shadowed-variable**: `false`
-
