@@ -16,7 +16,7 @@ Expliquez le problème et incluez des détails supplémentaires pour aider les r
 
 * **Utilisez un titre clair et descriptif**
 * **Décrivez les étapes exactes qui reproduisent le problème**
-* **Fournissez des exemples spécifiques pour illustrer les étapes.**Incluez des liens vers des fichiers ou des projets, ou copiez / copiez des extraits que vous utilisez dans ces exemples. Si vous fournissez des extraits dans le problème, utilisez les [blocs de code Markdown](https://help.github.com/articles/markdown-basics/#multiple-lines).
+* **Fournissez des exemples spécifiques pour illustrer les étapes.** Incluez des liens vers des fichiers ou des projets, ou copiez/collez des extraits que vous utilisez dans ces exemples. Si vous fournissez des extraits dans le problème, utilisez les [blocs de code Markdown](https://help.github.com/articles/markdown-basics/#multiple-lines).
 
 ## Proposer des modifications
 
