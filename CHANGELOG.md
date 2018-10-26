@@ -1,4 +1,6 @@
-Translations: [Français](./gh-docs/fr/CHANGELOG.md)
+### [v1.4.0-beta.8](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.7...v1.4.0-beta.8) (26-10-2018)
+
+* Beta version.
 
 ### [v1.4.0-beta.7](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.6...v1.4.0-beta.7) (12-10-2018)
 
