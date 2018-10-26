@@ -24,7 +24,7 @@
 
 ### [v1.4.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.4...v1.4.0-beta.1) (01-10-2018)
 
-* This beta is for testing DatePicker.
+* Testing `DatePicker`.
 
 ## [v1.3.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.3...v1.3.4) (27-09-2018)
 
@@ -43,7 +43,7 @@
 ### Documentation
 
 * Update documentation with new translations and lot of fixes (typos and presentation):
-	* Add guide README
+	* Add guide page
 	* CNAMTS -> CNAM
 	* Update `v-debounce` to match new features
 	* FR translation for `SvgIcon`
@@ -58,22 +58,22 @@
 
 ### Documentation
 
-* Update directives to match fixes and components to match actual code.
+* Update directives documentation to match fixes and components one to match actual code.
 
 ## [v1.3.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.2.0...v1.3.0) (26-09-2018)
 
 ### New features
 
 * Update `LangBtn` to get languages data from [languages](https://www.npmjs.com/package/languages) and update styles.
-* Publish directives :tada:
+* Publish directives 🎉.
 
 ### Package
 
-* Add MIT license
+* Add MIT license.
 
 ### Documentation
 
-* :tada: Add [VuePress](https://vuepress.vuejs.org/) for documentation.
+* 🎉 Add [VuePress](https://vuepress.vuejs.org/) for documentation.
 
 ### [v1.3.0-beta.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0-beta.3...v1.3.0-beta.4) (26-09-2018)
 
@@ -118,13 +118,13 @@
 
 * Add `BirthDatePciker`.
 * Add calendar icon in `SvgIcon`.
-* Add README
+* Add README.
 
 ## [v1.0.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.0.0...v1.0.1) (17-09-2018)
 
 ### Bug fixes
 
-* :ambulance: Fix missing build for NPM.
+* 🚑 Fix missing build for NPM.
 
 ## [v1.0.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.1.4...v1.0.0) (17-09-2018)
 
@@ -162,4 +162,4 @@
 
 ## [v0.1.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v0.0.0...v0.1.0) (14-08-2018)
 
-* :tada: Initial commit!
+* 🎉 Initial commit!
