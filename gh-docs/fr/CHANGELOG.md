@@ -1,3 +1,7 @@
+### [v1.4.0-beta.9](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.8...v1.4.0-beta.9) (26-10-2018)
+
+* Correction de la configuration TS.
+
 ### [v1.4.0-beta.8](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.7...v1.4.0-beta.8) (26-10-2018)
 
 * Version bêta.
