@@ -22,6 +22,6 @@ Create (customizable) themes and expose Vuetify through the library.
 
 - ✅ ~~Contribution guide~~
 - True deploy script (~~publish on NPM~~, ~~publish docs~~, Github release, ~~commit~~ and ~~changelog~~)
-- Typings TypeScript
+- ~~Typings TypeScript~~
 - Use new a-la-carte Vuetify loader
 - 100% tests coverage
