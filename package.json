@@ -36,7 +36,7 @@
 		"test:e2e": "vue-cli-service test:e2e",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
-		"release": "ts-node --files ./scripts/release"
+		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release"
 	},
 	"dependencies": {
 		"dayjs": "^1.7.7",

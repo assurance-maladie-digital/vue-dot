@@ -1,17 +1,18 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"module": "esnext",
+		"module": "CommonJS",
 		"strict": true,
-		"jsx": "preserve",
-		"importHelpers": true,
 		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
 		"baseUrl": ".",
 		"types": [
 			"node",
-			"jest"
+			"shelljs",
+			"figlet",
+			"inquirer",
+			"semver"
 		],
 		"paths": {
 			"@/*": [
@@ -21,19 +22,10 @@
 		"lib": [
 			"es2017",
 			"es2015",
-			"dom",
-			"dom.iterable",
 			"scripthost"
 		]
 	},
 	"include": [
-		"src/**/*.ts",
-		"src/**/*.tsx",
-		"src/**/*.vue",
-		"tests/**/*.ts",
-		"tests/**/*.tsx"
-	],
-	"exclude": [
-		"node_modules"
+		"**/*.ts"
 	]
 }
