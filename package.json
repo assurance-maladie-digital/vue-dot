@@ -23,7 +23,7 @@
 		"public/*"
 	],
 	"main": "./dist/vue-dot.common.js",
-	"types": "./src/vue-dot.d.ts",
+	"types": "./typings/vue-dot.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/assurance-maladie-digital/vue-dot"
