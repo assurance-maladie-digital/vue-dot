@@ -1,15 +1,12 @@
 # Components
 
-
-
-
 ## SvgIcon
 
 The component `SvgIcon` is meant to replace the Vuetify `v-icon`, which uses a font icon, and to extends his fonctionnalities.
 
 ### Usage
 
-``` html
+```html
 <SvgIcon icon="home" />
 ```
 
@@ -21,14 +18,14 @@ Default value is `currentColor`, which means current value of `color` property.
 
 The value can be any valid CSS color, some examples:
 
-- `#4edb4e`
-- `#000`
-- `white`
-- `rgba(0, 0, 0, .2)`
-- `rgb(144, 72, 219)`
-- `hsl(180, 67%, 57%)`
+-   `#4edb4e`
+-   `#000`
+-   `white`
+-   `rgba(0, 0, 0, .2)`
+-   `rgb(144, 72, 219)`
+-   `hsl(180, 67%, 57%)`
 
-``` html{3}
+```html{3}
 <SvgIcon
     icon="home"
     color="hsl(180, 67%, 57%)"
@@ -42,12 +39,12 @@ The default size of an icon is `1.35em` (this unit is relative to font size, so 
 
 Keywords:
 
-- `small`: `1em`
-- `medium`: `1.5em`
-- `large`: `1.85em`
-- `x-large`: `2.25em`
+-   `small`: `1em`
+-   `medium`: `1.5em`
+-   `large`: `1.85em`
+-   `x-large`: `2.25em`
 
-``` html{3}
+```html{3}
 <SvgIcon
     icon="home"
     medium
@@ -56,7 +53,7 @@ Keywords:
 
 Custom size:
 
-``` html{3}
+```html{3}
 <SvgIcon
     icon="home"
     size="100px"
@@ -67,7 +64,7 @@ Custom size:
 
 One missing functionality of `v-icon`, is custom icons, here there are:
 
-``` html{2,3,4}
+```html{2,3,4}
 <SvgIcon>
     <svg viewBox="0 0 24 24">
         <path d="M4.6 2.8l9.2 9.2-9.2 9.2L7.4 24l12-12-12-12z" />
@@ -80,6 +77,7 @@ We recommend a size of 24 pixels, and to optimize your icon with [SVGOMG](https:
 :::
 
 ### Demo
+
 <br>
 <CodePen
 	id="yxRJOO"
@@ -87,6 +85,7 @@ We recommend a size of 24 pixels, and to optimize your icon with [SVGOMG](https:
 />
 
 ### API
+
 <br>
 <CodePen
 	id="qJYJod"

@@ -1,10 +1,11 @@
----
+* * *
+
 home: true
 heroImage: /vue.js.svg
 actionText: Démarrer →
 actionLink: /fr/guide/
-footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
----
+
+## footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
 
 <div class="features">
 	<div class="feature">
@@ -25,13 +26,13 @@ footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
 
 #### Installer
 
-``` bash
+```bash
 yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 ```
 
 #### Charger
 
-``` ts{3,5}
+```ts{3,5}
 // main.ts
 import Vue from 'vue';
 import VueDot from '@cnamts/vue-dot';
@@ -45,7 +46,7 @@ new Vue({
 
 #### Et voilà !
 
-``` bash
+```bash
 # lancer votre projet
 yarn serve # OU votre propre commande
 ```

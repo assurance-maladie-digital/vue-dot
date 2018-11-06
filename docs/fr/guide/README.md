@@ -6,13 +6,13 @@ Cette bibliothèque est destinée à aider les développeurs dans leur travail a
 
 ### Installer
 
-``` bash
+```bash
 yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 ```
 
 ### Charger
 
-``` ts{3}
+```ts{3}
 // main.ts
 import Vue from 'vue';
 import '@cnamts/vue-dot';
@@ -24,12 +24,13 @@ new Vue({
 
 ### Et voilà !
 
-``` bash
+```bash
 # lancer votre projet
 yarn serve # OU votre propre commande
 ```
 
 ### CDN
+
 <br>
 Charger Vue, puis Vuetify et enfin VueDot:
 

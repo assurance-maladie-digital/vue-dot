@@ -53,7 +53,7 @@ Translations: [Français](./gh-docs/fr/README.md)
 
 ### Install
 
-``` bash
+```bash
 yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 ```
 
@@ -73,7 +73,7 @@ new Vue({
 
 ### You're done! 🎉
 
-``` bash
+```bash
 # run your project
 yarn serve # OR your own command
 ```

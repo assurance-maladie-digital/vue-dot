@@ -6,13 +6,13 @@ This library is meant to help developers in their work with Vue, and will evolve
 
 ### Install
 
-``` bash
+```bash
 yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 ```
 
 ### Load
 
-``` ts{3,5}
+```ts{3,5}
 // main.ts
 import Vue from 'vue';
 import VueDot from '@cnamts/vue-dot';
@@ -26,12 +26,13 @@ new Vue({
 
 ### You're done!
 
-``` bash
+```bash
 # run your project
 yarn serve # OR your own command
 ```
 
 ### CDN
+
 <br>
 Load Vue, then Vuetify and finally VueDot:
 

@@ -1,15 +1,12 @@
 # Composants
 
-
-
-
 ## SvgIcon
 
-Le composant `SvgIcon` est destiné à remplacer le` v-icon` de Vuetify, qui utilise une police d'icônes, et à étendre ses fonctionnalités.
+Le composant `SvgIcon` est destiné à remplacer le`v-icon` de Vuetify, qui utilise une police d'icônes, et à étendre ses fonctionnalités.
 
 ### Usage
 
-``` html
+```html
 <SvgIcon icon="home" />
 ```
 
@@ -17,18 +14,18 @@ Voir la [démo](#demo).
 
 #### Couleur
 
-La valeur par défaut est `currentColor`, qui signifie la valeur actuelle de la propriété` color`.
+La valeur par défaut est `currentColor`, qui signifie la valeur actuelle de la propriété`color`.
 
 La valeur peut être n'importe quelle couleur CSS valide, quelques exemples :
 
-- `#4edb4e`
-- `#000`
-- `white`
-- `rgba(0, 0, 0, .2)`
-- `rgb(144, 72, 219)`
-- `hsl(180, 67%, 57%)`
+-   `#4edb4e`
+-   `#000`
+-   `white`
+-   `rgba(0, 0, 0, .2)`
+-   `rgb(144, 72, 219)`
+-   `hsl(180, 67%, 57%)`
 
-``` html{3}
+```html{3}
 <SvgIcon
     icon="home"
     color="hsl(180, 67%, 57%)"
@@ -42,12 +39,12 @@ La taille par défaut d'une icône est `1.35em` (cette unité est relative à la
 
 Mots clés :
 
-- `small`: `1em`
-- `medium`: `1.5em`
-- `large`: `1.85em`
-- `x-large`: `2.25em`
+-   `small`: `1em`
+-   `medium`: `1.5em`
+-   `large`: `1.85em`
+-   `x-large`: `2.25em`
 
-``` html{3}
+```html{3}
 <SvgIcon
     icon="home"
     medium
@@ -56,7 +53,7 @@ Mots clés :
 
 Taille personnalisée :
 
-``` html{3}
+```html{3}
 <SvgIcon
     icon="home"
     size="100px"
@@ -67,7 +64,7 @@ Taille personnalisée :
 
 Une des fonctionnalités manquantes de `v-icon`, ce sont les icônes personnalisées, les voilà :
 
-``` html{2,3,4}
+```html{2,3,4}
 <SvgIcon>
     <svg viewBox="0 0 24 24">
         <path d="M4.6 2.8l9.2 9.2-9.2 9.2L7.4 24l12-12-12-12z" />
@@ -80,6 +77,7 @@ Nous vous recommandons une taille de 24 pixels et d'optimiser votre icône avec 
 :::
 
 ### Démo
+
 <br>
 <CodePen
 	id="oagJaV"
@@ -87,6 +85,7 @@ Nous vous recommandons une taille de 24 pixels et d'optimiser votre icône avec 
 />
 
 ### API
+
 <br>
 <CodePen
 	id="yRjRmr"

@@ -10,7 +10,7 @@ The directive `v-debounce` allows you to defer an `v-model` update on an `input`
 
 ### Usage
 
-``` html
+```html
 <input v-model.lazy="input" v-debounce="1000">
 ```
 
@@ -23,11 +23,11 @@ You can use the function `debounce` from `@/functions/debounce` in your scripts.
 #### Custom components
 
 The problem when using custom components as `input`, is that you cannot use the modifiers on `v-model`.
-To face this, you have to pass a callback to the directive and set the time with a modifier.`
+To face this, you have to pass a callback to the directive and set the time with a modifier.\`
 
 Example with `v-text-field` from Vuetify (see the demo for all the code):
 
-``` html
+```html
 <v-text-field
     :value="message"
     label="Type here"
@@ -37,6 +37,7 @@ Example with `v-text-field` from Vuetify (see the demo for all the code):
 ```
 
 ### Demo
+
 <br>
 <CodePen
 	id="GXegXL"

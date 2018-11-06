@@ -16,9 +16,9 @@ Before creating a new issue, [check if your bug hasn't alreaydy been reported](h
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
-* **Use a clear an descriptive title**
-* **Describe the exact steps which reproduce the problem**
-* **Provide specific examples to demonstrate the steps.** Include links to files or projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
+-   **Use a clear an descriptive title**
+-   **Describe the exact steps which reproduce the problem**
+-   **Provide specific examples to demonstrate the steps.** Include links to files or projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 
 ## Suggesting changes
 
@@ -42,13 +42,13 @@ It will show you the Playground, which is the file `App.vue`.
 
 For running tests:
 
-* unit
+-   unit
 
 ```bash
 yarn test:unit
 ```
 
-* e2e
+-   e2e
 
 ```bash
 yarn test:e2e
@@ -70,37 +70,37 @@ See [VuePress](https://vuepress.vuejs.org/guide/) for help.
 
 ### Git commit messages
 
-* Use English language
-* Use the present tense ("Add feature" not "Added feature")
-* Use the imperative mood ("Move cursor to…" not "Moves cursor to…")
-* Start the commit message with an applicable emoji from [Gitmoji](https://gitmoji.carloscuesta.me/)
+-   Use English language
+-   Use the present tense ("Add feature" not "Added feature")
+-   Use the imperative mood ("Move cursor to…" not "Moves cursor to…")
+-   Start the commit message with an applicable emoji from [Gitmoji](https://gitmoji.carloscuesta.me/)
 
 ### Vue
 
 The configuration is based on the [recommended configuration (Priority C)](https://vuejs.org/v2/style-guide/#Priority-C-Recommended), with the following changes:
 
-* **no-console**: allowed in `development`
-* **no-debugger**: allowed in `development`
-* **vue/html-indent**: `tab`
-* **indent**: `off`
-* **vue/no-spaces-around-equal-signs-in-attribute**: `true`
-* **semi**: `always`
-* **space-before-function-paren**: `never`
-* **vue/script-indent**: `tab`
-	* **baseIndent**: `1`
-	* **switchCase**: `1`
+-   **no-console**: allowed in `development`
+-   **no-debugger**: allowed in `development`
+-   **vue/html-indent**: `tab`
+-   **indent**: `off`
+-   **vue/no-spaces-around-equal-signs-in-attribute**: `true`
+-   **semi**: `always`
+-   **space-before-function-paren**: `never`
+-   **vue/script-indent**: `tab`
+    -   **baseIndent**: `1`
+    -   **switchCase**: `1`
 
 ### TypeScript
 
 The configuration is based on the [recommended configuration](https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts), with the following changes:
 
-* **quotemark**: `single`
-* **indent**: `tabs`
-* **interface-name**: `false`
-* **ordered-imports**: `false`
-* **object-literal-sort-keys**: `false`
-* **no-consecutive-blank-lines**: `false`
-* **semicolon**: `always`
-* **space-before-function-paren**: `never`
-* **trailing-comma**: `never`
-* **no-shadowed-variable**: `false`
+-   **quotemark**: `single`
+-   **indent**: `tabs`
+-   **interface-name**: `false`
+-   **ordered-imports**: `false`
+-   **object-literal-sort-keys**: `false`
+-   **no-consecutive-blank-lines**: `false`
+-   **semicolon**: `always`
+-   **space-before-function-paren**: `never`
+-   **trailing-comma**: `never`
+-   **no-shadowed-variable**: `false`

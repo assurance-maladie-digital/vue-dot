@@ -51,7 +51,7 @@
 
 ### Installer
 
-``` bash
+```bash
 yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 ```
 
@@ -71,10 +71,11 @@ new Vue({
 
 ### Et voilà ! 🎉
 
-``` bash
+```bash
 # lancer votre projet
 yarn serve # OU votre propre commande
 ```
+
 Cela va charger automatiquement tous les composants et les directives de la librairie et les rendre disponnibles globalement.
 
 ## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)

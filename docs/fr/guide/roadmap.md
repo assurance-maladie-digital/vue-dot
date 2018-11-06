@@ -4,11 +4,11 @@
 
 De nouveaux composants sont en développement :
 
-- `DatePicker`
-- `ListField`: affiche un tableau de clés/valeurs
-- `Address`
-- `FileUpload`
-- `DownloadFile`
+-   `DatePicker`
+-   `ListField`: affiche un tableau de clés/valeurs
+-   `Address`
+-   `FileUpload`
+-   `DownloadFile`
 
 ## Directives
 
@@ -20,8 +20,8 @@ Créer des thèmes (personnalisables) et exposer Vuetify via la librairie.
 
 ## 🛰️ Developer life
 
-- Guide de contribution
-- True deploy script (~~publication sur NPM~~, ~~publication de la documentation~~, publication Github, ~~commit~~ et ~~journal des modifications~~)
-- ~~Typages TypeScript~~
-- Utilisation du nouveau loader Vuetify a-la-carte
-- Couverture de test à 100%
+-   Guide de contribution
+-   True deploy script (~~publication sur NPM~~, ~~publication de la documentation~~, publication Github, ~~commit~~ et ~~journal des modifications~~)
+-   ~~Typages TypeScript~~
+-   Utilisation du nouveau loader Vuetify a-la-carte
+-   Couverture de test à 100%
