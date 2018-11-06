@@ -34,6 +34,13 @@
 		<img
 			src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"
 			alt="License"
+	<a
+		class="badge-align"
+		href="https://www.codacy.com/app/Deraw-/vue-dot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=assurance-maladie-digital/vue-dot&amp;utm_campaign=Badge_Grade"
+	>
+		<img
+			src="https://api.codacy.com/project/badge/Grade/3d671fb222b04201997aae91c49d510d"
+			alt="Badge Codacy"
 		>
 	</a>
 </p>
