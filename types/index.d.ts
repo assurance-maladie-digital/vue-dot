@@ -1,3 +1,17 @@
+import Vue, { Component, PluginFunction, PluginObject, VueConstructor, DirectiveFunction, DirectiveOptions } from 'vue';
+
+declare const VueDot: VueDot;
+
+export default VueDot;
+
+export interface VueDot {
+	install: PluginFunction<VueDotUseOptions>;
+}
+
+export interface VueDotUseOptions {
+	ameli: boolean;
+}
+
 declare module '@cnamts/vue-dot/src/directives/debounce' {
 	const debounce: {
 		inserted(el: HTMLInputElement, binding: any): void;
@@ -6,43 +20,9 @@ declare module '@cnamts/vue-dot/src/directives/debounce' {
 	export default debounce;
 }
 
-declare module '@cnamts/vue-dot/src/index' {
-	interface Options {
-		ameli: boolean;
-	}
-
-	const VueDot: {
-		install(Vue: any, options?: Options | undefined): void;
-	};
-
-	export default VueDot;
-}
-
 declare module '@cnamts/vue-dot/src/main' {
 	import '@babel/polyfill';
-
 }
-
-declare module '@cnamts/vue-dot/src/shims-tsx' {
-	import Vue, { VNode } from 'vue'; global {
-		namespace JSX {
-			// tslint:disable no-empty-interface
-			interface Element extends VNode {}
-			// tslint:disable no-empty-interface
-			interface ElementClass extends Vue {}
-			interface IntrinsicElements {
-				[elem: string]: any;
-			}
-		}
-	}
-}
-
-declare module '*.vue' {
-	import Vue from 'vue';
-	export default Vue;
-}
-
-declare module 'languages';
 
 declare module '@cnamts/vue-dot/src/helpers/ameliColors' {
 	const ameliColors: {
