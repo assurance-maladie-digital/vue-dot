@@ -1,6 +1,6 @@
 {
 	"name": "@cnamts/vue-dot",
-	"version": "1.4.0-beta.10",
+	"version": "1.4.0-beta.11",
 	"description": "Official CNAM component library",
 	"keywords": [
 		"vue",
@@ -20,7 +20,8 @@
 	"files": [
 		"dist/*",
 		"src/*",
-		"public/*"
+		"public/*",
+		"typings/*"
 	],
 	"main": "./dist/vue-dot.common.js",
 	"types": "./typings/vue-dot.d.ts",
