@@ -20,20 +20,22 @@
 	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
 		<img
 			src="https://img.shields.io/npm/v/@cnamts/vue-dot.svg?style=flat-square"
-			alt="NPM Version"
+			alt="Version NPM"
 		>
 	</a>
 	<a href="https://www.npmjs.com/package/@cnamts/vue-dot">
 		<img
 			src="https://img.shields.io/npm/dw/@cnamts/vue-dot.svg?style=flat-square"
-			alt="NPM Downloads"
+			alt="Téléchargements NPM"
 		>
 	</a>
 	<a
 		href="https://github.com/assurance-maladie-digital/vue-dot/blob/master/LICENSE">
 		<img
 			src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"
-			alt="License"
+			alt="Licence"
+		>
+	</a>
 	<a
 		class="badge-align"
 		href="https://www.codacy.com/app/Deraw-/vue-dot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=assurance-maladie-digital/vue-dot&amp;utm_campaign=Badge_Grade"
