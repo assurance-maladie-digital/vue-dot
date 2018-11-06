@@ -1,11 +1,10 @@
-* * *
-
+---
 home: true
 heroImage: /vue.js.svg
 actionText: Démarrer →
 actionLink: /fr/guide/
-
-## footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
+footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
+---
 
 <div class="features">
 	<div class="feature">
