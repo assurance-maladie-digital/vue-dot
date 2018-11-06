@@ -42,6 +42,8 @@ Translations: [Français](./gh-docs/fr/README.md)
 
 ## As Easy as 1, 2, 3
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8b96ede420914639a10a214daa45ba49)](https://app.codacy.com/app/Deraw-/vue-dot?utm_source=github.com&utm_medium=referral&utm_content=assurance-maladie-digital/vue-dot&utm_campaign=Badge_Grade_Settings)
+
 ### Install
 
 ``` bash
