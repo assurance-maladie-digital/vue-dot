@@ -64,6 +64,7 @@
     -   Update `v-debounce` to match new features
     -   FR translation for `SvgIcon`
     -   Add CHANGELOG link
+
 -   Fix deploy script.
 
 ## [v1.3.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.3.0...v1.3.1) (27-09-2018)
