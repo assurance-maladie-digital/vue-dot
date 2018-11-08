@@ -35,15 +35,15 @@
 - Suppression des polyfills
 
 
-### [v1.4.0-beta.11](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.10...v1.4.0-beta.11) (06-10-2018)
+### [v1.4.0-beta.11](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.10...v1.4.0-beta.11) (06-11-2018)
 
 -   Typage TS.
 
-### [v1.4.0-beta.10](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.9...v1.4.0-beta.10) (06-10-2018)
+### [v1.4.0-beta.10](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.9...v1.4.0-beta.10) (06-11-2018)
 
 -   Typage TS.
 
-### [v1.4.0-beta.9](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.8...v1.4.0-beta.9) (05-10-2018)
+### [v1.4.0-beta.9](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.8...v1.4.0-beta.9) (05-11-2018)
 
 -   Correction de la configuration TS.
 
