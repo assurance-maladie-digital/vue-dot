@@ -57,8 +57,14 @@
 			<p class="ma-0 result">Debounced text: {{ text }}</p>
 		</div>
 
-		<h2 class="my-3">Ameli</h2>
+		<h2 class="my-3">Ameli Pro</h2>
 		<div class="ml-3">
+			<h3 class="mb-3">Components</h3>
+			<h4>Buttons</h4>
+			<VDBtn>Success</VDBtn>
+			<VDBtn secondary>Secondary</VDBtn>
+			<VDBtn tertiary>Tertiary</VDBtn>
+
 			<h3 class="mb-3">Color theme</h3>
 			<ul v-if="colors">
 				<li
