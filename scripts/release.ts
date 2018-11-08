@@ -208,7 +208,7 @@ ${answers.changelog}
 		}));
 	};
 
-	prompt('en')
+	return prompt('en')
 	.then(() => prompt('fr'));
 }
 
@@ -270,9 +270,11 @@ promptForVersion()
 .then((version) => {
 	lint();
 	build();
-	changelog(version);
-	release(version);
-	publish();
-	// githubRelease(version);
-	deployDocs();
+	changelog(version)
+	.then(() => {
+		release(version);
+		publish();
+		// githubRelease(version);
+		deployDocs();
+	});
 });
