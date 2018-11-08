@@ -1,0 +1,35 @@
+{
+	"name": "ameli-pro",
+	"version": "0.0.1",
+	"config": {
+		"components": {
+			"DBtn": {
+				"default": {
+					"round": true,
+					"depressed": true,
+					"dark": true,
+					"color": "#0087cf",
+					"classes": [
+						"font-weight-regular"
+					]
+				},
+				"secondary": {
+					"outline": true
+				},
+				"tertiary": {
+					"round": false,
+					"small": true,
+					"flat": true,
+					"styles": {
+						"min-width": 0,
+						"height": "auto"
+					},
+					"classes": [
+						"px-2",
+						"py-1"
+					]
+				}
+			}
+		}
+	}
+}

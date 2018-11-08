@@ -5,3 +5,8 @@ declare module '*.vue' {
 
 declare module 'languages';
 declare module 'dayjs';
+
+declare module '*.json' {
+	const value: any;
+	export default value;
+}

@@ -4,7 +4,11 @@ import App from './App.vue';
 
 import VueDot from './';
 
+import * as theme from './theme.json';
+
 Vue.use(VueDot);
+
+Vue.prototype.$theme = theme.default;
 
 Vue.config.productionTip = false;
 
