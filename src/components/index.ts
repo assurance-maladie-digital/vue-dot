@@ -1,13 +1,16 @@
-import SvgIcon from './SvgIcon.vue';
-import LangBtn from './LangBtn.vue';
-import DatePicker from './DatePicker.vue';
+import DSvgIcon from './DSvgIcon.vue';
+import DLangBtn from './DLangBtn.vue';
+import DDatePicker from './DDatePicker.vue';
+
+import DBtn from './Vuetify/DBtn.vue';
 
 import { VueConstructor } from 'vue';
 
 const components: any = {
-	SvgIcon,
-	LangBtn,
-	DatePicker
+	DSvgIcon,
+	DLangBtn,
+	DDatePicker,
+	DBtn
 };
 
 export default (Vue: VueConstructor) => {

@@ -4,7 +4,7 @@
 		allow-overflow
 		offset-y
 	>
-		<v-btn
+		<DBtn
 			slot="activator"
 			:aria-label="`${label} ${languages[currentLangUsed].nativeName}`"
 
@@ -51,14 +51,14 @@
 				class="ml-2"
 				icon="expand"
 			/>
-		</v-btn>
+		</DBtn>
 		<v-list v-if="languages">
 			<v-list-tile
 				v-for="(item, lang, index) in languages"
 				:key="index"
 				avatar
 			>
-				<v-btn
+				<DBtn
 					flat
 					class="ma-0"
 					@click="changeLang(lang)"
@@ -72,7 +72,7 @@
 					</v-list-tile-avatar>
 
 					<v-list-tile-title>{{ item.nativeName }}</v-list-tile-title>
-				</v-btn>
+				</DBtn>
 			</v-list-tile>
 		</v-list>
 	</v-menu>
@@ -84,7 +84,7 @@
 	import languages from 'languages';
 
 	export default Vue.extend({
-		name: 'LangBtn',
+		name: 'DLangBtn',
 		props: {
 			// Shared
 			availableLanguages: {
@@ -122,7 +122,7 @@
 			},
 			activeClass: {
 				type: String,
-				default: 'v-btn--active'
+				default: 'DBtn--active'
 			},
 			append: {
 				type: Boolean,
@@ -277,7 +277,7 @@
 	}
 
 	.v-list {
-		.v-btn {
+		.DBtn {
 			width: 100%;
 			height: 100%;
 		}

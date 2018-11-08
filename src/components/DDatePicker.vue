@@ -40,7 +40,7 @@
 			:validate-on-blur="validateOnBlur"
 			:value="value"
 		>
-			<v-btn
+			<DBtn
 				v-if="!appendIcon"
 				icon
 				slot="prepend"
@@ -51,8 +51,8 @@
 					icon="calendar"
 					:color="appendIconColor"
 				/>
-			</v-btn>
-			<v-btn
+			</DBtn>
+			<DBtn
 				v-else-if="appendIcon && appendIconCb"
 				icon
 				slot="prepend"
@@ -63,7 +63,7 @@
 					:icon="appendIcon"
 					:color="appendIconColor"
 				/>
-			</v-btn>
+			</DBtn>
 			<SvgIcon
 				v-else
 				slot="prepend"
@@ -130,10 +130,10 @@
 
 	import * as dayjs from 'dayjs';
 
-	import SvgIcon from '@/components/SvgIcon.vue';
+	import SvgIcon from '@/components/DSvgIcon.vue';
 
 	export default Vue.extend({
-		name: 'DatePicker',
+		name: 'DDatePicker',
 		components: {
 			SvgIcon
 		},

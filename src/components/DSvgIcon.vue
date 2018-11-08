@@ -268,7 +268,7 @@
 				/>
 
 				<path
-					v-else-if="icon === 'buuble-speech'"
+					v-else-if="icon === 'bubble-speech'"
 					d="M21.6 0H2.4A2.4 2.4 0 0 0 0 2.4V24l4.8-4.8h16.8a2.4 2.4 0 0 0 2.4-2.4V2.4A2.4 2.4 0 0 0 21.6 0z"
 				/>
 
@@ -1280,7 +1280,7 @@
 	import Vue from 'vue';
 
 	export default Vue.extend({
-		name: 'SvgIcon',
+		name: 'DSvgIcon',
 		props: {
 			color: {
 				type: String,
