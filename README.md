@@ -8,7 +8,7 @@ Translations: [Français](./gh-docs/fr/README.md)
 	>
 		<img
 			width="280"
-			src="./docs/.vuepress/public/vue.js.svg"
+			src="https://firebasestorage.googleapis.com/v0/b/vue-dot.appspot.com/o/vue.js.svg?alt=media&token=8de281bf-97bf-4c1e-a07c-aa859450a7a3"
 			alt="VueDot"
 		>
 	</a>
