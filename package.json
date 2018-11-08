@@ -41,7 +41,12 @@
 		"docs:build": "vuepress build docs",
 		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"dayjs": "^1.7.7",
+		"languages": "^0.1.3",
+		"vue": "^2.5.17",
+		"vuetify": "^1.3.7"
+	},
 	"peerDependencies": {
 		"dayjs": "^1.7.7",
 		"languages": "^0.1.3",
