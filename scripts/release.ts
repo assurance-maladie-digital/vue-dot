@@ -183,13 +183,14 @@ function changelog(version: any) {
 
 	const prompt = (lang: string) => {
 		const link = `https://github.com/assurance-maladie-digital/vue-dot/compare/v${previousVersion}...v${version}`;
-		log(chalk.cyan(link));
+		const linkForDev = `https://github.com/assurance-maladie-digital/vue-dot/compare/v${tag === 'next' ? previousVersion : latest}...master`;
+		log(chalk.cyan(linkForDev));
 
-		return inquirer.prompt({
+		return Promise.resolve(inquirer.prompt({
 			type: 'editor',
 			name: 'changelog',
 			message: `Tell what changed in this version${lang === 'fr' ? ' in French ' : ''}:`,
-			default: lang === 'fr' ? '### Pas de changement spécifié.' : '### No changes specified.'
+			default: lang === 'fr' ? '### Pas de changements spécifiés.' : '### No changes specified.'
 		})
 		.then((answers: any) => {
 			const data =
@@ -204,7 +205,7 @@ ${answers.changelog}
 					log(error);
 				}
 			});
-		});
+		}));
 	};
 
 	prompt('en')
