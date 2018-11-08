@@ -1,3 +1,40 @@
+### [v1.4.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.11...v1.4.0) (08-11-2018)
+
+### New features
+
+-   Use Vue plugin architecture
+-   TypeScript typings
+-   Update Vuetify
+-   Add peer dependencies
+-   Update playground
+-   Add release script
+-   Refactoring of DatePicker (previously BirthDatepicker)
+-   Add more options to LangBtn
+-   Add more than 150 icons to SvgIcon
+-   Better internal typings
+-   True compilation to ES5
+
+### Documentation
+
+-   Add issue template (bug report & feature request)
+-   Complete changelog
+-   Add code of conduct
+-   Add contributing guide
+-   Fix license file
+-   Add badges to readme
+-   French translations
+-   PWA (service workers, icons, manifest)
+-   Fix typos and bad links
+-   Add CDN installation guide
+-   Global roadmap
+-   Add component API Codepen
+-   Add remark (Markdown lint)
+
+### Bug fixes
+
+-   Stop including polyfills
+
+
 ### [v1.4.0-beta.11](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.10...v1.4.0-beta.11) (06-10-2018)
 
 -   TS typings.
