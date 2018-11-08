@@ -2,7 +2,8 @@ export default function debounce(callback: (args: any) => void, time: number): (
 	let interval: any;
 	return () => {
 		clearTimeout(interval);
-		interval = setTimeout(() => {
+		// tslint:disable-next-line:only-arrow-functions
+		interval = setTimeout(function() {
 			interval = null;
 
 			callback(arguments);
