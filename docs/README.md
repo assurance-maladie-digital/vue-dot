@@ -31,11 +31,12 @@ yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 
 #### Load
 
-```ts{3,5}
+```ts{5,6}
 // main.ts
 import Vue from 'vue';
-import VueDot from '@cnamts/vue-dot';
+import './plugins/vuetify';
 
+import VueDot from '@cnamts/vue-dot';
 Vue.use(VueDot);
 
 new Vue({

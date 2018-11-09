@@ -4,6 +4,10 @@ This library is meant to help developers in their work with Vue, and will evolve
 
 ## Installation
 
+<br>
+
+You need to have Vuetify installed in order to use VueDot, see [Vuetify quick start](https://vuetifyjs.com/en/getting-started/quick-start) for help.
+
 ### Install
 
 ```bash
@@ -12,11 +16,12 @@ yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 
 ### Load
 
-```ts{3,5}
+```ts{5,6}
 // main.ts
 import Vue from 'vue';
-import VueDot from '@cnamts/vue-dot';
+import './plugins/vuetify';
 
+import VueDot from '@cnamts/vue-dot';
 Vue.use(VueDot);
 
 new Vue({
@@ -38,7 +43,7 @@ Load Vue, then Vuetify and finally VueDot:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@1.2.6/vuetify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@1.3.7/vuetify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@cnamts/vue-dot@1.4.0/dist/vue-dot.umd.min.js"></script>
 ```
 
@@ -52,16 +57,24 @@ It will load automatically all the components from Vuetify and VueDot.
 		<h3>Dylan Broussard</h3>
 		<p>Creator and main developer</p>
 	</li>
+	<li>
+		<img :src="$withBase('/user.svg')" alt="">
+		<h3>You, maybe?</h3>
+		<p>Don't hesitate and contact me if you want to integrate core team!</p>
+	</li>
 </ul>
 
 <style lang="scss" scoped>
 	li {
+		max-width: 250px;
 		list-style: none;
 	}
 
 	ul {
 		padding: 0;
+		display: flex;
 		margin-top: 30px;
+		justify-content: space-around;
 	}
 
 	li {
