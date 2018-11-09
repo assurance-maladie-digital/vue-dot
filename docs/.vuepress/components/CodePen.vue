@@ -8,7 +8,9 @@
 		allowtransparency="true"
 		allowfullscreen="true"
 		style="width: 100%;"
-	>See the Pen <a href="https://codepen.io/dylan-broussard/pen/${id}/">{{ title }}</a> by Dylan Broussard (<a href="https://codepen.io/dylan-broussard">@dylan-broussard</a>) on <a href="https://codepen.io">CodePen</a>.</iframe>
+	>
+		See the Pen <a href="https://codepen.io/dylan-broussard/pen/${id}/">{{ title }}</a> by Dylan Broussard (<a href="https://codepen.io/dylan-broussard">@dylan-broussard</a>) on <a href="https://codepen.io">CodePen</a>.
+	</iframe>
 </template>
 
 <script>

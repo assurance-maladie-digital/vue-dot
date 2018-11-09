@@ -94,7 +94,7 @@ module.exports = {
 		}
 	},
 	themeConfig: {
-		sidebarDepth: 2,
+		sidebarDepth: 1,
 		locales: {
 			'/': {
 				label: 'English',
