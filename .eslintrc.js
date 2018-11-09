@@ -20,7 +20,23 @@ module.exports = {
 			"baseIndent": 1,
 			"switchCase": 1,
 			"ignores": []
-		}]
+		}],
+		"vue/component-name-in-template-casing": [
+			"error",
+			"PascalCase",
+			{
+			  "ignores": [
+					"component",
+					"template",
+					"transition",
+					"transition-group",
+					"keep-alive",
+					"slot",
+					"router-view",
+					"router-link"
+				]
+			}
+		]
 	},
 	parserOptions: {
 		parser: 'typescript-eslint-parser'
