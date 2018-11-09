@@ -8,7 +8,7 @@
 			:key="index"
 			class="timeline-item"
 		>
-			<DSvgIcon
+			<XSvgIcon
 				:icon="statuses[item.status].icon"
 				color="#fff"
 				:class="`timeline-badge ${statuses[item.status].color}`"
@@ -25,7 +25,7 @@
 						<div class="timestamp">
 							<small class="text-muted">
 								{{ item.date }}
-								<DSvgIcon
+								<XSvgIcon
 									small
 									icon="calendar"
 								/>
@@ -45,7 +45,7 @@
 <script>
 	import Vue from 'vue';
 
-	import DSvgIcon from '../../../src/components/DSvgIcon.vue';
+	import XSvgIcon from '../../../src/components/SvgIcon.vue';
 
 	export default Vue.extend({
 		name: 'Timeline',
@@ -79,7 +79,7 @@
 			}
 		},
 		components: {
-			DSvgIcon
+			XSvgIcon
 		}
 	});
 </script>

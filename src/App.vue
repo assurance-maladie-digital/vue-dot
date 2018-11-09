@@ -5,7 +5,7 @@
 		<h2 class="mb-3">Components</h2>
 		<div class="ml-3">
 			<h3 class="mb-1">
-				<SvgIcon
+				<XSvgIcon
 					small
 					icon="heart"
 					class="mr-1"
@@ -16,9 +16,9 @@
 				id="yxRJOO"
 				title="SvgIcon"
 			/>
-			<v-divider class="my-3" />
+			<XDivider class="my-3" />
 			<h3 class="mb-3">DatePicker</h3>
-			<DatePicker
+			<XDatePicker
 				label="Date de naissance"
 				v-model="date"
 				birthdate
@@ -28,9 +28,9 @@
 				date-format-return="Le dddd D MMMM YYYY"
 			/>
 			<p class="ma-0 mt-2 result">Date: {{ date }}</p>
-			<v-divider class="my-3" />
+			<XDivider class="my-3" />
 			<h3 class="mb-3">LangBtn</h3>
-			<LangBtn
+			<XLangBtn
 				v-model="lang"
 				:available-languages="['en', 'fr']"
 			/>
@@ -61,9 +61,16 @@
 		<div class="ml-3">
 			<h3 class="mb-3">Components</h3>
 			<h4>Buttons</h4>
-			<VDBtn>Success</VDBtn>
-			<VDBtn secondary>Secondary</VDBtn>
-			<VDBtn tertiary>Tertiary</VDBtn>
+			<XBtn>Success</XBtn>
+			<XBtn secondary>Secondary</XBtn>
+			<XBtn tertiary>Tertiary</XBtn>
+
+			<XBreadcrumbs :items="items">
+				<template slot="item" slot-scope="props">
+					<a :href="props.item.href">{{ props.item.text.toUpperCase() }}</a>
+				</template>
+				<v-icon slot="divider">forward</v-icon>
+			</XBreadcrumbs>
 
 			<h3 class="mb-3">Color theme</h3>
 			<ul v-if="colors">
@@ -80,7 +87,7 @@
 							class="mt-2"
 						>
 							<span class="color-label">{{ index }}</span>
-							<SvgIcon
+							<XSvgIcon
 								:color="color"
 								class="color-square"
 							>
@@ -94,7 +101,7 @@
 										height="24"
 									/>
 								</svg>
-							</SvgIcon>
+							</XSvgIcon>
 							{{ color }}
 						</li>
 					</ul>
@@ -119,7 +126,24 @@
 				date: '14/09/1998',
 				text: '',
 				lang: 'en',
-				colors
+				colors,
+				items: [
+					{
+					text: 'Dashboard',
+					disabled: false,
+					href: 'breadcrumbs_dashboard'
+					},
+					{
+					text: 'Link 1',
+					disabled: false,
+					href: 'breadcrumbs_link_1'
+					},
+					{
+					text: 'Link 2',
+					disabled: true,
+					href: 'breadcrumbs_link_2'
+					}
+				]
 			};
 		},
 		methods: {

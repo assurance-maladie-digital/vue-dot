@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"config": {
 		"components": {
-			"DBtn": {
-				"default": {
+			"XBtn": {
+				"primary": {
 					"round": true,
 					"depressed": true,
 					"dark": true,

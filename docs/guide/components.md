@@ -7,7 +7,7 @@ The component `SvgIcon` is meant to replace the Vuetify `v-icon`, which uses a f
 ### Usage
 
 ```html
-<SvgIcon icon="home" />
+<XSvgIcon icon="home" />
 ```
 
 See [demo](#demo).
@@ -26,7 +26,7 @@ The value can be any valid CSS color, some examples:
 -   `hsl(180, 67%, 57%)`
 
 ```html{3}
-<SvgIcon
+<XSvgIcon
     icon="home"
     color="hsl(180, 67%, 57%)"
 />
@@ -45,7 +45,7 @@ Keywords:
 -   `x-large`: `2.25em`
 
 ```html{3}
-<SvgIcon
+<XSvgIcon
     icon="home"
     medium
 />
@@ -54,7 +54,7 @@ Keywords:
 Custom size:
 
 ```html{3}
-<SvgIcon
+<XSvgIcon
     icon="home"
     size="100px"
 />
@@ -65,7 +65,7 @@ Custom size:
 One missing functionality of `v-icon`, is custom icons, here there are:
 
 ```html{2,3,4}
-<SvgIcon>
+<XSvgIcon>
     <svg viewBox="0 0 24 24">
         <path d="M4.6 2.8l9.2 9.2-9.2 9.2L7.4 24l12-12-12-12z" />
     </svg>

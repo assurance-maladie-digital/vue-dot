@@ -1280,7 +1280,7 @@
 	import Vue from 'vue';
 
 	export default Vue.extend({
-		name: 'DSvgIcon',
+		name: 'XSvgIcon',
 		props: {
 			color: {
 				type: String,

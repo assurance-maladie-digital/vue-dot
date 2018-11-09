@@ -40,31 +40,31 @@
 			:validate-on-blur="validateOnBlur"
 			:value="value"
 		>
-			<DBtn
+			<XBtn
 				v-if="!appendIcon"
 				icon
 				slot="prepend"
 				@click="menu = true"
 				class="ma-0 activator-icon"
 			>
-				<SvgIcon
+				<XSvgIcon
 					icon="calendar"
 					:color="appendIconColor"
 				/>
-			</DBtn>
-			<DBtn
+			</XBtn>
+			<XBtn
 				v-else-if="appendIcon && appendIconCb"
 				icon
 				slot="prepend"
 				@click="appendIconCb"
 				class="ma-0 activator-icon"
 			>
-				<SvgIcon
+				<XSvgIcon
 					:icon="appendIcon"
 					:color="appendIconColor"
 				/>
-			</DBtn>
-			<SvgIcon
+			</XBtn>
+			<XSvgIcon
 				v-else
 				slot="prepend"
 				:icon="appendIcon"
@@ -130,10 +130,10 @@
 
 	import * as dayjs from 'dayjs';
 
-	import SvgIcon from '@/components/DSvgIcon.vue';
+	import SvgIcon from '@/components/SvgIcon.vue';
 
 	export default Vue.extend({
-		name: 'DDatePicker',
+		name: 'XDatePicker',
 		components: {
 			SvgIcon
 		},
