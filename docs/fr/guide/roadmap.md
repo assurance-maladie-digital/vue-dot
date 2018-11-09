@@ -36,4 +36,3 @@ VueDot est en cours de développement. Sur cette page, vous pouvez voir ce qui e
 		}
 	]"
 />
-

@@ -2,38 +2,37 @@
 
 ### Nouvelles fonctionnalités
 
-- Utilisation de l'architecture de plugin Vue
-- Typages typeScript
-- Mise à jour de Vuetify
-- Ajout des dépendances entre pairs
-- Mise à jour du terrain de jeu
-- Ajout d'un script de création de version
-- Refactoring de DatePicker (anciennement BirthDatepicker)
-- Ajout de plus d'options à LangBtn
-- Ajout de plus de 150 icônes à SvgIcon
-- Meilleurs typages internes
-- Véritable compilation vers ES5
+-   Utilisation de l'architecture de plugin Vue
+-   Typages typeScript
+-   Mise à jour de Vuetify
+-   Ajout des dépendances entre pairs
+-   Mise à jour du terrain de jeu
+-   Ajout d'un script de création de version
+-   Refactoring de DatePicker (anciennement BirthDatepicker)
+-   Ajout de plus d'options à LangBtn
+-   Ajout de plus de 150 icônes à SvgIcon
+-   Meilleurs typages internes
+-   Véritable compilation vers ES5
 
 ### Documentation
 
-- Ajout d'un modèle d'issue (rapport de bogue et demande de fonctionnalité)
-- Changelog complet
-- Ajout d'un code de conduite
-- Ajout d'un guide de contribution
-- Correction du fichier de licence
-- Ajout de badges au readme
-- Traductions françaises
-- PWA (service worker, icônes, manifeste)
-- Correction de fautes de frappe et de mauvais liens
-- Ajout d'un guide d'installation CDN
-- Roadmap globale
-- Ajout d'un composant API Codepen
-- Ajout de remark (lint de Markdown)
+-   Ajout d'un modèle d'issue (rapport de bogue et demande de fonctionnalité)
+-   Changelog complet
+-   Ajout d'un code de conduite
+-   Ajout d'un guide de contribution
+-   Correction du fichier de licence
+-   Ajout de badges au readme
+-   Traductions françaises
+-   PWA (service worker, icônes, manifeste)
+-   Correction de fautes de frappe et de mauvais liens
+-   Ajout d'un guide d'installation CDN
+-   Roadmap globale
+-   Ajout d'un composant API Codepen
+-   Ajout de remark (lint de Markdown)
 
 ### Corrections de bugs
 
-- Suppression des polyfills
-
+-   Suppression des polyfills
 
 ### [v1.4.0-beta.11](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.10...v1.4.0-beta.11) (06-11-2018)
 
