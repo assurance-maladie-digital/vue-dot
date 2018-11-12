@@ -12520,10 +12520,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-cli-plugin-vuetify@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/vue-cli-plugin-vuetify/-/vue-cli-plugin-vuetify-0.1.6.tgz#915a47c5d4f9d4fee44c826f5cf9e9596badb52d"
-  integrity sha512-PHiVGYLckWlqG78UN9YyrigEYZeCpu2toI4vPBPGOhcpfEvwRtwr5bEu0mR+/GDoTbJMTDDoIj0EP1hJKoqIcQ==
+vue-cli-plugin-vuetify@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-vuetify/-/vue-cli-plugin-vuetify-0.4.5.tgz#f85ee699fbff46131457a89220de95b8203f279a"
+  integrity sha512-OXeKzTZY2Fp6FX0XuF8TosjzO1eCNzbafWierS33/zzKMgWOTdVF4dj/CUDIW7fav/6brBxebsu6RD4rnSF9qg==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.0"
