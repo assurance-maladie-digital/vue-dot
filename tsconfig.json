@@ -36,6 +36,7 @@
 		"scripts/**/*.ts"
 	],
 	"exclude": [
-		"node_modules"
+		"node_modules",
+		"vue-cli-plugin-vue-dot-internal"
 	]
 }

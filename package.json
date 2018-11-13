@@ -55,7 +55,6 @@
 	},
 	"devDependencies": {
 		"@babel/polyfill": "^7.0.0-rc.4",
-		"@cnamts/vue-cli-plugin-vue-dot-internal": "./vue-cli-plugin-vue-dot-internal",
 		"@types/figlet": "^1.2.0",
 		"@types/inquirer": "^0.0.43",
 		"@types/jest": "^23.3.2",
@@ -160,5 +159,8 @@
 			"vue-cli-service lint",
 			"git add"
 		]
+	},
+	"vuePlugins": {
+		"ui": ["./vue-cli-plugin-vue-dot-internal/ui.js"]
 	}
 }
