@@ -1,6 +1,21 @@
 <template>
 	<v-app class="pa-5 white">
 		<h1 class="mb-3">VueDot</h1>
+		<XSvgIcon
+			x-large
+			icon="svg"
+		/>
+		 <XExpansionPanel>
+			<v-expansion-panel-content
+				v-for="(item, i) in 5"
+				:key="i"
+			>
+				<div slot="header">Item</div>
+				<v-card>
+					<v-card-text class="grey lighten-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
+				</v-card>
+			</v-expansion-panel-content>
+		</XExpansionPanel>
 		<h2 class="mb-3">Components</h2>
 		<div class="ml-3">
 			<h3 class="mb-1">
@@ -106,7 +121,7 @@
 					</ul>
 					<div
 						v-else
-						class="color-el"
+						class="color-el mt-2"
 					>
 						<XSvgIcon
 							:color="colorObj"

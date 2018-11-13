@@ -6,6 +6,7 @@ declare module '*.vue' {
 declare module 'languages';
 declare module 'dayjs';
 declare module 'deepmerge';
+declare module 'is-svg';
 
 declare module '*.json' {
 	const value: any;

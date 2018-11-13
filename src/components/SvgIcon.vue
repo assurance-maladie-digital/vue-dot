@@ -1272,12 +1272,22 @@
 					<path d="M20.4 2.4h-1.2V0h-2.4v2.4H7.2V0H4.8v2.4H3.6a2.39 2.39 0 0 0-2.39 2.4L1.2 21.6A2.4 2.4 0 0 0 3.6 24h16.8a2.4 2.4 0 0 0 2.4-2.4V4.8a2.4 2.4 0 0 0-2.4-2.4zm0 19.2H3.6V8.4h16.8z" />
 				</g>
 			</svg>
+
+			<!-- Custom icons from theme, only render if it's looks like svg -->
+			<div
+				v-for="iconTheme in $theme.config.icons"
+				:key="iconTheme.name"
+				v-html="iconTheme.svg"
+				v-if="icon === iconTheme.name && isSvg(iconTheme.svg)"
+			/>
 		</slot>
 	</span>
 </template>
 
 <script lang="ts">
 	import Vue from 'vue';
+
+	import isSvg from 'is-svg';
 
 	export default Vue.extend({
 		name: 'XSvgIcon',
@@ -1310,6 +1320,9 @@
 				type: Boolean,
 				default: false
 			}
+		},
+		methods: {
+			isSvg
 		}
 	});
 
