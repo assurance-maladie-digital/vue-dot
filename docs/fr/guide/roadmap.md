@@ -14,7 +14,7 @@ VueDot est en cours de développement. Sur cette page, vous pouvez voir ce qui e
 			status: 'pending',
 			date: 'Novembre 2018',
 			title: 'Version v1.5',
-			body: 'Ajout des __thèmes__ et __réduction de la taille de la bibliothèque__ pour pouvoir passer sous 200ko'
+			body: 'Ajout des __thèmes__ et __réduction de la taille de la bibliothèque__ pour pouvoir passer sous 200ko.'
 		},
 		{
 			status: 'next',
