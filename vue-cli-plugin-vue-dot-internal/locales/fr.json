@@ -1,0 +1,16 @@
+{
+	"org": {
+		"cnam": {
+			"vue-dot-internal": {
+				"tasks": {
+					"md-lint": "Lint MarkDown",
+					"vuepress-dev": "Compile et recharge à chaud pour le développement",
+					"vuepress-build": "Compile et minifie pour la production",
+					"release": "Créé une nouvelle version",
+					"build-bundle": "Compile le paquet",
+					"lint": "Vérifie le code pour trouver des erreurs"
+				}
+			}
+		}
+	}
+}
