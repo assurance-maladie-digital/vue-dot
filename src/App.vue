@@ -1,8 +1,6 @@
 <template>
 	<v-app class="pa-5 white">
 		<h1 class="mb-3">VueDot</h1>
-		<XBtn color="primary">Success</XBtn>
-		{{ this.$vuetify.theme }}
 		<h2 class="mb-3">Components</h2>
 		<div class="ml-3">
 			<h3 class="mb-1">
@@ -139,8 +137,6 @@
 
 	import CodePen from '../docs/.vuepress/components/CodePen.vue';
 
-	import { default as theme } from '@/theme.json';
-
 	export default Vue.extend({
 		name: 'App',
 		data() {
@@ -168,7 +164,7 @@
 			};
 		},
 		created() {
-			this.$vuetify.theme = theme.config.colors;
+			this.$vuetify.theme = this.$theme.config.colors;
 		},
 		methods: {
 			log(e: any) {
