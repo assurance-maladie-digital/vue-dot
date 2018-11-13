@@ -1,7 +1,8 @@
 <template>
 	<v-app class="pa-5 white">
 		<h1 class="mb-3">VueDot</h1>
-
+		<XBtn color="primary">Success</XBtn>
+		{{ this.$vuetify.theme }}
 		<h2 class="mb-3">Components</h2>
 		<div class="ml-3">
 			<h3 class="mb-1">
@@ -61,7 +62,7 @@
 		<div class="ml-3">
 			<h3 class="mb-3">Components</h3>
 			<h4>Buttons</h4>
-			<XBtn>Success</XBtn>
+			<XBtn primary>Success</XBtn>
 			<XBtn secondary>Secondary</XBtn>
 			<XBtn tertiary>Tertiary</XBtn>
 
@@ -73,14 +74,14 @@
 			</XBreadcrumbs>
 
 			<h3 class="mb-3">Color theme</h3>
-			<ul v-if="colors">
+			<ul>
 				<li
-					v-for="(colorObj, index) in colors"
+					v-for="(colorObj, index) in this.$vuetify.theme"
 					:key="index"
 					class="mt-4"
 				>
 					<h4>{{ index }}</h4>
-					<ul v-if="colorObj">
+					<ul v-if="colorObj && typeof colorObj === 'object'">
 						<li
 							v-for="(color, index) in colorObj"
 							:key="index"
@@ -105,6 +106,27 @@
 							{{ color }}
 						</li>
 					</ul>
+					<div
+						v-else
+						class="color-el"
+					>
+						<XSvgIcon
+							:color="colorObj"
+							class="color-square"
+						>
+							<svg
+								width="10"
+								height="10"
+								viewBox="0 0 24 24"
+							>
+								<rect
+									width="24"
+									height="24"
+								/>
+							</svg>
+						</XSvgIcon>
+						{{ colorObj }}
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -117,7 +139,7 @@
 
 	import CodePen from '../docs/.vuepress/components/CodePen.vue';
 
-	import colors from '@/helpers/ameliColors';
+	import { default as theme } from '@/theme.json';
 
 	export default Vue.extend({
 		name: 'App',
@@ -126,7 +148,6 @@
 				date: '14/09/1998',
 				text: '',
 				lang: 'en',
-				colors,
 				items: [
 					{
 					text: 'Dashboard',
@@ -145,6 +166,9 @@
 					}
 				]
 			};
+		},
+		created() {
+			this.$vuetify.theme = theme.config.colors;
 		},
 		methods: {
 			log(e: any) {
@@ -279,5 +303,9 @@
 	.color-label {
 		width: 100px;
 		display: inline-block;
+	}
+
+	.color-el {
+		padding-left: 24px;
 	}
 </style>
