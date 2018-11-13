@@ -1,6 +1,6 @@
 {
 	"name": "@cnamts/vue-cli-plugin-vue-dot-internal",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Plugin for the internal functioning of VueDot",
 	"keywords": [
 		"vue",
