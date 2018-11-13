@@ -71,6 +71,7 @@
 		"babel-core": "7.0.0-bridge.0",
 		"babel-plugin-transform-imports": "^1.5.1",
 		"clear": "^0.1.0",
+		"deepmerge": "^2.2.1",
 		"figlet": "^1.2.1",
 		"inquirer": "^6.2.0",
 		"lint-staged": "^7.2.2",
@@ -161,6 +162,8 @@
 		]
 	},
 	"vuePlugins": {
-		"ui": ["./vue-cli-plugin-vue-dot-internal/ui.js"]
+		"ui": [
+			"./vue-cli-plugin-vue-dot-internal/ui.js"
+		]
 	}
 }

@@ -81,9 +81,11 @@
 					]
 				},
 				"secondary": {
+					"extends": "primary",
 					"outline": true
 				},
 				"tertiary": {
+					"extends": "primary",
 					"round": false,
 					"small": true,
 					"flat": true,

@@ -3,6 +3,7 @@
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
+		@click="$emit('click', $event)"
 	>
 		<slot
 			v-for="slot in Object.keys($slots)"
@@ -15,30 +16,42 @@
 <script lang="ts">
 	import Vue from 'vue';
 
+	import merge from 'deepmerge';
+
+	const name = 'XBtn';
+
+	import propsGenerator from '@/generators/props';
+	const propsObj = propsGenerator(name);
+
 	export default Vue.extend({
-		name: 'XBtn',
+		name,
 		computed: {
-			merged(): object {
-				const attrs = this.$attrs;
-				const theme = this.$theme.config.components.XBtn.default;
+			merged(this: any): object {
+				const componentTheme = this.$theme.config.components[name];
 
-				const secondary = this.secondary ? this.$theme.config.components.XBtn.secondary : {};
-				const tertiary = this.tertiary ? this.$theme.config.components.XBtn.tertiary : {};
+				// Load the 'default' theme & other attributes
+				let merged = {...componentTheme.default, ...this.$attrs};
 
-				const merged = {...attrs, ...theme, ...secondary, ...tertiary};
+				// Load per-prop theme
+				Object.keys(componentTheme).map((prop: any) => {
+					if (prop !== 'default') {
+						let extend = {};
+
+						// If the custom prop depends on another one
+						if (this[prop] && componentTheme[prop].extends) {
+							extend = componentTheme[componentTheme[prop].extends];
+						}
+
+						const propTheme = this[prop] ? componentTheme[prop] : {};
+						merged = merge.all([merged, extend, propTheme]);
+					}
+				});
 
 				return merged;
 			}
 		},
 		props: {
-			secondary: {
-				type: Boolean,
-				default: false
-			},
-			tertiary: {
-				type: Boolean,
-				default: false
-			}
+			...propsObj
 		}
 	});
 </script>
