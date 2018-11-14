@@ -37,16 +37,14 @@
 			<v-toolbar-title>Application</v-toolbar-title>
 
 			<v-spacer />
-			<v-toolbar-item>
-				<v-btn
-					@click="dark = !dark"
-					:color="dark ? 'white' : 'primary darken-3'"
-					:light="dark"
-				>
-					<span v-if="!dark">Dark mode</span>
-					<span v-else>Light mode</span>
-				</v-btn>
-			</v-toolbar-item>
+			<v-btn
+				@click="dark = !dark"
+				:color="dark ? 'white' : 'primary darken-3'"
+				:light="dark"
+			>
+				<span v-if="!dark">Dark mode</span>
+				<span v-else>Light mode</span>
+			</v-btn>
 		</v-toolbar>
 
 		<v-content>
@@ -695,6 +693,201 @@
 									</v-speed-dial>
 								</v-scale-transition>
 							</v-layout>
+
+							<v-divider class="mt-5" />
+
+							<h2 class="font-weight-bold headline primary--text mt-5">Cards</h2>
+							<p class="mt-2">The v-card component is a versatile component that can be used for anything from a panel to a static image. The card component has numerous helper components to make markup as easy as possible.</p>
+
+							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<v-layout
+								align-center
+								class="custom-layout mt-1"
+								wrap
+							>
+								<v-switch
+									v-model="card.flat"
+									label="Flat"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="card.hover"
+									label="Hover"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="card.raised"
+									label="Raised"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="card.ripple"
+									label="Ripple"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="card.tile"
+									label="Tile"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="card.image"
+									label="Image"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-slider
+									v-model="card.width"
+									:min="200"
+									:max="1000"
+									label="Width"
+									thumb-label
+									color="primary"
+									hide-details
+								/>
+							</v-layout>
+
+							<v-layout
+								align-center
+								class="custom-layout mt-3"
+								wrap
+							>
+								<v-card
+									:flat="card.flat"
+									:hover="card.hover"
+									:raised="card.raised"
+									:ripple="card.ripple"
+									:tile="card.tile"
+									:width="card.width"
+								>
+									<v-scale-transition>
+										<v-img
+											src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+											aspect-ratio="2.75"
+											v-if="card.image"
+										/>
+									</v-scale-transition>
+
+									<v-card-title primary-title>
+										<div>
+											<h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+											<div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, etc.</div>
+										</div>
+									</v-card-title>
+
+									<v-card-actions>
+										<v-btn
+											flat
+											color="primary"
+										>Share</v-btn>
+										<v-btn
+											flat
+											color="primary"
+										>Explore</v-btn>
+									</v-card-actions>
+								</v-card>
+							</v-layout>
+
+							<v-divider class="mt-5" />
+
+							<h2 class="font-weight-bold headline primary--text mt-5">Carousels</h2>
+							<p class="mt-2">The carousel component is used to display large numbers of visual content on a rotating timer.</p>
+
+							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<v-layout
+								align-center
+								class="custom-layout mt-1"
+								wrap
+							>
+								<v-switch
+									v-model="carousel.cycle"
+									label="Cycle"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="carousel.hideControls"
+									label="Hide controls"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="carousel.reverse"
+									label="Reverse"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="carousel.vertical"
+									label="Vertical"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-slider
+									v-model="carousel.height"
+									:min="200"
+									:max="1000"
+									label="Height"
+									thumb-label
+									color="primary"
+									hide-details
+								/>
+
+								<v-switch
+									v-model="carousel.hideDelimiters"
+									label="Hide delimiters"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+							</v-layout>
+
+							<v-layout
+								align-center
+								class="custom-layout mt-1"
+								wrap
+							>
+								<v-carousel
+									:cycle="carousel.cycle"
+									:hide-controls="carousel.hideControls"
+									:hide-delimiters="carousel.hideDelimiters"
+									:reverse="carousel.reverse"
+									:vertical="carousel.vertical"
+									:interval="carousel.interval"
+									:height="carousel.height"
+								>
+									<v-carousel-item
+										v-for="(item, i) in carousel.items"
+										:key="i"
+										:src="item.src"
+									/>
+								</v-carousel>
+							</v-layout>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -874,6 +1067,38 @@
 						'top-left',
 						'top-right',
 					]
+				},
+				card: {
+					flat: false,
+					hover: false,
+					raised: false,
+					ripple: false,
+					tile: false,
+					width: 550,
+					image: true
+				},
+				carousel: {
+					items: [
+						{
+							src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
+						},
+						{
+							src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
+						},
+						{
+							src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
+						},
+						{
+							src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+						}
+					],
+					cycle: true,
+					hideControls: false,
+					hideDelimiters: false,
+					interval: '6000',
+					reverse: false,
+					vertical: false,
+					height: '500'
 				}
 			};
 		},
