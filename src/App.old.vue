@@ -178,37 +178,6 @@
 				]
 			};
 		},
-		created() {
-			this.$vuetify.theme = this.$theme.config.colors;
-
-			let style = ``;
-
-			// todo validate tags for only typo ones (hx, p, span, i, b, a, abbr, small, mark...
-			// todo ...blockquote, time, sup, sub, stong, code, bdb, pre, q, ins, del, cite)
-			// todo ... and classes (.xxx)
-			// CSS from tags in theme
-			Object.keys(this.$theme.config.typography.tags).map((className: any) => {
-				const classBody = this.$theme.config.typography.tags[className];
-
-				let bodyLines = ``;
-
-				Object.keys(classBody).map((cssPropName: any) => {
-					bodyLines += `${cssPropName}: ${classBody[cssPropName]};`;
-				});
-
-
-				const cssCSS = `
-	${className} {
-		${bodyLines}
-	}
-`;
-				style += cssCSS;
-			});
-
-			const sheet = document.createElement('style');
-			sheet.innerHTML = style;
-			document.body.appendChild(sheet);
-		},
 		methods: {
 			log(e: any) {
 				// tslint:disable no-console

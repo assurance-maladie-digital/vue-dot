@@ -3,6 +3,7 @@ import Vue, { VueConstructor } from 'vue';
 declare global {
 	interface Window {
 		Vue: VueConstructor;
+		VueDotInit: boolean;
 	}
 }
 
