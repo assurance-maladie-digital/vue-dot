@@ -1116,8 +1116,6 @@
 			}
 		},
 		created() {
-			this.$vuetify.theme = this.$theme.config.colors;
-
 			setTimeout(() => this.alert.value = true, 200);
 		}
 	});

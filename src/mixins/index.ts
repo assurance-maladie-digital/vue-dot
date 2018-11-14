@@ -1,9 +1,11 @@
 import typography from './typography';
+import theme from './theme';
 
 import { VueConstructor } from 'vue';
 
 const mixins: any = {
-	typography
+	typography,
+	theme
 };
 
 export default (Vue: VueConstructor) => {

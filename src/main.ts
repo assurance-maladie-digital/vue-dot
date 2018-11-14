@@ -1,9 +1,6 @@
 import '@babel/polyfill';
 import Vue from 'vue';
 
-import { default as theme } from './theme.json';
-Vue.prototype.$theme = theme;
-
 import Playground from './Playground.vue';
 
 import Vuetify from 'vuetify';

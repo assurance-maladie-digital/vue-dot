@@ -1,6 +1,4 @@
 import Vue from 'vue';
-// TODO: to move out
-// this.$vuetify.theme = this.$theme.config.colors;
 
 const allowedTags = [
 	'h1',
