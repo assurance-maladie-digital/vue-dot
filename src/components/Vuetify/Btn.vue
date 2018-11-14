@@ -15,10 +15,9 @@
 
 <script lang="ts">
 	import Vue from 'vue';
+	const name = 'XBtn';
 
 	import merge from 'deepmerge';
-
-	const name = 'XBtn';
 
 	import propsGenerator from '@/generators/props';
 	const propsObj = propsGenerator(name);
