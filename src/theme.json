@@ -2,6 +2,25 @@
 	"name": "ameli-pro",
 	"version": "0.0.1",
 	"config": {
+		"typography": {
+			"tags": {
+				"h1": {
+					"font-family": "OSP-DIN",
+					"font-size": "2.5rem",
+					"color": "#01b9f5"
+				},
+				"h2": {
+					"font-familiy": "Open sans semi bold",
+					"font-size": "1.13rem",
+					"color": "#333"
+				},
+				".class-i": {
+					"font-familiy": "Open sans semi bold",
+					"font-size": "1.13rem",
+					"color": "#333"
+				}
+			}
+		},
 		"colors": {
 			"primary": "#1976d2",
 			"secondary": "#424242",
@@ -103,6 +122,13 @@
 						"px-2",
 						"py-1"
 					]
+				}
+			},
+			"XExpansionPanel": {
+				"default": {
+					"styles": {
+
+					}
 				}
 			}
 		}

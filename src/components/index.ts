@@ -5,6 +5,7 @@ import XDatePicker from './DatePicker.vue';
 import XBtn from './Vuetify/Btn.vue';
 import XBreadcrumbs from './Vuetify/Breadcrumbs.vue';
 import XDivider from './Vuetify/Divider.vue';
+import XExpansionPanel from './Vuetify/ExpansionPanel.vue';
 
 import { VueConstructor } from 'vue';
 
@@ -14,7 +15,8 @@ const components: any = {
 	XDatePicker,
 	XBtn,
 	XBreadcrumbs,
-	XDivider
+	XDivider,
+	XExpansionPanel
 };
 
 export default (Vue: VueConstructor) => {
