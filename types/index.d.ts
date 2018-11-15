@@ -9,7 +9,7 @@ export interface VueDot {
 }
 
 export interface VueDotUseOptions {
-	ameli: boolean;
+	theme: object;
 }
 
 declare module '@cnamts/vue-dot/src/directives/debounce' {
