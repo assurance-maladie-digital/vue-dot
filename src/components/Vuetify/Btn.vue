@@ -19,9 +19,6 @@
 
 	import merge from 'deepmerge';
 
-	import propsGenerator from '@/generators/props';
-	const propsObj = propsGenerator(name);
-
 	export default Vue.extend({
 		name,
 		computed: {
@@ -41,16 +38,13 @@
 							extend = componentTheme[componentTheme[prop].extends];
 						}
 
-						const propTheme = this[prop] ? componentTheme[prop] : {};
+						const propTheme = prop in this.$attrs ? componentTheme[prop] : {};
 						merged = merge.all([merged, extend, propTheme]);
 					}
 				});
 
 				return merged;
 			}
-		},
-		props: {
-			...propsObj
 		}
 	});
 </script>
