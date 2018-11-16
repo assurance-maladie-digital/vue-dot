@@ -40,7 +40,9 @@ const typography = {
 
 			// CSS from tags in theme
 			Object.keys(tags).map((currentTag: any) => {
-				if (allowedTags.includes(currentTag)) {
+				const isClass = currentTag.match(/^\.[a-z- ]+$/gm);
+
+				if (allowedTags.includes(currentTag) || isClass) {
 					const classBody = tags[currentTag];
 
 					let bodyLines = ``;
