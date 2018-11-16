@@ -26,7 +26,7 @@
 				const componentTheme = this.$theme.config.components[name];
 
 				// Load the 'default' theme & other attributes
-				let merged = {...componentTheme.default, ...this.$attrs};
+				let merged = {...componentTheme.default};
 
 				// Load per-prop theme
 				Object.keys(componentTheme).map((prop: any) => {
@@ -34,12 +34,12 @@
 						let extend = {};
 
 						// If the custom prop depends on another one
-						if (this[prop] && componentTheme[prop].extends) {
+						if (prop in this.$attrs && componentTheme[prop].extends) {
 							extend = componentTheme[componentTheme[prop].extends];
 						}
 
 						const propTheme = prop in this.$attrs ? componentTheme[prop] : {};
-						merged = merge.all([merged, extend, propTheme]);
+						merged = merge.all([merged, extend, propTheme, ...this.$attrs]);
 					}
 				});
 
