@@ -21,10 +21,10 @@
 		"dist/*",
 		"src/*",
 		"public/*",
-		"typings/*"
+		"types/*"
 	],
 	"main": "./dist/vue-dot.common.js",
-	"types": "./typings/vue-dot.d.ts",
+	"types": "./types/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/assurance-maladie-digital/vue-dot"
