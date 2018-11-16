@@ -6,6 +6,7 @@ import XBtn from './Vuetify/Btn.vue';
 import XBreadcrumbs from './Vuetify/Breadcrumbs.vue';
 import XDivider from './Vuetify/Divider.vue';
 import XExpansionPanel from './Vuetify/ExpansionPanel.vue';
+import XSwitch from './Vuetify/Switch.vue';
 
 import { VueConstructor } from 'vue';
 
@@ -16,7 +17,8 @@ const components: any = {
 	XBtn,
 	XBreadcrumbs,
 	XDivider,
-	XExpansionPanel
+	XExpansionPanel,
+	XSwitch
 };
 
 export default (Vue: VueConstructor) => {
