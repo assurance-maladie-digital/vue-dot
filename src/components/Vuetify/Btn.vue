@@ -17,34 +17,15 @@
 	import Vue from 'vue';
 	const name = 'XBtn';
 
-	import merge from 'deepmerge';
+	import merge from '@/mixins/merge';
 
 	export default Vue.extend({
 		name,
-		computed: {
-			merged(this: any): object {
-				const componentTheme = this.$theme.config.components[name];
-
-				// Load the 'default' theme & other attributes
-				let merged = {...componentTheme.default};
-
-				// Load per-prop theme
-				Object.keys(componentTheme).map((prop: any) => {
-					if (prop !== 'default') {
-						let extend = {};
-
-						// If the custom prop depends on another one
-						if (prop in this.$attrs && componentTheme[prop].extends) {
-							extend = componentTheme[componentTheme[prop].extends];
-						}
-
-						const propTheme = prop in this.$attrs ? componentTheme[prop] : {};
-						merged = merge.all([merged, extend, propTheme, ...this.$attrs]);
-					}
-				});
-
-				return merged;
-			}
-		}
+		data() {
+			return {
+				name
+			};
+		},
+		mixins: [merge]
 	});
 </script>

@@ -37,14 +37,15 @@
 			<v-toolbar-title>Application</v-toolbar-title>
 
 			<v-spacer />
-			<v-btn
+			<XBtn
+				primary
 				@click="dark = !dark"
-				:color="dark ? 'white' : 'primary darken-3'"
+				:color="dark ? 'white' : 'primary darken-2'"
 				:light="dark"
 			>
 				<span v-if="!dark">Dark mode</span>
 				<span v-else>Light mode</span>
-			</v-btn>
+			</XBtn>
 		</v-toolbar>
 
 		<v-content>
@@ -72,42 +73,49 @@
 						</v-alert>
 
 						<div class="px-4 py-3 pb-5 mb-5">
-							<h2 class="font-weight-bold headline primary--text">Alerts</h2>
+							<h2 class="accent--text">Alerts</h2>
 							<p class="mt-2">The alert component is used to convey important information to the user. It comes in 4 variations, success, info, warning and error. These have default icons assigned which can be changed and represent different actions.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
 								class="custom-layout mt-2"
 								wrap
 							>
-								<v-btn
-									outline
-									color="primary"
+								<XBtn
+									secondary
 									@click="alert.value = !alert.value"
 									class="ma-0"
+									:color="alert.value ? 'warning' : 'blue'"
 								>
-									Toggle
-								</v-btn>
+									{{ alert.value ? 'Close' : 'Toggle' }}
+								</XBtn>
 
-								<v-select
-									color="primary"
-									:items="alert.items"
-									label="Type"
-									v-model="alert.type"
+								<v-layout
 									class="alert-el ml-4"
-									hide-details
-								/>
+									align-center
+								>
+									<p class="mb-0 mr-2">Type:</p>
+									<v-select
+										color="primary"
+										:items="alert.items"
+										label="Type"
+										v-model="alert.type"
+										hide-details
+										single-line
+										class="font-weight-medium"
+									/>
+								</v-layout>
 
-								<v-switch
+								<XSwitch
 									label="Dismissible"
-									color="primary"
+									color="blueGreen"
 									v-model="alert.dismissible"
 									hide-details
 									class="alert-el ml-4"
 								/>
 
-								<v-switch
+								<XSwitch
 									label="Outline"
 									color="primary"
 									v-model="alert.outline"
@@ -115,25 +123,33 @@
 									class="alert-el ml-4"
 								/>
 
-								<v-select
-									color="primary"
-									:items="alert.transition.items"
-									label="Transition"
-									v-model="alert.transition.value"
+								<v-layout
 									class="alert-el ml-4"
-									hide-details
-								/>
+									align-center
+									:style="{ width: '320px' }"
+								>
+									<p class="mb-0 mr-2">Transition:</p>
+									<v-select
+										color="primary"
+										:items="alert.transition.items"
+										label="Transition"
+										v-model="alert.transition.value"
+										hide-details
+										single-line
+										class="font-weight-medium"
+									/>
+								</v-layout>
 							</v-layout>
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Avatars</h2>
+							<h2 class="accent--text mt-5">Avatars</h2>
 							<p class="mt-2">The avatar component is used to control the size and border radius of responsive images, typically used to show profile pictures.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
 								<v-slider
@@ -146,16 +162,23 @@
 									hide-details
 								/>
 
-								<v-select
-									color="primary"
-									:items="avatar.items"
-									label="Mode"
-									v-model="avatar.mode"
+								<v-layout
 									class="alert-el ml-4"
-									hide-details
-								/>
+									align-center
+								>
+									<p class="mb-0 mr-2">Mode:</p>
+									<v-select
+										color="primary"
+										:items="avatar.items"
+										label="Mode"
+										v-model="avatar.mode"
+										hide-details
+										single-line
+										class="font-weight-medium"
+									/>
+								</v-layout>
 
-								<v-switch
+								<XSwitch
 									v-model="avatar.tile"
 									label="Tile"
 									color="primary"
@@ -166,7 +189,7 @@
 
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-3"
 								wrap
 							>
 								<v-flex
@@ -199,32 +222,40 @@
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Badges</h2>
+							<h2 class="accent--text mt-5">Badges</h2>
 							<p class="mt-2">The badge component can wrap any type of content to highlight information to a user or to just draw attention to a specific element.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
-								<v-btn
-									outline
-									color="primary"
+								<XBtn
+									secondary
 									@click="badge.value = !badge.value"
 									class="ma-0"
+									:color="badge.value ? 'warning' : 'blue'"
 								>
-									Toggle
-								</v-btn>
+									{{ badge.value ? 'Close' : 'Toggle' }}
+								</XBtn>
 
-								<v-select
-									color="primary"
-									:items="badge.items"
-									label="Position"
-									v-model="badge.position"
+								<v-layout
 									class="alert-el ml-4"
-									hide-details
-								/>
+									align-center
+									:style="{ width: '200px' }"
+								>
+									<p class="mb-0 mr-2">Position:</p>
+									<v-select
+										color="primary"
+										:items="badge.items"
+										label="Position"
+										v-model="badge.position"
+										single-line
+										class="font-weight-medium"
+										hide-details
+									/>
+								</v-layout>
 
 								<v-text-field
 									v-model="badge.icon"
@@ -234,7 +265,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="badge.overlap"
 									label="Overlap"
 									color="primary"
@@ -274,25 +305,25 @@
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Bottom navs</h2>
+							<h2 class="accent--text mt-5">Bottom navs</h2>
 							<p class="mt-2">The bottom-nav is an alternative to the sidebar. It is primarily used on mobile and comes in two variants, icons and text, and shift.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
-								<v-btn
-									outline
-									color="primary"
+								<XBtn
+									secondary
 									@click="bottomNav.value = !bottomNav.value"
 									class="ma-0"
+									:color="bottomNav.value ? 'warning' : 'blue'"
 								>
-									Toggle
-								</v-btn>
+									{{ bottomNav.value ? 'Close' : 'Toggle' }}
+								</XBtn>
 
-								<v-switch
+								<XSwitch
 									v-model="bottomNav.monochrome"
 									label="Monochrome"
 									color="primary"
@@ -300,7 +331,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="bottomNav.shift"
 									label="Shift"
 									color="primary"
@@ -315,37 +346,37 @@
 									fixed
 									:shift="bottomNav.shift"
 								>
-									<v-btn dark>
+									<XBtn dark>
 										<span>Video</span>
 										<v-icon>ondemand_video</v-icon>
-									</v-btn>
+									</XBtn>
 
-									<v-btn dark>
+									<XBtn dark>
 										<span>Music</span>
 										<v-icon>music_note</v-icon>
-									</v-btn>
+									</XBtn>
 
-									<v-btn dark>
+									<XBtn dark>
 										<span>Book</span>
 										<v-icon>book</v-icon>
-									</v-btn>
+									</XBtn>
 
-									<v-btn dark>
+									<XBtn dark>
 										<span>Image</span>
 										<v-icon>image</v-icon>
-									</v-btn>
+									</XBtn>
 								</v-bottom-nav>
 							</v-layout>
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Bottom sheets</h2>
+							<h2 class="accent--text mt-5">Bottom sheets</h2>
 							<p class="mt-2">The bottom sheet is a modified dialog that slides from the bottom of the screen, similar to a bottom-nav. Whereas a bottom navigation component is for buttons and specific application level actions, a bottom sheet can contain anything.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
 								<v-bottom-sheet
@@ -354,14 +385,14 @@
 									:inset="bottomSheet.inset"
 									:persistent="bottomSheet.persistent"
 								>
-									<v-btn
-										outline
-										color="primary"
+									<XBtn
+										secondary
 										slot="activator"
 										class="ma-0"
+										:color="bottomSheet.value ? 'warning' : 'blue'"
 									>
-										Toggle
-									</v-btn>
+										{{ bottomSheet.value ? 'Close' : 'Toggle' }}
+									</XBtn>
 
 									<v-list>
 										<v-subheader>Open in</v-subheader>
@@ -388,7 +419,7 @@
 									</v-list>
 								</v-bottom-sheet>
 
-								<v-switch
+								<XSwitch
 									v-model="bottomSheet.hideOverlay"
 									label="Hide overlay"
 									color="primary"
@@ -396,7 +427,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="bottomSheet.inset"
 									label="Inset"
 									color="primary"
@@ -404,7 +435,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="bottomSheet.persistent"
 									label="Persistent"
 									color="primary"
@@ -415,13 +446,13 @@
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Breadcrumbs</h2>
+							<h2 class="accent--text mt-5">Breadcrumbs</h2>
 							<p class="mt-2">The breadcrumbs component is a navigational helper for pages. It can accept a Material Icons icon or text characters as a divider. An array of objects can be passed to the items property of the component. Additionally, a scoped slot exists for more control of the breadcrumbs, either utilizing breadcrumbs-item or other custom markup.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
 								<v-text-field
@@ -433,7 +464,7 @@
 									:style="{ maxWidth: '60px' }"
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="breadcrumbs.large"
 									label="Large"
 									color="primary"
@@ -456,16 +487,16 @@
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Buttons</h2>
+							<h2 class="accent--text mt-5">Buttons</h2>
 							<p class="mt-2">The btn component replaces the standard html button with a material design theme and a multitude of options. Any color helper class can be used to alter the background or text color.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
-								<v-switch
+								<XSwitch
 									v-model="button.block"
 									label="Block"
 									color="primary"
@@ -473,7 +504,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.depressed"
 									label="Depressed"
 									color="primary"
@@ -481,7 +512,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.disabled"
 									label="Disabled"
 									color="primary"
@@ -489,7 +520,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.fab"
 									label="Fab"
 									color="primary"
@@ -497,7 +528,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.flat"
 									label="Flat"
 									color="primary"
@@ -505,7 +536,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.icon"
 									label="Icon"
 									color="primary"
@@ -513,7 +544,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.large"
 									label="Large"
 									color="primary"
@@ -521,7 +552,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.loading"
 									label="Loading"
 									color="primary"
@@ -529,7 +560,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.outline"
 									label="Outline"
 									color="primary"
@@ -537,7 +568,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.ripple"
 									label="Ripple"
 									color="primary"
@@ -545,7 +576,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.round"
 									label="Round"
 									color="primary"
@@ -553,7 +584,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="button.small"
 									label="Small"
 									color="primary"
@@ -562,14 +593,13 @@
 								/>
 							</v-layout>
 
-
 							<v-layout
 								align-center
 								class="mt-3"
 								wrap
 							>
-								<v-btn
-									color="success"
+								<XBtn
+									primary
 									:block="button.block"
 									:depressed="button.depressed"
 									:disabled="button.disabled"
@@ -586,35 +616,35 @@
 									<span v-if="!button.fab && !button.icon">Success</span>
 
 									<v-icon v-else>home</v-icon>
-								</v-btn>
+								</XBtn>
 							</v-layout>
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Buttons: Floating Action Button</h2>
+							<h2 class="accent--text mt-5">Buttons: Floating Action Button</h2>
 							<p class="mt-2">The btn component can be used as a Floating action button. This provides an application a main point of action. Combined with the speed-dial component, you can create a diverse set of functions available for your users.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
-								<v-btn
-									outline
-									color="primary"
+								<XBtn
+									secondary
 									class="ma-0"
 									@click="fab.value = !fab.value"
+									:color="fab.value ? 'warning' : 'blue'"
 								>
-									Toggle
-								</v-btn>
+									{{ fab.value ? 'Close' : 'Toggle' }}
+								</XBtn>
 
 								<v-select
 									color="primary"
 									:items="fab.items"
 									label="Type"
 									v-model="fab.direction"
-									class="alert-el ml-4"
+									class="alert-el ml-4 font-weight-medium"
 									hide-details
 								/>
 
@@ -623,7 +653,7 @@
 									:items="fab.transition.items"
 									label="Transition"
 									v-model="fab.transition.value"
-									class="alert-el ml-4"
+									class="alert-el ml-4 font-weight-medium"
 									hide-details
 								/>
 
@@ -632,11 +662,11 @@
 									:items="fab.positionItems"
 									label="Position"
 									v-model="fab.position"
-									class="alert-el ml-4"
+									class="alert-el ml-4 font-weight-medium"
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="fab.hover"
 									label="Open on hover"
 									color="primary"
@@ -656,7 +686,7 @@
 										:transition="fab.transition.value"
 										v-if="fab.value"
 									>
-										<v-btn
+										<XBtn
 											slot="activator"
 											v-model="fab.fab"
 											color="blue darken-2"
@@ -665,47 +695,47 @@
 										>
 											<v-icon>account_circle</v-icon>
 											<v-icon>close</v-icon>
-										</v-btn>
-										<v-btn
+										</XBtn>
+										<XBtn
 											fab
 											dark
 											small
 											color="green"
 										>
 											<v-icon>edit</v-icon>
-										</v-btn>
-										<v-btn
+										</XBtn>
+										<XBtn
 											fab
 											dark
 											small
 											color="indigo"
 										>
 											<v-icon>add</v-icon>
-										</v-btn>
-										<v-btn
+										</XBtn>
+										<XBtn
 											fab
 											dark
 											small
 											color="red"
 										>
 											<v-icon>delete</v-icon>
-										</v-btn>
+										</XBtn>
 									</v-speed-dial>
 								</v-scale-transition>
 							</v-layout>
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Cards</h2>
+							<h2 class="accent--text mt-5">Cards</h2>
 							<p class="mt-2">The v-card component is a versatile component that can be used for anything from a panel to a static image. The card component has numerous helper components to make markup as easy as possible.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
-								<v-switch
+								<XSwitch
 									v-model="card.flat"
 									label="Flat"
 									color="primary"
@@ -713,7 +743,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="card.hover"
 									label="Hover"
 									color="primary"
@@ -721,7 +751,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="card.raised"
 									label="Raised"
 									color="primary"
@@ -729,7 +759,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="card.ripple"
 									label="Ripple"
 									color="primary"
@@ -737,7 +767,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="card.tile"
 									label="Tile"
 									color="primary"
@@ -745,7 +775,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="card.image"
 									label="Image"
 									color="primary"
@@ -793,30 +823,28 @@
 									</v-card-title>
 
 									<v-card-actions>
-										<v-btn
-											flat
-											color="primary"
-										>Share</v-btn>
-										<v-btn
-											flat
-											color="primary"
-										>Explore</v-btn>
+										<XBtn
+											primary
+										>Share</XBtn>
+										<XBtn
+											secondary
+										>Explore</XBtn>
 									</v-card-actions>
 								</v-card>
 							</v-layout>
 
 							<v-divider class="mt-5" />
 
-							<h2 class="font-weight-bold headline primary--text mt-5">Carousels</h2>
+							<h2 class="accent--text mt-5">Carousels</h2>
 							<p class="mt-2">The carousel component is used to display large numbers of visual content on a rotating timer.</p>
 
-							<h3 class="subheading font-weight-bold primary--text mt-4">Settings</h3>
+							<h3 class="mt-4">Settings</h3>
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-2"
 								wrap
 							>
-								<v-switch
+								<XSwitch
 									v-model="carousel.cycle"
 									label="Cycle"
 									color="primary"
@@ -824,7 +852,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="carousel.hideControls"
 									label="Hide controls"
 									color="primary"
@@ -832,7 +860,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="carousel.reverse"
 									label="Reverse"
 									color="primary"
@@ -840,7 +868,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="carousel.vertical"
 									label="Vertical"
 									color="primary"
@@ -858,7 +886,7 @@
 									hide-details
 								/>
 
-								<v-switch
+								<XSwitch
 									v-model="carousel.hideDelimiters"
 									label="Hide delimiters"
 									color="primary"
@@ -869,7 +897,7 @@
 
 							<v-layout
 								align-center
-								class="custom-layout mt-1"
+								class="custom-layout mt-4"
 								wrap
 							>
 								<v-carousel
@@ -888,6 +916,151 @@
 									/>
 								</v-carousel>
 							</v-layout>
+
+							<v-divider class="mt-5" />
+
+							<h2 class="accent--text mt-5">Chips</h2>
+							<p class="mt-2">The chip component is used to convey small pieces of information. Using the close property, the chip becomes interactive, allowing user interaction.</p>
+
+							<h3 class="mt-4">Settings</h3>
+							<v-layout
+								align-center
+								class="custom-layout mt-2"
+								wrap
+							>
+								<v-text-field
+									v-model="chip.color"
+									label="Color"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<v-text-field
+									v-model="chip.textColor"
+									label="Text color"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.close"
+									label="Close"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.disabled"
+									label="Disabled"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.label"
+									label="Label"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.outline"
+									label="Outline"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.selected"
+									label="Selected"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.small"
+									label="Small"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.icon"
+									label="Icon"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+
+								<XSwitch
+									v-model="chip.avatar"
+									label="Avatar"
+									color="primary"
+									class="alert-el ml-4"
+									hide-details
+								/>
+							</v-layout>
+
+							<v-layout
+								align-center
+								class="custom-layout mt-3"
+								wrap
+							>
+								<v-chip
+									:close="chip.close"
+									:color="chip.color"
+									:text-color="chip.textColor"
+									:disabled="chip.disabled"
+									:label="chip.label"
+									:outline="chip.outline"
+									:selected="chip.selected"
+									:small="chip.small"
+								>
+									<v-avatar
+										class="primary"
+										v-if="chip.avatar"
+									>A</v-avatar>
+									Example Chip
+									<v-icon
+										right
+										v-if="chip.icon"
+									>star</v-icon>
+								</v-chip>
+							</v-layout>
+
+							<v-divider class="mt-5" />
+
+							<h2 class="accent--text mt-5">Custom - Typography</h2>
+							<v-layout
+								justify-start
+								align-baseline
+								class="custom-layout mt-3"
+								column
+							>
+								<h1>H1 Title</h1>
+								<h2>H2 Title</h2>
+								<h3>H3 Title</h3>
+								<h4>H4 Title</h4>
+								<h5>H5 Title</h5>
+
+								<a
+									href="#"
+									class="mt-3"
+								>Link</a>
+
+								<p class="mt-3 mb-1">Paragraph</p>
+								<p class="font-weight-medium mb-1">Semi-bold paragraph</p>
+								<p class="font-weight-bold mb-1">Bold paragraph</p>
+								<p class="nota mb-1">Nota paragraph</p>
+							</v-layout>
 						</div>
 					</v-flex>
 				</v-layout>
@@ -898,7 +1071,8 @@
 			class="px-3"
 			app
 		>
-			<span class="white--text">&copy; 2018</span>
+			<v-spacer />
+			<span class="white--text">v{{ pkg.version }} &copy; Dylan Broussard – 2018</span>
 		</v-footer>
 	</v-app>
 </template>
@@ -906,6 +1080,8 @@
 <script lang="ts">
 	// This is a playground, it is not tested because it isn't a part of the library
 	import Vue from 'vue';
+
+	import { default as pkg } from '../package.json';
 
 	export default Vue.extend({
 		name: 'XPlayground',
@@ -1019,7 +1195,7 @@
 				},
 				button: {
 					block: false,
-					depressed: false,
+					depressed: true,
 					disabled: false,
 					fab: false,
 					flat: false,
@@ -1027,8 +1203,8 @@
 					large: false,
 					loading: false,
 					outline: false,
-					ripple: true,
-					round: false,
+					ripple: false,
+					round: true,
 					small: false
 				},
 				fab: {
@@ -1099,7 +1275,20 @@
 					reverse: false,
 					vertical: false,
 					height: '500'
-				}
+				},
+				chip: {
+					close: false,
+					color: 'accent',
+					textColor: 'white',
+					disabled: false,
+					label: false,
+					outline: false,
+					selected: false,
+					small: false,
+					icon: false,
+					avatar: true
+				},
+				pkg
 			};
 		},
 		computed: {
@@ -1120,6 +1309,20 @@
 		}
 	});
 </script>
+
+<style>
+	@font-face {
+		font-family: 'OSP-DIN';
+		src: url('~#/assets/fonts/osp-din-webfont.woff') format('woff'),
+			 url('~#/assets/fonts/osp-din-webfont.ttf') format('ttf');
+		font-weight: 400;
+	}
+
+	html,
+	body {
+		font-size: 100% !important;
+	}
+</style>
 
 <style lang="scss" scoped>
 	.flex-ctn {
@@ -1143,5 +1346,54 @@
 
 	.custom-layout > * {
 		flex: none;
+	}
+
+	/deep/ .v-input--switch__thumb {
+		box-shadow: none !important;
+	}
+
+	/deep/ .v-input--switch.v-input--is-label-active {
+		.v-input--switch__track {
+			color: #d1eaff !important;
+		}
+
+		.v-input--switch__thumb {
+			color: #0092a8 !important;
+		}
+	}
+
+	/deep/ .v-input--switch:not(.v-input--is-label-active) {
+		.v-input--switch__track {
+			color: #ccc !important;
+		}
+
+		.v-input--switch__thumb {
+			color: #808080 !important;
+		}
+	}
+
+	.v-toolbar {
+		box-shadow: none;
+	}
+
+	.v-text-field {
+		padding-top: 0;
+
+		/deep/ .v-input__slot {
+			padding: 0 5px;
+			background: #fff;
+			border-radius: 5px;
+			border: 1px solid #bdbdbd;
+
+			&::before,
+			&::after {
+				content: none !important;
+			}
+		}
+	}
+
+	/deep/ .v-menu__content {
+		box-shadow: none;
+		border: 1px solid #bdbdbd;
 	}
 </style>

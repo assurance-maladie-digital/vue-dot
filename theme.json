@@ -4,26 +4,70 @@
 	"config": {
 		"typography": {
 			"tags": {
+				".application" : {
+					"font-family": "'Open Sans', sans-serif",
+					"line-height": "1.5"
+				},
 				"h1": {
-					"font-family": "OSP-DIN",
+					"font-family": "OSP-DIN, sans-serif",
 					"font-size": "2.5rem",
+					"font-weight": "400",
+					"text-transform": "uppercase",
 					"color": "#01b9f5"
 				},
 				"h2": {
-					"font-familiy": "Open sans semi bold",
+					"font-family": "'Open Sans', sans-serif",
 					"font-size": "1.13rem",
-					"color": "#333"
+					"color": "#333",
+					"font-weight": "600"
+				},
+				"h3": {
+					"font-family": "'Open Sans', sans-serif",
+					"font-size": "0.94rem",
+					"color": "#333",
+					"font-weight": "600"
+				},
+				"h4": {
+					"font-family": "'Open Sans', sans-serif",
+					"font-size": "0.88rem",
+					"color": "#333",
+					"font-weight": "600"
+				},
+				"h5": {
+					"font-family": "'Open Sans', sans-serif",
+					"font-size": "0.81rem",
+					"color": "#333",
+					"font-weight": "600"
+				},
+				"a": {
+					"font-family": "'Open Sans', sans-serif",
+					"font-size": "0.81rem",
+					"color": "#005da8",
+					"font-weight": "400",
+					"text-decoration": "none"
+				},
+				"p": {
+					"font-family": "'Open Sans', sans-serif",
+					"font-size": "0.81rem",
+					"color": "#333",
+					"font-weight": "400"
+				},
+				".font-weight-medium": {
+					"font-weight": "600 !important"
+				},
+				".nota": {
+					"font-size": "0.69rem"
 				}
 			}
 		},
 		"colors": {
-			"primary": "#1976d2",
+			"primary": "#084870",
 			"secondary": "#424242",
-			"accent": "#82b1ff",
-			"error": "#ff5252",
-			"info": "#2196f3",
+			"accent": "#01b9f5",
+			"error": "#941900",
+			"info": "#1cb0ba",
 			"success": "#4caf50",
-			"warning": "#ffc107",
+			"warning": "#b35a00",
 			"shades": {
 				"base": "#808080",
 				"darken1": "#333",
@@ -119,11 +163,9 @@
 					]
 				}
 			},
-			"XExpansionPanel": {
+			"XSwitch": {
 				"default": {
-					"styles": {
-
-					}
+					"ripple": false
 				}
 			}
 		}
