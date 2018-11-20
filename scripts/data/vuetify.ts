@@ -215,14 +215,14 @@ const components: any = {
 			event: undefined
 		}
 	},
-	VDatePicker: {
-		slots: false,
-		scopedSlots: false,
-		model: {
-			value: true,
-			event: 'input'
-		}
-	},
+	// VDatePicker: {
+	// 	slots: false,
+	// 	scopedSlots: false,
+	// 	model: {
+	// 		value: true,
+	// 		event: 'input'
+	// 	}
+	// },
 	VDatePickerTitle: {
 		slots: false,
 		scopedSlots: false,
