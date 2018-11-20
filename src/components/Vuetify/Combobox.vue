@@ -9,8 +9,10 @@
 		@change="$emit('change', $event)"
 		v-model="localValue"
 	>
+		<slot name="default" />
 		<slot
 			v-for="slot in Object.keys($slots)"
+			v-if="slot !== 'default'"
 			:name="slot"
 			:slot="slot"
 		/>
@@ -49,7 +51,7 @@
 		},
 		props: {
 			value: {
-				type: [String, Boolean],
+				type: [String, Boolean, Number],
 				default: undefined
 			}
 		}

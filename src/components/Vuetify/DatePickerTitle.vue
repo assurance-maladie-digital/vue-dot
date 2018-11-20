@@ -6,7 +6,8 @@
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-	/>
+	>
+		<slot name="default" /></VDatePickerTitle>
 </template>
 
 <script lang="ts">

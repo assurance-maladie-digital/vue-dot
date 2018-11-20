@@ -6,7 +6,8 @@
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-	/>
+	>
+		<slot name="default" /></VSpacer>
 </template>
 
 <script lang="ts">

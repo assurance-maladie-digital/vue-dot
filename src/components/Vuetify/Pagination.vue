@@ -8,7 +8,8 @@
 		:style="merged.styles"
 		@change="$emit('change', $event)"
 		v-model="localValue"
-	/>
+	>
+		<slot name="default" /></VPagination>
 </template>
 
 <script lang="ts">
@@ -32,7 +33,7 @@
 		},
 		props: {
 			value: {
-				type: [String, Boolean],
+				type: [String, Boolean, Number],
 				default: undefined
 			}
 		}

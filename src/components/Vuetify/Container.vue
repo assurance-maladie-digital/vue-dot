@@ -7,12 +7,7 @@
 		:class="merged.classes"
 		:style="merged.styles"
 	>
-		<slot
-			v-for="slot in Object.keys($slots)"
-			:name="slot"
-			:slot="slot"
-		/>
-	</VContainer>
+		<slot name="default" /></VContainer>
 </template>
 
 <script lang="ts">

@@ -6,7 +6,8 @@
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-	/>
+	>
+		<slot name="default" /></VScrollYReverseTransition>
 </template>
 
 <script lang="ts">

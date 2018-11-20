@@ -6,11 +6,11 @@
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@change="$emit('change', $event)"
-		v-model="localValue"
 	>
+		<slot name="default" />
 		<slot
 			v-for="slot in Object.keys($slots)"
+			v-if="slot !== 'default'"
 			:name="slot"
 			:slot="slot"
 		/>
@@ -38,20 +38,9 @@
 		name,
 		data() {
 			return {
-				name,
-				localValue: this.value
+				name
 			};
 		},
-		mixins: [merge],
-		model: {
-			prop: 'value',
-			event: 'change'
-		},
-		props: {
-			value: {
-				type: [String, Boolean],
-				default: undefined
-			}
-		}
+		mixins: [merge]
 	});
 </script>
