@@ -1,10 +1,13 @@
 import Vue from 'vue';
-
 import mergeFn from 'deepmerge';
+
+interface VueMerge extends Vue {
+	name: string;
+}
 
 const merge = {
 	computed: {
-		merged(this: any): object {
+		merged(this: VueMerge): object {
 			// Don't do anything without $theme
 			if (this.$theme) {
 				const componentTheme = this.$theme.config.components[this.name] || {};
@@ -15,7 +18,7 @@ const merge = {
 
 				if (componentTheme) {
 					// Load per-prop theme
-					Object.keys(componentTheme).map((prop: any) => {
+					Object.keys(componentTheme).map((prop: string) => {
 						if (prop !== 'default') {
 							let extend = {};
 
@@ -27,7 +30,7 @@ const merge = {
 							const propTheme = prop in this.$attrs ? componentTheme[prop] : {};
 
 							// Merge defaults, extended, prop and manually applied themes
-							merged = mergeFn.all([merged, extend, propTheme, ...this.$attrs]);
+							merged = mergeFn.all([merged, extend, propTheme, this.$attrs]);
 						}
 					});
 				}
