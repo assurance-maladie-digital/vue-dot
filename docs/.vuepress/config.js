@@ -105,6 +105,10 @@ module.exports = {
 						link: '/guide/'
 					},
 					{
+						text: 'Newsletter',
+						link: 'https://www.getrevue.co/profile/vue-dot'
+					},
+					{
 						text: 'NPM',
 						link: 'https://www.npmjs.com/package/@cnamts/vue-dot'
 					},
@@ -119,6 +123,19 @@ module.exports = {
 					{
 						text: 'Vue.js',
 						link: 'https://vuejs.org/'
+					},
+					{
+						text: 'Version',
+						items: [
+							{
+								text: 'Lastest (v1.4.0)',
+								link: '/'
+							},
+							{
+								text: 'Next',
+								link: '/next/'
+							}
+						]
 					}
 				],
 				sidebar: {
@@ -145,6 +162,10 @@ module.exports = {
 						link: '/fr/guide/'
 					},
 					{
+						text: 'Newsletter',
+						link: 'https://www.getrevue.co/profile/vue-dot'
+					},
+					{
 						text: 'NPM',
 						link: 'https://www.npmjs.com/package/@cnamts/vue-dot'
 					},
@@ -159,6 +180,19 @@ module.exports = {
 					{
 						text: 'Vue.js',
 						link: 'https://vuejs.org/'
+					},
+					{
+						text: 'Version',
+						items: [
+							{
+								text: 'Dernière (v1.4.0)',
+								link: '/fr/'
+							},
+							{
+								text: 'Prochaine',
+								link: '/next/fr/'
+							}
+						]
 					}
 				],
 				sidebar: {
