@@ -1,5 +1,5 @@
 <template>
-	<VApp :dark="dark">
+	<XApp :dark="dark">
 		<XNavigationDrawer
 			v-model="drawer"
 			fixed
@@ -62,7 +62,7 @@
 						class="flex-ctn pb-5 mb-5"
 					>
 						<XAlert
-							v-model="alert.value"
+							:value="alert.value"
 							:dismissible="alert.dismissible"
 							:type="alert.type"
 							:outline="alert.outline"
@@ -1074,7 +1074,7 @@
 			<XSpacer />
 			<span class="white--text">v{{ pkg.version }} &copy; Dylan Broussard – 2018</span>
 		</XFooter>
-	</VApp>
+	</XApp>
 </template>
 
 <script lang="ts">

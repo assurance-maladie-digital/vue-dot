@@ -7,10 +7,11 @@ const merge = {
 		merged(this: any): object {
 			// Don't do anything without $theme
 			if (this.$theme) {
-				const componentTheme = this.$theme.config.components[this.name];
+				const componentTheme = this.$theme.config.components[this.name] || {};
 
 				// Load the 'default' theme (if any)
-				let merged = componentTheme && componentTheme.default ? {...componentTheme.default} : {};
+				let merged = componentTheme && componentTheme.default ?
+				{...componentTheme.default, ...this.$attrs} : {...this.$attrs};
 
 				if (componentTheme) {
 					// Load per-prop theme
