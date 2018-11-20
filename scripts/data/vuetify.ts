@@ -11,8 +11,8 @@ const components: any = {
 		slots: true,
 		scopedSlots: true,
 		model: {
-			value: true,
-			event: 'input'
+			value: false,
+			event: undefined
 		}
 	},
 	VAutocomplete: {
@@ -312,7 +312,7 @@ const components: any = {
 		}
 	},
 	VContainer: {
-		slots: true,
+		slots: false,
 		scopedSlots: false,
 		model: {
 			value: false,

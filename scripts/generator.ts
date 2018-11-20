@@ -40,6 +40,7 @@ Object.keys(components).map((componentName: any) => {
 		`
 		<slot
 			v-for="slot in Object.keys($slots)"
+			v-if="slot !== 'default'"
 			:name="slot"
 			:slot="slot"
 		/>
@@ -74,12 +75,10 @@ Object.keys(components).map((componentName: any) => {
 		},
 		props: {
 			value: {
-				type: [String, Boolean],
+				type: [String, Boolean, Number],
 				default: undefined
 			}
 		}` : '';
-
-		const content = slot || scopedSlot;
 
 		const template =
 `// AUTO GENERATED FILE, DO NOT EDIT
@@ -90,7 +89,8 @@ Object.keys(components).map((componentName: any) => {
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"${modelBind}
-	${content ? '' : '/'}>${slot}${scopedSlot}${content ? '</' + componentName + '>' : ''}
+	>
+		<slot name="default" />${slot}${scopedSlot}</${componentName}>
 </template>
 
 <script lang="ts">
