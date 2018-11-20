@@ -73,11 +73,13 @@ Cela va charger automatiquement tous les composants de Vuetify et VueDot.
 	ul {
 		padding: 0;
 		display: flex;
+		flex-wrap: wrap;
 		margin-top: 30px;
 		justify-content: space-around;
 	}
 
 	li {
+		padding: 5px;
 		text-align: center;
 	}
 
