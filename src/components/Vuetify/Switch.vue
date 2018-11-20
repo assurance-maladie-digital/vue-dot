@@ -1,5 +1,8 @@
+// AUTO GENERATED FILE, DO NOT EDIT
+
 <template>
 	<VSwitch
+		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
@@ -18,49 +21,24 @@
 	import Vue from 'vue';
 	const name = 'XSwitch';
 
-	import merge from 'deepmerge';
+	import merge from '@/mixins/merge';
 
 	export default Vue.extend({
 		name,
 		data() {
 			return {
+				name,
 				localValue: this.value
 			};
 		},
-		computed: {
-			merged(this: any): object {
-				const componentTheme = this.$theme.config.components[name];
-
-				// Load the 'default' theme & other attributes
-				let merged = componentTheme ? {...componentTheme.default, ...this.$attrs} : {...this.$attrs};
-
-				if (componentTheme) {
-					// Load per-prop theme
-					Object.keys(componentTheme).map((prop: any) => {
-						if (prop !== 'default') {
-							let extend = {};
-
-							// If the custom prop depends on another one
-							if (this[prop] && componentTheme[prop].extends) {
-								extend = componentTheme[componentTheme[prop].extends];
-							}
-
-							const propTheme = prop in this.$attrs ? componentTheme[prop] : {};
-							merged = merge.all([merged, extend, propTheme]);
-						}
-					});
-				}
-
-				return merged;
-			}
-		},
+		mixins: [merge],
 		model: {
 			prop: 'value',
 			event: 'change'
 		},
 		props: {
 			value: {
-				type: Boolean,
+				type: [String, Boolean],
 				default: undefined
 			}
 		}

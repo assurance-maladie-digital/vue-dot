@@ -1,21 +1,33 @@
+// AUTO GENERATED FILE, DO NOT EDIT
+
 <template>
-	<div>
-		<VExpansionPanel
-			v-bind="$attrs"
-		>
-			<slot
-				v-for="slot in Object.keys($slots)"
-				:name="slot"
-				:slot="slot"
-			/>
-		</VExpansionPanel>
-	</div>
+	<VExpansionPanel
+		v-on="$listeners"
+		v-bind="merged"
+		:class="merged.classes"
+		:style="merged.styles"
+	>
+		<slot
+			v-for="slot in Object.keys($slots)"
+			:name="slot"
+			:slot="slot"
+		/>
+	</VExpansionPanel>
 </template>
 
 <script lang="ts">
 	import Vue from 'vue';
+	const name = 'XExpansionPanel';
+
+	import merge from '@/mixins/merge';
 
 	export default Vue.extend({
-		name: 'XExpansionPanel'
+		name,
+		data() {
+			return {
+				name
+			};
+		},
+		mixins: [merge]
 	});
 </script>

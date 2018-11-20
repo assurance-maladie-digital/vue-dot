@@ -1,21 +1,33 @@
+// AUTO GENERATED FILE, DO NOT EDIT
+
 <template>
-	<div>
-		<VFooter
-			v-bind="$attrs"
-		>
-			<slot
-				v-for="slot in Object.keys($slots)"
-				:name="slot"
-				:slot="slot"
-			/>
-		</VFooter>
-	</div>
+	<VFooter
+		v-on="$listeners"
+		v-bind="merged"
+		:class="merged.classes"
+		:style="merged.styles"
+	>
+		<slot
+			v-for="slot in Object.keys($slots)"
+			:name="slot"
+			:slot="slot"
+		/>
+	</VFooter>
 </template>
 
 <script lang="ts">
 	import Vue from 'vue';
+	const name = 'XFooter';
+
+	import merge from '@/mixins/merge';
 
 	export default Vue.extend({
-		name: 'XFooter'
+		name,
+		data() {
+			return {
+				name
+			};
+		},
+		mixins: [merge]
 	});
 </script>

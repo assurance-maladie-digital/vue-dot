@@ -1,9 +1,11 @@
+// AUTO GENERATED FILE, DO NOT EDIT
+
 <template>
 	<VBtn
+		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@click="$emit('click', $event)"
 	>
 		<slot
 			v-for="slot in Object.keys($slots)"
