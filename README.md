@@ -82,8 +82,6 @@ It automatically load all components and directives of the library and made them
 
 ## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)
 
-See [documentation](https://assurance-maladie-digital.github.io/vue-dot/).
-
 ## License
 
 VueDot is licensed under a [MIT  License](./LICENSE).

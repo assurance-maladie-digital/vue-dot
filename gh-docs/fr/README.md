@@ -80,8 +80,6 @@ Cela va charger automatiquement tous les composants et les directives de la libr
 
 ## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)
 
-Voir la [documentation](https://assurance-maladie-digital.github.io/vue-dot/).
-
 ## License
 
 VueDot est sous [licence MIT](./LICENSE).
