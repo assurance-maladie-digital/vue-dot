@@ -17,7 +17,8 @@ import writeFile from './helper/writeFile';
 log(chalk.white.bold(`✨  Generate Vuetify components wrappers`));
 process.stdout.write('\n');
 
-const dist = 'custom-dist';
+process.chdir('./src/components');
+const dist = 'Vuetify';
 
 import * as fs from 'fs';
 import * as path from 'path';
@@ -58,7 +59,8 @@ Object.keys(components).map((componentName: any) => {
 	` : '';
 
 		const modelBind = component.model.value ?
-		`@change="$emit('change', $event)"
+		`
+		@change="$emit('change', $event)"
 		v-model="localValue"` : '';
 
 		const modelData = component.model.value ? `,
@@ -83,10 +85,10 @@ Object.keys(components).map((componentName: any) => {
 
 <template>
 	<${componentName}
+		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
-		:style="merged.styles"
-		${modelBind}
+		:style="merged.styles"${modelBind}
 	${content ? '' : '/'}>${slot}${scopedSlot}${content ? '</' + componentName + '>' : ''}
 </template>
 
@@ -108,7 +110,7 @@ Object.keys(components).map((componentName: any) => {
 </script>
 `;
 
-		writeFile(template, `custom-dist/${name}.vue`);
+		writeFile(template, `${dist}/${name}.vue`);
 	} else {
 		xLog(`Name '${componentName}' is invalid`, 'error');
 	}
