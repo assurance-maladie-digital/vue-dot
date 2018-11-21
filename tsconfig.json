@@ -35,7 +35,8 @@
 		"tests/**/*.ts",
 		"tests/**/*.tsx",
 		"types/**/*.ts",
-		"scripts/**/*.ts"
+		"scripts/**/*.ts",
+		"*.json"
 	],
 	"exclude": [
 		"node_modules",
