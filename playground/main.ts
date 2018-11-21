@@ -8,8 +8,8 @@ Vue.use(Vuetify);
 
 import 'vuetify/dist/vuetify.min.css';
 
-import VueDot from './';
-import { default as theme } from '../theme.json';
+import VueDot from '../src/';
+import { default as theme } from './theme.json';
 
 Vue.use(VueDot, {
 	theme

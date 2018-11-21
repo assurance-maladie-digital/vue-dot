@@ -27,6 +27,8 @@
 		]
 	},
 	"include": [
+		"playground/**/*.ts",
+		"playground/**/*.vue",
 		"src/**/*.ts",
 		"src/**/*.tsx",
 		"src/**/*.vue",

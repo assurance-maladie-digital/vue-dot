@@ -3,6 +3,7 @@ module.exports = {
 		extract: false
 	},
 	configureWebpack: {
+		entry: './playground/main.ts',
 		output: {
 			libraryExport: 'default'
 		}

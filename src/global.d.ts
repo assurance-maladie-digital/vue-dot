@@ -10,5 +10,6 @@ declare global {
 declare module 'vue/types/vue' {
 	interface Vue {
 		$theme: any;
+		$vuetify: any;
 	}
 }
