@@ -62,7 +62,7 @@ Object.keys(components).map((componentName: any) => {
 
 		const modelBind = component.model.value ?
 		`
-		@change="$emit('change', $event)"
+		@${component.model.event}="$emit('${component.model.event}', $event)"
 		v-model="localValue"` : '';
 
 		const modelData = component.model.value ? `,
@@ -71,7 +71,7 @@ Object.keys(components).map((componentName: any) => {
 		const model = component.model.value ? `,
 		model: {
 			prop: 'value',
-			event: 'change'
+			event: '${component.model.event}'
 		},
 		props: {
 			value: {
@@ -79,6 +79,15 @@ Object.keys(components).map((componentName: any) => {
 				default: undefined
 			}
 		}` : '';
+
+		const valueWatch = component.model.value ?
+`
+		watch: {
+			value() {
+				this.localValue = this.value;
+				this.$emit('${component.model.event}', this.localValue);
+			}
+		},` : '';
 
 		const template =
 `// AUTO GENERATED FILE, DO NOT EDIT
@@ -105,7 +114,7 @@ Object.keys(components).map((componentName: any) => {
 			return {
 				name${modelData}
 			};
-		},
+		},${valueWatch}
 		mixins: [merge]${model}
 	});
 </script>

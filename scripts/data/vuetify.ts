@@ -140,7 +140,7 @@ const components: any = {
 		scopedSlots: false,
 		model: {
 			value: true,
-			event: 'input'
+			event: 'change'
 		}
 	},
 	VCarouselItem: {
@@ -676,7 +676,7 @@ const components: any = {
 		scopedSlots: false,
 		model: {
 			value: true,
-			event: 'input'
+			event: 'change'
 		}
 	},
 	VSystemBar: {
