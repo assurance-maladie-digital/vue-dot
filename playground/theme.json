@@ -41,6 +41,9 @@
 			".v-menu__content": {
 				"box-shadow": "none",
 				"border": "1px solid #bdbdbd"
+			},
+			".v-navigation-drawer *": {
+				"color": "#fff !important"
 			}
 		},
 		"typography": {
@@ -207,6 +210,15 @@
 			"XSwitch": {
 				"default": {
 					"ripple": false
+				}
+			},
+			"XNavigationDrawer": {
+				"default": {
+					"temporary": true,
+					"fixed": true,
+					"classes": [
+						"accent"
+					]
 				}
 			}
 		}

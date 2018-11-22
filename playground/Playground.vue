@@ -1,10 +1,6 @@
 <template>
 	<XApp :dark="dark">
-		<XNavigationDrawer
-			v-model="drawer"
-			fixed
-			app
-		>
+		<XNavigationDrawer v-model="drawer">
 			<XList dense>
 				<XListTile>
 					<XListTileAction>
@@ -257,13 +253,19 @@
 									/>
 								</XLayout>
 
-								<XTextField
-									v-model="badge.icon"
-									label="Icon"
-									color="primary"
+								<XLayout
 									class="alert-el ml-4"
-									hide-details
-								/>
+									align-center
+								>
+									<p class="mb-0 mr-2">Icon:</p>
+									<XTextField
+										v-model="badge.icon"
+										label="Icon"
+										single-line
+										color="primary"
+										hide-details
+									/>
+								</XLayout>
 
 								<XSwitch
 									v-model="badge.overlap"
@@ -1313,8 +1315,8 @@
 <style>
 	@font-face {
 		font-family: 'OSP-DIN';
-		src: url('~#/assets/fonts/osp-din-webfont.woff') format('woff'),
-			 url('~#/assets/fonts/osp-din-webfont.ttf') format('ttf');
+		src: url('./fonts/osp-din-webfont.woff') format('woff'),
+			 url('./fonts/osp-din-webfont.ttf') format('ttf');
 		font-weight: 400;
 	}
 
