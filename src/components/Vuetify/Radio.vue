@@ -26,6 +26,12 @@
 				localValue: this.value
 			};
 		},
+		watch: {
+			value() {
+				this.localValue = this.value;
+				this.$emit('change', this.localValue);
+			}
+		},
 		mixins: [merge],
 		model: {
 			prop: 'value',

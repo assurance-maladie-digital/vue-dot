@@ -6,7 +6,7 @@
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@change="$emit('change', $event)"
+		@input="$emit('input', $event)"
 		v-model="localValue"
 	>
 		<slot name="default" />
@@ -33,10 +33,16 @@
 				localValue: this.value
 			};
 		},
+		watch: {
+			value() {
+				this.localValue = this.value;
+				this.$emit('input', this.localValue);
+			}
+		},
 		mixins: [merge],
 		model: {
 			prop: 'value',
-			event: 'change'
+			event: 'input'
 		},
 		props: {
 			value: {
