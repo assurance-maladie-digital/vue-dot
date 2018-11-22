@@ -1063,6 +1063,81 @@
 								<p class="font-weight-bold mb-1">Bold paragraph</p>
 								<p class="nota mb-1">Nota paragraph</p>
 							</XLayout>
+
+							<XDivider class="mt-5" />
+
+							<h2 class="accent--text mt-5">Custom - Colors</h2>
+							<p class="mt-2">These are generated from Vuetify theme, cutsom colors in theme and Material colors.</p>
+							<ul
+								v-if="$vuetify.theme"
+								class="color-table mt-5"
+							>
+								<li
+									v-for="(color, name) in $vuetify.theme"
+									v-if="typeof color === 'string'"
+									:key="name"
+									class="color-item"
+								>
+									<v-layout
+										v-for="(sub, index) in themeItems"
+										:key="index"
+										:class="`${transform(name)} ${transform(sub)}`"
+										:style="{
+											color: getColorClass(sub),
+											padding: sub === 'base' ? '20px 15px' : '',
+											fontWeight: sub === 'base' ? 'bold' : ''
+										}"
+									>
+										{{ transform(name) }} {{ transform(sub) }}
+										<XSpacer />
+										{{ color }}
+									</v-layout>
+								</li>
+
+								<li
+									v-for="(colorObj, name) in $vuetify.theme"
+									v-if="typeof colorObj === 'object'"
+									:key="name"
+									class="color-item"
+								>
+									<v-layout
+										v-for="(color, sub) in colorObj"
+										:key="sub"
+										:class="`${transform(name)} ${transform(sub)}`"
+										:style="{
+											color: getColorClass(sub),
+											padding: sub === 'base' ? '20px 15px' : '',
+											fontWeight: sub === 'base' ? 'bold' : ''
+										}"
+									>
+										{{ transform(name) }} {{ transform(sub) }}
+										<XSpacer />
+										{{ color }}
+									</v-layout>
+								</li>
+
+								<li
+									v-for="(colorObj, name) in colors"
+									v-if="typeof colorObj === 'object'"
+									:key="name"
+									class="color-item"
+								>
+									<v-layout
+										v-for="(color, sub) in colorObj"
+										:key="sub"
+										:class="`${transform(name)} ${transform(sub)}`"
+										:style="{
+											color: getColorClass(sub),
+											padding: sub === 'base' ? '20px 15px' : '',
+											fontWeight: sub === 'base' ? 'bold' : ''
+										}"
+									>
+										{{ transform(name) }} {{ transform(sub) }}
+										<XSpacer />
+										{{ color }}
+									</v-layout>
+								</li>
+							</ul>
 						</div>
 					</XFlex>
 				</XLayout>
@@ -1084,11 +1159,25 @@
 	import Vue from 'vue';
 
 	import { default as pkg } from '../package.json';
+	import colors from 'vuetify/es5/util/colors';
 
 	export default Vue.extend({
 		name: 'XPlayground',
 		data() {
 			return {
+				colors,
+				themeItems: [
+					'base',
+					'lighten5',
+					'lighten4',
+					'lighten3',
+					'lighten2',
+					'lighten1',
+					'darken1',
+					'darken2',
+					'darken3',
+					'darken4'
+				],
 				dark: false,
 				drawer: null,
 				alert: {
@@ -1308,6 +1397,37 @@
 		},
 		created() {
 			setTimeout(() => this.alert.value = true, 200);
+		},
+		methods: {
+			endStr(str: string) {
+				return str[str.length - 1];
+			},
+			convertToClass(str: string): string {
+				const end = this.endStr(str);
+				const sub = str.substr(0, str.length - 1);
+
+				if (isNaN(parseInt(end, 10))) {
+					return str;
+				}
+
+				return `${sub}-${end}`;
+			},
+			getColorClass(key: string) {
+				if (['white', 'transparent'].includes(key) ||
+					key.indexOf('light') > -1 ||
+					key.indexOf('accent') > -1
+				) {
+					return '#000';
+				} else {
+					return '#fff';
+				}
+			},
+			kebab(str: string) {
+				return (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+			},
+			transform(str: string) {
+				return str !== 'base' ? this.convertToClass(this.kebab(str)) : '';
+			}
 		}
 	});
 </script>
@@ -1342,5 +1462,20 @@
 
 	.custom-layout > * {
 		flex: none;
+	}
+
+	.color-table {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+
+		.color-item {
+			margin: 10px;
+			width: 270px;
+
+			.layout {
+				padding: 10px 15px;
+			}
+		}
 	}
 </style>
