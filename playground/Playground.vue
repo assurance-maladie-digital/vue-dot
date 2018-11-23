@@ -1,6 +1,10 @@
 <template>
 	<XApp :dark="dark">
-		<XNavigationDrawer v-model="drawer">
+		<XNavigationDrawer
+			v-model="drawer"
+			app
+			fixed
+		>
 			<XList dense>
 				<XListTile>
 					<XListTileAction>
@@ -34,10 +38,11 @@
 
 			<XSpacer />
 			<XBtn
+				:color="dark ? 'white' : 'accent'"
+				:light="!dark"
+				:dark="dark"
 				primary
 				@click="dark = !dark"
-				:color="dark ? 'white' : 'primary darken-2'"
-				:light="dark"
 			>
 				<span v-if="!dark">Dark mode</span>
 				<span v-else>Light mode</span>
@@ -62,8 +67,8 @@
 							:dismissible="alert.dismissible"
 							:type="alert.type"
 							:outline="alert.outline"
-							class="mt-0"
 							:transition="alert.transition.value"
+							class="mt-0"
 						>
 							This is an {{ alert.type }} alert!
 						</XAlert>
@@ -79,62 +84,44 @@
 								wrap
 							>
 								<XBtn
-									secondary
-									@click="alert.value = !alert.value"
-									class="ma-0"
 									:color="alert.value ? 'warning' : 'blue'"
+									secondary
+									class="ma-0"
+									@click="alert.value = !alert.value"
 								>
 									{{ alert.value ? 'Close' : 'Toggle' }}
 								</XBtn>
 
-								<XLayout
+								<XSelect
+									:items="alert.items"
+									v-model="alert.type"
+									label="Type"
 									class="alert-el ml-4"
-									align-center
-								>
-									<p class="mb-0 mr-2">Type:</p>
-									<XSelect
-										color="primary"
-										:items="alert.items"
-										label="Type"
-										v-model="alert.type"
-										hide-details
-										single-line
-										class="font-weight-medium"
-									/>
-								</XLayout>
+								/>
 
 								<XSwitch
+									v-model="alert.dismissible"
 									label="Dismissible"
 									color="blueGreen"
-									v-model="alert.dismissible"
 									hide-details
 									class="alert-el ml-4"
 								/>
 
 								<XSwitch
+									v-model="alert.outline"
 									label="Outline"
 									color="primary"
-									v-model="alert.outline"
 									hide-details
 									class="alert-el ml-4"
 								/>
 
-								<XLayout
-									class="alert-el ml-4"
-									align-center
+								<XSelect
+									:items="alert.transition.items"
+									v-model="alert.transition.value"
 									:style="{ width: '320px' }"
-								>
-									<p class="mb-0 mr-2">Transition:</p>
-									<XSelect
-										color="primary"
-										:items="alert.transition.items"
-										label="Transition"
-										v-model="alert.transition.value"
-										hide-details
-										single-line
-										class="font-weight-medium"
-									/>
-								</XLayout>
+									label="Transition"
+									class="alert-el ml-4"
+								/>
 							</XLayout>
 
 							<XDivider class="mt-5" />
@@ -158,21 +145,12 @@
 									hide-details
 								/>
 
-								<XLayout
+								<XSelect
+									:items="avatar.items"
+									v-model="avatar.mode"
+									label="Mode"
 									class="alert-el ml-4"
-									align-center
-								>
-									<p class="mb-0 mr-2">Mode:</p>
-									<XSelect
-										color="primary"
-										:items="avatar.items"
-										label="Mode"
-										v-model="avatar.mode"
-										hide-details
-										single-line
-										class="font-weight-medium"
-									/>
-								</XLayout>
+								/>
 
 								<XSwitch
 									v-model="avatar.tile"
@@ -201,14 +179,14 @@
 										class="avatar-border"
 									>
 										<img
+											v-if="avatar.mode === 'image'"
 											src="https://firebasestorage.googleapis.com/v0/b/vue-dot.appspot.com/o/vue.js.svg?alt=media&token=8de281bf-97bf-4c1e-a07c-aa859450a7a3"
 											alt="Vue logo"
-											v-if="avatar.mode === 'image'"
 										>
 										<XIcon v-if="avatar.mode === 'icon'">notifications</XIcon>
 										<span
-											class="headline"
 											v-if="avatar.mode === 'text'"
+											class="headline"
 										>
 											J
 										</span>
@@ -228,30 +206,21 @@
 								wrap
 							>
 								<XBtn
-									secondary
-									@click="badge.value = !badge.value"
-									class="ma-0"
 									:color="badge.value ? 'warning' : 'blue'"
+									secondary
+									class="ma-0"
+									@click="badge.value = !badge.value"
 								>
 									{{ badge.value ? 'Close' : 'Toggle' }}
 								</XBtn>
 
-								<XLayout
-									class="alert-el ml-4"
-									align-center
+								<XSelect
+									:items="badge.items"
+									v-model="badge.position"
 									:style="{ width: '200px' }"
-								>
-									<p class="mb-0 mr-2">Position:</p>
-									<XSelect
-										color="primary"
-										:items="badge.items"
-										label="Position"
-										v-model="badge.position"
-										single-line
-										class="font-weight-medium"
-										hide-details
-									/>
-								</XLayout>
+									label="Position"
+									class="alert-el ml-4"
+								/>
 
 								<XLayout
 									class="alert-el ml-4"
@@ -281,12 +250,12 @@
 								class="mt-3"
 								wrap
 							>
-								 <XBadge
-									color="primary"
+								<XBadge
 									:overlap="badge.overlap"
 									:left="badge.position.match('left')"
 									:bottom="badge.position.match('bottom')"
 									:value="badge.value"
+									color="primary"
 								>
 									<XIcon
 										slot="badge"
@@ -317,10 +286,10 @@
 								wrap
 							>
 								<XBtn
-									secondary
-									@click="bottomNav.value = !bottomNav.value"
-									class="ma-0"
 									:color="bottomNav.value ? 'warning' : 'blue'"
+									secondary
+									class="ma-0"
+									@click="bottomNav.value = !bottomNav.value"
 								>
 									{{ bottomNav.value ? 'Close' : 'Toggle' }}
 								</XBtn>
@@ -345,8 +314,8 @@
 									:active.sync="bottomNav.active"
 									:color="bottomNav.monochrome ? 'info' : bottomNavColor"
 									:value="bottomNav.value"
-									fixed
 									:shift="bottomNav.shift"
+									fixed
 								>
 									<XBtn dark>
 										<span>Video</span>
@@ -388,10 +357,10 @@
 									:persistent="bottomSheet.persistent"
 								>
 									<XBtn
-										secondary
 										slot="activator"
-										class="ma-0"
 										:color="bottomSheet.value ? 'warning' : 'blue'"
+										secondary
+										class="ma-0"
 									>
 										{{ bottomSheet.value ? 'Close' : 'Toggle' }}
 									</XBtn>
@@ -457,14 +426,20 @@
 								class="custom-layout mt-2"
 								wrap
 							>
-								<XTextField
-									v-model="breadcrumbs.divider"
-									label="Divider"
-									color="primary"
+								<XLayout
+									:style="{ maxWidth: '80px' }"
 									class="alert-el ml-4"
-									hide-details
-									:style="{ maxWidth: '60px' }"
-								/>
+									align-center
+								>
+									<p class="mb-0 mr-2">Divider:</p>
+									<XTextField
+										v-model="breadcrumbs.divider"
+										label="Divider"
+										color="primary"
+										single-line
+										hide-details
+									/>
+								</XLayout>
 
 								<XSwitch
 									v-model="breadcrumbs.large"
@@ -601,7 +576,6 @@
 								wrap
 							>
 								<XBtn
-									primary
 									:block="button.block"
 									:depressed="button.depressed"
 									:disabled="button.disabled"
@@ -614,6 +588,7 @@
 									:ripple="button.ripple"
 									:round="button.round"
 									:small="button.small"
+									primary
 								>
 									<span v-if="!button.fab && !button.icon">Success</span>
 
@@ -633,43 +608,40 @@
 								wrap
 							>
 								<XBtn
+									:color="fab.value ? 'warning' : 'blue'"
 									secondary
 									class="ma-0"
 									@click="fab.value = !fab.value"
-									:color="fab.value ? 'warning' : 'blue'"
 								>
 									{{ fab.value ? 'Close' : 'Toggle' }}
 								</XBtn>
 
 								<XSelect
-									color="primary"
 									:items="fab.items"
-									label="Type"
 									v-model="fab.direction"
-									class="alert-el ml-4 font-weight-medium"
-									hide-details
+									label="Type"
+									class="alert-el ml-4"
 								/>
 
 								<XSelect
-									color="primary"
 									:items="fab.transition.items"
-									label="Transition"
 									v-model="fab.transition.value"
-									class="alert-el ml-4 font-weight-medium"
-									hide-details
+									:style="{ width: '250px' }"
+									label="Transition"
+									class="alert-el ml-4"
 								/>
 
 								<XSelect
-									color="primary"
 									:items="fab.positionItems"
-									label="Position"
 									v-model="fab.position"
-									class="alert-el ml-4 font-weight-medium"
-									hide-details
+									:style="{ width: '250px' }"
+									label="Position"
+									class="alert-el ml-4"
 								/>
 
 								<XSwitch
 									v-model="fab.hover"
+									:style="{ width: '160px' }"
 									label="Open on hover"
 									color="primary"
 									class="alert-el ml-4"
@@ -678,15 +650,15 @@
 
 								<XScaleTransition>
 									<XSpeedDial
-										fixed
-										:top="fab.position.match('top')"
-										:right="fab.position.match('right')"
-										:left="fab.position.match('left')"
-										:bottom="fab.position.match('bottom')"
+										v-if="fab.value"
+										:top="!!fab.position.match('top')"
+										:right="!!fab.position.match('right')"
+										:left="!!fab.position.match('left')"
+										:bottom="!!fab.position.match('bottom')"
 										:direction="fab.direction"
 										:open-on-hover="fab.hover"
 										:transition="fab.transition.value"
-										v-if="fab.value"
+										fixed
 									>
 										<XBtn
 											slot="activator"
@@ -811,9 +783,9 @@
 								>
 									<XScaleTransition>
 										<XImg
+											v-if="card.image"
 											src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
 											aspect-ratio="2.75"
-											v-if="card.image"
 										/>
 									</XScaleTransition>
 
@@ -930,21 +902,34 @@
 								class="custom-layout mt-2"
 								wrap
 							>
-								<XTextField
-									v-model="chip.color"
-									label="Color"
-									color="primary"
+								<XLayout
+									align-center
 									class="alert-el ml-4"
-									hide-details
-								/>
+								>
+									<p class="mb-0 mr-2">Color:</p>
+									<XTextField
+										v-model="chip.color"
+										label="Color"
+										color="primary"
+										single-line
+										hide-details
+									/>
+								</XLayout>
 
-								<XTextField
-									v-model="chip.textColor"
-									label="Text color"
-									color="primary"
+								<XLayout
+									:style="{ width: '150px' }"
 									class="alert-el ml-4"
-									hide-details
-								/>
+									align-center
+								>
+									<p class="mb-0 mr-2">Text color:</p>
+									<XTextField
+										v-model="chip.textColor"
+										label="Text color"
+										color="primary"
+										single-line
+										hide-details
+									/>
+								</XLayout>
 
 								<XSwitch
 									v-model="chip.close"
@@ -1027,13 +1012,13 @@
 									:small="chip.small"
 								>
 									<XAvatar
-										class="primary"
 										v-if="chip.avatar"
+										class="primary"
 									>A</XAvatar>
 									Example Chip
 									<XIcon
-										right
 										v-if="chip.icon"
+										right
 									>star</XIcon>
 								</XChip>
 							</XLayout>
@@ -1075,12 +1060,12 @@
 								<li
 									v-for="(color, name) in $vuetify.theme"
 									v-if="typeof color === 'string'"
-									:key="name"
+									:key="`a-${name}`"
 									class="color-item"
 								>
 									<v-layout
 										v-for="(sub, index) in themeItems"
-										:key="index"
+										:key="`a-a-${index}`"
 										:class="`${transform(name)} ${transform(sub)}`"
 										:style="{
 											color: getColorClass(sub),
@@ -1097,12 +1082,12 @@
 								<li
 									v-for="(colorObj, name) in $vuetify.theme"
 									v-if="typeof colorObj === 'object'"
-									:key="name"
+									:key="`b-${name}`"
 									class="color-item"
 								>
 									<v-layout
 										v-for="(color, sub) in colorObj"
-										:key="sub"
+										:key="`b-b-${sub}`"
 										:class="`${transform(name)} ${transform(sub)}`"
 										:style="{
 											color: getColorClass(sub),
@@ -1119,12 +1104,12 @@
 								<li
 									v-for="(colorObj, name) in colors"
 									v-if="typeof colorObj === 'object'"
-									:key="name"
+									:key="`c-${name}`"
 									class="color-item"
 								>
 									<v-layout
 										v-for="(color, sub) in colorObj"
-										:key="sub"
+										:key="`c-c-${sub}`"
 										:class="`${transform(name)} ${transform(sub)}`"
 										:style="{
 											color: getColorClass(sub),
@@ -1432,11 +1417,11 @@
 	});
 </script>
 
-<style>
+<style lang="scss">
 	@font-face {
 		font-family: 'OSP-DIN';
 		src: url('./fonts/osp-din-webfont.woff') format('woff'),
-			 url('./fonts/osp-din-webfont.ttf') format('ttf');
+			url('./fonts/osp-din-webfont.ttf') format('ttf');
 		font-weight: 400;
 	}
 

@@ -44,6 +44,18 @@
 			},
 			".v-navigation-drawer *": {
 				"color": "#fff !important"
+			},
+			".v-toolbar .v-btn.theme--dark[primary]": {
+				"color": "#084870"
+			},
+			".v-toolbar .v-btn:not(.theme--dark)[primary]": {
+				"color": "#fff !important"
+			},
+			".theme--dark p": {
+				"color": "#fff"
+			},
+			".theme--dark.v-text-field .v-input__slot": {
+				"background": "rgba(255, 255, 255, .19)"
 			}
 		},
 		"typography": {
@@ -218,6 +230,17 @@
 					"fixed": true,
 					"classes": [
 						"accent"
+					]
+				}
+			},
+			"XSelect": {
+				"default": {
+					"color": "primary",
+					"labelOut": true,
+					"hide-details": true,
+					"single-line": true,
+					"classes": [
+						"font-weight-medium"
 					]
 				}
 			}
