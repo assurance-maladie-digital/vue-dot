@@ -164,7 +164,7 @@
 				default: false
 			},
 			value: {
-				type: [String, Number, Boolean],
+				type: String,
 				default: undefined
 			},
 			light: {
