@@ -36,8 +36,10 @@ Object.keys(components).map((componentName: any) => {
 
 		const component = components[componentName];
 
-		const slot = component.slots ?
-		`
+		// Don't modify custom components
+		if (!component.custom) {
+			const slot = component.slots ?
+				`
 		<slot
 			v-for="slot in Object.keys($slots)"
 			v-if="slot !== 'default'"
@@ -46,8 +48,8 @@ Object.keys(components).map((componentName: any) => {
 		/>
 	` : '';
 
-		const scopedSlot = component.scopedSlots ?
-		`
+			const scopedSlot = component.scopedSlots ?
+				`
 		<template
 			v-for="slot in Object.keys($scopedSlots)"
 			:slot="slot"
@@ -60,15 +62,15 @@ Object.keys(components).map((componentName: any) => {
 		</template>
 	` : '';
 
-		const modelBind = component.model.value ?
-		`
+			const modelBind = component.model.value ?
+				`
 		@${component.model.event}="$emit('${component.model.event}', $event)"
 		v-model="localValue"` : '';
 
-		const modelData = component.model.value ? `,
+			const modelData = component.model.value ? `,
 				localValue: this.value` : '';
 
-		const model = component.model.value ? `,
+			const model = component.model.value ? `,
 		model: {
 			prop: 'value',
 			event: '${component.model.event}'
@@ -80,8 +82,8 @@ Object.keys(components).map((componentName: any) => {
 			}
 		}` : '';
 
-		const valueWatch = component.model.value ?
-`
+			const valueWatch = component.model.value ?
+				`
 		watch: {
 			value() {
 				this.localValue = this.value;
@@ -89,8 +91,8 @@ Object.keys(components).map((componentName: any) => {
 			}
 		},` : '';
 
-		const template =
-`// AUTO GENERATED FILE, DO NOT EDIT
+			const template =
+				`// AUTO GENERATED FILE, DO NOT EDIT
 
 <template>
 	<${componentName}
@@ -120,7 +122,8 @@ Object.keys(components).map((componentName: any) => {
 </script>
 `;
 
-		writeFile(template, `${dist}/${name}.vue`);
+			writeFile(template, `${dist}/${name}.vue`);
+		}
 	} else {
 		xLog(`Name '${componentName}' is invalid`, 'error');
 	}
@@ -167,7 +170,7 @@ glob('**/*.vue', {}, (er, files) => {
 	// was found, then files is ["**/*.js"]
 	// er is an error object or null.
 	let componentsObj =
-`const components: any = {
+		`const components: any = {
 `;
 
 	files.forEach((file: string) => {
@@ -175,29 +178,29 @@ glob('**/*.vue', {}, (er, files) => {
 
 		const isLast = files.indexOf(file) === files.length - 1;
 		componentsObj +=
-`	X${name}${isLast ? '' : ',\n'}`;
+			`	X${name}${isLast ? '' : ',\n'}`;
 
 		const importStr =
-`import X${name} from './${file.includes('Vuetify') ? 'Vuetify/' : ''}${name}.vue';
+			`import X${name} from './${file.includes('Vuetify') ? 'Vuetify/' : ''}${name}.vue';
 `;
 
 		indexTs += importStr;
 	});
 
 	componentsObj +=
-`
+		`
 };
 `;
 
 	indexTs +=
-`
+		`
 import { VueConstructor } from 'vue';
 
 `;
 
 	indexTs += componentsObj;
 	indexTs +=
-`
+		`
 export default (Vue: VueConstructor) => {
 	Object.keys(components).forEach((name: string) => {
 		Vue.component(name, components[name]);
