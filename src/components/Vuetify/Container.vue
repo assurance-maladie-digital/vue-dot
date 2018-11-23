@@ -2,12 +2,12 @@
 
 <template>
 	<VContainer
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
+		v-on="$listeners"
 	>
-		<slot name="default" /></VContainer>
+	<slot name="default" /></VContainer>
 </template>
 
 <script lang="ts">
@@ -18,11 +18,11 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
 		data() {
 			return {
 				name
 			};
 		},
-		mixins: [merge]
 	});
 </script>

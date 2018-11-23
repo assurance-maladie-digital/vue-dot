@@ -2,14 +2,14 @@
 
 <template>
 	<VTextarea
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@input="$emit('input', $event)"
 		v-model="localValue"
+		@input="$emit('input', $event)"
+		v-on="$listeners"
 	>
-		<slot name="default" /></VTextarea>
+	<slot name="default" /></VTextarea>
 </template>
 
 <script lang="ts">
@@ -20,6 +20,17 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
+		model: {
+			prop: 'value',
+			event: 'input'
+		},
+		props: {
+			value: {
+				type: [String, Boolean, Number],
+				default: undefined
+			}
+		},
 		data() {
 			return {
 				name,
@@ -30,17 +41,6 @@
 			value() {
 				this.localValue = this.value;
 				this.$emit('input', this.localValue);
-			}
-		},
-		mixins: [merge],
-		model: {
-			prop: 'value',
-			event: 'input'
-		},
-		props: {
-			value: {
-				type: [String, Boolean, Number],
-				default: undefined
 			}
 		}
 	});

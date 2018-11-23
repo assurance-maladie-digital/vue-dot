@@ -52,8 +52,8 @@ Object.keys(components).map((componentName: any) => {
 				`
 		<template
 			v-for="slot in Object.keys($scopedSlots)"
-			:slot="slot"
 			slot-scope="scope"
+			:slot="slot"
 		>
 			<slot
 				:name="slot"
@@ -64,8 +64,8 @@ Object.keys(components).map((componentName: any) => {
 
 			const modelBind = component.model.value ?
 				`
-		@${component.model.event}="$emit('${component.model.event}', $event)"
-		v-model="localValue"` : '';
+		v-model="localValue"
+		@${component.model.event}="$emit('${component.model.event}', $event)"` : '';
 
 			const modelData = component.model.value ? `,
 				localValue: this.value` : '';
@@ -89,19 +89,19 @@ Object.keys(components).map((componentName: any) => {
 				this.localValue = this.value;
 				this.$emit('${component.model.event}', this.localValue);
 			}
-		},` : '';
+		}` : '';
 
 			const template =
 				`// AUTO GENERATED FILE, DO NOT EDIT
 
 <template>
 	<${componentName}
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"${modelBind}
+		v-on="$listeners"
 	>
-		<slot name="default" />${slot}${scopedSlot}</${componentName}>
+	${slot || scopedSlot ? '	' : ''}<slot name="default" />${slot}${scopedSlot}</${componentName}>
 </template>
 
 <script lang="ts">
@@ -112,12 +112,12 @@ Object.keys(components).map((componentName: any) => {
 
 	export default Vue.extend({
 		name,
+		mixins: [merge]${model},
 		data() {
 			return {
 				name${modelData}
 			};
 		},${valueWatch}
-		mixins: [merge]${model}
 	});
 </script>
 `;

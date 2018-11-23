@@ -2,10 +2,10 @@
 
 <template>
 	<VApp
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
+		v-on="$listeners"
 	>
 		<slot name="default" />
 		<slot
@@ -17,8 +17,8 @@
 	
 		<template
 			v-for="slot in Object.keys($scopedSlots)"
-			:slot="slot"
 			slot-scope="scope"
+			:slot="slot"
 		>
 			<slot
 				:name="slot"
@@ -36,11 +36,11 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
 		data() {
 			return {
 				name
 			};
 		},
-		mixins: [merge]
 	});
 </script>

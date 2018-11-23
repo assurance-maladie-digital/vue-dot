@@ -2,12 +2,12 @@
 
 <template>
 	<VSwitch
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@change="$emit('change', $event)"
 		v-model="localValue"
+		@change="$emit('change', $event)"
+		v-on="$listeners"
 	>
 		<slot name="default" />
 		<slot
@@ -27,6 +27,17 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
+		model: {
+			prop: 'value',
+			event: 'change'
+		},
+		props: {
+			value: {
+				type: [String, Boolean, Number],
+				default: undefined
+			}
+		},
 		data() {
 			return {
 				name,
@@ -37,17 +48,6 @@
 			value() {
 				this.localValue = this.value;
 				this.$emit('change', this.localValue);
-			}
-		},
-		mixins: [merge],
-		model: {
-			prop: 'value',
-			event: 'change'
-		},
-		props: {
-			value: {
-				type: [String, Boolean, Number],
-				default: undefined
 			}
 		}
 	});
