@@ -63,6 +63,7 @@
 		"@types/shelljs": "^0.8.0",
 		"@vue/cli-plugin-babel": "^3.1.1",
 		"@vue/cli-plugin-e2e-nightwatch": "^3.1.1",
+		"@vue/cli-plugin-eslint": "^3.1.5",
 		"@vue/cli-plugin-typescript": "^3.1.1",
 		"@vue/cli-plugin-unit-jest": "^3.1.1",
 		"@vue/cli-service": "^3.1.1",

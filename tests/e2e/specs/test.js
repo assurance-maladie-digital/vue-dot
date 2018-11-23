@@ -11,4 +11,4 @@ module.exports = {
 			.assert.elementCount('img', 1)
 			.end();
 	}
-}
+};

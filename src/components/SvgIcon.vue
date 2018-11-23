@@ -378,7 +378,10 @@
 				/>
 
 				<g v-else-if="icon === 'camera'">
-					<circle cx="12" cy="13.15" r="3.84" />
+					<circle 
+						cx="12" 
+						cy="13.15" 
+						r="3.84" />
 					<path d="M8.4 1.2L6.24 3.6H2.4A2.4 2.4 0 0 0 0 6v14.4a2.4 2.4 0 0 0 2.4 2.4h19.2a2.4 2.4 0 0 0 2.4-2.4V6a2.4 2.4 0 0 0-2.4-2.4h-3.84L15.6 1.2zm3.6 18c-3.36 0-6-2.64-6-6s2.64-6 6-6 6 2.64 6 6-2.64 6-6 6z" />
 				</g>
 
@@ -1276,9 +1279,9 @@
 			<!-- Custom icons from theme, only render if it's looks like svg -->
 			<div
 				v-for="iconTheme in $theme.config.icons"
+				v-if="icon === iconTheme.name && isSvg(iconTheme.svg)"
 				:key="iconTheme.name"
 				v-html="iconTheme.svg"
-				v-if="icon === iconTheme.name && isSvg(iconTheme.svg)"
 			/>
 		</slot>
 	</span>

@@ -85,6 +85,10 @@
 
 	export default Vue.extend({
 		name: 'XLangBtn',
+		model: {
+			prop: 'value',
+			event: 'change'
+		},
 		props: {
 			// Shared
 			availableLanguages: {
@@ -217,12 +221,15 @@
 				default: 'button'
 			},
 			btnValue: {
+				type: [String, Number, Boolean],
 				default: undefined
 			}
 		},
-		model: {
-			prop: 'value',
-			event: 'change'
+		data(this: any): any {
+			return {
+				languagesData: this.getLanguagesWithData(),
+				currentLangUsed: this.value || 'fr'
+			};
 		},
 		computed: {
 			languages(): object {
@@ -241,12 +248,6 @@
 		},
 		mounted() {
 			this.$emit('change', this.currentLangUsed);
-		},
-		data(this: any): any {
-			return {
-				languagesData: this.getLanguagesWithData(),
-				currentLangUsed: this.value || 'fr'
-			};
 		},
 		methods: {
 			changeLang(lang: string): void {
