@@ -43,12 +43,11 @@ const generator = (tags: any, validate: boolean): string => {
 
 			Object.keys(classBody).map((cssPropName: any) => {
 				bodyLines +=
-		`${cssPropName}: ${classBody[cssPropName]};
+					`${cssPropName}: ${classBody[cssPropName]};
 		`;
 			});
 
-			const cssCSS =
-`
+			const cssCSS = `
 	${currentTag} {
 		${bodyLines}
 	}
@@ -73,11 +72,13 @@ const styles = {
 		if (!window.VueDotInit) {
 			window.VueDotInit = true;
 
-			let tags = this.$theme.config.styles;
-			append(tags, generator(tags, false), 'styles');
+			if (this.$theme.config.styles) {
+				let tags = this.$theme.config.styles;
+				append(tags, generator(tags, false), 'styles');
 
-			tags = this.$theme.config.typography.styles;
-			append(tags, generator(tags, true), 'typography');
+				tags = this.$theme.config.typography.styles;
+				append(tags, generator(tags, true), 'typography');
+			}
 		}
 	}
 };
