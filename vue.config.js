@@ -25,5 +25,12 @@ module.exports = {
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
 		config.optimization.splitChunks(false);
+		config
+			.plugin('html')
+			.tap(args => {
+				args[0].template = './playground/public/index.html';
+
+				return args;
+		});
 	}
 };
