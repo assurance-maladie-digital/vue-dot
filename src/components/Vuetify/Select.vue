@@ -1,33 +1,43 @@
-// AUTO GENERATED FILE, DO NOT EDIT
+// CUSTOM WRAPPER, YOU CAN EDIT!
 
 <template>
-	<VSelect
-		v-on="$listeners"
-		v-bind="merged"
-		:class="merged.classes"
-		:style="merged.styles"
-		@change="$emit('change', $event)"
-		v-model="localValue"
+	<div
+		:tag="merged.labelOut ? 'label' : ''"
+		:is="merged.labelOut ? 'XLayout' : 'label'"
+		:align-center="merged.labelOut ? true : null"
 	>
-		<slot name="default" />
-		<slot
-			v-for="slot in Object.keys($slots)"
-			v-if="slot !== 'default'"
-			:name="slot"
-			:slot="slot"
-		/>
-	
-		<template
-			v-for="slot in Object.keys($scopedSlots)"
-			:slot="slot"
-			slot-scope="scope"
+		<p
+			v-if="merged.labelOut"
+			class="ma-0 mr-2"
+		>{{ label }}:</p>
+		<VSelect
+			v-bind="merged"
+			:class="merged.classes"
+			:style="merged.styles"
+			v-model="localValue"
+			v-on="$listeners"
+			@input="$emit('input', $event)"
 		>
+			<slot name="default" />
 			<slot
+				v-for="slot in Object.keys($slots)"
+				v-if="slot !== 'default'"
 				:name="slot"
-				v-bind="scope"
+				:slot="slot"
 			/>
-		</template>
-	</VSelect>
+
+			<template
+				v-for="slot in Object.keys($scopedSlots)"
+				slot-scope="scope"
+				:slot="slot"
+			>
+				<slot
+					:name="slot"
+					v-bind="scope"
+				/>
+			</template>
+		</VSelect>
+	</div>
 </template>
 
 <script lang="ts">
@@ -38,22 +48,36 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
+		model: {
+			prop: 'value',
+			event: 'input'
+		},
+		props: {
+			value: {
+				type: [String, Boolean, Number],
+				default: undefined
+			},
+			labelOut: {
+				type: Boolean,
+				default: false
+			},
+			label: {
+				type: String,
+				default: undefined
+			}
+		},
 		data() {
 			return {
 				name,
 				localValue: this.value
 			};
 		},
-		mixins: [merge],
-		model: {
-			prop: 'value',
-			event: 'change'
-		},
-		props: {
-			value: {
-				type: [String, Boolean, Number],
-				default: undefined
+		watch: {
+			value() {
+				this.localValue = this.value;
+				this.$emit('input', this.localValue);
 			}
-		}
+		},
 	});
 </script>

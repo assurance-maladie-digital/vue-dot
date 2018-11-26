@@ -2,14 +2,14 @@
 
 <template>
 	<VTimePicker
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@change="$emit('change', $event)"
 		v-model="localValue"
+		@input="$emit('input', $event)"
+		v-on="$listeners"
 	>
-		<slot name="default" /></VTimePicker>
+	<slot name="default" /></VTimePicker>
 </template>
 
 <script lang="ts">
@@ -20,21 +20,27 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
+		model: {
+			prop: 'value',
+			event: 'input'
+		},
+		props: {
+			value: {
+				type: [String, Boolean, Number],
+				default: undefined
+			}
+		},
 		data() {
 			return {
 				name,
 				localValue: this.value
 			};
 		},
-		mixins: [merge],
-		model: {
-			prop: 'value',
-			event: 'change'
-		},
-		props: {
-			value: {
-				type: [String, Boolean, Number],
-				default: undefined
+		watch: {
+			value() {
+				this.localValue = this.value;
+				this.$emit('input', this.localValue);
 			}
 		}
 	});

@@ -79,6 +79,20 @@ module.exports = {
 				name: 'theme-color',
 				content: '#fefefe'
 			}
+		],
+		[
+			'meta',
+			{
+				name: 'google-site-verification',
+				content: 'cA4p0q68_DnDQ-yllaSj48QKn5yErVu6Dl2VeFpjI2E'
+			}
+		],
+		[
+			'script',
+			{
+				src: 'https://js.sentry-cdn.com/da9b678c454344789142e9b3c4e8b394.min.js',
+				crossorigin: 'anonymous'
+			}
 		]
 	],
 	locales: {
@@ -94,7 +108,13 @@ module.exports = {
 		}
 	},
 	themeConfig: {
+		updatePopup: true,
+		lastUpdated: 'Last Updated',
 		sidebarDepth: 1,
+		algolia: {
+			apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
+			indexName: 'vue-dot'
+		},
 		locales: {
 			'/': {
 				label: 'English',
@@ -148,6 +168,18 @@ module.exports = {
 								'components',
 								'directives',
 								'roadmap'
+							]
+						}
+					],
+					'/next/guide/': [
+						{
+							title: 'Guide',
+							collapsable: false,
+							children: [
+								'',
+								'components',
+								'directives',
+								'roadmap',
 							]
 						}
 					]

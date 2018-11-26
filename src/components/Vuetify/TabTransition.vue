@@ -2,12 +2,12 @@
 
 <template>
 	<VTabTransition
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
+		v-on="$listeners"
 	>
-		<slot name="default" /></VTabTransition>
+	<slot name="default" /></VTabTransition>
 </template>
 
 <script lang="ts">
@@ -18,11 +18,11 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
 		data() {
 			return {
 				name
 			};
 		},
-		mixins: [merge]
 	});
 </script>

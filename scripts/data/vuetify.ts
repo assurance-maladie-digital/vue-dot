@@ -5,7 +5,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VAlert: {
 		slots: true,
@@ -13,7 +14,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VAutocomplete: {
 		slots: true,
@@ -21,7 +23,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VAvatar: {
 		slots: true,
@@ -29,7 +32,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBadge: {
 		slots: true,
@@ -37,7 +41,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBottomNav: {
 		slots: true,
@@ -45,7 +50,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VBottomSheet: {
 		slots: true,
@@ -53,7 +59,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VBreadcrumbs: {
 		slots: true,
@@ -61,7 +68,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBreadcrumbsItem: {
 		slots: true,
@@ -69,7 +77,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBreadcrumbsDivider: {
 		slots: false,
@@ -77,7 +86,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBtn: {
 		slots: true,
@@ -85,7 +95,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBtnToggle: {
 		slots: true,
@@ -93,7 +104,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCard: {
 		slots: true,
@@ -101,7 +113,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCardMedia: {
 		slots: false,
@@ -109,7 +122,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCardTitle: {
 		slots: false,
@@ -117,7 +131,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCardActions: {
 		slots: false,
@@ -125,7 +140,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCardText: {
 		slots: false,
@@ -133,15 +149,17 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCarousel: {
 		slots: true,
 		scopedSlots: false,
 		model: {
 			value: true,
-			event: 'input'
-		}
+			event: 'change'
+		},
+		custom: false
 	},
 	VCarouselItem: {
 		slots: true,
@@ -149,7 +167,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCheckbox: {
 		slots: true,
@@ -157,7 +176,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VChip: {
 		slots: true,
@@ -165,7 +185,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCombobox: {
 		slots: true,
@@ -173,7 +194,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VCounter: {
 		slots: false,
@@ -181,7 +203,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDataIterator: {
 		slots: true,
@@ -189,7 +212,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VDataTable: {
 		slots: true,
@@ -197,7 +221,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VEditDialog: {
 		slots: true,
@@ -205,7 +230,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTableOverflow: {
 		slots: false,
@@ -213,7 +239,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	// VDatePicker: {
 	// 	slots: false,
@@ -229,7 +256,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDatePickerHeader: {
 		slots: false,
@@ -237,7 +265,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDatePickerDateTable: {
 		slots: false,
@@ -245,7 +274,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDatePickerMounthTable: {
 		slots: false,
@@ -253,7 +283,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDatePickerYears: {
 		slots: false,
@@ -261,7 +292,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDialog: {
 		slots: true,
@@ -269,7 +301,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VDivider: {
 		slots: false,
@@ -277,7 +310,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VExpansionPanel: {
 		slots: true,
@@ -285,7 +319,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VExpansionPanelContent: {
 		slots: true,
@@ -293,7 +328,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VFooter: {
 		slots: true,
@@ -301,7 +337,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VForm: {
 		slots: true,
@@ -309,7 +346,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VContainer: {
 		slots: false,
@@ -317,7 +355,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VContent: {
 		slots: true,
@@ -325,7 +364,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VFlex: {
 		slots: true,
@@ -333,7 +373,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VLayout: {
 		slots: true,
@@ -341,7 +382,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSpacer: {
 		slots: false,
@@ -349,7 +391,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VHover: {
 		slots: true,
@@ -357,7 +400,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VIcon: {
 		slots: true,
@@ -365,7 +409,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VImg: {
 		slots: false,
@@ -373,7 +418,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VInput: {
 		slots: false,
@@ -381,7 +427,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VItem: {
 		slots: false,
@@ -389,7 +436,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VItemGroup: {
 		slots: false,
@@ -397,7 +445,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VLabel: {
 		slots: false,
@@ -405,7 +454,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VList: {
 		slots: true,
@@ -413,7 +463,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListGroup: {
 		slots: true,
@@ -421,7 +472,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTile: {
 		slots: true,
@@ -429,7 +481,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTileAction: {
 		slots: true,
@@ -437,7 +490,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTileAvatar: {
 		slots: true,
@@ -445,7 +499,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTileActionText: {
 		slots: false,
@@ -453,7 +508,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTileContent: {
 		slots: false,
@@ -461,7 +517,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTileTitle: {
 		slots: true,
@@ -469,7 +526,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VListTileSubTitle: {
 		slots: true,
@@ -477,7 +535,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VMenu: {
 		slots: true,
@@ -485,7 +544,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VMessages: {
 		slots: false,
@@ -493,7 +553,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VNavigationDrawer: {
 		slots: true,
@@ -501,7 +562,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VOverflowBtn: {
 		slots: false,
@@ -509,7 +571,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VPagination: {
 		slots: false,
@@ -517,7 +580,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VParallax: {
 		slots: true,
@@ -525,7 +589,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VPicker: {
 		slots: false,
@@ -533,7 +598,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VProgressCircular: {
 		slots: true,
@@ -541,7 +607,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VProgressLinear: {
 		slots: false,
@@ -549,7 +616,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VRadioGroup: {
 		slots: true,
@@ -557,7 +625,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'change'
-		}
+		},
+		custom: false
 	},
 	VRadio: {
 		slots: false,
@@ -565,7 +634,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'change'
-		}
+		},
+		custom: false
 	},
 	VRangeSlider: {
 		slots: false,
@@ -573,7 +643,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VRating: {
 		slots: false,
@@ -581,7 +652,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VResponsive: {
 		slots: false,
@@ -589,7 +661,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSelect: {
 		slots: true,
@@ -597,7 +670,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: true
 	},
 	VSlider: {
 		slots: true,
@@ -605,7 +679,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VSnackbar: {
 		slots: true,
@@ -613,7 +688,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VSpeedDial: {
 		slots: true,
@@ -621,7 +697,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VStepper: {
 		slots: true,
@@ -629,7 +706,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VStepperContent: {
 		slots: true,
@@ -637,7 +715,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VStepperStep: {
 		slots: true,
@@ -645,7 +724,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VStepperHeader: {
 		slots: true,
@@ -653,7 +733,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VStepperItems: {
 		slots: true,
@@ -661,7 +742,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSubheader: {
 		slots: true,
@@ -669,15 +751,17 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VSwitch: {
 		slots: true,
 		scopedSlots: false,
 		model: {
 			value: true,
-			event: 'input'
-		}
+			event: 'change'
+		},
+		custom: false
 	},
 	VSystemBar: {
 		slots: true,
@@ -685,7 +769,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTabs: {
 		slots: true,
@@ -693,7 +778,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VTab: {
 		slots: true,
@@ -701,7 +787,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTabItem: {
 		slots: true,
@@ -709,7 +796,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTabsItems: {
 		slots: true,
@@ -717,7 +805,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VTabSlider: {
 		slots: false,
@@ -725,7 +814,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTextarea: {
 		slots: false,
@@ -733,7 +823,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VTextField: {
 		slots: false,
@@ -741,7 +832,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VTimeline: {
 		slots: false,
@@ -749,7 +841,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTimelineItem: {
 		slots: false,
@@ -757,7 +850,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTimePicker: {
 		slots: false,
@@ -765,7 +859,8 @@ const components: any = {
 		model: {
 			value: true,
 			event: 'input'
-		}
+		},
+		custom: false
 	},
 	VTimePickerClock: {
 		slots: false,
@@ -773,7 +868,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTimePickerTitle: {
 		slots: false,
@@ -781,7 +877,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VToolbar: {
 		slots: true,
@@ -789,7 +886,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VToolbarSideIcon: {
 		slots: false,
@@ -797,7 +895,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VToolbarTitle: {
 		slots: false,
@@ -805,7 +904,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VToolbarItems: {
 		slots: false,
@@ -813,7 +913,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTooltip: {
 		slots: true,
@@ -821,7 +922,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTreeview: {
 		slots: false,
@@ -829,7 +931,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VWindow: {
 		slots: false,
@@ -837,7 +940,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VWindowItem: {
 		slots: false,
@@ -845,7 +949,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VBottomSheetTransition: {
 		slots: false,
@@ -853,7 +958,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCarouselTransition: {
 		slots: false,
@@ -861,7 +967,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VCarouselReverseTransition: {
 		slots: false,
@@ -869,7 +976,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTabTransition: {
 		slots: false,
@@ -877,7 +985,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VTabReverseTransition: {
 		slots: false,
@@ -885,7 +994,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VMenuTransition: {
 		slots: false,
@@ -893,7 +1003,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VFabTransition: {
 		slots: false,
@@ -901,7 +1012,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDialogTransition: {
 		slots: false,
@@ -909,7 +1021,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VDialogBottomTransition: {
 		slots: false,
@@ -917,7 +1030,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VFadeTransition: {
 		slots: false,
@@ -925,7 +1039,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VScaleTransition: {
 		slots: false,
@@ -933,7 +1048,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VScrollXTransition: {
 		slots: false,
@@ -941,7 +1057,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VScrollXReverseTransition: {
 		slots: false,
@@ -949,7 +1066,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VScrollYTransition: {
 		slots: false,
@@ -957,7 +1075,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VScrollYReverseTransition: {
 		slots: false,
@@ -965,7 +1084,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSlideXTransition: {
 		slots: false,
@@ -973,7 +1093,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSlideXReverseTransition: {
 		slots: false,
@@ -981,7 +1102,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSlideYTransition: {
 		slots: false,
@@ -989,7 +1111,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VSlideYReverseTransition: {
 		slots: false,
@@ -997,7 +1120,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VExpandTransition: {
 		slots: false,
@@ -1005,7 +1129,8 @@ const components: any = {
 		model: {
 			value: false,
 			event: undefined
-		}
+		},
+		custom: false
 	},
 	VRowExpandTransition: {
 		slots: false,

@@ -45,6 +45,15 @@
 			alt="Badge Codacy"
 		>
 	</a>
+	<a
+		class="badge-align"
+		href="https://www.browserstack.com/"
+	>
+		<img
+			src="https://img.shields.io/badge/BrowserStack-powered%20by-brightgreen.svg?style=flat-square"
+			alt="BrowserStack"
+		>
+	</a>
 </p>
 
 ## Aussi simple que 1, 2, 3

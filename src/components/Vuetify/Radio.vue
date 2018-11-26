@@ -2,14 +2,14 @@
 
 <template>
 	<VRadio
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
-		@change="$emit('change', $event)"
 		v-model="localValue"
+		@change="$emit('change', $event)"
+		v-on="$listeners"
 	>
-		<slot name="default" /></VRadio>
+	<slot name="default" /></VRadio>
 </template>
 
 <script lang="ts">
@@ -20,12 +20,6 @@
 
 	export default Vue.extend({
 		name,
-		data() {
-			return {
-				name,
-				localValue: this.value
-			};
-		},
 		mixins: [merge],
 		model: {
 			prop: 'value',
@@ -35,6 +29,18 @@
 			value: {
 				type: [String, Boolean, Number],
 				default: undefined
+			}
+		},
+		data() {
+			return {
+				name,
+				localValue: this.value
+			};
+		},
+		watch: {
+			value() {
+				this.localValue = this.value;
+				this.$emit('change', this.localValue);
 			}
 		}
 	});

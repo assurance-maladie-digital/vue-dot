@@ -47,6 +47,15 @@ Translations: [Français](./gh-docs/fr/README.md)
 			alt="Codacy Badge"
 		>
 	</a>
+	<a
+		class="badge-align"
+		href="https://www.browserstack.com/"
+	>
+		<img
+			src="https://img.shields.io/badge/BrowserStack-powered%20by-brightgreen.svg?style=flat-square"
+			alt="BrowserStack"
+		>
+	</a>
 </p>
 
 ## As Easy as 1, 2, 3

@@ -2,12 +2,12 @@
 
 <template>
 	<VDatePickerMounthTable
-		v-on="$listeners"
 		v-bind="merged"
 		:class="merged.classes"
 		:style="merged.styles"
+		v-on="$listeners"
 	>
-		<slot name="default" /></VDatePickerMounthTable>
+	<slot name="default" /></VDatePickerMounthTable>
 </template>
 
 <script lang="ts">
@@ -18,11 +18,11 @@
 
 	export default Vue.extend({
 		name,
+		mixins: [merge],
 		data() {
 			return {
 				name
 			};
 		},
-		mixins: [merge]
 	});
 </script>

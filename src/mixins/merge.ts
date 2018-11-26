@@ -9,7 +9,7 @@ const merge = {
 	computed: {
 		merged(this: VueMerge): object {
 			// Don't do anything without $theme
-			if (this.$theme) {
+			if (this.$theme && this.$theme.config.components) {
 				const componentTheme = this.$theme.config.components[this.name] || {};
 
 				// Load the 'default' theme (if any)
@@ -24,7 +24,7 @@ const merge = {
 
 							// If the custom prop depends on another one
 							if (prop in this.$attrs && componentTheme[prop].extends) {
-								extend = componentTheme[componentTheme[prop].extends] || {};
+								extend = componentTheme[componentTheme[prop].extends] || {};
 							}
 
 							const propTheme = prop in this.$attrs ? componentTheme[prop] : {};

@@ -2,11 +2,9 @@
 	<div>
 		<v-text-field
 			v-model="computedDateFormatted"
-			@input="menu = false"
-			@blur="date = parseDate(dateFormatted)"
-
 			:autofocus="autofocus"
 			:background-color="backgroundColor"
+
 			:box="box"
 			:browser-autocomplete="browserAutocomplete"
 			:color="color"
@@ -39,25 +37,27 @@
 			:type="type"
 			:validate-on-blur="validateOnBlur"
 			:value="value"
+			@input="menu = false"
+			@blur="date = parseDate(dateFormatted)"
 		>
 			<XBtn
 				v-if="!appendIcon"
-				icon
 				slot="prepend"
-				@click="menu = true"
+				icon
 				class="ma-0 activator-icon"
+				@click="menu = true"
 			>
 				<XSvgIcon
-					icon="calendar"
 					:color="appendIconColor"
+					icon="calendar"
 				/>
 			</XBtn>
 			<XBtn
 				v-else-if="appendIcon && appendIconCb"
-				icon
 				slot="prepend"
-				@click="appendIconCb"
+				icon
 				class="ma-0 activator-icon"
+				@click="appendIconCb"
 			>
 				<XSvgIcon
 					:icon="appendIcon"
@@ -89,9 +89,8 @@
 			<v-date-picker
 				ref="picker"
 				v-model="date"
-				@input="save"
-
 				:allowed-dates="allowedDates"
+
 				:color="color"
 				:dark="dark"
 				:day-format="dayFormat"
@@ -120,6 +119,7 @@
 				:width="width"
 				:year-format="yearFormat"
 				:year-icon="yearIcon"
+				@input="save"
 			/>
 		</v-menu>
 	</div>
@@ -137,44 +137,9 @@
 		components: {
 			SvgIcon
 		},
-		data() {
-			return {
-				date: this.value || '',
-				menu: false,
-				dateFormatted: '',
-				dayjsLocales: [ // All supported locales of dayjs
-					'bg',
-					'ca',
-					'da',
-					'de',
-					'es',
-					'fa',
-					'fi',
-					'fr',
-					'hr',
-					'hu',
-					'id',
-					'it',
-					'ja',
-					'ka',
-					'ko',
-					'nb',
-					'nl',
-					'nn',
-					'pl',
-					'pt-br',
-					'ro',
-					'ru',
-					'sk',
-					'sr-cyrl',
-					'sr',
-					'sv',
-					'th',
-					'tr',
-					'zh-cn',
-					'zh-tw'
-				]
-			};
+		model: {
+			prop: 'model',
+			event: 'change'
 		},
 		props: {
 			// Shared
@@ -199,6 +164,7 @@
 				default: false
 			},
 			value: {
+				type: String,
 				default: undefined
 			},
 			light: {
@@ -438,6 +404,45 @@
 				default: undefined
 			}
 		},
+		data() {
+			return {
+				date: this.value || '',
+				menu: false,
+				dateFormatted: '',
+				dayjsLocales: [ // All supported locales of dayjs
+					'bg',
+					'ca',
+					'da',
+					'de',
+					'es',
+					'fa',
+					'fi',
+					'fr',
+					'hr',
+					'hu',
+					'id',
+					'it',
+					'ja',
+					'ka',
+					'ko',
+					'nb',
+					'nl',
+					'nn',
+					'pl',
+					'pt-br',
+					'ro',
+					'ru',
+					'sk',
+					'sr-cyrl',
+					'sr',
+					'sv',
+					'th',
+					'tr',
+					'zh-cn',
+					'zh-tw'
+				]
+			};
+		},
 		computed: {
 			computedDateFormatted: {
 				get(): string {
@@ -495,15 +500,6 @@
 				}
 			}
 		},
-		model: {
-			prop: 'model',
-			event: 'change'
-		},
-		created() {
-			this.loadLocale();
-			this.dateFormatted = this.value ? this.formatDate(this.date) : '';
-			this.$emit('change', this.formatDateForReturn(this.date));
-		},
 		watch: {
 			menu(val: string) {
 				if (this.birthdate && val) {
@@ -519,6 +515,11 @@
 			locale(val: string) {
 				this.loadLocale();
 			}
+		},
+		created() {
+			this.loadLocale();
+			this.dateFormatted = this.value ? this.formatDate(this.date) : '';
+			this.$emit('change', this.formatDateForReturn(this.date));
 		},
 		methods: {
 			// Save the date, see https://vuetifyjs.com/en/components/date-pickers#example-date-dialog-and-menu
