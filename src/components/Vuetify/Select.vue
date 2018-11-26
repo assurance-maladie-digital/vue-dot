@@ -2,7 +2,8 @@
 
 <template>
 	<div
-		:is="merged.labelOut ? 'XLayout' : 'div'"
+		:tag="merged.labelOut ? 'label' : ''"
+		:is="merged.labelOut ? 'XLayout' : 'label'"
 		:align-center="merged.labelOut ? true : null"
 	>
 		<p
