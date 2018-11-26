@@ -38,10 +38,11 @@
 
 			<XSpacer />
 			<XBtn
-				:color="dark ? 'white' : 'accent'"
 				:light="!dark"
 				:dark="dark"
+				color="white"
 				primary
+				flat
 				@click="dark = !dark"
 			>
 				<span v-if="!dark">Dark mode</span>
@@ -74,6 +75,7 @@
 						</XAlert>
 
 						<div class="px-4 py-3 pb-5 mb-5">
+							<h1>Playground</h1>
 							<h2 class="accent--text">Alerts</h2>
 							<p class="mt-2">The alert component is used to convey important information to the user. It comes in 4 variations, success, info, warning and error. These have default icons assigned which can be changed and represent different actions.</p>
 
@@ -84,7 +86,7 @@
 								wrap
 							>
 								<XBtn
-									:color="alert.value ? 'warning' : 'blue'"
+									:color="alert.value ? 'error' : 'secondary'"
 									secondary
 									class="ma-0"
 									@click="alert.value = !alert.value"
@@ -206,7 +208,7 @@
 								wrap
 							>
 								<XBtn
-									:color="badge.value ? 'warning' : 'blue'"
+									:color="badge.value ? 'error' : 'secondary'"
 									secondary
 									class="ma-0"
 									@click="badge.value = !badge.value"
@@ -266,7 +268,7 @@
 									</XIcon>
 
 									<XIcon
-										color="grey"
+										color="grey darken-1"
 										large
 									>
 										account_circle
@@ -286,7 +288,7 @@
 								wrap
 							>
 								<XBtn
-									:color="bottomNav.value ? 'warning' : 'blue'"
+									:color="bottomNav.value ? 'error' : 'secondary'"
 									secondary
 									class="ma-0"
 									@click="bottomNav.value = !bottomNav.value"
@@ -312,7 +314,7 @@
 
 								<XBottomNav
 									:active.sync="bottomNav.active"
-									:color="bottomNav.monochrome ? 'info' : bottomNavColor"
+									:color="bottomNav.monochrome ? 'secondary' : bottomNavColor"
 									:value="bottomNav.value"
 									:shift="bottomNav.shift"
 									fixed
@@ -358,7 +360,7 @@
 								>
 									<XBtn
 										slot="activator"
-										:color="bottomSheet.value ? 'warning' : 'blue'"
+										:color="bottomSheet.value ? 'error' : 'secondary'"
 										secondary
 										class="ma-0"
 									>
@@ -588,6 +590,7 @@
 									:ripple="button.ripple"
 									:round="button.round"
 									:small="button.small"
+									color="primary"
 									primary
 								>
 									<span v-if="!button.fab && !button.icon">Success</span>
@@ -608,7 +611,7 @@
 								wrap
 							>
 								<XBtn
-									:color="fab.value ? 'warning' : 'blue'"
+									:color="fab.value ? 'error' : 'secondary'"
 									secondary
 									class="ma-0"
 									@click="fab.value = !fab.value"
@@ -798,9 +801,11 @@
 
 									<XCardActions>
 										<XBtn
-											primary
+											color="primary"
 										>Share</XBtn>
 										<XBtn
+											color="primary"
+											outline
 											secondary
 										>Explore</XBtn>
 									</XCardActions>
@@ -1041,6 +1046,7 @@
 								<a
 									href="#"
 									class="mt-3"
+									aria-label="Demo link"
 								>Link</a>
 
 								<p class="mt-3 mb-1">Paragraph</p>
@@ -1053,76 +1059,7 @@
 
 							<h2 class="accent--text mt-5">Custom - Colors</h2>
 							<p class="mt-2">These are generated from Vuetify theme, cutsom colors in theme and Material colors.</p>
-							<ul
-								v-if="$vuetify.theme"
-								class="color-table mt-5"
-							>
-								<li
-									v-for="(color, name) in $vuetify.theme"
-									v-if="typeof color === 'string'"
-									:key="`a-${name}`"
-									class="color-item"
-								>
-									<v-layout
-										v-for="(sub, index) in themeItems"
-										:key="`a-a-${index}`"
-										:class="`${transform(name)} ${transform(sub)}`"
-										:style="{
-											color: getColorClass(sub),
-											padding: sub === 'base' ? '20px 15px' : '',
-											fontWeight: sub === 'base' ? 'bold' : ''
-										}"
-									>
-										{{ transform(name) }} {{ transform(sub) }}
-										<XSpacer />
-										{{ color }}
-									</v-layout>
-								</li>
-
-								<li
-									v-for="(colorObj, name) in $vuetify.theme"
-									v-if="typeof colorObj === 'object'"
-									:key="`b-${name}`"
-									class="color-item"
-								>
-									<v-layout
-										v-for="(color, sub) in colorObj"
-										:key="`b-b-${sub}`"
-										:class="`${transform(name)} ${transform(sub)}`"
-										:style="{
-											color: getColorClass(sub),
-											padding: sub === 'base' ? '20px 15px' : '',
-											fontWeight: sub === 'base' ? 'bold' : ''
-										}"
-									>
-										{{ transform(name) }} {{ transform(sub) }}
-										<XSpacer />
-										{{ color }}
-									</v-layout>
-								</li>
-
-								<li
-									v-for="(colorObj, name) in colors"
-									v-if="typeof colorObj === 'object'"
-									:key="`c-${name}`"
-									class="color-item"
-								>
-									<v-layout
-										v-for="(color, sub) in colorObj"
-										:key="`c-c-${sub}`"
-										:class="`${transform(name)} ${transform(sub)}`"
-										:style="{
-											color: getColorClass(sub),
-											padding: sub === 'base' ? '20px 15px' : '',
-											fontWeight: sub === 'base' ? 'bold' : ''
-										}"
-									>
-										{{ transform(name) }} {{ transform(sub) }}
-										<XSpacer />
-										{{ color }}
-									</v-layout>
-								</li>
-							</ul>
+							<XColorTable :dark="dark" />
 						</div>
 					</XFlex>
 				</XLayout>
@@ -1143,26 +1080,17 @@
 	// This is a playground, it is not tested because it isn't a part of the library
 	import Vue from 'vue';
 
+	import XColorTable from './components/ColorTable.vue';
+
 	import { default as pkg } from '../package.json';
-	import colors from 'vuetify/es5/util/colors';
 
 	export default Vue.extend({
 		name: 'XPlayground',
+		components: {
+			XColorTable
+		},
 		data() {
 			return {
-				colors,
-				themeItems: [
-					'base',
-					'lighten5',
-					'lighten4',
-					'lighten3',
-					'lighten2',
-					'lighten1',
-					'darken1',
-					'darken2',
-					'darken3',
-					'darken4'
-				],
 				dark: false,
 				drawer: null,
 				alert: {
@@ -1217,7 +1145,7 @@
 				bottomNav: {
 					value: false,
 					active: 3,
-					monochrome: false,
+					monochrome: true,
 					shift: true
 				},
 				bottomSheet: {
@@ -1256,14 +1184,14 @@
 							href: 'breadcrumbs_dashboard'
 						},
 						{
-							text: 'Link 1',
+							text: 'Demo Link 1',
 							disabled: false,
-							href: 'breadcrumbs_link_1'
+							href: '#breadcrumbs_link_1'
 						},
 						{
-							text: 'Link 2',
+							text: 'Demo Link 2',
 							disabled: true,
-							href: 'breadcrumbs_link_2'
+							href: '#breadcrumbs_link_2'
 						}
 					],
 					divider: '/',
@@ -1383,37 +1311,6 @@
 		created() {
 			setTimeout(() => this.alert.value = true, 200);
 		},
-		methods: {
-			endStr(str: string) {
-				return str[str.length - 1];
-			},
-			convertToClass(str: string): string {
-				const end = this.endStr(str);
-				const sub = str.substr(0, str.length - 1);
-
-				if (isNaN(parseInt(end, 10))) {
-					return str;
-				}
-
-				return `${sub}-${end}`;
-			},
-			getColorClass(key: string) {
-				if (['white', 'transparent'].includes(key) ||
-					key.indexOf('light') > -1 ||
-					key.indexOf('accent') > -1
-				) {
-					return '#000';
-				} else {
-					return '#fff';
-				}
-			},
-			kebab(str: string) {
-				return (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-			},
-			transform(str: string) {
-				return str !== 'base' ? this.convertToClass(this.kebab(str)) : '';
-			}
-		}
 	});
 </script>
 
@@ -1447,20 +1344,5 @@
 
 	.custom-layout > * {
 		flex: none;
-	}
-
-	.color-table {
-		display: flex;
-		flex-wrap: wrap;
-		list-style: none;
-
-		.color-item {
-			margin: 10px;
-			width: 270px;
-
-			.layout {
-				padding: 10px 15px;
-			}
-		}
 	}
 </style>

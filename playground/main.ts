@@ -10,6 +10,7 @@ import 'vuetify/dist/vuetify.min.css';
 
 import VueDot from '../src/';
 import { default as theme } from './theme.json';
+// import { default as theme } from './theme-ameli-pro.json';
 
 Vue.use(VueDot, {
 	theme
