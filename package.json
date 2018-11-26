@@ -33,7 +33,7 @@
 		"serve": "vue-cli-service serve",
 		"build-bundle": "ts-node --project ./scripts/tsconfig.json --files ./scripts/build-lib",
 		"lint": "vue-cli-service lint",
-		"lint:md": "remark .",
+		"lint:md": "remark . -o",
 		"test:unit": "vue-cli-service test:unit",
 		"test:e2e": "vue-cli-service test:e2e",
 		"docs:dev": "vuepress dev docs",
@@ -164,6 +164,10 @@
 		],
 		"*.vue": [
 			"vue-cli-service lint",
+			"git add"
+		],
+		"*.md": [
+			"remark . --frail",
 			"git add"
 		]
 	},

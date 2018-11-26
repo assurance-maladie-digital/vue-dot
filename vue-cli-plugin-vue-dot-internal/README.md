@@ -40,7 +40,7 @@
 
 ## Install
 
-``` bash
+```bash
 yarn add @cnamts/vue-cli-plugin-vue-dot-internal
 # OR npm install @cnamts/vue-cli-plugin-vue-dot-internal
 ```
