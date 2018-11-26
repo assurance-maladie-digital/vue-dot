@@ -102,6 +102,10 @@ module.exports = {
 	},
 	themeConfig: {
 		sidebarDepth: 1,
+		algolia: {
+			apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
+			indexName: 'vue-dot'
+		},
 		locales: {
 			'/': {
 				label: 'English',
