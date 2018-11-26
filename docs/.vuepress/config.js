@@ -101,6 +101,8 @@ module.exports = {
 		}
 	},
 	themeConfig: {
+		updatePopup: true,
+		lastUpdated: 'Last Updated',
 		sidebarDepth: 1,
 		algolia: {
 			apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
