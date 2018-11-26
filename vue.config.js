@@ -6,7 +6,7 @@ module.exports = {
 		extract: false
 	},
 	configureWebpack: {
-		entry: './playground/main.ts',
+		entry: process.env.NODE_ENV !== 'production' ? './playground/main.ts' : './src/index.ts',
 		output: {
 			libraryExport: 'default'
 		},
@@ -25,12 +25,14 @@ module.exports = {
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
 		config.optimization.splitChunks(false);
-		config
-			.plugin('html')
-			.tap(args => {
-				args[0].template = './playground/public/index.html';
+		if (process.env.NODE_ENV !== 'production') {
+			config
+				.plugin('html')
+				.tap(args => {
+					args[0].template = './playground/public/index.html';
 
-				return args;
-		});
+					return args;
+			});
+		}
 	}
 };
