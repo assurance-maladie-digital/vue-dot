@@ -170,6 +170,18 @@ module.exports = {
 								'roadmap'
 							]
 						}
+					],
+					'/next/guide/': [
+						{
+							title: 'Guide',
+							collapsable: false,
+							children: [
+								'',
+								'components',
+								'directives',
+								'roadmap',
+							]
+						}
 					]
 				}
 			},
