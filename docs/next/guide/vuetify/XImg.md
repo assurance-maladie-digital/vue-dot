@@ -1,0 +1,3 @@
+# XImg
+
+<ComponentDoc current="XImg" />

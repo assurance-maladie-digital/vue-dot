@@ -1,0 +1,3 @@
+# XLayout
+
+<ComponentDoc current="XLayout" />

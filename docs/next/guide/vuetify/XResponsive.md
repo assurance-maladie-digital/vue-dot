@@ -1,0 +1,3 @@
+# XResponsive
+
+<ComponentDoc current="XResponsive" />

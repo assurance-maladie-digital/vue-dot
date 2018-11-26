@@ -1,0 +1,3 @@
+# XListTileAvatar
+
+<ComponentDoc current="XListTileAvatar" />

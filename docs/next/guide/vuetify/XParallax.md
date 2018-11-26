@@ -1,0 +1,3 @@
+# XParallax
+
+<ComponentDoc current="XParallax" />

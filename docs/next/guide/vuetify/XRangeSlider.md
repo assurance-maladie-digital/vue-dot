@@ -1,0 +1,3 @@
+# XRangeSlider
+
+<ComponentDoc current="XRangeSlider" />

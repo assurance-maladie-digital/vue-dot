@@ -39,7 +39,8 @@
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
 		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release",
-		"vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/generator"
+		"vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/generator",
+		"docs:vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/docs-generator"
 	},
 	"dependencies": {
 		"@sentry/browser": "^4.3.4",

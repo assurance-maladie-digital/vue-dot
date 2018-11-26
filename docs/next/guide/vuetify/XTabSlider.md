@@ -1,0 +1,3 @@
+# XTabSlider
+
+<ComponentDoc current="XTabSlider" />

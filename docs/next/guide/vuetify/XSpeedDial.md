@@ -1,0 +1,3 @@
+# XSpeedDial
+
+<ComponentDoc current="XSpeedDial" />

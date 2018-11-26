@@ -45,7 +45,7 @@
 <script>
 	import Vue from 'vue';
 
-	const XSvgIcon = () => require('./lib/SvgIcon.js').default;
+	import XSvgIcon from './lib/SvgIcon.js';
 
 	export default Vue.extend({
 		name: 'Timeline',

@@ -1,0 +1,3 @@
+# XBreadcrumbsItem
+
+<ComponentDoc current="XBreadcrumbsItem" />

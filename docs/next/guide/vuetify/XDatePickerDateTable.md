@@ -1,0 +1,3 @@
+# XDatePickerDateTable
+
+<ComponentDoc current="XDatePickerDateTable" />

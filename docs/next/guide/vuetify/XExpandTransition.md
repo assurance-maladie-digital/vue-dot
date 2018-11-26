@@ -1,0 +1,3 @@
+# XExpandTransition
+
+<ComponentDoc current="XExpandTransition" />

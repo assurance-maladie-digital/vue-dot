@@ -1,0 +1,3 @@
+# XScrollYTransition
+
+<ComponentDoc current="XScrollYTransition" />

@@ -1,3 +1,16 @@
+const fs = require('fs');
+const path = require('path');
+
+const files = [];
+
+fs.readdirSync(path.join(__dirname, '../next/guide/vuetify')).forEach((file) => {
+	if (file !== 'README.md') {
+		files.push('vuetify/' + file.replace('.md', ''));
+	} else {
+		files.push('vuetify/');
+	}
+});
+
 module.exports = {
 	base: '/vue-dot/',
 	serviceWorker: true,
@@ -179,8 +192,13 @@ module.exports = {
 								'',
 								'components',
 								'directives',
-								'roadmap',
+								'roadmap'
 							]
+						},
+						{
+							title: 'XVuetify',
+							collapsable: true,
+							children: files
 						}
 					]
 				}
