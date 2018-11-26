@@ -86,6 +86,13 @@ module.exports = {
 				name: 'google-site-verification',
 				content: 'cA4p0q68_DnDQ-yllaSj48QKn5yErVu6Dl2VeFpjI2E'
 			}
+		],
+		[
+			'script',
+			{
+				src: 'https://js.sentry-cdn.com/da9b678c454344789142e9b3c4e8b394.min.js',
+				crossorigin: 'anonymous'
+			}
 		]
 	],
 	locales: {
