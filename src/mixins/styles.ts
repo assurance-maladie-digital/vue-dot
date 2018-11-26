@@ -76,8 +76,10 @@ const styles = {
 				let tags = this.$theme.config.styles;
 				append(tags, generator(tags, false), 'styles');
 
-				tags = this.$theme.config.typography.styles;
-				append(tags, generator(tags, true), 'typography');
+				if (this.$theme.config.typography) {
+					tags = this.$theme.config.typography.styles;
+					append(tags, generator(tags, true), 'typography');
+				}
 			}
 		}
 	}
