@@ -79,6 +79,13 @@ module.exports = {
 				name: 'theme-color',
 				content: '#fefefe'
 			}
+		],
+		[
+			'meta',
+			{
+				name: 'google-site-verification',
+				content: 'cA4p0q68_DnDQ-yllaSj48QKn5yErVu6Dl2VeFpjI2E'
+			}
 		]
 	],
 	locales: {
