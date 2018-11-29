@@ -1,0 +1,3 @@
+# XApp
+
+<ComponentDoc current="XApp" />

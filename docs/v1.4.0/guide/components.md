@@ -69,7 +69,7 @@ One missing functionality of `v-icon`, is custom icons, here there are:
     <svg viewBox="0 0 24 24">
         <path d="M4.6 2.8l9.2 9.2-9.2 9.2L7.4 24l12-12-12-12z" />
     </svg>
-</XSvgIcon>
+</SvgIcon>
 ```
 
 ::: tip

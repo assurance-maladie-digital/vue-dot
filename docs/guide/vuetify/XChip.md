@@ -1,0 +1,3 @@
+# XChip
+
+<ComponentDoc current="XChip" />

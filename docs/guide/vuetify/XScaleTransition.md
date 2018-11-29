@@ -1,0 +1,3 @@
+# XScaleTransition
+
+<ComponentDoc current="XScaleTransition" />

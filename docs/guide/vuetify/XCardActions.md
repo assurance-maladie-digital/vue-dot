@@ -1,0 +1,3 @@
+# XCardActions
+
+<ComponentDoc current="XCardActions" />

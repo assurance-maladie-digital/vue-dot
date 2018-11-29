@@ -161,7 +161,11 @@ module.exports = {
 						text: 'Version',
 						items: [
 							{
-								text: 'Lastest (v1.4.0)',
+								text: 'v1.4.0',
+								link: '/v1.4.0/'
+							},
+							{
+								text: 'Lastest (v1.5.0)',
 								link: '/'
 							},
 							{
@@ -182,6 +186,12 @@ module.exports = {
 								'directives',
 								'roadmap'
 							]
+						},
+						'themes/',
+						{
+							title: 'XVuetify',
+							collapsable: true,
+							children: files
 						}
 					],
 					'/next/guide/': [

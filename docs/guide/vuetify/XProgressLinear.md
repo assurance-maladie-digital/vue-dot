@@ -1,0 +1,3 @@
+# XProgressLinear
+
+<ComponentDoc current="XProgressLinear" />

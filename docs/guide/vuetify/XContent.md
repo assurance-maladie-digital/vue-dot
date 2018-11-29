@@ -1,0 +1,3 @@
+# XContent
+
+<ComponentDoc current="XContent" />

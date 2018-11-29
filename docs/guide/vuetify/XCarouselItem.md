@@ -1,0 +1,3 @@
+# XCarouselItem
+
+<ComponentDoc current="XCarouselItem" />

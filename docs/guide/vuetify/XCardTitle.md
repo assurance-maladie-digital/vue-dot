@@ -1,0 +1,3 @@
+# XCardTitle
+
+<ComponentDoc current="XCardTitle" />

@@ -1,0 +1,3 @@
+# XDataIterator
+
+<ComponentDoc current="XDataIterator" />

@@ -1,0 +1,3 @@
+# XSlideXTransition
+
+<ComponentDoc current="XSlideXTransition" />
