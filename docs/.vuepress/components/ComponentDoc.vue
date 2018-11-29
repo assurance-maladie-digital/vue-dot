@@ -1,97 +1,107 @@
 <template>
-	<div v-if="component">
-		<p>{{ component.description }}</p>
-		<h2
-			class="mb-3 mt-5"
-			id="api"
-		>
-			<a
-				href="#api"
-				aria-hidden="true"
-				class="header-anchor"
-			>#</a>
-			API
-		</h2>
-		<v-card
-			flat
-			class="main-card"
-		>
-			<v-tabs
-				color="grey lighten-3"
-				slider-color="green"
+	<div>
+		<div v-if="component">
+			<p>{{ component.description }}</p>
+			<h2
+				class="mb-3 mt-5"
+				id="api"
 			>
-				<v-tab
-					v-for="(data, key) in componentData"
-					:key="key"
-					ripple
+				<a
+					href="#api"
+					aria-hidden="true"
+					class="header-anchor"
+				>#</a>
+				API
+			</h2>
+			<v-card
+				flat
+				class="main-card"
+			>
+				<v-tabs
+					color="grey lighten-3"
+					slider-color="green"
 				>
-					{{ key }}
-				</v-tab>
-				<v-tab-item
-					v-for="(data, key) in componentData"
-					:key="key"
-				>
-					<v-card
-						flat
-						class="grey lighten-5"
+					<v-tab
+						v-for="(data, key) in componentData"
+						:key="key"
+						ripple
 					>
-						<v-card-text class="grey lighten-5">
-							<v-data-iterator
-								:items="data"
-								hide-actions
-							>
-								<div
-									slot="item"
-									slot-scope="props"
-									class="row"
+						{{ key }}
+					</v-tab>
+					<v-tab-item
+						v-for="(data, key) in componentData"
+						:key="key"
+					>
+						<v-card
+							flat
+							class="grey lighten-5"
+						>
+							<v-card-text class="grey lighten-5">
+								<v-data-iterator
+									:items="data"
+									hide-actions
 								>
-									<h2 v-if="props.item.name === 'separator'">{{ props.item.title }}</h2>
-									<template v-else>
-										<div
-											class="pa-2 white d-flex align-top"
-										>
-											<div class="flex xs3 text-xs-left">
-												<div class="header grey--text text--darken-1">Name</div>
-												<div class="mono name">{{ props.item.name }}</div>
-											</div>
+									<div
+										slot="item"
+										slot-scope="props"
+										class="row"
+									>
+										<h2 v-if="props.item.name === 'separator'">{{ props.item.title }}</h2>
+										<template v-else>
 											<div
-												class="flex xs6 text-xs-left"
-												v-if="props.item.default"
+												class="pa-2 white d-flex align-top"
 											>
-												<div class="header grey--text text--darken-1">Default</div>
-												<div class="mono default">{{ props.item.default }}</div>
-											</div>
-											<div
-												class="flex xs3 text-xs-right"
-												v-if="props.item.type"
-											>
-												<div class="header grey--text text--darken-1">Type</div>
-												<div class="mono type">{{ typeof props.item.type === 'object' ? props.item.type.join(' | ') : props.item.type }}</div>
-											</div>
-											<v-spacer v-if="props.item.value" />
-											<div
-												class="flex xs3 text-xs-right"
-												v-if="props.item.value"
-											>
-												<div class="header grey--text text--darken-1">Value</div>
-												<div class="mono type">{{ props.item.value }}</div>
-											</div>
-										</div>
-										<div class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex">
-											<div class="flex">
-												<div class="justify">
-													<p class="mb-0" v-html="props.item.description"></p>
+												<div class="flex xs3 text-xs-left">
+													<div class="header grey--text text--darken-1">Name</div>
+													<div class="mono name">{{ props.item.name }}</div>
+												</div>
+												<div
+													class="flex xs6 text-xs-left"
+													v-if="props.item.default"
+												>
+													<div class="header grey--text text--darken-1">Default</div>
+													<div class="mono default">{{ props.item.default }}</div>
+												</div>
+												<div
+													class="flex xs3 text-xs-right"
+													v-if="props.item.type"
+												>
+													<div class="header grey--text text--darken-1">Type</div>
+													<div class="mono type">{{ typeof props.item.type === 'object' ? props.item.type.join(' | ') : props.item.type }}</div>
+												</div>
+												<v-spacer v-if="props.item.value" />
+												<div
+													class="flex xs3 text-xs-right"
+													v-if="props.item.value"
+												>
+													<div class="header grey--text text--darken-1">Value</div>
+													<div class="mono type">{{ props.item.value }}</div>
 												</div>
 											</div>
-										</div>
-									</template>
-								</div>
-							</v-data-iterator>
-						</v-card-text>
-					</v-card>
-				</v-tab-item>
-			</v-tabs>
-		</v-card>
+											<div class="pa-2 grey lighten-3 grey--text text--darken-2 d-flex">
+												<div class="flex">
+													<div class="justify">
+														<p class="mb-0" v-html="props.item.description"></p>
+													</div>
+												</div>
+											</div>
+										</template>
+									</div>
+								</v-data-iterator>
+							</v-card-text>
+						</v-card>
+					</v-tab-item>
+				</v-tabs>
+			</v-card>
+		</div>
+		<div v-else>
+			<p>No documentation yet, but it's comming soon! See that of <a href="https://vuetifyjs.com/en/">Vuetify</a> as fallback.</p>
+			<img
+				:src="$withBase('/404.svg')"
+				alt="Logo error 404"
+				class="error404 mx-auto d-block"
+			>
+		</div>
 	</div>
 </template>
 
@@ -142,6 +152,22 @@
 	.v-tabs__item:hover {
 		text-decoration: none !important;
 	}
+
+	code::after,
+	code::before {
+		content: none !important;
+	}
+
+	code {
+		display: inline !important;
+		font-weight: 400 !important;
+		font-family: inherit !important;
+		box-shadow: none !important;
+	}
+
+	.content-code {
+		font-size: .95em;
+	}
 </style>
 
 <style lang="scss" scoped>
@@ -183,5 +209,9 @@
 
 	code {
 		color: #3eaf7c;
+	}
+
+	.error404 {
+		max-width: 250px !important;
 	}
 </style>
