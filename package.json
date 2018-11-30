@@ -31,7 +31,8 @@
 	},
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build-bundle": "ts-node --project ./scripts/tsconfig.json --files ./scripts/build-lib",
+		"build-bundle": "vue-cli-service build --target lib --name vue-dot ./src/index.ts",
+		"build-bundle-full": "ts-node --project ./scripts/tsconfig.json --files ./scripts/build-lib",
 		"lint": "vue-cli-service lint",
 		"lint:md": "remark . -o",
 		"test:unit": "vue-cli-service test:unit",
