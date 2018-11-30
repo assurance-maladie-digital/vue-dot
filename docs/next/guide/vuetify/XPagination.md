@@ -1,0 +1,3 @@
+# XPagination
+
+<ComponentDoc current="XPagination" />

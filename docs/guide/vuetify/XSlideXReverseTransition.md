@@ -1,0 +1,3 @@
+# XSlideXReverseTransition
+
+<ComponentDoc current="XSlideXReverseTransition" />

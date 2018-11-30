@@ -1,6 +1,6 @@
 {
 	"name": "@cnamts/vue-dot",
-	"version": "1.4.0",
+	"version": "1.5.0-beta.2",
 	"description": "Official CNAM component library",
 	"keywords": [
 		"vue",
@@ -32,14 +32,16 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build-bundle": "vue-cli-service build --target lib --name vue-dot ./src/index.ts",
+		"build-bundle-full": "ts-node --project ./scripts/tsconfig.json --files ./scripts/build-lib",
 		"lint": "vue-cli-service lint",
-		"lint:md": "remark .",
+		"lint:md": "remark . -o",
 		"test:unit": "vue-cli-service test:unit",
 		"test:e2e": "vue-cli-service test:e2e",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
 		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release",
-		"vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/generator"
+		"vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/generator",
+		"docs:vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/docs-generator"
 	},
 	"dependencies": {
 		"@sentry/browser": "^4.3.4",
@@ -47,13 +49,13 @@
 		"is-svg": "^3.0.0",
 		"languages": "^0.1.3",
 		"vue": "^2.5.17",
-		"vuetify": "^1.3.8"
+		"vuetify": "^1.3.11"
 	},
 	"peerDependencies": {
 		"dayjs": "^1.7.7",
 		"languages": "^0.1.3",
 		"vue": "^2.5.17",
-		"vuetify": "^1.3.8"
+		"vuetify": "^1.3.11"
 	},
 	"devDependencies": {
 		"@babel/polyfill": "^7.0.0-rc.4",
@@ -76,6 +78,7 @@
 		"clear": "^0.1.0",
 		"deepmerge": "^2.2.1",
 		"figlet": "^1.2.1",
+		"fs-extra": "^7.0.1",
 		"glob": "^7.1.3",
 		"inquirer": "^6.2.0",
 		"lint-staged": "^7.2.2",
@@ -90,10 +93,11 @@
 		"stylus-loader": "^3.0.2",
 		"ts-jest": "^23.1.4",
 		"ts-node": "^7.0.1",
-		"typescript": "^3.0.3",
+		"typescript": "^3.1.6",
 		"vue-cli-plugin-vuetify": "^0.4.6",
 		"vue-template-compiler": "^2.5.17",
-		"vuepress": "^0.14.5"
+		"vuepress": "^0.14.5",
+		"vuetify-loader": "^1.0.7"
 	},
 	"postcss": {
 		"plugins": {
@@ -162,6 +166,10 @@
 		],
 		"*.vue": [
 			"vue-cli-service lint",
+			"git add"
+		],
+		"*.md": [
+			"remark . --frail",
 			"git add"
 		]
 	},

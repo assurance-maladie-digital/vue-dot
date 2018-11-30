@@ -1,0 +1,3 @@
+# XCounter
+
+<ComponentDoc current="XCounter" />

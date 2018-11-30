@@ -1,0 +1,3 @@
+# XDataTable
+
+<ComponentDoc current="XDataTable" />

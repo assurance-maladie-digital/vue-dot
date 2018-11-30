@@ -1,0 +1,3 @@
+# XTabsItems
+
+<ComponentDoc current="XTabsItems" />

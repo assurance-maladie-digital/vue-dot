@@ -1,0 +1,3 @@
+# XToolbarTitle
+
+<ComponentDoc current="XToolbarTitle" />

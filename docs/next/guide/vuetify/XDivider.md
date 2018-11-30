@@ -1,0 +1,3 @@
+# XDivider
+
+<ComponentDoc current="XDivider" />

@@ -1,0 +1,3 @@
+# XToolbarSideIcon
+
+<ComponentDoc current="XToolbarSideIcon" />

@@ -1,0 +1,3 @@
+# XWindow
+
+<ComponentDoc current="XWindow" />

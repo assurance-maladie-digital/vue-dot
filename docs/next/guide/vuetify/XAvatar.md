@@ -1,0 +1,3 @@
+# XAvatar
+
+<ComponentDoc current="XAvatar" />

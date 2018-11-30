@@ -1,0 +1,3 @@
+# XAlert
+
+<ComponentDoc current="XAlert" />

@@ -1,0 +1,3 @@
+# XBtnToggle
+
+<ComponentDoc current="XBtnToggle" />

@@ -1,0 +1,3 @@
+# XDatePickerTitle
+
+<ComponentDoc current="XDatePickerTitle" />

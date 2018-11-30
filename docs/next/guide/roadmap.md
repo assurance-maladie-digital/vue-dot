@@ -2,6 +2,7 @@
 
 VueDot is under development, on this page you can see what's planned on the future. This is not an exhaustive list and is subject to change at any time without notice.
 
+<ClientOnly>
 <Timeline
 	:items="[
 		{
@@ -36,3 +37,4 @@ VueDot is under development, on this page you can see what's planned on the futu
 		}
 	]"
 />
+</ClientOnly>

@@ -1,0 +1,3 @@
+# XExpansionPanel
+
+<ComponentDoc current="XExpansionPanel" />

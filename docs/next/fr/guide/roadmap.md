@@ -2,6 +2,7 @@
 
 VueDot est en cours de développement. Sur cette page, vous pouvez voir ce qui est prévu pour l’avenir. Cette liste n'est pas exhaustive et peut être modifiée à tout moment sans préavis.
 
+<ClientOnly>
 <Timeline
 	:items="[
 		{
@@ -36,3 +37,4 @@ VueDot est en cours de développement. Sur cette page, vous pouvez voir ce qui e
 		}
 	]"
 />
+</ClientOnly>

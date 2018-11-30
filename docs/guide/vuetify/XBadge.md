@@ -1,0 +1,3 @@
+# XBadge
+
+<ComponentDoc current="XBadge" />

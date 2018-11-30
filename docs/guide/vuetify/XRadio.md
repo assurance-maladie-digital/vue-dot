@@ -1,0 +1,3 @@
+# XRadio
+
+<ComponentDoc current="XRadio" />

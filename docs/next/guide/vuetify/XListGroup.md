@@ -1,0 +1,3 @@
+# XListGroup
+
+<ComponentDoc current="XListGroup" />

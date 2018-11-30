@@ -1,0 +1,3 @@
+# XInput
+
+<ComponentDoc current="XInput" />

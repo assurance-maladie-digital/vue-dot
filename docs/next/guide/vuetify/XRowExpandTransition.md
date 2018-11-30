@@ -1,0 +1,3 @@
+# XRowExpandTransition
+
+<ComponentDoc current="XRowExpandTransition" />

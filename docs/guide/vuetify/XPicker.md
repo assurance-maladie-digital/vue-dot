@@ -1,0 +1,3 @@
+# XPicker
+
+<ComponentDoc current="XPicker" />

@@ -1,0 +1,3 @@
+# XSnackbar
+
+<ComponentDoc current="XSnackbar" />

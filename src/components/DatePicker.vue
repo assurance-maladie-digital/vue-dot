@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-text-field
+		<XTextField
 			v-model="computedDateFormatted"
 			:autofocus="autofocus"
 			:background-color="backgroundColor"
@@ -71,8 +71,8 @@
 				:color="appendIconColor"
 				class="activator-icon"
 			/>
-		</v-text-field>
-		<v-menu
+		</XTextField>
+		<XMenu
 			ref="menu"
 			:close-on-content-click="false"
 			v-model="menu"
@@ -86,7 +86,7 @@
 			offset-overflow
 			attach=".activator-icon"
 		>
-			<v-date-picker
+			<VDatePicker
 				ref="picker"
 				v-model="date"
 				:allowed-dates="allowedDates"
@@ -121,7 +121,7 @@
 				:year-icon="yearIcon"
 				@input="save"
 			/>
-		</v-menu>
+		</XMenu>
 	</div>
 </template>
 

@@ -1,0 +1,3 @@
+# XListTileTitle
+
+<ComponentDoc current="XListTileTitle" />

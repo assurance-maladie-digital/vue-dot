@@ -1,0 +1,3 @@
+# XSystemBar
+
+<ComponentDoc current="XSystemBar" />

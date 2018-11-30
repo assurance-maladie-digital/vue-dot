@@ -1,0 +1,3 @@
+# XRating
+
+<ComponentDoc current="XRating" />

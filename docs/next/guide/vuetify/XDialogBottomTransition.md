@@ -1,0 +1,3 @@
+# XDialogBottomTransition
+
+<ComponentDoc current="XDialogBottomTransition" />

@@ -1,0 +1,3 @@
+# XDialog
+
+<ComponentDoc current="XDialog" />

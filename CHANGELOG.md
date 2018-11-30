@@ -1,3 +1,15 @@
+### [v1.5.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.1...v1.5.0-beta.2) (30-11-2018)
+
+### Fix Vuetify components names
+
+### [v1.5.0-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.0...v1.5.0-beta.1) (30-11-2018)
+
+### Fix tag
+
+### [v1.5.0-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0...v1.5.0-beta.0) (30-11-2018)
+
+### Ensure that everything works
+
 ### [v1.4.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.11...v1.4.0) (08-11-2018)
 
 ### New features

@@ -1,0 +1,3 @@
+# XWindowItem
+
+<ComponentDoc current="XWindowItem" />

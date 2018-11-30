@@ -1,0 +1,3 @@
+# XMenu
+
+<ComponentDoc current="XMenu" />

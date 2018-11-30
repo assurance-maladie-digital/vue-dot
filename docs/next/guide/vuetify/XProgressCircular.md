@@ -1,0 +1,3 @@
+# XProgressCircular
+
+<ComponentDoc current="XProgressCircular" />

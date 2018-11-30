@@ -801,6 +801,7 @@
 
 									<XCardActions>
 										<XBtn
+											primary
 											color="primary"
 										>Share</XBtn>
 										<XBtn

@@ -1,5 +1,5 @@
 <template>
-	<v-menu
+	<VMenu
 		class="menu-depth"
 		allow-overflow
 		offset-y
@@ -52,8 +52,8 @@
 				icon="expand"
 			/>
 		</XBtn>
-		<v-list v-if="languages">
-			<v-list-tile
+		<VList v-if="languages">
+			<VListTile
 				v-for="(item, lang, index) in languages"
 				:key="index"
 				avatar
@@ -63,19 +63,19 @@
 					class="ma-0"
 					@click="changeLang(lang)"
 				>
-					<v-list-tile-avatar v-if="flags">
+					<VListTileAvatar v-if="flags">
 						<img
 							:src="`${flagsUrl}${lang}.svg`"
 							class="flag-img"
 							alt=""
 						>
-					</v-list-tile-avatar>
+					</VListTileAvatar>
 
-					<v-list-tile-title>{{ item.nativeName }}</v-list-tile-title>
+					<XListTileTitle>{{ item.nativeName }}</XListTileTitle>
 				</XBtn>
-			</v-list-tile>
-		</v-list>
-	</v-menu>
+			</VListTile>
+		</VList>
+	</VMenu>
 </template>
 
 <script lang="ts">

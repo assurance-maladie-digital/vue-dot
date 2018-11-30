@@ -1,0 +1,3 @@
+# XDialogTransition
+
+<ComponentDoc current="XDialogTransition" />
