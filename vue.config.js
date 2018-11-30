@@ -25,6 +25,7 @@ module.exports = {
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
 		config.optimization.splitChunks(false);
+
 		if (process.env.NODE_ENV !== 'production') {
 			config
 				.plugin('html')
@@ -32,7 +33,9 @@ module.exports = {
 					args[0].template = './playground/public/index.html';
 
 					return args;
-			});
+				});
+
+			config.plugin('VuetifyLoaderPlugin');
 		}
 	}
 };
