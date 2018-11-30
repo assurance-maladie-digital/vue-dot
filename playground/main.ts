@@ -15,6 +15,7 @@ import { default as theme } from './theme.json';
 Vue.use(VueDot, {
 	theme
 });
+// Vue.use(VueDot);
 
 Vue.config.productionTip = false;
 

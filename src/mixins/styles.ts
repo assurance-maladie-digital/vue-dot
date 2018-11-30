@@ -72,7 +72,7 @@ const styles = {
 		if (!window.VueDotInit) {
 			window.VueDotInit = true;
 
-			if (this.$theme.config.styles) {
+			if (this.$theme && this.$theme.config.styles) {
 				let tags = this.$theme.config.styles;
 				append(tags, generator(tags, false), 'styles');
 
