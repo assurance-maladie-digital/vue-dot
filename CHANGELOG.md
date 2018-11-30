@@ -1,3 +1,34 @@
+### [v1.5.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.2...v1.5.0) (30-11-2018)
+
+### New features
+
+-   Add themes!
+-   Add XVuetify (wrappers for Vuetify components)
+-   Update Vuetify to v1.3.11
+
+### Documentation
+
+-   Update & fix Roadmap
+-   Add Algolia search
+-   Add newsletter link
+-   Add multiple versions support
+-   Warn about installing Vuetify first
+-   Use X prefix
+-   Script to generate documentation for wrappers
+-   Add Sentry for errors
+
+### Development
+
+-   Add ESLint & activate remark
+-   Update Playground with two themes (and refactore it)
+-   Script to generate Vuetify wrappers
+-   Update dependencies
+-   Add internal plugin
+
+### Package
+
+-   Improve build (no more chunks & minify code)
+
 ### [v1.5.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.1...v1.5.0-beta.2) (30-11-2018)
 
 ### Fix Vuetify components names
