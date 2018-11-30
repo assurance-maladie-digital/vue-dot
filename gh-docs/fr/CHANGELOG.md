@@ -1,3 +1,7 @@
+### [v1.5.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0...v1.5.1) (30-11-2018)
+
+### Correction des erreurs lorsqu'aucun thème n'est utilisé
+
 ### [v1.5.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.2...v1.5.0) (30-11-2018)
 
 ### Nouvelles fonctionnalités
