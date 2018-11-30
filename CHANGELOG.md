@@ -1,3 +1,7 @@
+### [v1.5.0-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0...v1.5.0-beta.0) (30-11-2018)
+
+### Ensure that everything works
+
 ### [v1.4.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.4.0-beta.11...v1.4.0) (08-11-2018)
 
 ### New features
