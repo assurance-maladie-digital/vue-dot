@@ -41,7 +41,7 @@
 		href="https://www.codacy.com/app/Deraw-/vue-dot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=assurance-maladie-digital/vue-dot&amp;utm_campaign=Badge_Grade"
 	>
 		<img
-			src="https://api.codacy.com/project/badge/Grade/3d671fb222b04201997aae91c49d510d"
+			src="https://img.shields.io/codacy/grade/3d671fb222b04201997aae91c49d510d/master.svg?style=flat-square&label=Code+Quality"
 			alt="Badge Codacy"
 		>
 	</a>
