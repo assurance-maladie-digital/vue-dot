@@ -20,6 +20,6 @@ declare module '@cnamts/vue-dot/src/directives/debounce' {
 	export default debounce;
 }
 
-declare module '@cnamts/vue-dot/src/main' {
-	import '@babel/polyfill';
+declare module '@cnamts/vue-dot' {
+	export default VueDot;
 }
