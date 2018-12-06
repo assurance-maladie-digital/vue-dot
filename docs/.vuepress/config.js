@@ -176,6 +176,17 @@ module.exports = {
 					}
 				],
 				sidebar: {
+					'/v1.4.0/guide/': [
+						{
+							title: 'Guide',
+							collapsable: false,
+							children: [
+								'',
+								'components',
+								'directives'
+							]
+						}
+					],
 					'/guide/': [
 						{
 							title: 'Guide',
@@ -245,17 +256,32 @@ module.exports = {
 						text: 'Version',
 						items: [
 							{
-								text: 'Dernière (v1.4.0)',
+								text: 'v1.4.0',
+								link: '/fr/v1.4.0/'
+							},
+							{
+								text: 'Dernière (v1.5.x)',
 								link: '/fr/'
 							},
 							{
 								text: 'Prochaine',
-								link: '/next/fr/'
+								link: '/fr/next/'
 							}
 						]
 					}
 				],
 				sidebar: {
+					'/fr/v1.4.0/guide/': [
+						{
+							title: 'Guide',
+							collapsable: false,
+							children: [
+								'',
+								'composants',
+								'directives',
+							]
+						}
+					],
 					'/fr/guide/': [
 						{
 							title: 'Guide',

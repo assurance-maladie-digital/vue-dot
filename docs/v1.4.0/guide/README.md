@@ -44,10 +44,14 @@ Load Vue, then Vuetify and finally VueDot:
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vuetify@1.3.11/vuetify.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@cnamts/vue-dot@1.5.0/dist/vue-dot.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cnamts/vue-dot@1.4.0/dist/vue-dot.umd.min.js"></script>
 ```
 
 It will load automatically all the components from Vuetify and VueDot.
+
+## Know issues
+
+There is a bug with a error *when trying to laod `vue.common.js chunk 6`*. Just update to lastest version!
 
 ## Core team
 

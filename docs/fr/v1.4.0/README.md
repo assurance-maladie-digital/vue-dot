@@ -2,7 +2,7 @@
 home: true
 heroImage: /vue.js.svg
 actionText: Démarrer →
-actionLink: /fr/guide/
+actionLink: /fr/v1.4.0/guide/
 footer: Sous license MIT | Copyright © 2018-aujourd'hui CNAM
 ---
 

@@ -1292,7 +1292,7 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import isSvg from 'is-svg';
+	import isSvg from '@/functions/isSvg';
 
 	export default Vue.extend({
 		name: 'XSvgIcon',
