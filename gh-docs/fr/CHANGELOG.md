@@ -1,3 +1,11 @@
+### [v1.5.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.1...v1.5.2) (06-12-2018)
+
+### Corrections de bugs
+
+-   Correction des types
+-   Mise à jour des dépendances
+-   Ajout d'une fonction personnalsiée isSvg
+
 ### [v1.5.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0...v1.5.1) (30-11-2018)
 
 ### Correction des erreurs lorsqu'aucun thème n'est utilisé
