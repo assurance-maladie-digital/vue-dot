@@ -1,3 +1,7 @@
+### [v1.5.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.2...v1.5.3) (06-12-2018)
+
+### Correction d'une erreur de types
+
 ### [v1.5.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.1...v1.5.2) (06-12-2018)
 
 ### Corrections de bugs
@@ -45,7 +49,7 @@
 
 ### Correction des noms de compsoants Vuetify
 
-### [v1.5.0-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.0...v1.5.0-beta.1) (30-11-2018)
+### [v1.5.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.0-beta.0...v1.5.0-beta.1) (30-11-2018)
 
 ### Correction du tag
 
