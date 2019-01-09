@@ -1,5 +1,3 @@
-Translations: [Français](./gh-docs/fr/README.md)
-
 <p align="center">
 	<a
 		href="https://assurance-maladie-digital.github.io/vue-dot/"
@@ -8,7 +6,7 @@ Translations: [Français](./gh-docs/fr/README.md)
 	>
 		<img
 			width="280"
-			src="https://firebasestorage.googleapis.com/v0/b/vue-dot.appspot.com/o/vue.js.svg?alt=media&token=8de281bf-97bf-4c1e-a07c-aa859450a7a3"
+			src="https://res.cloudinary.com/deraw/image/upload/v1547049133/vue-dot.svg"
 			alt="VueDot"
 		>
 	</a>
@@ -52,7 +50,7 @@ Translations: [Français](./gh-docs/fr/README.md)
 		href="https://www.browserstack.com/"
 	>
 		<img
-			src="https://img.shields.io/badge/BrowserStack-powered%20by-brightgreen.svg?style=flat-square"
+			src="https://img.shields.io/badge/powered%20by-BrowserStack-brightgreen.svg?style=flat-square"
 			alt="BrowserStack"
 		>
 	</a>
@@ -63,7 +61,9 @@ Translations: [Français](./gh-docs/fr/README.md)
 ### Install
 
 ```bash
-yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
+$ yarn add @cnamts/vue-dot
+// OR
+$ npm install @cnamts/vue-dot --save
 ```
 
 ### Load
@@ -71,6 +71,7 @@ yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
 ```ts
 // main.ts
 import Vue from 'vue';
+import '@/plugins/vuetify';
 import VueDot from '@cnamts/vue-dot';
 
 Vue.use(VueDot);
@@ -87,10 +88,12 @@ new Vue({
 yarn serve # OR your own command
 ```
 
-It automatically load all components and directives of the library and made them available globally.
-
 ## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)
 
 ## License
 
-VueDot is licensed under a [MIT  License](./LICENSE).
+VueDot is licensed under [MIT License](./LICENSE).
+
+## Translations
+
+-   [FR](./gh-docs/fr/README.md)
