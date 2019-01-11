@@ -22,7 +22,14 @@ module.exports = {
 			})
 		],
 		// see https://github.com/vuetifyjs/vuetify/issues/4068#issuecomment-394890573
-		externals: process.env.NODE_ENV === 'production' ? [/^vuetify\/.+$/, 'vue'] : []
+		externals: process.env.NODE_ENV === 'production' ?
+			[
+				{
+					vue: 'Vue',
+					'vuetify/lib': 'Vuetify'
+				}
+			]
+			: []
 	},
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
