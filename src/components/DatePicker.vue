@@ -43,6 +43,7 @@
 			<XBtn
 				v-if="!appendIcon"
 				slot="prepend"
+				:ripple="!menu"
 				icon
 				class="ma-0 activator-icon"
 				@click="menu = true"
@@ -55,6 +56,7 @@
 			<XBtn
 				v-else-if="appendIcon && appendIconCb"
 				slot="prepend"
+				:ripple="!menu"
 				icon
 				class="ma-0 activator-icon"
 				@click="appendIconCb"
