@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
 	css: {
-		extract: false
+		extract: true
 	},
 	configureWebpack: {
 		entry: process.env.NODE_ENV !== 'production' ? './playground/main.ts' : './src/index.ts',

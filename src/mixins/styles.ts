@@ -60,16 +60,18 @@ const generator = (tags: any, validate: boolean): string => {
 };
 
 const append = (tags: any, style: any, id: string) => {
-	const sheet = document.createElement('style');
-	sheet.id = `vue-dot-theme-${id}`;
-	sheet.innerHTML = style;
-	document.body.appendChild(sheet);
+	if (typeof document !== 'undefined') {
+		const sheet = document.createElement('style');
+		sheet.id = `vue-dot-theme-${id}`;
+		sheet.innerHTML = style;
+		document.body.appendChild(sheet);
+	}
 };
 
 const styles = {
-	created(this: Vue) {
+	mounted(this: Vue) {
 		// only do it once
-		if (!window.VueDotInit) {
+		if (typeof window !== 'undefined' && !window.VueDotInit) {
 			window.VueDotInit = true;
 
 			if (this.$theme && this.$theme.config.styles) {
