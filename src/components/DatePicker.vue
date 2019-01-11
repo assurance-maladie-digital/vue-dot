@@ -53,6 +53,7 @@
 					icon="calendar"
 				/>
 			</XBtn>
+
 			<XBtn
 				v-else-if="appendIcon && appendIconCb"
 				slot="prepend"
@@ -66,6 +67,7 @@
 					:color="appendIconColor"
 				/>
 			</XBtn>
+
 			<XSvgIcon
 				v-else
 				slot="prepend"
@@ -74,6 +76,7 @@
 				class="activator-icon"
 			/>
 		</VTextField>
+
 		<VMenu
 			ref="menu"
 			:close-on-content-click="false"
@@ -87,6 +90,7 @@
 			min-width="290px"
 			offset-overflow
 			attach=".activator-icon"
+			z-index="1"
 		>
 			<VDatePicker
 				ref="picker"

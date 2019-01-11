@@ -1317,7 +1317,7 @@
 		},
 		created() {
 			setTimeout(() => this.alert.value = true, 200);
-		},
+		}
 	});
 </script>
 
