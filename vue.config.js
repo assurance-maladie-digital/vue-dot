@@ -18,7 +18,7 @@ module.exports = {
 		},
 		plugins: [
 			new webpack.optimize.LimitChunkCountPlugin({
-				maxChunks: 1
+				maxChunks:  process.env.NODE_ENV === 'production' ? 1 : 9999
 			})
 		],
 		// see https://github.com/vuetifyjs/vuetify/issues/4068#issuecomment-394890573
@@ -32,9 +32,6 @@ module.exports = {
 			: []
 	},
 	chainWebpack: config => {
-		config.optimization.delete('splitChunks');
-		config.optimization.splitChunks(false);
-
 		if (process.env.NODE_ENV !== 'production') {
 			config
 				.plugin('html')
@@ -45,6 +42,9 @@ module.exports = {
 				});
 
 			config.plugin('VuetifyLoaderPlugin');
+		} else {
+			config.optimization.delete('splitChunks');
+			config.optimization.splitChunks(false);
 		}
 	}
 };
