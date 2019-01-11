@@ -21,7 +21,8 @@ module.exports = {
 				maxChunks: 1
 			})
 		],
-		externals: process.env.NODE_ENV === 'production' ? [/^vuetify\/.+$/] : []
+		// see https://github.com/vuetifyjs/vuetify/issues/4068#issuecomment-394890573
+		externals: process.env.NODE_ENV === 'production' ? [/^vuetify\/.+$/, 'vue'] : []
 	},
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
