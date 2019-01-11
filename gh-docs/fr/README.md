@@ -6,7 +6,7 @@
 	>
 		<img
 			width="280"
-			src="https://firebasestorage.googleapis.com/v0/b/vue-dot.appspot.com/o/vue.js.svg?alt=media&token=8de281bf-97bf-4c1e-a07c-aa859450a7a3"
+			src="https://res.cloudinary.com/deraw/image/upload/v1547049133/vue-dot.svg"
 			alt="VueDot"
 		>
 	</a>
@@ -50,7 +50,7 @@
 		href="https://www.browserstack.com/"
 	>
 		<img
-			src="https://img.shields.io/badge/BrowserStack-powered%20by-brightgreen.svg?style=flat-square"
+			src="https://img.shields.io/badge/powered%20by-BrowserStack-brightgreen.svg?style=flat-square"
 			alt="BrowserStack"
 		>
 	</a>
@@ -61,7 +61,9 @@
 ### Installer
 
 ```bash
-yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
+$ yarn add @cnamts/vue-dot
+// OU
+$ npm install @cnamts/vue-dot --save
 ```
 
 ### Charger
@@ -69,6 +71,7 @@ yarn add @cnamts/vue-dot # OU npm install @cnamts/vue-dot
 ```ts
 // main.ts
 import Vue from 'vue';
+import '@/plugins/vuetify';
 import VueDot from '@cnamts/vue-dot';
 
 Vue.use(VueDot);
@@ -84,8 +87,6 @@ new Vue({
 # lancer votre projet
 yarn serve # OU votre propre commande
 ```
-
-Cela va charger automatiquement tous les composants et les directives de la librairie et les rendre disponnibles globalement.
 
 ## [Documentation](https://assurance-maladie-digital.github.io/vue-dot/)
 

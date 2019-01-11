@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<XTextField
+		<VTextField
 			v-model="computedDateFormatted"
 			:autofocus="autofocus"
 			:background-color="backgroundColor"
@@ -71,8 +71,8 @@
 				:color="appendIconColor"
 				class="activator-icon"
 			/>
-		</XTextField>
-		<XMenu
+		</VTextField>
+		<VMenu
 			ref="menu"
 			:close-on-content-click="false"
 			v-model="menu"
@@ -121,7 +121,7 @@
 				:year-icon="yearIcon"
 				@input="save"
 			/>
-		</XMenu>
+		</VMenu>
 	</div>
 </template>
 

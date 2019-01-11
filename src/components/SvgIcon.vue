@@ -12,7 +12,7 @@
 			width: size,
 			height: size
 		}"
-		class="icon"
+		class="x-svg-icon"
 		aria-hidden="true"
 	>
 		<slot>
@@ -1357,14 +1357,14 @@
 	// And load categories on demand
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	$default: 1.35em;
 	$small: 1em;
 	$medium: 1.5em;
 	$large: 1.85em;
 	$xLarge: 2.25em;
 
-	.icon {
+	.x-svg-icon {
 		width: $default;
 		height: $default;
 		position: relative;
@@ -1383,25 +1383,25 @@
 		&.custom-color svg {
 			fill: currentColor;
 		}
-	}
 
-	.small {
-		width: $small;
-		height: $small;
-	}
+		&.small {
+			width: $small;
+			height: $small;
+		}
 
-	.medium {
-		width: $medium;
-		height: $medium;
-	}
+		&.medium {
+			width: $medium;
+			height: $medium;
+		}
 
-	.large {
-		width: $large;
-		height: $large;
-	}
+		&.large {
+			width: $large;
+			height: $large;
+		}
 
-	.x-large {
-		width: $xLarge;
-		height: $xLarge;
+		&.x-large {
+			width: $xLarge;
+			height: $xLarge;
+		}
 	}
 </style>

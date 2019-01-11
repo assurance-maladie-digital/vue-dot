@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
 	css: {
-		extract: false
+		extract: true
 	},
 	configureWebpack: {
 		entry: process.env.NODE_ENV !== 'production' ? './playground/main.ts' : './src/index.ts',
@@ -20,7 +20,8 @@ module.exports = {
 			new webpack.optimize.LimitChunkCountPlugin({
 				maxChunks: 1
 			})
-		]
+		],
+		externals: process.env.NODE_ENV === 'production' ? [/^vuetify\/.+$/] : []
 	},
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
