@@ -20,7 +20,8 @@ module.exports = {
 			new webpack.optimize.LimitChunkCountPlugin({
 				maxChunks: 1
 			})
-		]
+		],
+		externals: process.env.NODE_ENV === 'production' ? [/^vuetify\/.+$/] : []
 	},
 	chainWebpack: config => {
 		config.optimization.delete('splitChunks');
