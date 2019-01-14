@@ -1,5 +1,3 @@
-Translations: [Français](./gh-docs/fr/CODE_OF_CONDUCT.md)
-
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
@@ -80,3 +78,7 @@ For answers to common questions about this code of conduct, see
 <https://www.contributor-covenant.org/faq>
 
 [homepage]: https://www.contributor-covenant.org
+
+## Translations
+
+-   [FR](./gh-docs/fr/CODE_OF_CONDUCT.md)
