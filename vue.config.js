@@ -25,8 +25,18 @@ module.exports = {
 		externals: process.env.NODE_ENV === 'production' ?
 			[
 				{
-					vue: 'Vue',
-					'vuetify/lib': 'Vuetify'
+					'vue': {
+						commonjs: 'vue',
+						commonjs2: 'vue',
+						amd: 'vue',
+						root: 'Vue'
+					},
+					'vuetify/lib': {
+						commonjs: 'vuetify/lib',
+						commonjs2: 'vuetify/lib',
+						amd: 'vuetify/lib',
+						root: 'Vuetify'
+					}
 				}
 			]
 			: []
