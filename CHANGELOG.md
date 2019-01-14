@@ -1,3 +1,24 @@
+### [v1.5.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.3...v1.5.4) (14-01-2019)
+
+### New features
+
+-   SSR/Nuxt compatible
+-   Externalize styles
+-   Externalize Vue & Vuetify
+
+### Bug fixes
+
+-   Fix icon/ripple & remove wrappers in DatePicker
+-   Global styles for SvgIcon
+
+
+### Documentation
+
+-   New logo
+-   Update License (2019)
+-   Update README
+-   Update Playground
+
 ### [v1.5.4-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.2...v1.5.4-beta.3) (11-01-2019)
 
 ### Beta version
