@@ -170,7 +170,7 @@
 			},
 			value: {
 				type: String,
-				default: undefined
+				default: 'fr'
 			},
 			// Shared
 			absolute: {

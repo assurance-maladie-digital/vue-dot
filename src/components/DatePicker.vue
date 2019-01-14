@@ -40,7 +40,7 @@
 			@input="menu = false"
 			@blur="date = parseDate(dateFormatted)"
 		>
-			<XBtn
+			<VBtn
 				v-if="!appendIcon"
 				slot="prepend"
 				:ripple="!menu"
@@ -52,9 +52,9 @@
 					:color="appendIconColor"
 					icon="calendar"
 				/>
-			</XBtn>
+			</VBtn>
 
-			<XBtn
+			<VBtn
 				v-else-if="appendIcon && appendIconCb"
 				slot="prepend"
 				:ripple="!menu"
@@ -66,7 +66,7 @@
 					:icon="appendIcon"
 					:color="appendIconColor"
 				/>
-			</XBtn>
+			</VBtn>
 
 			<XSvgIcon
 				v-else
