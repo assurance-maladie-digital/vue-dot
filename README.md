@@ -72,6 +72,8 @@ $ npm install @cnamts/vue-dot --save
 // main.ts
 import Vue from 'vue';
 import '@/plugins/vuetify';
+
+import '@cnamts/vue-dot/dist/vue-dot.css';
 import VueDot from '@cnamts/vue-dot';
 
 Vue.use(VueDot);
