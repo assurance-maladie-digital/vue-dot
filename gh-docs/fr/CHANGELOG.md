@@ -1,3 +1,13 @@
+### [v1.5.5](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4...v1.5.5) (15-01-2019)
+
+### Corrections de bugs
+
+-   Même menu lorsque plusieurs `DatePicker`
+
+### Documentation
+
+-   Mise à jour du README
+
 ### [v1.5.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.3...v1.5.4) (14-01-2019)
 
 ### Nouvelles fonctionnalités
