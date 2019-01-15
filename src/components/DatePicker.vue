@@ -40,54 +40,62 @@
 			@input="menu = false"
 			@blur="date = parseDate(dateFormatted)"
 		>
-			<XBtn
+			<VBtn
 				v-if="!appendIcon"
 				slot="prepend"
+				:ripple="!menu"
+				:class="`activator-icon-${menuRef}`"
 				icon
-				class="ma-0 activator-icon"
+				class="ma-0"
 				@click="menu = true"
 			>
 				<XSvgIcon
 					:color="appendIconColor"
 					icon="calendar"
 				/>
-			</XBtn>
-			<XBtn
+			</VBtn>
+
+			<VBtn
 				v-else-if="appendIcon && appendIconCb"
 				slot="prepend"
+				:ripple="!menu"
+				:class="`activator-icon-${menuRef}`"
 				icon
-				class="ma-0 activator-icon"
+				class="ma-0"
 				@click="appendIconCb"
 			>
 				<XSvgIcon
 					:icon="appendIcon"
 					:color="appendIconColor"
 				/>
-			</XBtn>
+			</VBtn>
+
 			<XSvgIcon
 				v-else
 				slot="prepend"
 				:icon="appendIcon"
 				:color="appendIconColor"
-				class="activator-icon"
+				:class="`activator-icon-${menuRef}`"
 			/>
 		</VTextField>
+
 		<VMenu
-			ref="menu"
+			:ref="menuRef"
 			:close-on-content-click="false"
 			v-model="menu"
 			:nudge-right="40"
 			:nudge-bottom="55"
+			:attach="`.activator-icon-${menuRef}`"
 			lazy
 			transition="scale-transition"
 			offset-y
 			full-width
-			min-width="290px"
+			min-width="300px"
 			offset-overflow
-			attach=".activator-icon"
+			z-index="1"
 		>
 			<VDatePicker
-				ref="picker"
+				:ref="ref"
 				v-model="date"
 				:allowed-dates="allowedDates"
 
@@ -406,6 +414,8 @@
 		},
 		data() {
 			return {
+				ref: 'date-picker-ref-' + Math.floor(Math.random() * 1000).toString(),
+				menuRef: 'menu-picker-ref-' + Math.floor(Math.random() * 1000).toString(),
 				date: this.value || '',
 				menu: false,
 				dateFormatted: '',
@@ -503,7 +513,7 @@
 		watch: {
 			menu(val: string) {
 				if (this.birthdate && val) {
-					this.$nextTick(() => ((this.$refs.picker as any).activePicker = 'YEAR'));
+					this.$nextTick(() => ((this.$refs[this.ref] as any).activePicker = 'YEAR'));
 				}
 			},
 			date(val: string) {
@@ -524,7 +534,7 @@
 		methods: {
 			// Save the date, see https://vuetifyjs.com/en/components/date-pickers#example-date-dialog-and-menu
 			save(date: string): void {
-				(this.$refs.menu as any).save(date);
+				(this.$refs[this.menuRef] as any).save(date);
 			},
 			// Format the date with `dateFormat` (default 'DD/MM/YYYY')
 			formatDate(date: string): string {

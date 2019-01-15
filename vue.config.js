@@ -18,15 +18,30 @@ module.exports = {
 		},
 		plugins: [
 			new webpack.optimize.LimitChunkCountPlugin({
-				maxChunks: 1
+				maxChunks:  process.env.NODE_ENV === 'production' ? 1 : 9999
 			})
 		],
-		externals: process.env.NODE_ENV === 'production' ? [/^vuetify\/.+$/] : []
+		// see https://github.com/vuetifyjs/vuetify/issues/4068#issuecomment-394890573
+		externals: process.env.NODE_ENV === 'production' ?
+			[
+				{
+					'vue': {
+						commonjs: 'vue',
+						commonjs2: 'vue',
+						amd: 'vue',
+						root: 'Vue'
+					},
+					'vuetify/lib': {
+						commonjs: 'vuetify/lib',
+						commonjs2: 'vuetify/lib',
+						amd: 'vuetify/lib',
+						root: 'Vuetify'
+					}
+				}
+			]
+			: []
 	},
 	chainWebpack: config => {
-		config.optimization.delete('splitChunks');
-		config.optimization.splitChunks(false);
-
 		if (process.env.NODE_ENV !== 'production') {
 			config
 				.plugin('html')
@@ -37,6 +52,9 @@ module.exports = {
 				});
 
 			config.plugin('VuetifyLoaderPlugin');
+		} else {
+			config.optimization.delete('splitChunks');
+			config.optimization.splitChunks(false);
 		}
 	}
 };

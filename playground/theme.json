@@ -8,9 +8,6 @@
 				"width": "100%",
 				"position": "absolute"
 			},
-			".theme--light.v-btn": {
-				"color": "#fff"
-			},
 			".v-breadcrumbs__divider": {
 				"color": "#737373 !important"
 			}

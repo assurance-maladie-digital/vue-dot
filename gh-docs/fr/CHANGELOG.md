@@ -1,3 +1,49 @@
+### [v1.5.5](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4...v1.5.5) (15-01-2019)
+
+### Corrections de bugs
+
+-   Même menu lorsque plusieurs `DatePicker`
+
+### Documentation
+
+-   Mise à jour du README
+
+### [v1.5.4](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.3...v1.5.4) (14-01-2019)
+
+### Nouvelles fonctionnalités
+
+-   Compatibilité Rendu côté serveur/Nuxt
+-   Styles séparés
+-   Vue & Vuetify ne sont plus inclus dans le build
+
+### Corrections de bugs
+
+-   Correction de l'icône/de l'effet ripple et suppression des wrappers dans DatePicker
+-   Styles globaux pour SvgIcon
+
+### Documentation
+
+-   Nouveau logo
+-   Mise à jour de la licence (2019)
+-   Mise à jour du README
+-   Mise à jour du Playground
+
+### [v1.5.4-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.2...v1.5.4-beta.3) (11-01-2019)
+
+### Version bêta
+
+### [v1.5.4-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.1...v1.5.4-beta.2) (11-01-2019)
+
+### Version bêta
+
+### [v1.5.4-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4-beta.0...v1.5.4-beta.1) (11-01-2019)
+
+### Version bêta
+
+### [v1.5.4-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.3...v1.5.4-beta.0) (11-01-2019)
+
+### Version bêta
+
 ### [v1.5.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.2...v1.5.3) (06-12-2018)
 
 ### Correction d'une erreur de types

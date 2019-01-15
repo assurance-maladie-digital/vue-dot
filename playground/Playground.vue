@@ -75,6 +75,18 @@
 						</XAlert>
 
 						<div class="px-4 py-3 pb-5 mb-5">
+							<XDatePicker birthdate />
+
+							<XDivider class="my-5" />
+
+							<XLangBtn />
+
+							<XDivider class="my-5" />
+
+							<XDatePicker />
+
+							<XDivider class="my-5" />
+
 							<h1>Playground</h1>
 							<h2 class="accent--text">Alerts</h2>
 							<p class="mt-2">The alert component is used to convey important information to the user. It comes in 4 variations, success, info, warning and error. These have default icons assigned which can be changed and represent different actions.</p>
@@ -1311,7 +1323,7 @@
 		},
 		created() {
 			setTimeout(() => this.alert.value = true, 200);
-		},
+		}
 	});
 </script>
 

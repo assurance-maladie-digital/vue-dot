@@ -81,22 +81,22 @@ function promptForVersion() {
 		],
 		default: () => (
 			semver.prerelease(latestGit) == null
-			? createVersionOption('Patch').value
-			: createVersionOption('Prerelease').value
+				? createVersionOption('Patch').value
+				: createVersionOption('Prerelease').value
 		),
 		pageSize: 8
 	})
-	.then((answers: any) => {
-		if (answers.version === 'other') {
-			return inquirer.prompt({
-				type: 'input',
-				name: 'version',
-				message: 'Enter new version:',
-				validate: (val: any) => !!semver.valid(val) || `'${val}' is not a valid version number`
-			})
-			.then((answers: any) => answers.version);
-		}
-		return answers.version;
+		.then((answers: any) => {
+			if (answers.version === 'other') {
+				return inquirer.prompt({
+					type: 'input',
+					name: 'version',
+					message: 'Enter new version:',
+					validate: (val: any) => !!semver.valid(val) || `'${val}' is not a valid version number`
+				})
+					.then((answers: any) => answers.version);
+			}
+			return answers.version;
 	});
 }
 
@@ -113,7 +113,7 @@ function verifyBranch(version: any) {
 			message: 'Do you want to continue',
 			default: false
 		})
-		.then((answers: any) => answers.yes ? version : shell.exit(1));
+			.then((answers: any) => answers.yes ? version : shell.exit(1));
 	}
 
 	return Promise.resolve(version);
@@ -131,7 +131,7 @@ function confirmVersion(version: any) {
 		message: 'Are you sure',
 		default: true
 	})
-	.then((answers: any) => answers.yes ? version : shell.exit(1));
+		.then((answers: any) => answers.yes ? version : shell.exit(1));
 }
 
 function lint() {
@@ -192,24 +192,23 @@ function changelog(version: any) {
 			message: `Tell what changed in this version${lang === 'fr' ? ' in French ' : ''}:`,
 			default: lang === 'fr' ? '### Pas de changements spécifiés.' : '### No changes specified.'
 		})
-		.then((answers: any) => {
-			const data =
-`### [v${version}](${link}) (${date})
+			.then((answers: any) => {
+				const data =
+					`### [v${version}](${link}) (${date})
 
-${answers.changelog}
-`;
-			const file = lang === 'fr' ? './gh-docs/fr/CHANGELOG.md' : './CHANGELOG.md';
+${answers.changelog}`;
+				const file = lang === 'fr' ? './gh-docs/fr/CHANGELOG.md' : './CHANGELOG.md';
 
-			prepend(file, data, (error: any) => {
-				if (error) {
-					log(error);
-				}
-			});
+				prepend(file, data, (error: any) => {
+					if (error) {
+						log(error);
+					}
+				});
 		}));
 	};
 
 	return prompt('en')
-	.then(() => prompt('fr'));
+		.then(() => prompt('fr'));
 }
 
 // function githubRelease(version: any) {
@@ -265,16 +264,16 @@ function deployDocs() {
 }
 
 promptForVersion()
-.then(verifyBranch)
-.then(confirmVersion)
-.then((version) => {
-	lint();
-	build();
-	changelog(version)
-	.then(() => {
-		release(version);
-		publish();
+	.then(verifyBranch)
+	.then(confirmVersion)
+	.then((version) => {
+		lint();
+		build();
+		changelog(version)
+			.then(() => {
+				release(version);
+				publish();
 		// githubRelease(version);
-		deployDocs();
-	});
+		// deployDocs();
+		});
 });
