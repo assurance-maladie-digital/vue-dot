@@ -83,7 +83,9 @@
 
 							<XDivider class="my-5" />
 
-							<XDatePicker />
+							<XDatePicker v-model="date" />
+
+							<p class="mb-0 mt-3">Date: {{ date }}</p>
 
 							<XDivider class="my-5" />
 
@@ -1104,6 +1106,7 @@
 		},
 		data() {
 			return {
+				date: '',
 				dark: false,
 				drawer: null,
 				alert: {

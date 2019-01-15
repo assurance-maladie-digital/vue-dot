@@ -39,6 +39,7 @@
 			:value="value"
 			@input="menu = false"
 			@blur="date = parseDate(dateFormatted)"
+			@keyup.enter="date = parseDate(dateFormatted)"
 		>
 			<VBtn
 				v-if="!appendIcon"
@@ -517,7 +518,7 @@
 				}
 			},
 			date(val: string) {
-				this.dateFormatted = this.formatDate(this.date);
+				this.computedDateFormatted = this.formatDate(this.date);
 			},
 			computedDateFormatted() {
 				this.$emit('change', this.formatDateForReturn(this.date));
