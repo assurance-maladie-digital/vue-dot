@@ -1279,8 +1279,7 @@
 			<!-- Custom icons from theme, only render if it's looks like svg -->
 			<template v-if="$theme">
 				<div
-					v-for="iconTheme in $theme.config.icons"
-					v-if="icon === iconTheme.name && isSvg(iconTheme.svg)"
+					v-for="iconTheme in themeIcons"
 					:key="iconTheme.name"
 					v-html="iconTheme.svg"
 				/>
@@ -1326,8 +1325,17 @@
 				default: false
 			}
 		},
-		methods: {
-			isSvg
+		computed: {
+			themeIcons(): any {
+				// If there is icons in theme
+				if (this.$theme.config && this.$theme.config.icons) {
+					const filtered = this.$theme.config.icons.filter((icon: any) => {
+						return this.icon === icon.name && isSvg(icon.svg);
+					});
+
+					return filtered;
+				}
+			}
 		}
 	});
 
