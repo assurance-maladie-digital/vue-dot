@@ -1,4 +1,5 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack = require('webpack');
 
 module.exports = {
@@ -19,7 +20,8 @@ module.exports = {
 		plugins: [
 			new webpack.optimize.LimitChunkCountPlugin({
 				maxChunks:  process.env.NODE_ENV === 'production' ? 1 : 9999
-			})
+			}),
+			new BundleAnalyzerPlugin()
 		],
 		// see https://github.com/vuetifyjs/vuetify/issues/4068#issuecomment-394890573
 		externals: process.env.NODE_ENV === 'production' ?
@@ -38,6 +40,8 @@ module.exports = {
 						root: 'Vuetify'
 					}
 				}
+				// /dayjs/,
+				// /^languages/
 			]
 			: []
 	},
