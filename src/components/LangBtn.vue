@@ -124,7 +124,7 @@
 						>
 					</VListTileAvatar>
 
-					<XListTileTitle>{{ item.nativeName }}</XListTileTitle>
+					<VListTileTitle>{{ item.nativeName }}</VListTileTitle>
 				</VBtn>
 			</VListTile>
 		</VList>
