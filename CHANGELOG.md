@@ -1,3 +1,7 @@
+### [v1.6.0-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.5...v1.6.0-beta.0) (16-01-2019)
+
+### Beta version
+
 ### [v1.5.5](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4...v1.5.5) (15-01-2019)
 
 ### Bug fixes

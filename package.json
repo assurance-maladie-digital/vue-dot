@@ -1,6 +1,6 @@
 {
 	"name": "@cnamts/vue-dot",
-	"version": "1.5.5",
+	"version": "1.6.0-beta.0",
 	"description": "Official CNAM component library",
 	"keywords": [
 		"vue",
