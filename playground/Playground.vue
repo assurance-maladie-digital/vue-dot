@@ -76,6 +76,62 @@
 						</VAlert>
 
 						<div class="px-4 py-3 pb-5 mb-5">
+							<VLayout wrap>
+								<DataList
+									:list=" [
+										{
+											key: 'Civilité',
+											value: 'M.'
+										},
+										{
+											key: 'Nom',
+											value: 'Dupont'
+										},
+										{
+											key: 'Prénom',
+											value: 'Paul'
+										},
+										{
+											key: 'Date de naissance',
+											value: '24/09/1970'
+										},
+										{
+											key: 'Nationalité',
+											value: 'Français'
+										},
+										{
+											key: 'Pays de naissance',
+											value: 'France'
+										},
+										{
+											key: 'Date d\'inscription à l\'établissement universitaire',
+											value: ''
+										}
+									]"
+									:label-color="dark ? 'white' : '#757575'"
+									:value-color="dark ? '#ccc' : '#333'"
+									list-title="Test"
+								/>
+							</VLayout>
+
+							<VDivider class="my-5" />
+
+							<SvgIcon x-large>
+								<svg viewBox="0 0 400 400">
+									<path
+										fill="#4dba87"
+										d="M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z"
+									/>
+
+									<path
+										fill="#435466"
+										d="M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z"
+									/>
+								</svg>
+							</SvgIcon>
+
+							<VDivider class="my-5" />
+
 							<DatePicker birthdate />
 
 							<VDivider class="my-5" />
@@ -803,7 +859,7 @@
 									:width="card.width"
 								>
 									<VScaleTransition>
-										<XImg
+										<VImg
 											v-if="card.image"
 											src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
 											aspect-ratio="2.75"
@@ -1111,14 +1167,14 @@
 	// This is a playground, it is not tested because it isn't a part of the library
 	import Vue from 'vue';
 
-	import XColorTable from './components/ColorTable.vue';
+	import ColorTable from './components/ColorTable.vue';
 
 	import { default as pkg } from '../package.json';
 
 	export default Vue.extend({
 		name: 'Playground',
 		components: {
-			XColorTable
+			ColorTable
 		},
 		data() {
 			return {
@@ -1357,6 +1413,10 @@
 	html,
 	body {
 		font-size: 100% !important;
+	}
+
+	.v-sheet {
+		max-width: 100% !important;
 	}
 </style>
 

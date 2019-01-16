@@ -21,7 +21,6 @@
 -   Fix icon/ripple & remove wrappers in DatePicker
 -   Global styles for SvgIcon
 
-
 ### Documentation
 
 -   New logo
