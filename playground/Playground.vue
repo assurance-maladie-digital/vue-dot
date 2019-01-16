@@ -75,6 +75,46 @@
 						</XAlert>
 
 						<div class="px-4 py-3 pb-5 mb-5">
+							<VLayout wrap>
+								<XDataList
+									:list=" [
+										{
+											key: 'Civilité',
+											value: 'M.'
+										},
+										{
+											key: 'Nom',
+											value: 'Dupont'
+										},
+										{
+											key: 'Prénom',
+											value: 'Paul'
+										},
+										{
+											key: 'Date de naissance',
+											value: '24/09/1970'
+										},
+										{
+											key: 'Nationalité',
+											value: 'Français'
+										},
+										{
+											key: 'Pays de naissance',
+											value: 'France'
+										},
+										{
+											key: 'Date d\'inscription à l\'établissement universitaire',
+											value: ''
+										}
+									]"
+									:label-color="dark ? 'white' : '#757575'"
+									:value-color="dark ? '#ccc' : '#333'"
+									list-title="Test"
+								/>
+							</VLayout>
+
+							<XDivider class="my-5" />
+
 							<XDatePicker birthdate />
 
 							<XDivider class="my-5" />
@@ -1341,6 +1381,10 @@
 	html,
 	body {
 		font-size: 100% !important;
+	}
+
+	.v-sheet {
+		max-width: 100% !important;
 	}
 </style>
 

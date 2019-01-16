@@ -1,6 +1,7 @@
 import XDatePicker from './DatePicker.vue';
 import XLangBtn from './LangBtn.vue';
 import XSvgIcon from './SvgIcon.vue';
+import XDataList from './DataList.vue';
 import XAlert from './Vuetify/Alert.vue';
 import XApp from './Vuetify/App.vue';
 import XAutocomplete from './Vuetify/Autocomplete.vue';
@@ -134,6 +135,7 @@ const components: any = {
 	XDatePicker,
 	XLangBtn,
 	XSvgIcon,
+	XDataList,
 	XAlert,
 	XApp,
 	XAutocomplete,
