@@ -1293,6 +1293,11 @@
 
 	import isSvg from '@/functions/isSvg';
 
+	interface Icon extends Object {
+		name: string;
+		svg: string;
+	}
+
 	export default Vue.extend({
 		name: 'XSvgIcon',
 		props: {
@@ -1326,15 +1331,17 @@
 			}
 		},
 		computed: {
-			themeIcons(): any {
+			themeIcons(): object {
 				// If there is icons in theme
 				if (this.$theme.config && this.$theme.config.icons) {
-					const filtered = this.$theme.config.icons.filter((icon: any) => {
+					const filtered = this.$theme.config.icons.filter((icon: Icon) => {
 						return this.icon === icon.name && isSvg(icon.svg);
 					});
 
 					return filtered;
 				}
+
+				return {};
 			}
 		}
 	});
