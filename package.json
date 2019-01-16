@@ -39,9 +39,7 @@
 		"test:e2e": "vue-cli-service test:e2e",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
-		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release",
-		"vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/generator",
-		"docs:vuetify-components": "ts-node --project ./scripts/tsconfig.json --files ./scripts/docs-generator"
+		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release"
 	},
 	"peerDependencies": {
 		"dayjs": "^1.7.7",
