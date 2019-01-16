@@ -9,7 +9,7 @@
 			:key="`a-${name}`"
 			class="color-item"
 		>
-			<v-layout
+			<VLayout
 				v-for="(sub, index) in themeItems"
 				:key="`a-a-${index}`"
 				:class="`${transform(name)} ${transform(sub)}`"
@@ -20,9 +20,11 @@
 				}"
 			>
 				{{ transform(name) }} {{ transform(sub) }}
-				<XSpacer />
+
+				<VSpacer />
+
 				{{ color }}
-			</v-layout>
+			</VLayout>
 		</li>
 
 		<li
@@ -31,7 +33,7 @@
 			:key="`b-${name}`"
 			class="color-item"
 		>
-			<v-layout
+			<VLayout
 				v-for="(color, sub) in colorObj"
 				:key="`b-b-${sub}`"
 				:class="`${transform(name)} ${transform(sub)}`"
@@ -42,9 +44,11 @@
 				}"
 			>
 				{{ transform(name) }} {{ transform(sub) }}
-				<XSpacer />
+
+				<VSpacer />
+
 				{{ color }}
-			</v-layout>
+			</VLayout>
 		</li>
 
 		<li
@@ -53,7 +57,7 @@
 			:key="`c-${name}`"
 			class="color-item"
 		>
-			<v-layout
+			<VLayout
 				v-for="(color, sub) in colorObj"
 				:key="`c-c-${sub}`"
 				:class="`${transform(name)} ${transform(sub)}`"
@@ -64,9 +68,11 @@
 				}"
 			>
 				{{ transform(name) }} {{ sub !== 'transparent' ? transform(sub) : '' }}
-				<XSpacer />
+
+				<VSpacer />
+
 				{{ color }}
-			</v-layout>
+			</VLayout>
 		</li>
 	</ul>
 </template>
@@ -77,7 +83,7 @@
 	import colors from 'vuetify/es5/util/colors';
 
 	export default Vue.extend({
-		name: 'XColorTable',
+		name: 'ColorTable',
 		props: {
 			dark: {
 				type: Boolean,
@@ -151,4 +157,3 @@
 		}
 	}
 </style>
-

@@ -40,7 +40,7 @@
 	import Vue from 'vue';
 
 	export default Vue.extend({
-		name: 'XDataList',
+		name: 'DataList',
 		props: {
 			titleClass: {
 				type: String,
