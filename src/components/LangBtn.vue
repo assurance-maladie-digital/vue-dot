@@ -82,7 +82,7 @@
 				class="ml-2"
 			>{{ languages[currentLangUsed].nativeName }}</span>
 
-			<XSvgIcon
+			<SvgIcon
 				v-if="displayArrow"
 				size="10px"
 				class="ml-2"
@@ -137,7 +137,7 @@
 	import languages from 'languages';
 
 	export default Vue.extend({
-		name: 'XLangBtn',
+		name: 'LangBtn',
 		model: {
 			prop: 'value',
 			event: 'change'

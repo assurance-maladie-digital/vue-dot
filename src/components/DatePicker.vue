@@ -50,7 +50,7 @@
 				class="ma-0"
 				@click="menu = true"
 			>
-				<XSvgIcon
+				<SvgIcon
 					:color="appendIconColor"
 					icon="calendar"
 				/>
@@ -65,13 +65,13 @@
 				class="ma-0"
 				@click="appendIconCb"
 			>
-				<XSvgIcon
+				<SvgIcon
 					:icon="appendIcon"
 					:color="appendIconColor"
 				/>
 			</VBtn>
 
-			<XSvgIcon
+			<SvgIcon
 				v-else
 				slot="prepend"
 				:icon="appendIcon"
@@ -142,7 +142,7 @@
 	import SvgIcon from '@/components/SvgIcon.vue';
 
 	export default Vue.extend({
-		name: 'XDatePicker',
+		name: 'DatePicker',
 		components: {
 			SvgIcon
 		},

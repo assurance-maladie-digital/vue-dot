@@ -1295,7 +1295,7 @@
 	import isSvg from '@/functions/isSvg';
 
 	export default Vue.extend({
-		name: 'XSvgIcon',
+		name: 'SvgIcon',
 		props: {
 			color: {
 				type: String,
