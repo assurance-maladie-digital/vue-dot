@@ -94,7 +94,8 @@
 		"vue-template-compiler": "^2.5.17",
 		"vuepress": "^0.14.5",
 		"vuetify": "^1.4.1",
-		"vuetify-loader": "^1.0.7"
+		"vuetify-loader": "^1.0.7",
+		"webpack-bundle-analyzer": "^3.0.3"
 	},
 	"postcss": {
 		"plugins": {
