@@ -3,13 +3,15 @@
 		<h2 class="mt-0 headline">
 			Champ de texte natif
 		</h2>
-		<input
-			v-model.lazy="text"
-			v-debounce="1000"
+		<label>
+			<input
+				v-model.lazy="text"
+				v-debounce="1000"
 
-			placeholder="Écrivez ici"
-			class="simple-input"
-		>
+				placeholder="Écrivez ici"
+				class="simple-input"
+			>
+		</label>
 
 		<h2 class="headline">
 			Champ de texte Vuetify

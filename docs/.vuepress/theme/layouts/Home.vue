@@ -11,6 +11,7 @@
 					class="logo"
 					height="250"
 					:src="config.heroImage"
+					alt=""
 				/>
 
 				<h2

@@ -11,6 +11,7 @@
 				<VBtn
 					icon
 					class="mr-3"
+					:aria-label="$t('menu')"
 					@click="sidebarShow = !sidebarShow"
 				>
 					<SvgIcon icon="menu" />
@@ -202,6 +203,7 @@
 				>
 					<img
 						:src="$withBase('/img/logo-am.svg')"
+						alt="l'Assurance Maladie"
 						height="70"
 					>
 

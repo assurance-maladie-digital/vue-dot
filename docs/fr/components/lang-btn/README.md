@@ -6,7 +6,7 @@ Vous pouvez le personnaliser comme un `VBtn`, voir [Vuetify](https://vuetifyjs.c
 
 ## Utilisation
 
-<Example value="lang-btn/base" />
+<Example value="common/lang-btn/base" />
 
 ## API
 

@@ -4,7 +4,7 @@ The `DataList` component is used to display tabular datas.
 
 ## Usage
 
-<Example value="data-list/base" />
+<Example value="en/data-list/base" />
 
 ## API
 
@@ -81,10 +81,10 @@ The `DataList` component is used to display tabular datas.
 
 Displays values under the labels.
 
-<Example value="data-list/column" />
+<Example value="en/data-list/column" />
 
 ### Customization
 
 You can push the customization even further using classes and properties.
 
-<Example value="data-list/custom" />
+<Example value="en/data-list/custom" />

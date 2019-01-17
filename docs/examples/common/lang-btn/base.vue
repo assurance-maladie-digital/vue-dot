@@ -34,7 +34,7 @@
 		methods: {
 			updateLang(value) {
 				// eslint-disable-next-line no-console
-				console.log(value);
+				console.log('From example: ' + value);
 			}
 		}
 	};

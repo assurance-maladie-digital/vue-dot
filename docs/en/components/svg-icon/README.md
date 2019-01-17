@@ -6,7 +6,7 @@ The `SvgIcon` component is meant to replace `VIcon` from Vuetify, which uses a f
 
 Icons come in five different sizes (small, standard, medium, large, and x-large), you can apply any colour or custom size.
 
-<Example value="svg-icon/base" />
+<Example value="common/svg-icon/base" />
 
 ## API
 
@@ -71,13 +71,13 @@ Icons come in five different sizes (small, standard, medium, large, and x-large)
 
 The most basic use of `SvgIcon`.
 
-<Example value="svg-icon/simple" />
+<Example value="common/svg-icon/simple" />
 
 ### Custom icons
 
 You can use custom icons with the default slot of `SvgIcon`.
 
-<Example value="svg-icon/custom" />
+<Example value="common/svg-icon/custom" />
 
 ::: tip
 We recommend a size of 24 pixels, and to optimize your icon with [SVGOMG](https://jakearchibald.github.io/svgomg/).
@@ -87,4 +87,4 @@ We recommend a size of 24 pixels, and to optimize your icon with [SVGOMG](https:
 
 You can define custom icon size using the `size` property.
 
-<Example value="svg-icon/custom-size" />
+<Example value="common/svg-icon/custom-size" />

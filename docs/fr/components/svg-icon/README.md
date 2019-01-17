@@ -71,13 +71,13 @@ Les icônes existent en cinq tailles différentes (petite, standarde, moyenne, g
 
 L'utilisation la plus élémentaire de `SvgIcon`.
 
-<Example value="svg-icon/simple" />
+<Example value="common/svg-icon/simple" />
 
 ### Icônes personnalisées
 
 Vous pouvez utiliser des icônes personnalisées avec l'emplacement par défaut de `SvgIcon`.
 
-<Example value="svg-icon/custom" />
+<Example value="common/svg-icon/custom" />
 
 ::: tip CONSEIL
 Nous recommandons une taille de 24 pixels et d'optimiser votre icône avec [SVGOMG](https://jakearchibald.github.io/svgomg/).
@@ -87,4 +87,4 @@ Nous recommandons une taille de 24 pixels et d'optimiser votre icône avec [SVGO
 
 Vous pouvez définir la taille de l'icône personnalisée à l'aide de la propriété `size`.
 
-<Example value="svg-icon/custom-size" />
+<Example value="common/svg-icon/custom-size" />

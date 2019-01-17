@@ -25,7 +25,7 @@
 					justify-space-between
 					class="timeline-heading"
 				>
-					<h4 class="timeline-title">{{ item.title }}</h4>
+					<h2 class="timeline-title mb-2">{{ item.title }}</h2>
 
 					<div class="timeline-panel-date">
 						<div class="timestamp">
@@ -224,6 +224,8 @@
 	.timeline-title {
 		margin-top: 0;
 		color: inherit;
+		font-size: 1rem;
+		font-weight: 700;
 	}
 
 	.timeline-body > p,

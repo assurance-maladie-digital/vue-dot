@@ -3,13 +3,15 @@
 		<h2 class="mt-0 headline">
 			Native input
 		</h2>
-		<input
-			v-model.lazy="text"
-			v-debounce="1000"
+		<label>
+			<input
+				v-model.lazy="text"
+				v-debounce="1000"
 
-			placeholder="Type here"
-			class="simple-input"
-		>
+				placeholder="Type here"
+				class="simple-input"
+			>
+		</label>
 
 		<h2 class="headline">
 			Vuetify Text Field

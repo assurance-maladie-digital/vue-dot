@@ -121,13 +121,13 @@
 				"margin-bottom": "0"
 			},
 			".custom-block.warning .custom-block-title": {
-				"color": "#b29400"
+				"color": "#776300"
 			}
 		},
 		"colors": {
 			"primary": "#0c4887",
 			"secondary": "#01579b",
-			"accent": "#007cc1",
+			"accent": "#0079bc",
 			"error": "#e54d42",
 			"info": "#0077c5",
 			"success": "#2d9437",

@@ -5,6 +5,7 @@
 	>
 		<DataList
 			:list="data"
+			:title-level="3"
 			list-title="Informations"
 		/>
 	</VLayout>

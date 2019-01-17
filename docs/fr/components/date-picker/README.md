@@ -1,3 +1,3 @@
 # DatePicker
 
-<Example value="date-picker/base" />
+<Example value="common/date-picker/base" />

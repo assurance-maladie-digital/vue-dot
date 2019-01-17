@@ -2,7 +2,7 @@
 
 The `v-debounce` directive allows you to defer an `v-model` update on an input field by an amount of time.
 
-<Example value="directives/v-debounce" />
+<Example value="en/directives/v-debounce" />
 
 ## API
 

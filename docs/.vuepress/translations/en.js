@@ -1,6 +1,7 @@
 const en = {
 	name: 'VueDot',
 	home: '/en/',
+	menu: 'Menu',
 	toolbar: {
 		search: 'Search',
 		ecosystem: 'Ecosystem',
@@ -86,6 +87,12 @@ const en = {
 	api: {
 		name: 'Name',
 		default: 'Default'
+	},
+	codepen: {
+		invertColors: 'Invert colors',
+		codepen: 'See the example on Codepen',
+		github: 'See the example on Github',
+		code: 'See the source code'
 	}
 };
 

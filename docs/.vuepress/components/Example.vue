@@ -8,6 +8,7 @@
 			<VSpacer />
 
 			<VBtn
+				:aria-label="$t('codepen.invertColors')"
 				icon
 				@click="dark = !dark"
 			>
@@ -15,6 +16,7 @@
 			</VBtn>
 
 			<VBtn
+				:aria-label="$t('codepen.codepen')"
 				icon
 				@click="sendToCodepen"
 			>
@@ -22,6 +24,7 @@
 			</VBtn>
 
 			<VBtn
+				:aria-label="$t('codepen.github')"
 				:href="`https://github.com/assurance-maladie-digital/vue-dot/tree/master/docs/examples/${file}.vue`"
 				icon
 				target="_blank"
@@ -31,6 +34,7 @@
 			</VBtn>
 
 			<VBtn
+				:aria-label="$t('codepen.code')"
 				icon
 				@click="expand = !expand"
 			>
