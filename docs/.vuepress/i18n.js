@@ -7,15 +7,15 @@ Vue.use(VueI18n);
 
 let defaultLang;
 
-// Get default language from previously selected, or from the browser, or fallback to French
+// Get default language from previously selected, or from the browser, or fallback to English
 if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
-	defaultLang = window.localStorage.getItem('lang') || navigator.language.substr(0, 2) || 'fr';
+	defaultLang = window.localStorage.getItem('lang') || navigator.language.substr(0, 2) || 'en';
 } else {
-	defaultLang = 'fr';
+	defaultLang = 'en';
 }
 
 if (!translations.includes(defaultLang)) {
-	defaultLang = 'fr';
+	defaultLang = 'en';
 }
 
 const i18n = new VueI18n({

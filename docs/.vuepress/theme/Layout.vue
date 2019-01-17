@@ -1,112 +1,7 @@
 <template>
 	<div class="theme-container">
 		<VApp>
-			<VToolbar
-				app
-				dark
-				fixed
-				clipped-left
-				color="secondary"
-			>
-				<VBtn
-					icon
-					class="mr-3"
-					:aria-label="$t('menu')"
-					@click="sidebarShow = !sidebarShow"
-				>
-					<SvgIcon icon="menu" />
-				</VBtn>
-
-				<VBtn
-					flat
-					:to="$t('home')"
-					active-class="active"
-					class="px-3 ma-0 text-none"
-				>
-					<SvgIcon
-						x-large
-						icon="vue-dot-dark"
-					/>
-					<h1 class="ml-2 mr-2 font-weight-regular">{{ $t('name') }}</h1>
-				</VBtn>
-
-				<VSpacer />
-
-				<VTextField
-					solo
-					light
-					:label="$t('toolbar.search')"
-					single-line
-					hide-details
-					class="search mr-3"
-					append-icon="search"
-				/>
-
-				<VMenu
-					left
-					bottom
-					offset-y
-				>
-					<VBtn
-						flat
-						slot="activator"
-						class="px-3 ma-0 text-none"
-					>
-						{{ $t('toolbar.ecosystem') }}
-						<SvgIcon
-							size=".7em"
-							icon="down-arrow"
-							class="ml-2"
-						/>
-					</VBtn>
-
-					<VList>
-						<VListTile
-							v-for="item in $t('toolbar.items')"
-							:key="item.title"
-							:href="item.href"
-							target="_blank"
-							rel="noopener noreferrer"
-							ripple
-						>
-							<VListTileContent>
-								<VListTileTitle>
-									<SvgIcon
-										v-if="item.icon"
-										:icon="item.icon"
-										class="mr-2"
-										color="#888"
-									/>
-
-									<span>{{ item.title }}</span>
-								</VListTileTitle>
-							</VListTileContent>
-						</VListTile>
-					</VList>
-				</VMenu>
-
-				<VBtn
-					flat
-					class="px-3 ma-0 text-none"
-				>
-					v{{ version }}
-				</VBtn>
-
-				<LangBtn
-					flat
-					flags
-					menu-left
-					menu-bottom
-					:outline="false"
-					:value="$i18n.locale"
-					@change="updateLang"
-					:display-text-btn="false"
-					:display-arrow="false"
-					:available-languages="languages"
-					class="ma-0 text-none lang-btn"
-					flags-url="https://res.cloudinary.com/deraw/image/upload/v1547044454/"
-				/>
-			</VToolbar>
+			<Toolbar @drawer:update="sidebarShow = !sidebarShow" />
 
 			<VNavigationDrawer
 				app
@@ -142,11 +37,12 @@
 
 						<VListGroup
 							v-if="item.items"
+							:key="item.title"
 							:group="item.group"
 							no-action
+							active-class="primary--text your-class"
 						>
 							<VListTile
-								:key="item.title"
 								:to="item.to"
 								slot="activator"
 								ripple
@@ -227,22 +123,19 @@
 </template>
 
 <script>
+	import Toolbar from '../components/Toolbar.vue';
 	import Home from './layouts/Home.vue';
 	import Basic from './layouts/Basic.vue';
-	import { version } from '../../../package.json';
-	import { loadLanguageAsync } from '../i18n';
 
 	export default {
 		name: 'Layout',
 		components: {
+			Toolbar,
 			Home,
 			Basic
 		},
 		data() {
 			return {
-				version,
-				initiated: false,
-				languages: ['en', 'fr'],
 				sidebarShow: false
 			};
 		},
@@ -259,15 +152,6 @@
 			}
 		},
 		methods: {
-			updateLang(lang) {
-				loadLanguageAsync(lang);
-
-				if (this.initiated) {
-					this.$router.push(`/${lang}/`);
-				} else {
-					this.initiated = true;
-				}
-			},
 			guard() {
 				// If the route doesn't match selected langage, redirect
 				if (!this.$route.path.includes(this.$i18n.locale)) {
@@ -296,16 +180,6 @@
 </script>
 
 <style scoped>
-	.v-toolbar {
-		z-index: 5 !important;
-	}
-
-	.v-toolbar .v-btn:not(.v-btn--icon),
-	.v-menu,
-	.v-menu >>> .v-menu__activator {
-		height: 100%;
-	}
-
 	.footer-content {
 		opacity: .9;
 	}
@@ -323,23 +197,8 @@
 		transition: background .15s !important;
 	}
 
-	.v-input.search {
-		flex: none;
-		height: 38px;
-		width: 250px;
-		overflow: hidden;
-		border-radius: 50px;
-	}
-
-	.v-input.search >>> .v-input__control {
-		min-height: 38px !important;
-	}
-
-	.lang-btn >>> .v-btn {
-		margin: 0;
-		height: 100%;
-		padding: 20px;
-		min-width: 50px;
+	.v-list__group__header--active span {
+		color: #0c4887 !important;
 	}
 </style>
 

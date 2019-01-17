@@ -84,6 +84,11 @@ const fr = {
 		codepen: 'Voir l\'exemple sur Codepen',
 		github: 'Voir l\'exemple sur Github',
 		code: 'Voir le code source'
+	},
+	error404: {
+		title: 'Oups, 404',
+		description: 'La page que vous recherchez n\'existe pas.',
+		button: 'Faites moi sortir d\'ici !'
 	}
 };
 

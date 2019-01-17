@@ -93,6 +93,11 @@ const en = {
 		codepen: 'See the example on Codepen',
 		github: 'See the example on Github',
 		code: 'See the source code'
+	},
+	error404: {
+		title: 'Whoops, 404',
+		description: 'The page you were looking for does not exist.',
+		button: 'Get me out of here!'
 	}
 };
 
