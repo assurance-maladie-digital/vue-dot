@@ -1,6 +1,6 @@
 const en = {
 	name: 'VueDot',
-	home: '/',
+	home: '/en/',
 	toolbar: {
 		search: 'Search',
 		ecosystem: 'Ecosystem',
@@ -25,22 +25,22 @@ const en = {
 			{
 				title: 'Getting started',
 				icon: 'forward-arrow',
-				to: '/guide/'
+				to: '/en/guide/'
 			},
 			{
 				title: 'Custom themes',
 				icon: 'painter-palette',
-				to: '/guide/themes/'
+				to: '/en/guide/themes/'
 			},
 			{
 				title: 'Contributing',
 				icon: 'heart',
-				to: '/contributing/'
+				to: '/en/contributing/'
 			},
 			{
 				title: 'Roadmap',
 				icon: 'clock',
-				to: '/roadmap/'
+				to: '/en/roadmap/'
 			},
 			{
 				title: 'UI Components',
@@ -49,19 +49,19 @@ const en = {
 				items: [
 					{
 						title: 'SvgIcon',
-						to: '/components/svg-icon/'
+						to: '/en/components/svg-icon/'
 					},
 					{
 						title: 'LangBtn',
-						to: '/components/lang-btn/'
+						to: '/en/components/lang-btn/'
 					},
 					{
 						title: 'DatePicker',
-						to: '/components/date-picker/'
+						to: '/en/components/date-picker/'
 					},
 					{
 						title: 'DataList',
-						to: '/components/data-list/'
+						to: '/en/components/data-list/'
 					}
 				]
 			},
@@ -72,7 +72,7 @@ const en = {
 				items: [
 					{
 						title: 'Debounce',
-						to: '/directives/debounce/'
+						to: '/en/directives/debounce/'
 					}
 				]
 			},

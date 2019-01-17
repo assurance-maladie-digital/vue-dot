@@ -56,6 +56,5 @@ export function loadLanguageAsync(lang) {
 }
 
 // Load default language
-loadLanguageAsync(defaultLang);
 
 export default i18n;

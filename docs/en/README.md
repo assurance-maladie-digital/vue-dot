@@ -8,7 +8,7 @@ heroImage: /img/vue.js.svg
 
 # main action
 actionText: Get Started
-actionLink: /guide/
+actionLink: /en/guide/
 
 # github
 githubText: Github

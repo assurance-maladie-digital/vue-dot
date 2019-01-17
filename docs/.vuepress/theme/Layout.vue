@@ -239,6 +239,7 @@
 		data() {
 			return {
 				version,
+				initiated: false,
 				languages: ['en', 'fr'],
 				sidebarShow: false
 			};
@@ -259,10 +260,16 @@
 			updateLang(lang) {
 				loadLanguageAsync(lang);
 
-				if (this.$i18n.fallbackLocale !== lang) {
+				if (this.initiated) {
 					this.$router.push(`/${lang}/`);
 				} else {
-					this.$router.push('/');
+					this.initiated = true;
+				}
+			},
+			guard() {
+				// If the route doesn't match selected langage, redirect
+				if (!this.$route.path.includes(this.$i18n.locale)) {
+					this.$router.push(`/${this.$i18n.locale}/`);
 				}
 			}
 		},
@@ -275,6 +282,13 @@
 			if (!this.$vuetify.breakpoint.xsOnly) {
 				this.sidebarShow = !this.$page.frontmatter.home;
 			}
+
+			// Redirect default route
+			if (this.$route.path === '/') {
+				this.$router.push(`/${this.$i18n.locale}/`);
+			}
+
+			this.guard();
 		}
 	}
 </script>
