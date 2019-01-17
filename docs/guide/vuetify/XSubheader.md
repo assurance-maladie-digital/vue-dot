@@ -1,3 +1,0 @@
-# XSubheader
-
-<ComponentDoc current="XSubheader" />

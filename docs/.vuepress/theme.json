@@ -1,0 +1,171 @@
+{
+	"name": "digital",
+	"version": "0.0.1",
+	"config": {
+		"styles": {
+			"html, body": {
+				"font-size": "100% !important"
+			},
+			".v-ripple__container, .v-ripple__container *": {
+				"max-width": "none"
+			},
+			".v-input--selection-controls__ripple": {
+				"max-width": "none"
+			},
+			".application--wrap": {
+				"width": "100%"
+			},
+			".theme--light.v-input--is-disabled .v-label, .theme--light.v-icon.v-icon--disabled, .theme--light.v-list .v-list--disabled": {
+				"color": "#767676 !important"
+			},
+			".theme--light.v-btn.v-btn--disabled .v-icon": {
+				"color": "#949494 !important"
+			},
+			".v-tabs__bar .v-tabs__item--disabled": {
+				"color": "#333 !important"
+			},
+			".theme--light.v-btn.v-btn--disabled": {
+				"color": "#646464 !important"
+			},
+			".content h1": {
+				"font-size": "2.2rem",
+				"margin-bottom": "25px"
+			},
+			".content h2": {
+				"font-size": "1.65rem",
+				"margin-bottom": "16px",
+				"margin-top": "35px"
+			},
+			".content h2 + h3": {
+				"margin-top": "0"
+			},
+			".content h3": {
+				"font-size": "1.35rem",
+				"margin-bottom": "10px",
+				"margin-top": "35px"
+			},
+			"pre[class*='language-']": {
+				"align-items": "center",
+				"box-shadow": "none",
+				"display": "flex",
+				"border-radius": "2px",
+				"position": "relative",
+				"overflow-x": "auto",
+				"overflow-y": "hidden",
+				"background": "#2d2d2d",
+				"margin": "0",
+				"margin-bottom": "5px"
+			},
+			"code[class*='language-'], code": {
+				"position": "relative",
+				"box-shadow": "none",
+				"overflow-x": "auto",
+				"overflow-y": "hidden",
+				"word-break": "break-word",
+				"flex-wrap": "wrap",
+				"align-items": "center",
+				"vertical-align": "middle",
+				"white-space": "pre-wrap",
+				"margin": "0",
+				"font-family": "'Inconsolata', monospace",
+				"font-weight": "300",
+				"font-size": ".9rem",
+				"line-height": "1.55",
+				"padding": "0 5px"
+			},
+			"code": {
+				"background": "rgba(240, 240, 240, .8)",
+				"color": "rgba(0, 0, 0, .7)"
+			},
+			"code::after, code::before": {
+				"content": "none"
+			},
+			"pre code": {
+				"background": "transparent",
+				"padding": "0",
+				"color": "#ccc"
+			},
+			".header-anchor": {
+				"color": "#0c4887",
+				"transition": "opacity .15s",
+				"text-decoration": "none",
+				"font-size": ".85em",
+				"float": "left",
+				"margin-left": "-.7em",
+				"margin-top": ".125em",
+				"padding-right": ".23em",
+				"opacity": "0",
+				"position": "absolute"
+			},
+			"[id]:hover > .header-anchor, .header-anchor:focus": {
+				"opacity": "1"
+			},
+			".icon.outbound": {
+				"color": "inherit"
+			},
+			".custom-block": {
+				"padding": ".1rem 1.5rem",
+				"border-left-width": ".5rem",
+				"border-left-style": "solid",
+				"margin": "1rem 0",
+				"background-color": "#f3f5f7 !important",
+				"border-color": "#42b983"
+			},
+			".custom-block.warning": {
+				"background-color": "rgba(255, 229, 100, .3) !important",
+				"border-color": "#e7c000 !important"
+			},
+			".custom-block .custom-block-title": {
+				"font-weight": "600",
+				"margin-top": "10px",
+				"margin-bottom": "0"
+			},
+			".custom-block.warning .custom-block-title": {
+				"color": "#b29400"
+			}
+		},
+		"colors": {
+			"primary": "#0c4887",
+			"secondary": "#01579b",
+			"accent": "#007cc1",
+			"error": "#e54d42",
+			"info": "#0077c5",
+			"success": "#2d9437",
+			"warning": "#977000"
+		},
+		"icons": [
+			{
+				"name": "vuejs",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><path fill=\"#4dba87\" d=\"M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z\"/><path fill=\"#435466\" d=\"M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z\"/></svg>"
+			},
+			{
+				"name": "vue-dot-dark",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><path fill=\"#fff\" d=\"M184.55 78.53H61.8l145.4 251.84L352.6 78.53H229.84l-22.64 39.21-22.64-39.21z\"/><path fill=\"#1867c0\" d=\"M237.42 86.66L207.19 139l-30.22-52.35H76.3L207.2 313.34 338.07 86.66z\"/><path fill=\"#1697f6\" d=\"M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z\"/></svg>"
+			},
+			{
+				"name": "github",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M22.39 6.27A11.95 11.95 0 0 0 12 .29a11.95 11.95 0 0 0-12 12c0 2.62.76 4.97 2.29 7.06a11.75 11.75 0 0 0 5.91 4.33c.28.06.5.02.63-.1.13-.13.2-.29.2-.47a359.71 359.71 0 0 0-.01-2.24l-.36.06a6.6 6.6 0 0 1-1.95-.05 2.43 2.43 0 0 1-1.05-.47 1.98 1.98 0 0 1-.7-.96l-.15-.36a3.9 3.9 0 0 0-.49-.8c-.22-.29-.45-.49-.68-.59l-.1-.08a1.15 1.15 0 0 1-.35-.4c-.03-.08 0-.14.08-.18.08-.05.23-.07.45-.07l.31.04c.2.04.47.17.77.38.31.2.56.48.76.8.24.44.53.76.87.99.34.22.68.33 1.02.33.35 0 .64-.02.9-.08.24-.05.48-.13.7-.23.09-.7.35-1.24.76-1.61a10.7 10.7 0 0 1-1.6-.28 6.38 6.38 0 0 1-1.47-.61A4.2 4.2 0 0 1 4.66 14a7.8 7.8 0 0 1-.32-2.34c0-1.26.42-2.34 1.24-3.22a4.2 4.2 0 0 1 .1-3.19c.3-.1.76-.02 1.35.21A9.4 9.4 0 0 1 9 6.5a11.1 11.1 0 0 1 6 0l.6-.38c.4-.25.88-.48 1.43-.69.55-.2.98-.26 1.27-.17.47 1.18.5 2.24.12 3.19a4.56 4.56 0 0 1 1.24 3.22c0 .88-.11 1.67-.32 2.35a4.84 4.84 0 0 1-.83 1.64c-.34.41-.76.76-1.27 1.04-.5.28-1 .48-1.47.6-.47.13-1 .23-1.6.29.54.47.81 1.2.81 2.22v3.3c0 .18.07.34.2.46.13.13.34.17.62.11 2.41-.8 4.39-2.24 5.91-4.33A11.66 11.66 0 0 0 24 12.29c0-2.17-.54-4.18-1.61-6.02z\"/></svg>"
+			},
+			{
+				"name": "dashboard",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M13.33 0H24v8H13.33zM0 0h10.67v13.33H0zM0 16h10.67v8H0zM13.33 10.67H24V24H13.33z\"/></svg>"
+			},
+			{
+				"name": "package",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M13.97 12.19l-1.07.62V24l9.68-5.6V7.23zM2.05 5.75L5.78 7.9l9.95-5.74L12 0zM12 11.5l3.7-2.14 6.25-3.61-4.3-2.45-9.94 5.75.57.3zM5.17 9.4L1.5 7.28v11.1l9.61 5.56v-11.1l-4.15-2.4v2.72l-1.79-.92z\"/></svg>"
+			},
+			{
+				"name": "function",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M15.75 0S12.6 0 11.7 4.5l-.6 3H8.25L7.5 9h3.3L8.7 19.5c-.6 3-2.85 3-2.85 3h-1.5l-.6 1.5h4.5s3.15 0 4.05-4.5L14.4 9H18l.75-1.5H14.7l.6-3c.6-3 2.7-3 2.7-3h1.5l.75-1.5z\"/></svg>"
+			},
+			{
+				"name": "codepen",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12.9.32a1.9 1.9 0 0 0-2.14.02L1.23 6.98C.72 7.34.4 7.92.4 8.54v7.16c0 .63.32 1.23.85 1.58l9.7 6.4a1.9 1.9 0 0 0 2.09 0l9.88-6.53c.54-.35.86-.94.86-1.58V8.54a1.9 1.9 0 0 0-.85-1.58zm7.38 7.75l-3.66 2.45-3.42-2.49-.03-4.9zM10.7 3.13v4.8l-3.52 2.46-3.5-2.35zM2.72 10.4L5 11.92l-2.27 1.59zm8.04 10.23l-7.08-4.75 3.54-2.46 3.54 2.37zM9.4 11.88l2.3-1.6 2.66 1.75L12 13.62zm3.84 8.75v-4.84l3.39-2.27 3.64 2.4zm8.04-7.04L18.89 12l2.4-1.61z\"/></svg>"
+			},
+			{
+				"name": "vuetify",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path fill=\"#1697f6\" d=\"M12 0H7.08L12 11.64\"/><path fill=\"#1867c0\" d=\"M12 0h4.93L12 11.64\"/><path fill=\"#7bc6ff\" d=\"M12 15v9L1.5 3.5H7\"/><path fill=\"#aeddff\" d=\"M12 15v9L22.5 3.5H17\"/></svg>"
+			}
+		]
+	}
+}

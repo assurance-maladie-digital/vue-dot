@@ -1,3 +1,0 @@
-# XCarouselReverseTransition
-
-<ComponentDoc current="XCarouselReverseTransition" />

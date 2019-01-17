@@ -1,3 +1,0 @@
-# XAutocomplete
-
-<ComponentDoc current="XAutocomplete" />

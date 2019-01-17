@@ -1,3 +1,0 @@
-# XScrollXReverseTransition
-
-<ComponentDoc current="XScrollXReverseTransition" />

@@ -1,33 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-
-const files = [];
-
-fs.readdirSync(path.join(__dirname, '../next/guide/vuetify')).forEach((file) => {
-	if (file !== 'README.md') {
-		files.push('vuetify/' + file.replace('.md', ''));
-	} else {
-		files.push('vuetify/');
-	}
-});
-
 module.exports = {
-	base: '/vue-dot/',
 	serviceWorker: true,
-	evergreen: true,
 	head: [
-		[
-			'script',
-			{
-				async: 'true',
-				src: 'https://static.codepen.io/assets/embed/ei.js'
-			}
-		],
 		[
 			'link',
 			{
-				rel: 'icon',
-				type: 'image/png',
+				rel: 'apple-touch-icon',
 				sizes: '180x180',
 				href: '/apple-touch-icon.png'
 			}
@@ -58,11 +35,11 @@ module.exports = {
 			}
 		],
 		[
-			'meta',
+			'link',
 			{
 				rel: 'mask-icon',
 				href: '/safari-pinned-tab.svg',
-				color: '#435466'
+				color: '#01579b'
 			}
 		],
 		[
@@ -83,14 +60,14 @@ module.exports = {
 			'meta',
 			{
 				name: 'msapplication-TileColor',
-				content: '#fefefe'
+				content: '#01579b'
 			}
 		],
 		[
 			'meta',
 			{
 				name: 'theme-color',
-				content: '#fefefe'
+				content: '#01579b'
 			}
 		],
 		[
@@ -103,7 +80,7 @@ module.exports = {
 		[
 			'script',
 			{
-				src: 'https://js.sentry-cdn.com/da9b678c454344789142e9b3c4e8b394.min.js',
+				src: 'https://js.sentry-cdn.com/6d4a333e85304865ae61bf8ad39d3805.min.js',
 				crossorigin: 'anonymous'
 			}
 		]
@@ -117,185 +94,8 @@ module.exports = {
 		'/fr/': {
 			lang: 'fr-FR',
 			title: 'VueDot',
-			description: 'Librairie de composants officielle de la CNAM',
+			description: 'Bibliothèque de composants officielle de la CNAM',
 		}
 	},
-	themeConfig: {
-		updatePopup: true,
-		lastUpdated: 'Last Updated',
-		sidebarDepth: 1,
-		algolia: {
-			apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
-			indexName: 'vue-dot'
-		},
-		locales: {
-			'/': {
-				label: 'English',
-				selectText: 'Languages',
-				nav: [
-					{
-						text: 'Guide',
-						link: '/guide/'
-					},
-					{
-						text: 'Newsletter',
-						link: 'https://www.getrevue.co/profile/vue-dot'
-					},
-					{
-						text: 'NPM',
-						link: 'https://www.npmjs.com/package/@cnamts/vue-dot'
-					},
-					{
-						text: 'Changelog',
-						link: 'https://github.com/assurance-maladie-digital/vue-dot/releases'
-					},
-					{
-						text: 'Github',
-						link: 'https://github.com/assurance-maladie-digital/vue-dot'
-					},
-					{
-						text: 'Vue.js',
-						link: 'https://vuejs.org/'
-					},
-					{
-						text: 'Version',
-						items: [
-							{
-								text: 'v1.4.0',
-								link: '/v1.4.0/'
-							},
-							{
-								text: 'Lastest (v1.5.0)',
-								link: '/'
-							},
-							{
-								text: 'Next',
-								link: '/next/'
-							}
-						]
-					}
-				],
-				sidebar: {
-					'/v1.4.0/guide/': [
-						{
-							title: 'Guide',
-							collapsable: false,
-							children: [
-								'',
-								'components',
-								'directives'
-							]
-						}
-					],
-					'/guide/': [
-						{
-							title: 'Guide',
-							collapsable: false,
-							children: [
-								'',
-								'components',
-								'directives',
-								'roadmap'
-							]
-						},
-						'themes/',
-						{
-							title: 'XVuetify',
-							collapsable: true,
-							children: files
-						}
-					],
-					'/next/guide/': [
-						{
-							title: 'Guide',
-							collapsable: false,
-							children: [
-								'',
-								'components',
-								'directives',
-								'roadmap'
-							]
-						},
-						{
-							title: 'XVuetify',
-							collapsable: true,
-							children: files
-						}
-					]
-				}
-			},
-			'/fr/': {
-				label: 'Français',
-				selectText: 'Langues',
-				nav: [
-					{
-						text: 'Guide',
-						link: '/fr/guide/'
-					},
-					{
-						text: 'Newsletter',
-						link: 'https://www.getrevue.co/profile/vue-dot'
-					},
-					{
-						text: 'NPM',
-						link: 'https://www.npmjs.com/package/@cnamts/vue-dot'
-					},
-					{
-						text: 'Changelog',
-						link: 'https://github.com/assurance-maladie-digital/vue-dot/releases'
-					},
-					{
-						text: 'Github',
-						link: 'https://github.com/assurance-maladie-digital/vue-dot'
-					},
-					{
-						text: 'Vue.js',
-						link: 'https://vuejs.org/'
-					},
-					{
-						text: 'Version',
-						items: [
-							{
-								text: 'v1.4.0',
-								link: '/fr/v1.4.0/'
-							},
-							{
-								text: 'Dernière (v1.5.x)',
-								link: '/fr/'
-							},
-							{
-								text: 'Prochaine',
-								link: '/fr/next/'
-							}
-						]
-					}
-				],
-				sidebar: {
-					'/fr/v1.4.0/guide/': [
-						{
-							title: 'Guide',
-							collapsable: false,
-							children: [
-								'',
-								'composants',
-								'directives',
-							]
-						}
-					],
-					'/fr/guide/': [
-						{
-							title: 'Guide',
-							collapsable: false,
-							children: [
-								'',
-								'composants',
-								'directives',
-								'roadmap'
-							]
-						}
-					]
-				}
-			}
-		}
-	}
+	plugins: ['@vuepress/i18n-ui']
 };

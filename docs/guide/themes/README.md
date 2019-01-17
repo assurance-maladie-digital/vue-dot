@@ -1,28 +1,35 @@
-# Themes
+# Custom themes
 
-The themes allows you to totally change the look and feel of the VueDot library by globally configure components, adding colors, icons and writing custom CSS!
+VueDot provides a **theme system** in order to answer the need of **matching multiple graphic charts** across teams and projects.
 
-## Use a theme
+The themes allows you to **totally change the look and feel** of the VueDot library by **globally configure components**, **adding colors**, **icons** and writing **custom CSS**.
+
+By default, no theme is used so it will be pure Vuetify.
+
+[Learn how themes were developed](./how/)
+
+## Usage
 
 A theme is a JSON file that you need to pass as an option when using VueDot. By convention it is named `theme.json`.
 
+<Code>
 ```ts
+// main.ts
 import { default as theme } from './theme.json';
 
 Vue.use(VueDot, {
 	theme
 });
 ```
+</Code>
 
-## Create a theme
+## Creation
 
-In version 1.5.0, there is no theme generator, so this needs to be done manually.
-The best way is to clone the project, and use the Playground.
-
-### The minimal structure
+### Minimal structure
 
 A theme can be empty, but still needs to have a name, a version and the config object.
 
+<Code>
 ```json
 {
 	"name": "digital",
@@ -30,11 +37,13 @@ A theme can be empty, but still needs to have a name, a version and the config o
 	"config": {}
 }
 ```
+</Code>
 
 ### Styles
 
 You can define global styles using the `styles` property.
 
+<Code>
 ```json
 "config": {
 	"styles": {
@@ -46,21 +55,17 @@ You can define global styles using the `styles` property.
 	}
 }
 ```
+</Code>
 
+::: warning
 The pattern is a selector containing properties and values. This cannot be nested.
-
-```json
-"selector": {
-	"propery1": "value1",
-	"propery2": "value2",
-}
-```
+:::
 
 ### Typography
 
-You can define CSS related to typography here to make things more readable.
-Theses styles can only be classes or HTML typography elements (such as paragraphs, quotes, etc).
+You can define CSS related to typography here to make things more readable. Theses styles can only be classes or HTML typography elements.
 
+<Code>
 ```json
 "typography": {
 	"styles": {
@@ -78,12 +83,42 @@ Theses styles can only be classes or HTML typography elements (such as paragraph
 	}
 }
 ```
+</Code>
+<br>
+Allowed tags:
+
+- `h1`
+- `h2`
+- `h3`
+- `h4`
+- `h5`
+- `h6`
+- `p`
+- `span`
+- `i`
+- `b`
+- `a`
+- `abbr`
+- `small`
+- `mark`
+- `blockquote`
+- `time`
+- `sup`
+- `sub`
+- `strong`
+- `code`
+- `bdb`
+- `pre`
+- `q`
+- `ins`
+- `del`
+- `cite`
 
 ### Colors
 
-You can override the default colors or define custom ones using Vuetify theme.
-These colors will be available as classes and via `this.$vuetify.theme` (see [Vuetify documentation](https://vuetifyjs.com/en/style/theme#customizing)).
+You can override the default colors or define custom ones using Vuetify theme. These colors will be available as classes and via `this.$vuetify.theme` (see [Vuetify documentation](https://vuetifyjs.com/en/framework/theme#customizing)).
 
+<Code>
 ```json
 "colors": {
 	"primary": "#084870",
@@ -106,74 +141,94 @@ These colors will be available as classes and via `this.$vuetify.theme` (see [Vu
 	}
 }
 ```
+</Code>
 
 ### Icons
 
-You can define custom icons for the XSvgIcon component.
-For each icon, you need to define a `name` and a `svg`.
+You can define custom icons for the `XSvgIcon` component. For each icon, you need to define the `name` and `svg` properties.
 
+<Code>
 ```json
 "icons": [
 	{
-		"name": "svg",
+		"name": "vuejs",
 		"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><path fill=\"#4dba87\" d=\"M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z\"/><path fill=\"#435466\" d=\"M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z\"/></svg>"
 	}
 ]
 ```
+</Code>
 
-The `svg` is a string so the `"` character needs to be escaped.
+::: warning
+The `svg` property is a string so the quote character needs to be escaped.
+:::
 
-### Components
+### Final file
 
-You can configure components, and even add properties to them in order to extend the styling possibilities.
+Here's the final file with all the examples above, don't hesitate to try it!
 
+<Code>
 ```json
-"components": {
-	"XBtn": {
-		"default": {
-			"ripple": false
+{
+	"name": "digital",
+	"version": "0.0.1",
+	"config": {
+		"styles": {
+			".v-alert": {
+				"top": "0",
+				"width": "100%",
+				"position": "absolute"
+			}
 		},
-		"primary": {
-			"round": true,
-			"depressed": true,
-			"dark": true,
-			"color": "#0087cf",
-			"classes": [
-				"font-weight-regular"
-			]
-		},
-		"secondary": {
-			"extends": "primary",
-			"outline": true
-		},
-		"tertiary": {
-			"extends": "primary",
-			"round": false,
-			"small": true,
-			"flat": true,
+		"typography": {
 			"styles": {
-				"min-width": 0,
-				"height": "auto"
-			},
-			"classes": [
-				"px-2",
-				"py-1"
-			]
-		}
+				".application" : {
+					"font-family": "'Open Sans', sans-serif",
+					"line-height": "1.5"
+				},
+				"h1": {
+					"font-family": "OSP-DIN, sans-serif",
+					"font-size": "2.5rem",
+					"font-weight": "400",
+					"text-transform": "uppercase",
+					"color": "#01b9f5"
+				}
+			}
+		},
+		"colors": {
+			"primary": "#084870",
+			"secondary": "#424242",
+			"accent": "#01b9f5",
+			"error": "#941900",
+			"info": "#1cb0ba",
+			"success": "#4caf50",
+			"warning": "#b35a00",
+			"shades": {
+				"base": "#808080",
+				"darken1": "#333",
+				"black": "#000",
+				"lighten1": "#ccc",
+				"lighten2": "#e0e0e0",
+				"lighten3": "#ededed",
+				"lighten4": "#f5f5f5",
+				"lighten5": "#fafafa",
+				"white": "#fff"
+			}
+		},
+		"icons": [
+			{
+				"name": "svg",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><path fill=\"#4dba87\" d=\"M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z\"/><path fill=\"#435466\" d=\"M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z\"/></svg>"
+			}
+		]
 	}
 }
 ```
+</Code>
 
-Here we are configuring the XBtn component by setting values for the component properties.
-Values defined in `default` will be always applied.
+### Components
 
-We're setting values in `primary`, `secondary` and `tertiary`, these will generate properties you can use on the component.
-These generated properties can extends an other one so it will heritate the values.
+Component customization will be available in Vuetify 2.0 at Q2 2019, check [Vuetify next](https://next.vuetifyjs.com/en/) for more informations.
 
-You can also define an array of classes that will be applied to the component, and so one for the styles.
-
-So you can use XBtn like this:
-
-```html
-<XBtn secondary />
-```
+::: tip INFORMATION
+Component configuration has been removed from the theme from version 1.6.
+:::

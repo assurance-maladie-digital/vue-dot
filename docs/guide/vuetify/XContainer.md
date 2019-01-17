@@ -1,3 +1,0 @@
-# XContainer
-
-<ComponentDoc current="XContainer" />

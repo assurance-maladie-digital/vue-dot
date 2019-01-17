@@ -1,3 +1,0 @@
-# XMessages
-
-<ComponentDoc current="XMessages" />

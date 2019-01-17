@@ -1,97 +1,52 @@
-# Introduction
+# Getting started
 
-This library is meant to help developers in their work with Vue, and will evolve with the contributions of the community, so don't be afraid to make some pull requests!
+VueDot is the Official CNAM component library, built with Vue.js. It's goal is to **help developers** of the French Social Security to **build User Interfaces more quickly**, with the **benefits of the work made by the community**.
+
+## Vuetify
+
+VueDot is built on top of [Vuetify](https://vuetifyjs.com/en/), so you _need_ to install it _first_.
+
+If you're using the [Vue.js stack](https://www.jiracnamts.co/confluence/display/CDD/Stack+Vue.js), everything is already setup for you, so you can skip this part!
+Else, check the [installation guide](https://vuetifyjs.com/en/getting-started/quick-start) fom the Vuetify documentation.
 
 ## Installation
 
+After installing Vuetify, you need to add the library itself.
+
+### Vue CLI
+
+When using Vue CLI, you can install the library from [npm](https://www.npmjs.com/package/@cnamts/vue-dot).
+
+<Code>
+```bash
+$ yarn add @cnamts/vue-dot
+// OR
+$ npm install @cnamts/vue-dot --save
+```
+</Code>
 <br>
 
-You need to have Vuetify installed in order to use VueDot, see [Vuetify quick start](https://vuetifyjs.com/en/getting-started/quick-start) for help.
+#### Load
 
-### Install
+Then you need to load the library in your main application file.
 
-```bash
-yarn add @cnamts/vue-dot # OR npm install @cnamts/vue-dot
-```
-
-### Load
-
-```ts{5,6}
+<Code>
+```ts
 // main.ts
 import Vue from 'vue';
-import './plugins/vuetify';
+import '@/plugins/vuetify';
 
+import '@cnamts/vue-dot/dist/vue-dot.css';
 import VueDot from '@cnamts/vue-dot';
+
 Vue.use(VueDot);
 
 new Vue({
-    render: (h) => h(App)
+	render: (h) => h(App)
 }).$mount('#app');
 ```
-
-### You're done!
-
-```bash
-# run your project
-yarn serve # OR your own command
-```
+</Code>
 
 ### CDN
 
-<br>
-Load Vue, then Vuetify and finally VueDot:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@1.3.11/vuetify.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@cnamts/vue-dot@1.5.0/dist/vue-dot.umd.min.js"></script>
-```
-
-It will load automatically all the components from Vuetify and VueDot.
-
-## Core team
-
-<ul>
-	<li>
-		<img :src="$withBase('/dylan-broussard.jpg')" alt="">
-		<h3>Dylan Broussard</h3>
-		<p>Creator and main developer</p>
-	</li>
-	<li>
-		<img :src="$withBase('/user.svg')" alt="">
-		<h3>You, maybe?</h3>
-		<p>Don't hesitate and contact me if you want to integrate core team!</p>
-	</li>
-</ul>
-
-<style lang="scss" scoped>
-	li {
-		max-width: 250px;
-		list-style: none;
-	}
-
-	ul {
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 30px;
-		justify-content: space-around;
-	}
-
-	li {
-		padding: 5px;
-		text-align: center;
-	}
-
-	p,
-	h3 {
-		margin: 0;
-	}
-
-	img {
-		width: 150px;
-		height: 150px;
-		object-fit: cover;
-		border-radius: 50%;
-	}
-</style>
+<CDN />

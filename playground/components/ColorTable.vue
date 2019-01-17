@@ -4,8 +4,7 @@
 		class="color-table mt-5"
 	>
 		<li
-			v-for="(color, name) in $vuetify.theme"
-			v-if="typeof color === 'string'"
+			v-for="(color, name) in filter('string')"
 			:key="`a-${name}`"
 			class="color-item"
 		>
@@ -28,8 +27,7 @@
 		</li>
 
 		<li
-			v-for="(colorObj, name) in $vuetify.theme"
-			v-if="typeof colorObj === 'object'"
+			v-for="(colorObj, name) in filter('object')"
 			:key="`b-${name}`"
 			class="color-item"
 		>
@@ -52,8 +50,7 @@
 		</li>
 
 		<li
-			v-for="(colorObj, name) in colors"
-			v-if="typeof colorObj === 'object'"
+			v-for="(colorObj, name) in filter('object', true)"
 			:key="`c-${name}`"
 			class="color-item"
 		>
@@ -136,8 +133,17 @@
 			},
 			transform(str: string) {
 				return str !== 'base' ? this.convertToClass(this.kebab(str)) : '';
+			},
+			filter(type: string, color = false) {
+				const source: any = color ? colors : this.$vuetify.theme;
+
+				const filtered = source.filter((color: any) => {
+					return typeof color === type;
+				});
+
+				return filtered;
 			}
-		},
+		}
 	});
 </script>
 

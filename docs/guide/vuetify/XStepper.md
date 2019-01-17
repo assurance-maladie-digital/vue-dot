@@ -1,3 +1,0 @@
-# XStepper
-
-<ComponentDoc current="XStepper" />

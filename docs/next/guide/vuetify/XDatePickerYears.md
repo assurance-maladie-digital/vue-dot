@@ -1,3 +1,0 @@
-# XDatePickerYears
-
-<ComponentDoc current="XDatePickerYears" />

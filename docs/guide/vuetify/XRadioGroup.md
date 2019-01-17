@@ -1,3 +1,0 @@
-# XRadioGroup
-
-<ComponentDoc current="XRadioGroup" />

@@ -1,3 +1,0 @@
-# XMenuTransition
-
-<ComponentDoc current="XMenuTransition" />

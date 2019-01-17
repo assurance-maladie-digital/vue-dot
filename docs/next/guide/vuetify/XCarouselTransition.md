@@ -1,3 +1,0 @@
-# XCarouselTransition
-
-<ComponentDoc current="XCarouselTransition" />

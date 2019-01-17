@@ -1,3 +1,0 @@
-# XBottomNav
-
-<ComponentDoc current="XBottomNav" />

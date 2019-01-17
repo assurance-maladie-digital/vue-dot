@@ -82,8 +82,8 @@
 
 		<VMenu
 			:ref="menuRef"
-			:close-on-content-click="false"
 			v-model="menu"
+			:close-on-content-click="false"
 			:nudge-right="40"
 			:nudge-bottom="55"
 			:attach="`.activator-icon-${menuRef}`"

@@ -1,0 +1,14 @@
+<template>
+	<VLayout
+		align-center
+		justify-space-around
+	>
+		<DatePicker
+			hint=""
+			label="Дата"
+			date-format="DD.MM.YYYY"
+			locale="ru"
+			hide-details
+		/>
+	</VLayout>
+</template>

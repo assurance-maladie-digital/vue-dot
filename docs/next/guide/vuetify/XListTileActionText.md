@@ -1,3 +1,0 @@
-# XListTileActionText
-
-<ComponentDoc current="XListTileActionText" />

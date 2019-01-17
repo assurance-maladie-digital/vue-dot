@@ -1,3 +1,0 @@
-# XTableOverflow
-
-<ComponentDoc current="XTableOverflow" />
