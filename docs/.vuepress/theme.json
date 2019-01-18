@@ -44,6 +44,14 @@
 				"margin-bottom": "10px",
 				"margin-top": "35px"
 			},
+			".content h3 + h4": {
+				"margin-top": "0"
+			},
+			".content h4": {
+				"font-size": "1.15rem",
+				"margin-bottom": "5px",
+				"margin-top": "15px"
+			},
 			"pre[class*='language-']": {
 				"align-items": "center",
 				"box-shadow": "none",
@@ -122,6 +130,13 @@
 			},
 			".custom-block.warning .custom-block-title": {
 				"color": "#776300"
+			},
+			".custom-block.danger": {
+				"background-color": "#ffe6e6 !important",
+				"border-color": "#c00 !important"
+			},
+			".custom-block.danger .custom-block-title": {
+				"color": "#4d0000"
 			}
 		},
 		"colors": {

@@ -24,7 +24,6 @@ $ yarn add @cnamts/vue-dot
 $ npm install @cnamts/vue-dot --save
 ```
 </Code>
-<br>
 
 #### Load
 

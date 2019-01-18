@@ -24,7 +24,7 @@ Explain the problem and include additional details to help maintainers reproduce
 
 Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/).
 
-Before creating enhancement suggestions, check the Roadmap to see if what you want is already planned. If you don't see your suggestion, [create a new issue](#submitting-a-good-bug-report).
+Before creating enhancement suggestions, check the [Roadmap](../roadmap/) to see if what you want is already planned. If you don't see your suggestion, [create a new issue](#submitting-a-good-bug-report).
 
 ## Code contribution
 
@@ -36,6 +36,7 @@ You can look for issues labelled with `help-wanted` if you're not sure where to 
 
 Setting up your dev environment is easy! To start fork [VueDot](https://github.com/assurance-maladie-digital/vue-dot/issues) into your own repo.
 
+<Code>
 ```bash
 // Clone your forked repo
 $ git clone <forked-vue-dot-repo>
@@ -52,18 +53,24 @@ $ yarn
 // Launch the development server
 $ yarn serve
 ```
+</Code>
 
 #### Documentation
 
 To work on documentation, start the development server of Vuepress.
 
+<Code>
 ```bash
 yarn docs:dev
 ```
+</Code>
 
 See [VuePress documentation](https://vuepress.vuejs.org/guide/) for help.
 
+::: danger
 Other commands should be executed only on master branch
+:::
+
 ### Code style
 
 You need to respect the code style defined in `editorconfig` and to resolve any warning or error thrown by `TSLint` or `ESLint`.
