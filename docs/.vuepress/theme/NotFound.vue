@@ -32,6 +32,12 @@
 		name: 'NotFound',
 		components: {
 			Toolbar
+		},
+		created() {
+			// Redirect default route
+			if (this.$route.path === '/') {
+				this.$router.push(`/${this.$i18n.locale}/`);
+			}
 		}
 	};
 </script>
