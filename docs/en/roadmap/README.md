@@ -7,14 +7,20 @@ VueDot is always under development. On this page you can see what's planned on t
     {
       status: 'next',
       date: 'Q2 2019',
-      title: 'v1.6.x Releases',
+      title: 'v1.7.0 Release',
       body: '100% __tests coverage__.'
     },
     {
-      status: 'pending',
+      status: 'next',
       date: 'Q1 2019',
-      title: 'v1.6 Release',
-      body: 'Add __File Upload__ and __DataList__ components.'
+      title: 'v1.6.x Release',
+      body: 'Add __FileUpload__ component.'
+    },
+    {
+      status: 'pending',
+      date: 'January 2019',
+      title: 'v1.6.0 Release',
+      body: 'Add __DataList__ component.'
     },
     {
       status: 'pending',
