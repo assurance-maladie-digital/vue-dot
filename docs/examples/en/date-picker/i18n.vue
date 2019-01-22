@@ -8,6 +8,7 @@
 			label="Дата"
 			date-format="DD.MM.YYYY"
 			locale="ru"
+			single-line
 			hide-details
 		/>
 	</VLayout>

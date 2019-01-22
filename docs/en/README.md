@@ -37,7 +37,7 @@ footerRealease: Released under the
 footerRealeaseLink: MIT License
 footerMadeWith: Made with
 footerVueJs: Vue.js
-footerMadeBy: By
+footerMadeBy: by
 footerMadeByLink: https://github.com/Deraw-
 footerMadeByLinkText: Dylan Broussard
 footerCopyright: Copyright © 2018-present CNAM

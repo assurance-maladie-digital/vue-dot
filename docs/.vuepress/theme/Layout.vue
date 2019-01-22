@@ -115,19 +115,19 @@
 						<a href="https://fr.vuejs.org/">
 							{{ $page.frontmatter.footerVueJs }}
 						</a>
-					</p>
 
-					<p
-						v-if="$page.frontmatter.footerMadeBy"
-						class="mb-0"
-					>
-						{{ $page.frontmatter.footerMadeBy }}
-						<a
-							v-if="$page.frontmatter.footerMadeByLink"
-							:href="$page.frontmatter.footerMadeByLink"
+						<span
+							v-if="$page.frontmatter.footerMadeBy"
+							class="mb-0"
 						>
-							{{ $page.frontmatter.footerMadeByLinkText }}
-						</a>
+							{{ $page.frontmatter.footerMadeBy }}
+							<a
+								v-if="$page.frontmatter.footerMadeByLink"
+								:href="$page.frontmatter.footerMadeByLink"
+							>
+								{{ $page.frontmatter.footerMadeByLinkText }}
+							</a>
+						</span>
 					</p>
 
 					<p class="mb-0">{{ $page.frontmatter.footerCopyright }}</p>

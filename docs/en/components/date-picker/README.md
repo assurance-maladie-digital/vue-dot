@@ -462,6 +462,210 @@ By default it comes in a field with menu and icon.
         default: 'undefined',
         type: 'string',
         description: 'Sets the icon in the year selection button.'
+      },
+      {
+        name: 'absolute',
+        default: 'false',
+        type: 'boolean',
+        description: 'Position the menu absolutely.'
+      },
+      {
+        name: 'allow-overflow',
+        default: 'false',
+        type: 'boolean',
+        description: 'Removes overflow re-positioning for the content.'
+      },
+      {
+        name: 'auto',
+        default: 'false',
+        type: 'boolean',
+        description: 'Centers list on selected element.'
+      },
+      {
+        name: 'bottom',
+        default: 'false',
+        type: 'boolean',
+        description: 'Align the menu towards the bottom.'
+      },
+      {
+        name: 'close-delay',
+        default: '0',
+        type: 'number | string',
+        description: 'Milliseconds to wait before closing component.'
+      },
+      {
+        name: 'close-on-click',
+        default: 'true',
+        type: 'boolean',
+        description: 'Designates if menu should close on outside-activator click.'
+      },
+      {
+        name: 'close-on-content-click',
+        default: 'false',
+        type: 'boolean',
+        description: 'Designates if menu should close when its content is clicked.'
+      },
+      {
+        name: 'content-class',
+        default: 'undefined',
+        type: 'string',
+        description: 'Applies a custom class to the detached element. This is useful because the content is moved to the end of the app and is not targettable by classes passed directly on the component.'
+      },
+      {
+        name: 'disable-keys',
+        default: 'false',
+        type: 'boolean',
+        description: 'Removes all keyboard interaction.'
+      },
+      {
+        name: 'fixed',
+        default: 'false',
+        type: 'boolean',
+        description: 'Position the element fixed.'
+      },
+      {
+        name: 'lazy',
+        default: 'true',
+        type: 'boolean',
+        description: 'Conditionally renders content on mounted. Will only render content if activated.'
+      },
+      {
+        name: 'left',
+        default: 'false',
+        type: 'boolean',
+        description: 'Align the menu towards the left.'
+      },
+      {
+        name: 'max-height',
+        default: `'auto'`,
+        type: 'number | string',
+        description: 'Sets the maximum height for the menu content.'
+      },
+      {
+        name: 'max-width',
+        default: `'auto'`,
+        type: 'number | string',
+        description: 'Sets the maximum width for the menu content.'
+      },
+      {
+        name: 'min-width',
+        default: `'300px'`,
+        type: 'number | string',
+        description: 'Sets the minimum width for the menu content.'
+      },
+      {
+        name: 'nudge-bottom',
+        default: '55',
+        type: 'number | string',
+        description: 'Nudge the content to the bottom.'
+      },
+      {
+        name: 'nudge-left',
+        default: '0',
+        type: 'number | string',
+        description: 'Nudge the content to the left.'
+      },
+      {
+        name: 'nudge-right',
+        default: '40',
+        type: 'number | string',
+        description: 'Nudge the content to the right.'
+      },
+      {
+        name: 'nudge-top',
+        default: '0',
+        type: 'number | string',
+        description: 'Nudge the content to the top.'
+      },
+      {
+        name: 'nudge-width',
+        default: '0',
+        type: 'number | string',
+        description: 'Nudge the content width.'
+      },
+      {
+        name: 'offset-overflow',
+        default: 'true',
+        type: 'boolean',
+        description: 'Causes the component to flip to the opposite side when repositioned due to overflow.'
+      },
+      {
+        name: 'offset-x',
+        default: 'false',
+        type: 'boolean',
+        description: 'Offset the menu on the x-axis. Works in conjunction with direction left/right.'
+      },
+      {
+        name: 'offset-y',
+        default: 'true',
+        type: 'boolean',
+        description: 'Offset the menu on the y-axis. Works in conjunction with direction top/bottom.'
+      },
+      {
+        name: 'open-delay',
+        default: '0',
+        type: 'number | string',
+        description: 'Milliseconds to wait before opening component.'
+      },
+      {
+        name: 'open-on-click',
+        default: 'true',
+        type: 'boolean',
+        description: 'Designates whether menu should open on activator click.'
+      },
+      {
+        name: 'open-on-hover',
+        default: 'false',
+        type: 'boolean',
+        description: 'Designates whether menu should open on activator hover.'
+      },
+      {
+        name: 'origin',
+        default: `'top left'`,
+        type: 'string',
+        description: 'Sets the transition origin.'
+      },
+      {
+        name: 'position-x',
+        default: 'undefined',
+        type: 'number',
+        description: 'Used to position the content when not using an activator slot.'
+      },
+      {
+        name: 'position-y',
+        default: 'undefined',
+        type: 'number',
+        description: 'Used to position the content when not using an activator slot.'
+      },
+      {
+        name: 'return-value',
+        default: 'undefined',
+        type: 'boolean | number | string',
+        description: 'Used to return the value of menu.'
+      },
+      {
+        name: 'right',
+        default: 'false',
+        type: 'boolean',
+        description: 'Align the component towards the right.'
+      },
+      {
+        name: 'top',
+        default: 'false',
+        type: 'boolean',
+        description: 'Align the content towards the top.'
+      },
+      {
+        name: 'transition',
+        default: `'scale-transition'`,
+        type: 'string',
+        description: 'Sets the component transition. Can be one of the built in transitions or your own.'
+      },
+      {
+        name: 'z-index',
+        default: '1',
+        type: 'number | string',
+        description: 'The z-index used for the component.'
       }
     ],
     'events': [
