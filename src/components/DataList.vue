@@ -79,7 +79,7 @@
 			},
 			minWidth: {
 				type: String,
-				default: '300px'
+				default: undefined
 			},
 			width: {
 				type: String,
