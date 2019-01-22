@@ -10,6 +10,9 @@
 			locale="ru"
 			single-line
 			hide-details
+			top
+			:nudge-bottom="0"
+			origin="bottom left"
 		/>
 	</VLayout>
 </template>
