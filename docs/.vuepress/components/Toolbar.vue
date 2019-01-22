@@ -36,6 +36,7 @@
 			:label="$t('toolbar.search')"
 			single-line
 			hide-details
+			id="algolia-search-box"
 			class="search mr-3"
 			append-icon="search"
 		/>
@@ -130,6 +131,23 @@
 					this.initiated = true;
 				}
 			}
+		},
+		created() {
+			Promise.all([
+				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
+				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css')
+			]).then(([docsearch]) => {
+				docsearch = docsearch.default;
+
+				docsearch({
+					apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
+					indexName: 'vue-dot',
+					inputSelector: '#algolia-search-box',
+					algoliaOptions: {
+						'facetFilters': [`lang:${this.$i18n.locale}`]
+					}
+				});
+			});
 		}
 	}
 </script>
@@ -149,8 +167,10 @@
 		flex: none;
 		height: 38px;
 		width: 250px;
-		overflow: hidden;
-		border-radius: 50px;
+	}
+
+	.v-input.search >>> .v-input__slot {
+		border-radius: 50px !important;
 	}
 
 	.v-input.search >>> .v-input__control {
