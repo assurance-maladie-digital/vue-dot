@@ -306,6 +306,162 @@ By default it comes in a field with menu and icon.
         default: 'false',
         type: 'boolean',
         description: 'Delays validation until blur event.'
+      },
+      {
+        name: 'allowed-dates',
+        default: 'null',
+        type: 'function',
+        description: 'Restricts which dates can be selected.'
+      },
+      {
+        name: 'day-format',
+        default: 'null',
+        type: 'function',
+        description: 'Allows you to customize the format of the day string that appears in the date table. Called with date (ISO 8601 string) arguments.'
+      },
+      {
+        name: 'event-color',
+        default: `'warning'`,
+        type: 'string | function | object',
+        description: 'Sets the color for event dot. It can be __string__ (all events will have the same color) or __object__ where attribute is the event date and value is boolean/color/array of colors for specified date or __function__ taking date as a parameter and returning boolean/color/array of colors for that date'
+      },
+      {
+        name: 'events',
+        default: 'null',
+        type: 'array | function | object',
+        description: 'Array of dates or object defining events or colors or function returning boolean/color/array of colors.'
+      },
+      {
+        name: 'first-day-of-week',
+        default: '1',
+        type: 'string | number',
+        description: 'Sets the first day of the week, starting with 1 for Monday.'
+      },
+      {
+        name: 'header-color',
+        default: 'undefined',
+        type: 'string',
+        description: 'Defines the header color. If not specified it will use the color defined by __color__ prop or the default picker color.'
+      },
+      {
+        name: 'header-date-format',
+        default: 'undefined',
+        type: 'string',
+        description: 'Allows you to customize the format of the month string that appears in the header of the calendar. Called with date (ISO 8601 string) arguments.'
+      },
+      {
+        name: 'landscape',
+        default: 'false',
+        type: 'boolean',
+        description: 'Orients picker horizontal.'
+      },
+      {
+        name: 'max',
+        default: 'function | undefined',
+        type: 'string',
+        description: 'Maximum allowed date/month (ISO 8601 format). If __birthdate__ is setted, it\'s the current date.'
+      },
+      {
+        name: 'min',
+        default: 'function | undefined',
+        type: 'string',
+        description: 'Minimum allowed date/month (ISO 8601 format). If __birthdate__ is setted, it\'s __\'1950-01-01\'__.'
+      },
+      {
+        name: 'month-format',
+        default: 'null',
+        type: 'function',
+        description: 'Formatting function used for displaying months in the months table. Called with date (ISO 8601 string) arguments.'
+      },
+      {
+        name: 'multiple',
+        default: 'false',
+        type: 'boolean',
+        description: 'Allow the selection of multiple dates.'
+      },
+      {
+        name: 'next-icon',
+        default: `'$vuetify.icons.next'`,
+        type: 'string',
+        description: 'Sets the icon for next month/year button.'
+      },
+      {
+        name: 'no-title',
+        default: 'true',
+        type: 'boolean',
+        description: 'Hide the picker title.'
+      },
+      {
+        name: 'picker-date',
+        default: 'undefined',
+        type: 'string',
+        description: 'Displayed year/month.'
+      },
+      {
+        name: 'prev-icon',
+        default: `'$vuetify.icons.prev'`,
+        type: 'string',
+        description: 'Sets the icon for previous month/year button.'
+      },
+      {
+        name: 'reactive',
+        default: 'false',
+        type: 'boolean',
+        description: 'Updates the picker model when changing months/years automatically.'
+      },
+      {
+        name: 'scrollable',
+        default: 'false',
+        type: 'boolean',
+        description: 'Allows changing displayed month with mouse scroll.'
+      },
+      {
+        name: 'show-current',
+        default: 'true',
+        type: 'boolean | string',
+        description: 'Toggles visibility of the current date/month outline or shows the provided date/month as a current.'
+      },
+      {
+        name: 'show-week',
+        default: 'false',
+        type: 'boolean',
+        description: 'Toggles visibility of the week numbers in the body of the calendar.'
+      },
+      {
+        name: 'title-date-format',
+        default: 'null',
+        type: 'function',
+        description: 'Allows you to customize the format of the date string that appears in the title of the date picker. Called with date (ISO 8601 string) arguments.'
+      },
+      {
+        name: 'picker-type',
+        default: `'date'`,
+        type: 'sting',
+        description: 'Determines the type of the picker. __date__ for date picker, __month__ for month picker.'
+      },
+      {
+        name: 'weekday-format',
+        default: 'null',
+        type: 'function',
+        description: 'Allows you to customize the format of the weekday string that appears in the body of the calendar. Called with date (ISO 8601 string) arguments.'
+      },
+      {
+        name: 'width',
+        default: '300',
+        type: 'number | string',
+        description: 'The width of the content.'
+      },
+      {
+        name: 'year-format',
+        default: 'null',
+        type: 'function',
+        description: 'Allows you to customize the format of the year string that appears in the header of the calendar. Called with date (ISO 8601 string) arguments.'
+      },
+      {
+        name: 'year-icon',
+        default: 'undefined',
+        type: 'string',
+        description: 'Sets the icon in the year selection button.'
       }
     ],
     'events': [
