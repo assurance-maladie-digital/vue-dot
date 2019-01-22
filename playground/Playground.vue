@@ -46,8 +46,12 @@
 				flat
 				@click="dark = !dark"
 			>
-				<span v-if="!dark">Dark mode</span>
-				<span v-else>Light mode</span>
+				<span v-if="!dark">
+					Dark mode
+				</span>
+				<span v-else>
+					Light mode
+				</span>
 			</VBtn>
 		</VToolbar>
 
@@ -132,7 +136,13 @@
 
 							<VDivider class="my-5" />
 
-							<DatePicker birthdate />
+							<DatePicker
+								clearable
+								birthdate
+								append-icon="code"
+								prepend-inner-icon="menu"
+								append-outer-icon="home"
+							/>
 
 							<VDivider class="my-5" />
 
@@ -142,15 +152,23 @@
 
 							<DatePicker v-model="date" />
 
-							<p class="mb-0 mt-3">Date: {{ date }}</p>
+							<p class="mb-0 mt-3">
+								Date: {{ date }}
+							</p>
 
 							<VDivider class="my-5" />
 
 							<h1>Playground</h1>
-							<h2 class="accent--text">Alerts</h2>
-							<p class="mt-2">The alert component is used to convey important information to the user. It comes in 4 variations, success, info, warning and error. These have default icons assigned which can be changed and represent different actions.</p>
+							<h2 class="accent--text">
+								Alerts
+							</h2>
+							<p class="mt-2">
+								The alert component is used to convey important information to the user. It comes in 4 variations, success, info, warning and error. These have default icons assigned which can be changed and represent different actions.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -166,8 +184,8 @@
 								</VBtn>
 
 								<VSelect
-									:items="alert.items"
 									v-model="alert.type"
+									:items="alert.items"
 									label="Type"
 									class="alert-el ml-4"
 								/>
@@ -189,8 +207,8 @@
 								/>
 
 								<VSelect
-									:items="alert.transition.items"
 									v-model="alert.transition.value"
+									:items="alert.transition.items"
 									:style="{ width: '320px' }"
 									label="Transition"
 									class="alert-el ml-4"
@@ -199,10 +217,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Avatars</h2>
-							<p class="mt-2">The avatar component is used to control the size and border radius of responsive images, typically used to show profile pictures.</p>
+							<h2 class="accent--text mt-5">
+								Avatars
+							</h2>
+							<p class="mt-2">
+								The avatar component is used to control the size and border radius of responsive images, typically used to show profile pictures.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -219,8 +243,8 @@
 								/>
 
 								<VSelect
-									:items="avatar.items"
 									v-model="avatar.mode"
+									:items="avatar.items"
 									label="Mode"
 									class="alert-el ml-4"
 								/>
@@ -256,7 +280,9 @@
 											src="https://firebasestorage.googleapis.com/v0/b/vue-dot.appspot.com/o/vue.js.svg?alt=media&token=8de281bf-97bf-4c1e-a07c-aa859450a7a3"
 											alt="Vue logo"
 										>
-										<VIcon v-if="avatar.mode === 'icon'">notifications</VIcon>
+										<VIcon v-if="avatar.mode === 'icon'">
+											notifications
+										</VIcon>
 										<span
 											v-if="avatar.mode === 'text'"
 											class="headline"
@@ -269,10 +295,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Badges</h2>
-							<p class="mt-2">The badge component can wrap any type of content to highlight information to a user or to just draw attention to a specific element.</p>
+							<h2 class="accent--text mt-5">
+								Badges
+							</h2>
+							<p class="mt-2">
+								The badge component can wrap any type of content to highlight information to a user or to just draw attention to a specific element.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -288,8 +320,8 @@
 								</VBtn>
 
 								<VSelect
-									:items="badge.items"
 									v-model="badge.position"
+									:items="badge.items"
 									:style="{ width: '200px' }"
 									label="Position"
 									class="alert-el ml-4"
@@ -299,7 +331,9 @@
 									class="alert-el ml-4"
 									align-center
 								>
-									<p class="mb-0 mr-2">Icon:</p>
+									<p class="mb-0 mr-2">
+										Icon:
+									</p>
 									<VTextField
 										v-model="badge.icon"
 										label="Icon"
@@ -349,10 +383,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Bottom navs</h2>
-							<p class="mt-2">The bottom-nav is an alternative to the sidebar. It is primarily used on mobile and comes in two variants, icons and text, and shift.</p>
+							<h2 class="accent--text mt-5">
+								Bottom navs
+							</h2>
+							<p class="mt-2">
+								The bottom-nav is an alternative to the sidebar. It is primarily used on mobile and comes in two variants, icons and text, and shift.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -414,18 +454,24 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Bottom sheets</h2>
-							<p class="mt-2">The bottom sheet is a modified dialog that slides from the bottom of the screen, similar to a bottom-nav. Whereas a bottom navigation component is for buttons and specific application level actions, a bottom sheet can contain anything.</p>
+							<h2 class="accent--text mt-5">
+								Bottom sheets
+							</h2>
+							<p class="mt-2">
+								The bottom sheet is a modified dialog that slides from the bottom of the screen, similar to a bottom-nav. Whereas a bottom navigation component is for buttons and specific application level actions, a bottom sheet can contain anything.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
 								wrap
 							>
 								<VBottomSheet
-									:hide-overlay="bottomSheet.hideOverlay"
 									v-model="bottomSheet.value"
+									:hide-overlay="bottomSheet.hideOverlay"
 									:inset="bottomSheet.inset"
 									:persistent="bottomSheet.persistent"
 								>
@@ -490,10 +536,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Breadcrumbs</h2>
-							<p class="mt-2">The breadcrumbs component is a navigational helper for pages. It can accept a Material Icons icon or text characters as a divider. An array of objects can be passed to the items property of the component. Additionally, a scoped slot exists for more control of the breadcrumbs, either utilizing breadcrumbs-item or other custom markup.</p>
+							<h2 class="accent--text mt-5">
+								Breadcrumbs
+							</h2>
+							<p class="mt-2">
+								The breadcrumbs component is a navigational helper for pages. It can accept a Material Icons icon or text characters as a divider. An array of objects can be passed to the items property of the component. Additionally, a scoped slot exists for more control of the breadcrumbs, either utilizing breadcrumbs-item or other custom markup.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -504,7 +556,9 @@
 									class="alert-el ml-4"
 									align-center
 								>
-									<p class="mb-0 mr-2">Divider:</p>
+									<p class="mb-0 mr-2">
+										Divider:
+									</p>
 									<VTextField
 										v-model="breadcrumbs.divider"
 										label="Divider"
@@ -537,10 +591,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Buttons</h2>
-							<p class="mt-2">The btn component replaces the standard html button with a material design theme and a multitude of options. Any color helper class can be used to alter the background or text color.</p>
+							<h2 class="accent--text mt-5">
+								Buttons
+							</h2>
+							<p class="mt-2">
+								The btn component replaces the standard html button with a material design theme and a multitude of options. Any color helper class can be used to alter the background or text color.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -664,18 +724,28 @@
 									color="primary"
 									primary
 								>
-									<span v-if="!button.fab && !button.icon">Success</span>
+									<span v-if="!button.fab && !button.icon">
+										Success
+									</span>
 
-									<VIcon v-else>home</VIcon>
+									<VIcon v-else>
+										home
+									</VIcon>
 								</VBtn>
 							</VLayout>
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Buttons: Floating Action Button</h2>
-							<p class="mt-2">The btn component can be used as a Floating action button. This provides an application a main point of action. Combined with the speed-dial component, you can create a diverse set of functions available for your users.</p>
+							<h2 class="accent--text mt-5">
+								Buttons: Floating Action Button
+							</h2>
+							<p class="mt-2">
+								The btn component can be used as a Floating action button. This provides an application a main point of action. Combined with the speed-dial component, you can create a diverse set of functions available for your users.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -691,23 +761,23 @@
 								</VBtn>
 
 								<VSelect
-									:items="fab.items"
 									v-model="fab.direction"
+									:items="fab.items"
 									label="Type"
 									class="alert-el ml-4"
 								/>
 
 								<VSelect
-									:items="fab.transition.items"
 									v-model="fab.transition.value"
+									:items="fab.transition.items"
 									:style="{ width: '250px' }"
 									label="Transition"
 									class="alert-el ml-4"
 								/>
 
 								<VSelect
-									:items="fab.positionItems"
 									v-model="fab.position"
+									:items="fab.positionItems"
 									:style="{ width: '250px' }"
 									label="Position"
 									class="alert-el ml-4"
@@ -777,10 +847,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Cards</h2>
-							<p class="mt-2">The v-card component is a versatile component that can be used for anything from a panel to a static image. The card component has numerous helper components to make markup as easy as possible.</p>
+							<h2 class="accent--text mt-5">
+								Cards
+							</h2>
+							<p class="mt-2">
+								The v-card component is a versatile component that can be used for anything from a panel to a static image. The card component has numerous helper components to make markup as easy as possible.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -868,7 +944,9 @@
 
 									<VCardTitle primary-title>
 										<div>
-											<h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+											<h3 class="headline mb-0">
+												Kangaroo Valley Safari
+											</h3>
 											<div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, etc.</div>
 										</div>
 									</VCardTitle>
@@ -894,10 +972,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Carousels</h2>
-							<p class="mt-2">The carousel component is used to display large numbers of visual content on a rotating timer.</p>
+							<h2 class="accent--text mt-5">
+								Carousels
+							</h2>
+							<p class="mt-2">
+								The carousel component is used to display large numbers of visual content on a rotating timer.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -978,10 +1062,16 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Chips</h2>
-							<p class="mt-2">The chip component is used to convey small pieces of information. Using the close property, the chip becomes interactive, allowing user interaction.</p>
+							<h2 class="accent--text mt-5">
+								Chips
+							</h2>
+							<p class="mt-2">
+								The chip component is used to convey small pieces of information. Using the close property, the chip becomes interactive, allowing user interaction.
+							</p>
 
-							<h3 class="mt-4">Settings</h3>
+							<h3 class="mt-4">
+								Settings
+							</h3>
 							<VLayout
 								align-center
 								class="custom-layout mt-2"
@@ -991,7 +1081,9 @@
 									align-center
 									class="alert-el ml-4"
 								>
-									<p class="mb-0 mr-2">Color:</p>
+									<p class="mb-0 mr-2">
+										Color:
+									</p>
 									<VTextField
 										v-model="chip.color"
 										label="Color"
@@ -1006,7 +1098,9 @@
 									class="alert-el ml-4"
 									align-center
 								>
-									<p class="mb-0 mr-2">Text color:</p>
+									<p class="mb-0 mr-2">
+										Text color:
+									</p>
 									<VTextField
 										v-model="chip.textColor"
 										label="Text color"
@@ -1116,7 +1210,9 @@
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Custom - Typography</h2>
+							<h2 class="accent--text mt-5">
+								Custom - Typography
+							</h2>
 							<VLayout
 								justify-start
 								align-baseline
@@ -1133,19 +1229,33 @@
 									href="#"
 									class="mt-3"
 									aria-label="Demo link"
-								>Link</a>
+								>
+									Link
+								</a>
 
-								<p class="mt-3 mb-1">Paragraph</p>
-								<p class="font-weight-medium mb-1">Semi-bold paragraph</p>
-								<p class="font-weight-bold mb-1">Bold paragraph</p>
-								<p class="nota mb-1">Nota paragraph</p>
+								<p class="mt-3 mb-1">
+									Paragraph
+								</p>
+								<p class="font-weight-medium mb-1">
+									Semi-bold paragraph
+								</p>
+								<p class="font-weight-bold mb-1">
+									Bold paragraph
+								</p>
+								<p class="nota mb-1">
+									Nota paragraph
+								</p>
 							</VLayout>
 
 							<VDivider class="mt-5" />
 
-							<h2 class="accent--text mt-5">Custom - Colors</h2>
-							<p class="mt-2">These are generated from Vuetify theme, cutsom colors in theme and Material colors.</p>
-							<VColorTable :dark="dark" />
+							<h2 class="accent--text mt-5">
+								Custom - Colors
+							</h2>
+							<p class="mt-2">
+								These are generated from Vuetify theme, cutsom colors in theme and Material colors.
+							</p>
+							<ColorTable :dark="dark" />
 						</div>
 					</VFlex>
 				</VLayout>
@@ -1158,7 +1268,9 @@
 		>
 			<VSpacer />
 
-			<span class="white--text">v{{ pkg.version }} &copy; Dylan Broussard – 2018</span>
+			<span class="white--text">
+				v{{ pkg.version }} &copy; Dylan Broussard – 2018
+			</span>
 		</VFooter>
 	</VApp>
 </template>
@@ -1393,6 +1505,7 @@
 					case 1: return 'teal';
 					case 2: return 'brown';
 					case 3: return 'indigo';
+					default: return 'primary';
 				}
 			}
 		},

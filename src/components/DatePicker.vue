@@ -5,13 +5,20 @@
 			:autofocus="autofocus"
 			:background-color="backgroundColor"
 
+			:append-icon="appendIcon"
+			:append-outer-icon="appendOuterIcon"
 			:box="box"
 			:browser-autocomplete="browserAutocomplete"
 			:color="color"
+			:clear-icon="clearIcon"
+			:clearable="clearable"
 			:counter="counter"
 			:dark="dark"
 			:disabled="disabled"
 			:dont-fill-mask-blanks="dontFillMaskBlanks"
+			:error="error"
+			:error-count="errorCount"
+			:error-messages="errorMessages"
 			:flat="flat"
 			:full-width="fullWidth"
 			:height="height"
@@ -25,9 +32,11 @@
 			:persistent-hint="persistentHint"
 			:placeholder="placeholder"
 			:prefix="prefix"
+			:prepend-inner-icon="prependInnerIcon"
 			:readonly="readonly"
 			:return-masked-value="returnMaskedValue"
 			:reverse="reverse"
+			:rules="rules"
 			:single-line="singleLine"
 			:solo="solo"
 			:solo-inverted="soloInverted"
@@ -42,7 +51,7 @@
 			@keyup.enter="date = parseDate(dateFormatted)"
 		>
 			<VBtn
-				v-if="!appendIcon"
+				v-if="!prependIcon"
 				slot="prepend"
 				:ripple="!menu"
 				:class="`activator-icon-${menuRef}`"
@@ -51,49 +60,78 @@
 				@click="menu = true"
 			>
 				<SvgIcon
-					:color="appendIconColor"
+					:color="prependIconColor"
 					icon="calendar"
 				/>
 			</VBtn>
 
 			<VBtn
-				v-else-if="appendIcon && appendIconCb"
+				v-else-if="prependIcon && prependIconCb"
 				slot="prepend"
 				:ripple="!menu"
 				:class="`activator-icon-${menuRef}`"
 				icon
 				class="ma-0"
-				@click="appendIconCb"
+				@click="prependIconCb"
 			>
 				<SvgIcon
-					:icon="appendIcon"
-					:color="appendIconColor"
+					:icon="prependIcon"
+					:color="prependIconColor"
 				/>
 			</VBtn>
 
 			<SvgIcon
 				v-else
 				slot="prepend"
-				:icon="appendIcon"
-				:color="appendIconColor"
+				:icon="prependIcon"
+				:color="prependIconColor"
 				:class="`activator-icon-${menuRef}`"
 			/>
 		</VTextField>
 
 		<VMenu
 			:ref="menuRef"
-			:close-on-content-click="false"
 			v-model="menu"
-			:nudge-right="40"
-			:nudge-bottom="55"
+
+			:absolute="absolute"
+			:allow-overflow="allowOverflow"
 			:attach="`.activator-icon-${menuRef}`"
-			lazy
-			transition="scale-transition"
-			offset-y
-			full-width
-			min-width="300px"
-			offset-overflow
-			z-index="1"
+			:auto="auto"
+			:bottom="bottom"
+			:close-delay="closeDelay"
+			:close-on-click="closeOnClick"
+			:close-on-content-click="closeOnContentClick"
+			:content-class="contentClass"
+			:dark="dark"
+			:disable-keys="disableKeys"
+			:disabled="disabled"
+			:fixed="fixed"
+			:full-width="fullWidth"
+			:lazy="lazy"
+			:left="left"
+			:light="light"
+			:max-height="maxHeight"
+			:max-width="maxWidth"
+			:min-width="minWidth"
+			:nudge-bottom="nudgeBottom"
+			:nudge-left="nudgeLeft"
+			:nudge-right="nudgeRight"
+			:nudge-top="nudgeTop"
+			:nudge-width="nudgeWidth"
+			:offset-overflow="offsetOverflow"
+			:offset-x="offsetX"
+			:offset-y="offsetY"
+			:open-delay="openDelay"
+			:open-on-click="openOnClick"
+			:open-on-hover="openOnHover"
+			:origin="origin"
+			:position-x="positionX"
+			:position-y="positionY"
+			:return-value="returnValue"
+			:right="right"
+			:top="top"
+			:transition="transition"
+			:z-index="zIndex"
 		>
 			<VDatePicker
 				:ref="ref"
@@ -103,6 +141,7 @@
 				:color="color"
 				:dark="dark"
 				:day-format="dayFormat"
+				:disabled="disabled"
 				:event-color="eventColor"
 				:events="events"
 				:first-day-of-week="firstDayOfWeek"
@@ -114,6 +153,7 @@
 				:locale="locale"
 				:max="max"
 				:min="min"
+				:month-format="monthFormat"
 				:multiple="multiple"
 				:next-icon="nextIcon"
 				:no-title="noTitle"
@@ -123,8 +163,11 @@
 				:readonly="readonly"
 				:scrollable="scrollable"
 				:show-current="showCurrent"
+				:show-week="showWeek"
 				:title-date-format="titleDateFormat"
+				:type="type"
 				:value="value"
+				:weekday-format="weekdayFormat"
 				:width="width"
 				:year-format="yearFormat"
 				:year-icon="yearIcon"
@@ -199,13 +242,9 @@
 				type: String,
 				default: undefined
 			},
-			appendIconColor: {
+			appendOuterIcon: {
 				type: String,
-				default: '#808080'
-			},
-			appendIconCb: {
-				type: Function,
-				default: null
+				default: undefined
 			},
 			autofocus: {
 				type: Boolean,
@@ -223,6 +262,14 @@
 				type: String,
 				default: undefined
 			},
+			clearIcon: {
+				type: String,
+				default: '$vuetify.icons.clear'
+			},
+			clearable: {
+				type: Boolean,
+				default: false
+			},
 			counter: {
 				type: [Boolean, Number, String],
 				default: undefined
@@ -234,6 +281,18 @@
 			dontFillMaskBlanks: {
 				type: Boolean,
 				default: false
+			},
+			error: {
+				type: Boolean,
+				default: false
+			},
+			errorCount: {
+				type: [Number, String],
+				default: 1
+			},
+			errorMessages: {
+				type: [String, Array],
+				default: () => []
 			},
 			flat: {
 				type: Boolean,
@@ -279,6 +338,22 @@
 				type: String,
 				default: undefined
 			},
+			prependIcon: {
+				type: String,
+				default: undefined
+			},
+			prependIconColor: {
+				type: String,
+				default: '#808080'
+			},
+			prependIconCb: {
+				type: Function,
+				default: null
+			},
+			prependInnerIcon: {
+				type: String,
+				default: undefined
+			},
 			returnMaskedValue: {
 				type: Boolean,
 				default: true
@@ -286,6 +361,10 @@
 			reverse: {
 				type: Boolean,
 				default: false
+			},
+			rules: {
+				type: Array,
+				default: () => []
 			},
 			singleLine: {
 				type: Boolean,
@@ -364,6 +443,10 @@
 					return this.birthdate ? '1950-01-01' : undefined;
 				}
 			},
+			monthFormat: {
+				type: Function,
+				default: null
+			},
 			multiple: {
 				type: Boolean,
 				default: false
@@ -396,7 +479,19 @@
 				type: [Boolean, String],
 				default: true
 			},
+			showWeek: {
+				type: Boolean,
+				default: false
+			},
 			titleDateFormat: {
+				type: Function,
+				default: null
+			},
+			pickerType: {
+				type: String,
+				default: 'date'
+			},
+			weekdayFormat: {
 				type: Function,
 				default: null
 			},
@@ -411,6 +506,143 @@
 			yearIcon: {
 				type: String,
 				default: undefined
+			},
+			// Menu,
+			absolute: {
+				type: Boolean,
+				default: false
+			},
+			allowOverflow: {
+				type: Boolean,
+				default: false
+			},
+			auto: {
+				type: Boolean,
+				default: false
+			},
+			bottom: {
+				type: Boolean,
+				default: false
+			},
+			closeDelay: {
+				type: [Number, String],
+				default: 0
+			},
+			closeOnClick: {
+				type: Boolean,
+				default: true
+			},
+			closeOnContentClick: {
+				type: Boolean,
+				default: false
+			},
+			contentClass: {
+				type: String,
+				default: undefined
+			},
+			disableKeys: {
+				type: Boolean,
+				default: false
+			},
+			fixed: {
+				type: Boolean,
+				default: false
+			},
+			lazy: {
+				type: Boolean,
+				default: true
+			},
+			left: {
+				type: Boolean,
+				default: false
+			},
+			maxHeight: {
+				type: [Number, String],
+				default: 'auto'
+			},
+			maxWidth: {
+				type: [Number, String],
+				default: 'auto'
+			},
+			minWidth: {
+				type: [Number, String],
+				default: '300px'
+			},
+			nudgeBottom: {
+				type: [Number, String],
+				default: 55
+			},
+			nudgeLeft: {
+				type: [Number, String],
+				default: 0
+			},
+			nudgeRight: {
+				type: [Number, String],
+				default: 40
+			},
+			nudgeTop: {
+				type: [Number, String],
+				default: 0
+			},
+			nudgeWidth: {
+				type: [Number, String],
+				default: 0
+			},
+			offsetOverflow: {
+				type: Boolean,
+				default: true
+			},
+			offsetX: {
+				type: Boolean,
+				default: false
+			},
+			offsetY: {
+				type: Boolean,
+				default: true
+			},
+			openDelay: {
+				type: [Number, String],
+				default: 0
+			},
+			openOnClick: {
+				type: Boolean,
+				default: true
+			},
+			openOnHover: {
+				type: Boolean,
+				default: false
+			},
+			origin: {
+				type: String,
+				default: 'top left'
+			},
+			positionX: {
+				type: Number,
+				default: undefined
+			},
+			positionY: {
+				type: Number,
+				default: undefined
+			},
+			returnValue: {
+				type: [Boolean, Number, String],
+				default: undefined
+			},
+			right: {
+				type: Boolean,
+				default: false
+			},
+			top: {
+				type: Boolean,
+				default: false
+			},
+			transition: {
+				type: String,
+				default: 'scale-transition'
+			},
+			zIndex: {
+				type: [Number, String],
+				default: 1
 			}
 		},
 		data() {
