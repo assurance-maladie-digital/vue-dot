@@ -168,7 +168,7 @@
 				:show-current="showCurrent"
 				:show-week="showWeek"
 				:title-date-format="titleDateFormat"
-				:type="type"
+				:type="pickerType"
 				:value="value"
 				:weekday-format="weekdayFormat"
 				:width="width"
