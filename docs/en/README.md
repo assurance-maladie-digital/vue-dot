@@ -35,7 +35,10 @@ newsletterLink: https://www.getrevue.co/profile/vue-dot
 # footer
 footerRealease: Released under the
 footerRealeaseLink: MIT License
-footerMadeWith: Released under the
+footerMadeWith: Made with
 footerVueJs: Vue.js
+footerMadeBy: By
+footerMadeByLink: https://github.com/Deraw-
+footerMadeByLinkText: Dylan Broussard
 footerCopyright: Copyright © 2018-present CNAM
 ---

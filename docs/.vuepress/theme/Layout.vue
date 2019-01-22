@@ -109,12 +109,27 @@
 							{{ $page.frontmatter.footerRealeaseLink }}
 						</a>
 					</p>
+
 					<p class="mb-0">
 						{{ $page.frontmatter.footerMadeWith }}
 						<a href="https://fr.vuejs.org/">
 							{{ $page.frontmatter.footerVueJs }}
 						</a>
 					</p>
+
+					<p
+						v-if="$page.frontmatter.footerMadeBy"
+						class="mb-0"
+					>
+						{{ $page.frontmatter.footerMadeBy }}
+						<a
+							v-if="$page.frontmatter.footerMadeByLink"
+							:href="$page.frontmatter.footerMadeByLink"
+						>
+							{{ $page.frontmatter.footerMadeByLinkText }}
+						</a>
+					</p>
+
 					<p class="mb-0">{{ $page.frontmatter.footerCopyright }}</p>
 				</VLayout>
 			</VFooter>
