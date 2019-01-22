@@ -54,6 +54,7 @@
 				v-if="!prependIcon"
 				slot="prepend"
 				:ripple="!menu"
+				:aria-label="iconAriaLabel"
 				:class="`activator-icon-${menuRef}`"
 				icon
 				class="ma-0"
@@ -69,6 +70,7 @@
 				v-else-if="prependIcon && prependIconCb"
 				slot="prepend"
 				:ripple="!menu"
+				:aria-label="iconAriaLabel"
 				:class="`activator-icon-${menuRef}`"
 				icon
 				class="ma-0"
@@ -86,6 +88,7 @@
 				:icon="prependIcon"
 				:color="prependIconColor"
 				:class="`activator-icon-${menuRef}`"
+				aria-hidden="true"
 			/>
 		</VTextField>
 
@@ -236,6 +239,10 @@
 			locale: {
 				type: String,
 				default: 'fr-fr'
+			},
+			iconAriaLabel: {
+				type: String,
+				default: 'Sélection de la date'
 			},
 			// Input
 			appendIcon: {
