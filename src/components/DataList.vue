@@ -2,7 +2,6 @@
 	<div class="subheading">
 		<div
 			v-if="listTitle"
-			:class="titleClass"
 			v-html="getTitle(titleLevel, listTitle)"
 		/>
 
@@ -89,7 +88,7 @@
 		},
 		methods: {
 			getTitle(level: number, text: string) {
-				return `<h${level}>${text}</h${level}>`;
+				return `<h${level} class="${this.titleClass}">${text}</h${level}>`;
 			}
 		}
 	});
