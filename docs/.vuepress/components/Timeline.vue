@@ -228,12 +228,6 @@
 		font-weight: 700;
 	}
 
-	.timeline-title,
-	.timeline-body,
-	.timeline-body >>> * {
-		word-break: break-all !important;
-	}
-
 	.timeline-body > p,
 	.timeline-body > ul {
 		margin-bottom: 0;
@@ -283,6 +277,12 @@
 
 		.timeline-badge.pending {
 			margin-left: -18px;
+		}
+
+		.timeline-title,
+		.timeline-body,
+		.timeline-body >>> * {
+			word-break: break-all !important;
 		}
 	}
 </style>
