@@ -6,9 +6,8 @@
 		<DataList
 			:list="data"
 			column
-			width="500px"
 			label-color="#0077c5"
-			title-class="mb-3 display-1 info--text"
+			title-class="mb-3 display-2 info--text"
 			list-title="Informations"
 			placeholder="No data"
 		/>
