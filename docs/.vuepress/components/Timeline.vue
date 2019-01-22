@@ -144,7 +144,7 @@
 		top: 28px;
 		left: 50px;
 		width: 25px;
-		z-index: 100;
+		z-index: 2;
 		height: 25px;
 		color: #fff;
 		display: flex;
