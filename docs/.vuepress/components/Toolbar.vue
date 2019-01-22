@@ -8,7 +8,7 @@
 	>
 		<VBtn
 			icon
-			class="mr-3"
+			class="mr-3 menu-btn"
 			:aria-label="$t('menu')"
 			@click="$emit('drawer:update')"
 		>
@@ -25,7 +25,13 @@
 				x-large
 				icon="vue-dot-dark"
 			/>
-			<h1 class="ml-2 mr-2 font-weight-regular">{{ $t('name') }}</h1>
+
+			<h1
+				v-if="!$vuetify.breakpoint.xsOnly"
+				class="ml-2 mr-2 font-weight-regular"
+			>
+				{{ $t('name') }}
+			</h1>
 		</VBtn>
 
 		<VSpacer />
@@ -51,12 +57,20 @@
 				slot="activator"
 				class="px-3 ma-0 text-none"
 			>
-				{{ $t('toolbar.ecosystem') }}
-				<SvgIcon
-					size=".7em"
-					icon="down-arrow"
-					class="ml-2"
-				/>
+				<template v-if="!$vuetify.breakpoint.xsOnly">
+					{{ $t('toolbar.ecosystem') }}
+					<SvgIcon
+						size=".7em"
+						icon="down-arrow"
+						class="ml-2"
+					/>
+				</template>
+
+				<template v-else>
+					<SvgIcon
+						icon="earth"
+					/>
+				</template>
 			</VBtn>
 
 			<VList>
@@ -81,10 +95,19 @@
 						</VListTileTitle>
 					</VListTileContent>
 				</VListTile>
+
+				<VListTile v-if="$vuetify.breakpoint.xsOnly">
+					<VListTileContent>
+						<VListTileTitle>
+							v{{ version }}
+						</VListTileTitle>
+					</VListTileContent>
+				</VListTile>
 			</VList>
 		</VMenu>
 
 		<VBtn
+			v-if="!$vuetify.breakpoint.xsOnly"
 			flat
 			class="px-3 ma-0 text-none"
 		>
@@ -182,5 +205,40 @@
 		height: 100%;
 		padding: 20px;
 		min-width: 50px;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		.v-input.search {
+			width: 125px;
+			margin: 0 !important;
+		}
+
+		.v-toolbar .v-btn,
+		.lang-btn >>> .v-btn {
+			min-width: 0 !important;
+			padding: 0 16px !important;
+		}
+
+		.menu-btn {
+			margin: 0 !important;
+		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		.v-input.search {
+			width: 110px;
+		}
+	}
+
+	@media only screen and (max-width: 350px) {
+		/* Too small for searching */
+		.v-input.search {
+			display: none;
+		}
+
+		.v-toolbar .v-btn,
+		.lang-btn >>> .v-btn {
+			padding: 0 10px !important;
+		}
 	}
 </style>

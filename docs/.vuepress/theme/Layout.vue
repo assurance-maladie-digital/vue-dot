@@ -103,14 +103,14 @@
 						height="70"
 					>
 
-					<p class="mt-3 mb-0">
+					<p class="text-center mt-3 mb-0">
 						{{ $page.frontmatter.footerRealease }}
 						<a href="https://github.com/assurance-maladie-digital/vue-dot/blob/master/LICENSE">
 							{{ $page.frontmatter.footerRealeaseLink }}
 						</a>
 					</p>
 
-					<p class="mb-0">
+					<p class="text-center mb-0">
 						{{ $page.frontmatter.footerMadeWith }}
 						<a href="https://fr.vuejs.org/">
 							{{ $page.frontmatter.footerVueJs }}
@@ -130,7 +130,7 @@
 						</span>
 					</p>
 
-					<p class="mb-0">{{ $page.frontmatter.footerCopyright }}</p>
+					<p class="text-center mb-0">{{ $page.frontmatter.footerCopyright }}</p>
 				</VLayout>
 			</VFooter>
 		</VApp>
@@ -174,7 +174,7 @@
 				}
 			},
 			updateSidebar() {
-				if (!this.$vuetify.breakpoint.xsOnly) {
+				if (!this.$vuetify.breakpoint.mdAndDown) {
 					this.sidebarShow = !this.$page.frontmatter.home;
 				}
 			}
@@ -221,6 +221,10 @@
 </style>
 
 <style lang="scss">
+	.text-center {
+		text-align: center;
+	}
+
 	@media only screen and (max-width: 959px) {
 		.container {
 			padding: 16px 24px !important;

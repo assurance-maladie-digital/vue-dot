@@ -228,6 +228,12 @@
 		font-weight: 700;
 	}
 
+	.timeline-title,
+	.timeline-body,
+	.timeline-body >>> * {
+		word-break: break-all !important;
+	}
+
 	.timeline-body > p,
 	.timeline-body > ul {
 		margin-bottom: 0;
@@ -259,5 +265,24 @@
 
 	.timeline-badge.info {
 		background: #5bc0de;
+	}
+
+	@media only screen and (max-width: 350px) {
+		.timeline-heading .x-svg-icon {
+			display: none;
+		}
+
+		.timeline-panel {
+			margin-left: 50px;
+		}
+
+		.timeline-badge,
+		.timeline::before {
+			left: 10px;
+		}
+
+		.timeline-badge.pending {
+			margin-left: -18px;
+		}
 	}
 </style>

@@ -3,6 +3,7 @@
 		<VLayout
 			v-for="(size, index) in sizes"
 			:key="index"
+			wrap
 			align-center
 			justify-space-around
 			class="mb-2"

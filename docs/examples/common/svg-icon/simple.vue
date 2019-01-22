@@ -1,5 +1,6 @@
 <template>
 	<VLayout
+		wrap
 		align-center
 		justify-space-around
 	>
@@ -8,7 +9,7 @@
 			color="red"
 			icon="heart"
 		/>
-	
+
 		<SvgIcon
 			large
 			icon="home"

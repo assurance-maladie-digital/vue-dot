@@ -1,5 +1,7 @@
 <template>
 	<VLayout
+		wrap
+		px-2
 		align-center
 		justify-space-around
 	>

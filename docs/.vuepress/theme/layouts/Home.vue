@@ -16,14 +16,23 @@
 
 				<h2
 					v-if="config.heroTitle"
-					class="display-3 font-weight-medium"
-				>{{ config.heroTitle }}</h2>
+					class="text-center display-3 font-weight-medium"
+				>
+					{{ config.heroTitle }}
+				</h2>
+
 				<p
 					v-if="config.heroDescription"
-					class="headline mt-4 grey--text text--darken-1"
-				>{{ config.heroDescription }}</p>
+					class="text-center headline mt-4 grey--text text--darken-1"
+				>
+					{{ config.heroDescription }}
+				</p>
 
-				<VLayout class="mt-4">
+				<VLayout
+					wrap
+					justify-center
+					class="mt-4"
+				>
 					<VBtn
 						v-if="config.actionText && config.actionLink"
 						large
@@ -46,6 +55,7 @@
 							icon="github"
 							class="mr-2"
 						/>
+
 						{{ config.githubText }}
 					</VBtn>
 				</VLayout>
@@ -98,6 +108,7 @@
 						icon="envelope-email"
 						class="mr-2"
 					/>
+
 					{{ config.newsletterText }}
 				</VBtn>
 			</VLayout>

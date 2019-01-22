@@ -5,7 +5,7 @@
 			dense
 			flat
 		>
-			<VSpacer />
+			<VSpacer v-if="!$vuetify.breakpoint.xsOnly" />
 
 			<VBtn
 				:aria-label="$t('codepen.invertColors')"
@@ -208,6 +208,17 @@
 		height: 100%;
 		overflow-y: auto;
 		max-height: calc(100vh - 275px);
+	}
+
+	.v-toolbar >>> .v-toolbar__content {
+		flex-wrap: wrap;
+		height: auto !important;
+		justify-content: flex-start !important;
+	}
+
+	.v-toolbar >>> .v-toolbar__content > *:first-child.v-btn--icon,
+	.v-toolbar__content > *:last-child.v-btn--icon {
+		margin: 0 !important;
 	}
 </style>
 
