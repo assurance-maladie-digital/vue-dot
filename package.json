@@ -1,6 +1,6 @@
 {
 	"name": "@cnamts/vue-dot",
-	"version": "1.6.0-beta.2",
+	"version": "1.6.0-beta.3",
 	"description": "Official CNAM component library",
 	"keywords": [
 		"vue",
@@ -50,7 +50,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
 		"@babel/polyfill": "^7.2.5",
-		"@cnamts/vue-dot": "^1.6.0-beta.2",
+		"@cnamts/vue-dot": "^1.6.0-beta.3",
 		"@sentry/browser": "^4.5.2",
 		"@types/figlet": "^1.2.0",
 		"@types/inquirer": "^0.0.43",
