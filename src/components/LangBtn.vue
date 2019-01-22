@@ -80,7 +80,9 @@
 			<span
 				v-if="displayTextBtn"
 				class="ml-2"
-			>{{ languages[currentLangUsed].nativeName }}</span>
+			>
+				{{ languages[currentLangUsed].nativeName }}
+			</span>
 
 			<SvgIcon
 				v-if="displayArrow"
