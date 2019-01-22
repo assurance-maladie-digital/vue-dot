@@ -172,17 +172,20 @@
 				if (!this.$route.path.includes(this.$i18n.locale)) {
 					this.$router.push(`/${this.$i18n.locale}/`);
 				}
+			},
+			updateSidebar() {
+				if (!this.$vuetify.breakpoint.xsOnly) {
+					this.sidebarShow = !this.$page.frontmatter.home;
+				}
 			}
 		},
 		watch: {
 			$page() {
-				this.sidebarShow = !this.$page.frontmatter.home;
+				this.updateSidebar();
 			}
 		},
 		created() {
-			if (!this.$vuetify.breakpoint.xsOnly) {
-				this.sidebarShow = !this.$page.frontmatter.home;
-			}
+			this.updateSidebar();
 
 			// Redirect default route
 			if (this.$route.path === '/') {
@@ -214,6 +217,14 @@
 
 	.v-list__group__header--active span {
 		color: #0c4887 !important;
+	}
+</style>
+
+<style lang="scss">
+	@media only screen and (max-width: 959px) {
+		.container {
+			padding: 16px 24px !important;
+		}
 	}
 </style>
 
