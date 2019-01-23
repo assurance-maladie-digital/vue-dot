@@ -136,7 +136,13 @@
 
 							<VDivider class="my-5" />
 
-							<DatePicker birthdate />
+							<DatePicker
+								clearable
+								birthdate
+								append-icon="code"
+								prepend-inner-icon="menu"
+								append-outer-icon="home"
+							/>
 
 							<VDivider class="my-5" />
 
