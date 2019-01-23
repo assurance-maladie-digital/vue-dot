@@ -21,7 +21,7 @@
 				data: [
 					{
 						key: 'Civility',
-						value: 'M.'
+						value: 'Mr'
 					},
 					{
 						key: 'Name',

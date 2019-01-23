@@ -63,7 +63,8 @@ yarn docs:dev
 
 See [VuePress documentation](https://vuepress.vuejs.org/guide/) for help.
 
-Other commands should be executed only on master branch
+Other commands should be executed only on master branch.
+
 ### Code style
 
 You need to respect the code style defined in `editorconfig` and to resolve any warning or error thrown by `TSLint` or `ESLint`.

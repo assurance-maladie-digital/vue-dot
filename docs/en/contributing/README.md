@@ -6,7 +6,7 @@ First off, thanks for taking the time to contribute! This is really important to
 
 Bugs are reported using [GitHub issues](https://guides.github.com/features/issues/).
 
-Before creating a new issue, [check if your bug hasn't alreaydy been reported](https://github.com/assurance-maladie-digital/vue-dot/issues?utf8=%E2%9C%93&q=is%3Aissue). If it's the case and you don't find a solution in the comments, contribute to the issue instead of creating a new one.
+Before creating a new issue, [check if your bug hasn't already been reported](https://github.com/assurance-maladie-digital/vue-dot/issues?utf8=%E2%9C%93&q=is%3Aissue). If it's the case and you don't find a solution in the comments, contribute to the issue instead of creating a new one.
 
 ### Submit a (good) bug report
 
@@ -34,7 +34,7 @@ You can look for issues labelled with `help-wanted` if you're not sure where to 
 
 #### Setup environment
 
-Setting up your dev environment is easy! To start fork [VueDot](https://github.com/assurance-maladie-digital/vue-dot/issues) into your own repo.
+Setting up your dev environment is easy! To start fork [VueDot](https://github.com/assurance-maladie-digital/vue-dot) into your own repo.
 
 <Code>
 ```bash
@@ -77,7 +77,7 @@ You need to respect the code style defined in `editorconfig` and to resolve any 
 
 #### Commit guidelines
 
-Look at the previous commits for inspiration! But you need it to be explicit, and it should follow these rules:
+Look at the previous commits for inspiration! But you need it to be explicit, and you must follow these rules:
 
 -   Write it in English
 -   Start with an emoji from [gitmoji](https://gitmoji.carloscuesta.me/) corresponding to the changes made

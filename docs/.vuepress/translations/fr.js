@@ -34,6 +34,11 @@ const fr = {
 				to: '/fr/guide/themes/'
 			},
 			{
+				title: 'Contribuer',
+				icon: 'heart',
+				to: '/fr/contribuer/'
+			},
+			{
 				title: 'Roadmap',
 				icon: 'clock',
 				to: '/fr/roadmap/'
@@ -41,19 +46,23 @@ const fr = {
 			{
 				title: 'Composants IU',
 				icon: 'dashboard',
-				group: 'components',
+				group: 'composants',
 				items: [
 					{
 						title: 'SvgIcon',
-						to: '/fr/components/svg-icon/'
+						to: '/fr/composants/svg-icon/'
 					},
 					{
 						title: 'LangBtn',
-						to: '/fr/components/lang-btn/'
+						to: '/fr/composants/lang-btn/'
 					},
 					{
 						title: 'DatePicker',
-						to: '/fr/components/date-picker/'
+						to: '/fr/composants/date-picker/'
+					},
+					{
+						title: 'DataList',
+						to: '/fr/composants/data-list/'
 					}
 				]
 			},

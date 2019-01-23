@@ -1,6 +1,6 @@
 # DataList
 
-The `DataList` component is used to display tabular datas.
+The `DataList` component is used to display tabular data.
 
 ## Usage
 
@@ -26,8 +26,8 @@ The `DataList` component is used to display tabular datas.
       {
         name: 'list',
         default: 'undefined',
-        type: 'Array',
-        description: 'The datas to display.'
+        type: 'array',
+        description: 'The data to display.'
       },
       {
         name: 'list-title',
@@ -61,7 +61,7 @@ The `DataList` component is used to display tabular datas.
       },
       {
         name: 'min-width',
-        default: `'300px'`,
+        default: 'undefined',
         type: 'string',
         description: 'The minimum width of the component, can be any CSS value.'
       },

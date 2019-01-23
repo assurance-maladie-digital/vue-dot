@@ -6,7 +6,7 @@ Le composant `SvgIcon` est destiné à remplacer `VIcon` de Vuetify, qui utilise
 
 Les icônes existent en cinq tailles différentes (petite, standarde, moyenne, grande et très grande), vous pouvez appliquer n’importe quelle couleur ou taille personnalisée.
 
-<Example value="fr/svg-icon/base" />
+<Example value="common/svg-icon/base" />
 
 ## API
 

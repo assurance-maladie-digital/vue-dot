@@ -162,63 +162,6 @@ Vous pouvez définir des icônes personnalisées pour le composant `XSvgIcon`. P
 La propriété `svg` est une chaîne de caractères, le caractère de citation doit donc être échappé.
 :::
 
-### Composants
-
-Vous pouvez configurer les composants à l'aide d'attributs Vuetify, et même leur ajouter des propriétés afin d'étendre les possibilités de style.
-
-<Code>
-```json
-"components": {
-	"XBtn": {
-		"default": {
-			"ripple": false
-		},
-		"primary": {
-			"round": true,
-			"depressed": true,
-			"dark": true,
-			"color": "#0087cf",
-			"classes": [
-				"font-weight-regular"
-			]
-		},
-		"secondary": {
-			"extends": "primary",
-			"outline": true
-		},
-		"tertiary": {
-			"extends": "primary",
-			"round": false,
-			"small": true,
-			"flat": true,
-			"styles": {
-				"min-width": 0,
-				"height": "auto"
-			},
-			"classes": [
-				"px-2",
-				"py-1"
-			]
-		}
-	}
-}
-```
-</Code>
-
-Ici, nous configurons le composant `XBtn` en définissant des valeurs pour les propriétés du composant. Les valeurs définies dans `default` seront toujours appliquées.
-
-Nous définissons des valeurs dans `primary`, `secondary` et `tertiary`, elles généreront des propriétés que vous pourrez utiliser sur le composant. Ces propriétés générées peuvent en étendre une autre, de sorte qu'elle héritera des valeurs.
-
-Vous pouvez également définir un tableau de classes qui sera appliqué au composant, et idem pour les styles.
-
-<Code>
-```html
-<XBtn secondary />
-```
-</Code>
-
-Vous pouvez maintenant utiliser le composant `XBtn` avec l'attribut `secondary`.
-
 ### Fichier final
 
 Voici le fichier final avec tous les exemples ci-dessus, n'hésitez pas à l'essayer !
@@ -276,42 +219,16 @@ Voici le fichier final avec tous les exemples ci-dessus, n'hésitez pas à l'ess
 				"name": "svg",
 				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><path fill=\"#4dba87\" d=\"M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z\"/><path fill=\"#435466\" d=\"M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z\"/></svg>"
 			}
-		],
-		"components": {
-			"XBtn": {
-				"default": {
-					"ripple": false
-				},
-				"primary": {
-					"round": true,
-					"depressed": true,
-					"dark": true,
-					"color": "#0087cf",
-					"classes": [
-						"font-weight-regular"
-					]
-				},
-				"secondary": {
-					"extends": "primary",
-					"outline": true
-				},
-				"tertiary": {
-					"extends": "primary",
-					"round": false,
-					"small": true,
-					"flat": true,
-					"styles": {
-						"min-width": 0,
-						"height": "auto"
-					},
-					"classes": [
-						"px-2",
-						"py-1"
-					]
-				}
-			}
-		}
+		]
 	}
 }
 ```
 </Code>
+
+### Composants
+
+La personnalisation des composants sera disponible dans Vuetify 2.0 au T2 2019, consultez [Vuetify next](https://next.vuetifyjs.com/en/) pour plus d'informations.
+
+::: tip INFORMATION
+La configuration des composants a été supprimée du thème à partir de la version 1.6.
+:::

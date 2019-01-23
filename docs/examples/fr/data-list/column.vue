@@ -17,31 +17,31 @@
 			return {
 				data: [
 					{
-						key: 'Civility',
-						value: 'Mr'
+						key: 'Civilité',
+						value: 'M.'
 					},
 					{
-						key: 'Name',
+						key: 'Nom',
 						value: 'Dupont'
 					},
 					{
-						key: 'First name',
+						key: 'Prénom',
 						value: 'Paul'
 					},
 					{
-						key: 'Birth date',
-						value: '09/24/1970'
+						key: 'Date de naissance',
+						value: '24/09/1970'
 					},
 					{
-						key: 'Nationality',
-						value: 'French'
+						key: 'Nationalité',
+						value: 'Français'
 					},
 					{
-						key: 'Native country',
+						key: 'Pays de naissance',
 						value: 'France'
 					},
 					{
-						key: 'Date of registration',
+						key: 'Date d\'incription',
 						value: ''
 					}
 				]

@@ -24,7 +24,7 @@ Expliquez le problème et incluez des détails supplémentaires pour aider les r
 
 Les suggestions d'amélioration sont suivies en tant [qu'issues GitHub](https://guides.github.com/features/issues/).
 
-Avant de créer des suggestions d’amélioration, consultez la Roadmap pour voir si ce que vous voulez est déjà planifié. Si vous ne voyez pas votre suggestion, [créez une nouvelle issue](#soumettre-un-bon-rapport-de-bogue).
+Avant de créer des suggestions d’amélioration, consultez la [Roadmap](../roadmap/) pour voir si ce que vous voulez est déjà planifié. Si vous ne voyez pas votre suggestion, [créez une nouvelle issue](#soumettre-un-bon-rapport-de-bogue).
 
 ## Contribution de code
 
@@ -36,6 +36,7 @@ Vous pouvez rechercher des problèmes marqués `help-wanted` si vous ne savez pa
 
 La configuration de votre environnement de développement est facile ! Pour démarrer, forkez [VueDot](https://github.com/assurance-maladie-digital/vue-dot) dans votre propre dépôt.
 
+<Code>
 ```bash
 // Clonez votre repo forké
 $ git clone <forked-vue-dot-repo>
@@ -52,18 +53,23 @@ $ yarn
 // Lancez le serveur de développement
 $ yarn serve
 ```
+</Code>
 
 #### Documentation
 
 Pour travailler sur la documentation, démarrez le serveur de développement de Vuepress.
 
+<Code>
 ```bash
 yarn docs:dev
 ```
+</Code>
 
 Voir la [documentation VuePress]((https://vuepress.vuejs.org/guide/)) pour obtenir de l'aide.
 
-Les autres commandes doivent être exécutées uniquement sur la branche principale.
+::: danger ATTENTION
+Les autres commandes doivent être exécutées uniquement sur la branche principale
+:::
 
 ### Style du code
 

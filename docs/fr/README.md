@@ -3,7 +3,7 @@ home: true
 
 # hero
 heroTitle: VueDot
-heroDescription: Bibliothèque de composants officielle de la CNAM.
+heroDescription: Bibliothèque de composants officielle de la CNAM
 heroImage: /img/vue.js.svg
 
 # main action
@@ -38,5 +38,8 @@ footerRealease: Sous
 footerRealeaseLink: licence MIT
 footerMadeWith: Fabriqué avec
 footerVueJs: Vue.js
+footerMadeBy: par
+footerMadeByLink: https://github.com/Deraw-
+footerMadeByLinkText: Dylan Broussard
 footerCopyright: Copyright © 2018-aujourd'hui CNAM
 ---

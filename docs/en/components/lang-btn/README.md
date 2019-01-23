@@ -80,10 +80,10 @@ You can customize it like a `VBtn`, see [Vuetify](https://vuetifyjs.com/en/compo
         description: 'Position the element fixed.'
       },
       {
-        name: 'left',
+        name: 'menu-left',
         default: 'false',
         type: 'boolean',
-        description: 'Align the component towards the left.'
+        description: 'Align the menu towards the left.'
       },
       {
         name: 'allow-overflow',
@@ -93,7 +93,7 @@ You can customize it like a `VBtn`, see [Vuetify](https://vuetifyjs.com/en/compo
       },
       {
         name: 'auto',
-        default: 'flase',
+        default: 'false',
         type: 'boolean',
         description: 'Centers list on selected element.'
       },
@@ -119,7 +119,7 @@ You can customize it like a `VBtn`, see [Vuetify](https://vuetifyjs.com/en/compo
         name: 'content-class',
         default: 'undefined',
         type: 'string',
-        description: 'Applies a custom class to the detached element. This is useful because the content is moved to the end of the app and is not targettable by classes passed directly on the component.'
+        description: 'Applies a custom class to the detached element. This is useful because the content is moved to the end of the app and is not targetable by classes passed directly on the component.'
       },
       {
         name: 'disable-keys',

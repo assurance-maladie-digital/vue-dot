@@ -17,7 +17,7 @@ By default it comes in a field with menu and icon.
         name: 'color',
         default: `'primary'`,
         type: 'string',
-        description: 'The main color of the input.'
+        description: 'The main color.'
       },
       {
         name: 'birthdate',
@@ -53,13 +53,13 @@ By default it comes in a field with menu and icon.
         name: 'light',
         default: 'false',
         type: 'boolean',
-        description: 'Applies the dark theme variant.'
+        description: 'Applies the light theme variant.'
       },
       {
         name: 'date-format',
         default: `'DD/MM/YYYY'`,
         type: 'string',
-        description: 'Changes the format of the date in the TextField.'
+        description: 'Changes the format of the date in the input.'
       },
       {
         name: 'date-format-return',
@@ -107,7 +107,7 @@ By default it comes in a field with menu and icon.
         name: 'browser-autocomplete',
         default: 'undefined',
         type: 'string',
-        description: 'Configures the default __input__ autocomplete attribute'
+        description: 'Configures the default __input__ autocomplete attribute.'
       },
       {
         name: 'clear-icon',
@@ -131,7 +131,7 @@ By default it comes in a field with menu and icon.
         name: 'disabled',
         default: 'false',
         type: 'boolean',
-        description: 'Disable the input.'
+        description: 'Disable the component.'
       },
       {
         name: 'dont-fill-mask-blanks',
@@ -155,7 +155,7 @@ By default it comes in a field with menu and icon.
         name: 'error-messages',
         default: '[]',
         type: 'string | array',
-        description: 'Puts the input in an error state and passes through custom error messsages. Will be combined with any validations that occur from the __rules__ prop. This field will not trigger validation.'
+        description: 'Puts the input in an error state and passes through custom error messages. Will be combined with any validations that occur from the __rules__ prop. This field will not trigger validation.'
       },
       {
         name: 'flat',
@@ -191,7 +191,7 @@ By default it comes in a field with menu and icon.
         name: 'loading',
         default: 'false',
         type: 'boolean | string',
-        description: 'Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color: __primary__, __secondary__, __success__, __info__, __warning__, __error__) or a Boolean which uses the component __color__ (set by color prop if it\'s supported by the component) or the primary color'
+        description: 'Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color: __primary__, __secondary__, __success__, __info__, __warning__, __error__) or a Boolean which uses the component __color__ (set by color prop if it\'s supported by the component) or the primary color.'
       },
       {
         name: 'mask',
@@ -323,7 +323,7 @@ By default it comes in a field with menu and icon.
         name: 'event-color',
         default: `'warning'`,
         type: 'string | function | object',
-        description: 'Sets the color for event dot. It can be __string__ (all events will have the same color) or __object__ where attribute is the event date and value is boolean/color/array of colors for specified date or __function__ taking date as a parameter and returning boolean/color/array of colors for that date'
+        description: 'Sets the color for event dot. It can be __string__ (all events will have the same color) or __object__ where attribute is the event date and value is boolean/color/array of colors for specified date or __function__ taking date as a parameter and returning boolean/color/array of colors for that date.'
       },
       {
         name: 'events',
@@ -436,7 +436,7 @@ By default it comes in a field with menu and icon.
       {
         name: 'picker-type',
         default: `'date'`,
-        type: 'sting',
+        type: 'string',
         description: 'Determines the type of the picker. __date__ for date picker, __month__ for month picker.'
       },
       {
@@ -681,7 +681,7 @@ By default it comes in a field with menu and icon.
 
 ### Birthdate
 
-You can turn the picker into a birthdate picker (select year, then mounth and finally date).
+You can turn the picker into a birth date picker (select year, then month and finally date).
 
 <Example value="en/date-picker/birthdate" />
 
@@ -695,4 +695,4 @@ You can specify a display format, and another format for the returned value. It 
 
 You can use any locale from [dayjs](https://github.com/iamkun/dayjs/tree/master/src/locale).
 
-<Example value="en/date-picker/i18n" />
+<Example value="common/date-picker/i18n" />
