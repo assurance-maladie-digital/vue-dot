@@ -11,7 +11,7 @@
 				v-model="sidebarShow"
 			>
 				<VList expand>
-					<template v-for="item in $t('toolbar.sidebarItems')">
+					<template v-for="(item, index) in $t('toolbar.sidebarItems')">
 						<VListTile
 							v-show="!item.items"
 							:key="item.title"
@@ -37,7 +37,7 @@
 
 						<VListGroup
 							v-show="item.items"
-							:key="item.title"
+							:key="`group-${index}`"
 							:group="item.group"
 							no-action
 							active-class="primary--text your-class"
@@ -63,7 +63,7 @@
 
 							<VListTile
 								v-for="item in item.items"
-								:key="item.title"
+								:key="`sub-${item.title}`"
 								:to="item.to"
 								ripple
 								exact
@@ -87,7 +87,6 @@
 				v-show="$page.frontmatter.home"
 				app
 				dark
-				absolute
 				height="auto"
 				class="px-3 py-5"
 			>
@@ -223,6 +222,14 @@
 <style lang="scss">
 	.text-center {
 		text-align: center;
+	}
+
+	.v-content {
+		padding-bottom: 0 !important;
+	}
+
+	.v-footer {
+		position: static !important;
 	}
 
 	@media only screen and (max-width: 959px) {

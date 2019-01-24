@@ -1,3 +1,23 @@
+### [v1.6.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0-beta.3...v1.6.0) (24-01-2019)
+
+### Changements bloquants
+
+-   Suppression des wrappers Vuetify
+-   Suppression de la configuration des composants dans le thème
+
+### Nouvelles fonctionnalités
+
+-   Ajout du composant `DataList`
+-   Ajout d'options de configuration aux composants `DatePicker` et `LangBtn`
+
+### Corrections de bugs
+
+-   Modèle non mis à jour lors d'une entrée manuelle dans `DatePicker`
+
+### Documentation v2.0
+
+-   Refonte totale de la documentation en utilisant un thème Vuepress personnalisé
+
 ### [v1.6.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0-beta.2...v1.6.0-beta.3) (22-01-2019)
 
 ### Version bêta

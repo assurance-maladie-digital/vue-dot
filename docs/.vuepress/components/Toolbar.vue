@@ -208,8 +208,8 @@
 
 	@media only screen and (max-width: 1000px) {
 		.v-input.search {
-			width: 125px;
-			margin: 0 !important;
+			width: 145px;
+			margin: 0 10px !important;
 		}
 
 		.v-toolbar .v-btn,
@@ -223,21 +223,16 @@
 		}
 	}
 
-	@media only screen and (max-width: 700px) {
-		.v-input.search {
-			width: 110px;
-		}
-	}
-
-	@media only screen and (max-width: 350px) {
-		/* Too small for searching */
-		.v-input.search {
-			display: none;
-		}
-
+	@media only screen and (max-width: 400px) {
 		.v-toolbar .v-btn,
 		.lang-btn >>> .v-btn {
 			padding: 0 10px !important;
+		}
+	}
+
+	@media only screen and (max-width: 360px) {
+		.v-input.search {
+			display: none;
 		}
 	}
 </style>
