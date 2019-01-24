@@ -188,7 +188,7 @@
 			this.updateSidebar();
 
 			// Redirect default route
-			if (this.$route.path === '/') {
+			if (this.$route.path === '/vue-dot/') {
 				this.$router.push(`/${this.$i18n.locale}/`);
 			}
 
