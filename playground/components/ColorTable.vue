@@ -50,7 +50,7 @@
 		</li>
 
 		<li
-			v-for="(colorObj, name) in filter('object', true)"
+			v-for="(colorObj, name) in filter('string', true)"
 			:key="`c-${name}`"
 			class="color-item"
 		>
@@ -129,7 +129,9 @@
 				}
 			},
 			kebab(str: string) {
-				return (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+				const toReplace = str || '';
+
+				return toReplace.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 			},
 			transform(str: string) {
 				return str !== 'base' ? this.convertToClass(this.kebab(str)) : '';
@@ -137,9 +139,9 @@
 			filter(type: string, color = false) {
 				const source: any = color ? colors : this.$vuetify.theme;
 
-				const filtered = source.filter((color: any) => {
+				const filtered = Object.keys(source).filter((color: any) => {
 					return typeof color === type;
-				});
+				}).reduce((res, key) => Object.assign(res, { [key]: source[key] }), {} );
 
 				return filtered;
 			}
