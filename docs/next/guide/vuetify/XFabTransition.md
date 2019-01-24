@@ -1,3 +1,0 @@
-# XFabTransition
-
-<ComponentDoc current="XFabTransition" />

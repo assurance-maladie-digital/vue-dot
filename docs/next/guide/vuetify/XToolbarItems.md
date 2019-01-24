@@ -1,3 +1,0 @@
-# XToolbarItems
-
-<ComponentDoc current="XToolbarItems" />

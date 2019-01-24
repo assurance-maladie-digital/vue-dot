@@ -381,7 +381,8 @@
 					<circle
 						cx="12"
 						cy="13.15"
-						r="3.84" />
+						r="3.84"
+					/>
 					<path d="M8.4 1.2L6.24 3.6H2.4A2.4 2.4 0 0 0 0 6v14.4a2.4 2.4 0 0 0 2.4 2.4h19.2a2.4 2.4 0 0 0 2.4-2.4V6a2.4 2.4 0 0 0-2.4-2.4h-3.84L15.6 1.2zm3.6 18c-3.36 0-6-2.64-6-6s2.64-6 6-6 6 2.64 6 6-2.64 6-6 6z" />
 				</g>
 
@@ -1279,8 +1280,7 @@
 			<!-- Custom icons from theme, only render if it's looks like svg -->
 			<template v-if="$theme">
 				<div
-					v-for="iconTheme in $theme.config.icons"
-					v-if="icon === iconTheme.name && isSvg(iconTheme.svg)"
+					v-for="iconTheme in themeIcons"
 					:key="iconTheme.name"
 					v-html="iconTheme.svg"
 				/>
@@ -1294,8 +1294,13 @@
 
 	import isSvg from '@/functions/isSvg';
 
+	interface Icon extends Object {
+		name: string;
+		svg: string;
+	}
+
 	export default Vue.extend({
-		name: 'XSvgIcon',
+		name: 'SvgIcon',
 		props: {
 			color: {
 				type: String,
@@ -1326,8 +1331,19 @@
 				default: false
 			}
 		},
-		methods: {
-			isSvg
+		computed: {
+			themeIcons(): object {
+				// If there is icons in theme
+				if (this.$theme.config && this.$theme.config.icons) {
+					const filtered = this.$theme.config.icons.filter((icon: Icon) => {
+						return this.icon === icon.name && isSvg(icon.svg);
+					});
+
+					return filtered;
+				}
+
+				return {};
+			}
 		}
 	});
 

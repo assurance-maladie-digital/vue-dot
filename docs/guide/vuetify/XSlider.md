@@ -1,3 +1,0 @@
-# XSlider
-
-<ComponentDoc current="XSlider" />

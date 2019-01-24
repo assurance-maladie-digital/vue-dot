@@ -1,3 +1,0 @@
-# XDatePickerHeader
-
-<ComponentDoc current="XDatePickerHeader" />

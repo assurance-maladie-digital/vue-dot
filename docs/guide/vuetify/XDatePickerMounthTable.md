@@ -1,3 +1,0 @@
-# XDatePickerMounthTable
-
-<ComponentDoc current="XDatePickerMounthTable" />

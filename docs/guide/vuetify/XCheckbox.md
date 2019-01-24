@@ -1,3 +1,0 @@
-# XCheckbox
-
-<ComponentDoc current="XCheckbox" />

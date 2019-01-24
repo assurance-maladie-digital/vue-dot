@@ -12,7 +12,7 @@
     </a>
 </p>
 
-<h1 align="center">CNAM – Vue dot</h1>
+<h1 align="center">CNAM – VueDot</h1>
 
 <p align="center">Official CNAM component library.</p>
 

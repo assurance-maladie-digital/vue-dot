@@ -1,3 +1,0 @@
-# XStepperContent
-
-<ComponentDoc current="XStepperContent" />

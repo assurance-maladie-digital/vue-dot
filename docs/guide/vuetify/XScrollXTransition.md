@@ -1,3 +1,0 @@
-# XScrollXTransition
-
-<ComponentDoc current="XScrollXTransition" />

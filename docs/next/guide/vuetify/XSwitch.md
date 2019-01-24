@@ -1,3 +1,0 @@
-# XSwitch
-
-<ComponentDoc current="XSwitch" />

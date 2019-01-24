@@ -1,113 +1,84 @@
-Translations: [Français](./gh-docs/fr/CONTRIBUTING.md)
+# Contributing
 
-# Contributing to Vue Dot
+First off, thanks for taking the time to contribute! This is really important to help us improve the library.
 
-🎉 First off, thanks for taking the time to contribute!
-
-## How to contribute
-
-### Reporting bugs
+## Report bugs
 
 Bugs are reported using [GitHub issues](https://guides.github.com/features/issues/).
 
 Before creating a new issue, [check if your bug hasn't alreaydy been reported](https://github.com/assurance-maladie-digital/vue-dot/issues?utf8=%E2%9C%93&q=is%3Aissue). If it's the case and you don't find a solution in the comments, contribute to the issue instead of creating a new one.
 
-#### Submitting a (good) bug report
+### Submit a (good) bug report
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
--   **Use a clear an descriptive title**
+-   **Use a clear and descriptive title**
 -   **Describe the exact steps which reproduce the problem**
 -   **Provide specific examples to demonstrate the steps.** Include links to files or projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 
-### Suggesting changes
+<br>
+
+[Go to issues](https://github.com/assurance-maladie-digital/vue-dot/issues)
+
+## Suggest changes
 
 Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/).
 
-Before creating enhancement suggestions, check the [Roadmap](https://assurance-maladie-digital.github.io/vue-dot/guide/roadmap.html) to see if what you want is already planned. If you don't see your suggestion, [create a new issue](#submitting-a-good-bug-report).
+Before creating enhancement suggestions, check the Roadmap to see if what you want is already planned. If you don't see your suggestion, [create a new issue](#submitting-a-good-bug-report).
 
-### Code contribution
+## Code contribution
 
 You can look for issues labelled with `help-wanted` if you're not sure where to start!
 
-#### Local development
+### Local development
 
-To start the development server, use the following command:
+#### Setup environment
 
-```bash
-yarn serve
-```
-
-It will show you the Playground, which is the file `App.vue`.
-
-For running tests:
-
--   unit
+Setting up your dev environment is easy! To start fork [VueDot](https://github.com/assurance-maladie-digital/vue-dot/issues) into your own repo.
 
 ```bash
-yarn test:unit
-```
+// Clone your forked repo
+$ git clone <forked-vue-dot-repo>
 
--   e2e
+// Change to your new vue-dot directory
+$ cd vue-dot
 
-```bash
-yarn test:e2e
+// Checkout the branch you are working on
+$ git checkout <branch name>
+
+// Install dependencies
+$ yarn
+
+// Launch the development server
+$ yarn serve
 ```
 
 #### Documentation
 
-To start the development server for documentation:
+To work on documentation, start the development server of Vuepress.
 
 ```bash
 yarn docs:dev
 ```
 
-See [VuePress](https://vuepress.vuejs.org/guide/) for help.
+See [VuePress documentation](https://vuepress.vuejs.org/guide/) for help.
 
-#### 🚨 Other commands should be executed only on master branch
+Other commands should be executed only on master branch.
 
-### Styleguide
+### Code style
 
-#### Git commit messages
+You need to respect the code style defined in `editorconfig` and to resolve any warning or error thrown by `TSLint` or `ESLint`.
 
--   Use English language
--   Use the present tense ("Add feature" not "Added feature")
--   Use the imperative mood ("Move cursor to…" not "Moves cursor to…")
--   Start the commit message with an applicable emoji from [Gitmoji](https://gitmoji.carloscuesta.me/)
+#### Commit guidelines
 
-#### Vue
+Look at the previous commits for inspiration! But you need it to be explicit, and it should follow these rules:
 
-The configuration is based on the [recommended configuration (Priority C)](https://vuejs.org/v2/style-guide/#Priority-C-Recommended), with the following changes:
+-   Write it in English
+-   Start with an emoji from [gitmoji](https://gitmoji.carloscuesta.me/) corresponding to the changes made
+-   Do not end the subject line with a period
+-   Capitalize the subject line
+-   Use the imperative mood
 
--   **no-console**: allowed in `development`
+#### Pull requests
 
--   **no-debugger**: allowed in `development`
-
--   **vue/html-indent**: `tab`
-
--   **indent**: `off`
-
--   **vue/no-spaces-around-equal-signs-in-attribute**: `true`
-
--   **semi**: `always`
-
--   **space-before-function-paren**: `never`
-
--   **vue/script-indent**: `tab`
-    -   **baseIndent**: `1`
-    -   **switchCase**: `1`
-
-#### TypeScript
-
-The configuration is based on the [recommended configuration](https://github.com/palantir/tslint/blob/master/src/configs/recommended.ts), with the following changes:
-
--   **quotemark**: `single`
--   **indent**: `tabs`
--   **interface-name**: `false`
--   **ordered-imports**: `false`
--   **object-literal-sort-keys**: `false`
--   **no-consecutive-blank-lines**: `false`
--   **semicolon**: `always`
--   **space-before-function-paren**: `never`
--   **trailing-comma**: `never`
--   **no-shadowed-variable**: `false`
+When creating a pull request, follow and complete the provided template.

@@ -1,3 +1,0 @@
-# XTreeview
-
-<ComponentDoc current="XTreeview" />

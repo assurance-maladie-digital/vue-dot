@@ -1,3 +1,0 @@
-# XTextarea
-
-<ComponentDoc current="XTextarea" />

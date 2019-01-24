@@ -1,3 +1,0 @@
-# XCombobox
-
-<ComponentDoc current="XCombobox" />

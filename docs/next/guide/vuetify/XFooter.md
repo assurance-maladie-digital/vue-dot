@@ -1,3 +1,0 @@
-# XFooter
-
-<ComponentDoc current="XFooter" />

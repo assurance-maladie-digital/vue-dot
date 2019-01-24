@@ -1,3 +1,19 @@
+### [v1.6.0-beta.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0-beta.2...v1.6.0-beta.3) (22-01-2019)
+
+### Beta version
+
+### [v1.6.0-beta.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0-beta.1...v1.6.0-beta.2) (22-01-2019)
+
+### Beta version
+
+### [v1.6.0-beta.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0-beta.0...v1.6.0-beta.1) (16-01-2019)
+
+### Fix broken build
+
+### [v1.6.0-beta.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.5...v1.6.0-beta.0) (16-01-2019)
+
+### Beta version
+
 ### [v1.5.5](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.5.4...v1.5.5) (15-01-2019)
 
 ### Bug fixes
@@ -20,7 +36,6 @@
 
 -   Fix icon/ripple & remove wrappers in DatePicker
 -   Global styles for SvgIcon
-
 
 ### Documentation
 

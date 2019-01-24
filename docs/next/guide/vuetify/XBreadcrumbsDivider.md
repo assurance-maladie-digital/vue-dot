@@ -1,3 +1,0 @@
-# XBreadcrumbsDivider
-
-<ComponentDoc current="XBreadcrumbsDivider" />

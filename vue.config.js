@@ -1,7 +1,8 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack = require('webpack');
 
-module.exports = {
+const webpackConfig = {
 	css: {
 		extract: true
 	},
@@ -38,6 +39,8 @@ module.exports = {
 						root: 'Vuetify'
 					}
 				}
+				// /dayjs/,
+				// /^languages/
 			]
 			: []
 	},
@@ -58,3 +61,9 @@ module.exports = {
 		}
 	}
 };
+
+// if (process.env.NODE_ENV === 'production') {
+// 	webpackConfig.configureWebpack.plugins.push(new BundleAnalyzerPlugin());
+// }
+
+module.exports = webpackConfig;

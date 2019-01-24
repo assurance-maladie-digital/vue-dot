@@ -1,3 +1,0 @@
-# XBottomSheet
-
-<ComponentDoc current="XBottomSheet" />

@@ -1,3 +1,0 @@
-# XSelect
-
-<ComponentDoc current="XSelect" />

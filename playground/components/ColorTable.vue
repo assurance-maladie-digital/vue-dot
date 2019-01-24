@@ -4,12 +4,11 @@
 		class="color-table mt-5"
 	>
 		<li
-			v-for="(color, name) in $vuetify.theme"
-			v-if="typeof color === 'string'"
+			v-for="(color, name) in filter('string')"
 			:key="`a-${name}`"
 			class="color-item"
 		>
-			<v-layout
+			<VLayout
 				v-for="(sub, index) in themeItems"
 				:key="`a-a-${index}`"
 				:class="`${transform(name)} ${transform(sub)}`"
@@ -20,18 +19,19 @@
 				}"
 			>
 				{{ transform(name) }} {{ transform(sub) }}
-				<XSpacer />
+
+				<VSpacer />
+
 				{{ color }}
-			</v-layout>
+			</VLayout>
 		</li>
 
 		<li
-			v-for="(colorObj, name) in $vuetify.theme"
-			v-if="typeof colorObj === 'object'"
+			v-for="(colorObj, name) in filter('object')"
 			:key="`b-${name}`"
 			class="color-item"
 		>
-			<v-layout
+			<VLayout
 				v-for="(color, sub) in colorObj"
 				:key="`b-b-${sub}`"
 				:class="`${transform(name)} ${transform(sub)}`"
@@ -42,18 +42,19 @@
 				}"
 			>
 				{{ transform(name) }} {{ transform(sub) }}
-				<XSpacer />
+
+				<VSpacer />
+
 				{{ color }}
-			</v-layout>
+			</VLayout>
 		</li>
 
 		<li
-			v-for="(colorObj, name) in colors"
-			v-if="typeof colorObj === 'object'"
+			v-for="(colorObj, name) in filter('string', true)"
 			:key="`c-${name}`"
 			class="color-item"
 		>
-			<v-layout
+			<VLayout
 				v-for="(color, sub) in colorObj"
 				:key="`c-c-${sub}`"
 				:class="`${transform(name)} ${transform(sub)}`"
@@ -64,9 +65,11 @@
 				}"
 			>
 				{{ transform(name) }} {{ sub !== 'transparent' ? transform(sub) : '' }}
-				<XSpacer />
+
+				<VSpacer />
+
 				{{ color }}
-			</v-layout>
+			</VLayout>
 		</li>
 	</ul>
 </template>
@@ -77,7 +80,7 @@
 	import colors from 'vuetify/es5/util/colors';
 
 	export default Vue.extend({
-		name: 'XColorTable',
+		name: 'ColorTable',
 		props: {
 			dark: {
 				type: Boolean,
@@ -126,12 +129,23 @@
 				}
 			},
 			kebab(str: string) {
-				return (str || '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+				const toReplace = str || '';
+
+				return toReplace.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 			},
 			transform(str: string) {
 				return str !== 'base' ? this.convertToClass(this.kebab(str)) : '';
+			},
+			filter(type: string, color = false) {
+				const source: any = color ? colors : this.$vuetify.theme;
+
+				const filtered = Object.keys(source).filter((color: any) => {
+					return typeof color === type;
+				}).reduce((res, key) => Object.assign(res, { [key]: source[key] }), {} );
+
+				return filtered;
 			}
-		},
+		}
 	});
 </script>
 
@@ -151,4 +165,3 @@
 		}
 	}
 </style>
-

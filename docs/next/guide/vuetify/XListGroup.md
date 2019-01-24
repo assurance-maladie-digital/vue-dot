@@ -1,3 +1,0 @@
-# XListGroup
-
-<ComponentDoc current="XListGroup" />

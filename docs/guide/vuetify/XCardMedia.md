@@ -1,3 +1,0 @@
-# XCardMedia
-
-<ComponentDoc current="XCardMedia" />

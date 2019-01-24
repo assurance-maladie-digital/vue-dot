@@ -80,9 +80,11 @@
 			<span
 				v-if="displayTextBtn"
 				class="ml-2"
-			>{{ languages[currentLangUsed].nativeName }}</span>
+			>
+				{{ languages[currentLangUsed].nativeName }}
+			</span>
 
-			<XSvgIcon
+			<SvgIcon
 				v-if="displayArrow"
 				size="10px"
 				class="ml-2"
@@ -124,7 +126,7 @@
 						>
 					</VListTileAvatar>
 
-					<XListTileTitle>{{ item.nativeName }}</XListTileTitle>
+					<VListTileTitle>{{ item.nativeName }}</VListTileTitle>
 				</VBtn>
 			</VListTile>
 		</VList>
@@ -137,7 +139,7 @@
 	import languages from 'languages';
 
 	export default Vue.extend({
-		name: 'XLangBtn',
+		name: 'LangBtn',
 		model: {
 			prop: 'value',
 			event: 'change'

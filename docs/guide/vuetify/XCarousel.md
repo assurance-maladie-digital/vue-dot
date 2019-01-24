@@ -1,3 +1,0 @@
-# XCarousel
-
-<ComponentDoc current="XCarousel" />

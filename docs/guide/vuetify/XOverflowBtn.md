@@ -1,3 +1,0 @@
-# XOverflowBtn
-
-<ComponentDoc current="XOverflowBtn" />

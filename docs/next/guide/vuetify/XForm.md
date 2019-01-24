@@ -1,3 +1,0 @@
-# XForm
-
-<ComponentDoc current="XForm" />

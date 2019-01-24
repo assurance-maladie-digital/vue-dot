@@ -1,3 +1,0 @@
-# XTooltip
-
-<ComponentDoc current="XTooltip" />

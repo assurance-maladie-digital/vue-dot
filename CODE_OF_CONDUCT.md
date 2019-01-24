@@ -77,8 +77,8 @@ available at <https://www.contributor-covenant.org/version/1/4/code-of-conduct.h
 For answers to common questions about this code of conduct, see
 <https://www.contributor-covenant.org/faq>
 
-[homepage]: https://www.contributor-covenant.org
-
 ## Translations
 
 -   [FR](./gh-docs/fr/CODE_OF_CONDUCT.md)
+
+[homepage]: https://www.contributor-covenant.org

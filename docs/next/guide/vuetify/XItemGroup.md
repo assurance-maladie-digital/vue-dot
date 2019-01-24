@@ -1,3 +1,0 @@
-# XItemGroup
-
-<ComponentDoc current="XItemGroup" />
