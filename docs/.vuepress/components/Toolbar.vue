@@ -162,15 +162,17 @@
 			]).then(([docsearch]) => {
 				docsearch = docsearch.default;
 
-				docsearch({
-					apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
-					indexName: 'vue-dot',
-					inputSelector: '#algolia-search-box',
-					algoliaOptions: {
-						'facetFilters': [`lang:${this.$i18n.locale}`]
-					}
-				});
-			});
+				if (typeof docsearch === 'function') {
+					docsearch({
+						apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
+						indexName: 'vue-dot',
+						inputSelector: '#algolia-search-box',
+						algoliaOptions: {
+							'facetFilters': [`lang:${this.$i18n.locale}`]
+						}
+					});
+				}
+			}).catch((e) => console.log(e));
 		}
 	}
 </script>
