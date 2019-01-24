@@ -1386,10 +1386,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cnamts/vue-dot@^1.6.0-beta.3":
-  version "1.6.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@cnamts/vue-dot/-/vue-dot-1.6.0-beta.3.tgz#7923a3005c8af2b4a3730b2b54be55cbd4b2b177"
-  integrity sha512-33qoTq0Ih9KlEjgilSDXmAmQVdcCHORinYswNMMFX7S2WzeqOVavXSTerfauu65vY1e7k0yUUV+VxYI+y0uZ9w==
+"@cnamts/vue-dot@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@cnamts/vue-dot/-/vue-dot-1.6.0.tgz#43bd8043301432e3766dbb291d68cc5c0be359b7"
+  integrity sha512-g1Si1wY+Mf/tMqZm4hT5a2yckG9VJMCU9poc3xxlALtWOglVuEBIkg0m5m3QrnsrprVrtBWliW+nmhqItioN2g==
 
 "@iamstarkov/listr-update-renderer@0.4.1":
   version "0.4.1"
