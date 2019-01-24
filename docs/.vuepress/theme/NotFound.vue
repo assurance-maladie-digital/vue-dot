@@ -33,7 +33,7 @@
 		components: {
 			Toolbar
 		},
-		created() {
+		mounted() {
 			// Redirect default route
 			if (this.$route.path === '/') {
 				this.$router.push(`/${this.$i18n.locale}/`);

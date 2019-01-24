@@ -13,7 +13,7 @@
 				<VList expand>
 					<template v-for="item in $t('toolbar.sidebarItems')">
 						<VListTile
-							v-if="!item.items"
+							v-show="!item.items"
 							:key="item.title"
 							:to="item.to || null"
 							:href="item.href || null"
@@ -25,7 +25,7 @@
 							<VListTileContent>
 								<VListTileTitle>
 									<SvgIcon
-										v-if="item.icon"
+										v-show="item.icon"
 										:icon="item.icon"
 										class="mr-3"
 									/>
@@ -36,7 +36,7 @@
 						</VListTile>
 
 						<VListGroup
-							v-if="item.items"
+							v-show="item.items"
 							:key="item.title"
 							:group="item.group"
 							no-action
@@ -51,7 +51,7 @@
 								<VListTileContent>
 									<VListTileTitle>
 										<SvgIcon
-											v-if="item.icon"
+											v-show="item.icon"
 											:icon="item.icon"
 											class="mr-3"
 										/>
@@ -84,7 +84,7 @@
 			</VContent>
 
 			<VFooter
-				v-if="$page.frontmatter.home"
+				v-show="$page.frontmatter.home"
 				app
 				dark
 				absolute
@@ -117,12 +117,12 @@
 						</a>
 
 						<span
-							v-if="$page.frontmatter.footerMadeBy"
+							v-show="$page.frontmatter.footerMadeBy"
 							class="mb-0"
 						>
 							{{ $page.frontmatter.footerMadeBy }}
 							<a
-								v-if="$page.frontmatter.footerMadeByLink"
+								v-show="$page.frontmatter.footerMadeByLink"
 								:href="$page.frontmatter.footerMadeByLink"
 							>
 								{{ $page.frontmatter.footerMadeByLinkText }}
@@ -184,7 +184,7 @@
 				this.updateSidebar();
 			}
 		},
-		created() {
+		mounted() {
 			this.updateSidebar();
 
 			// Redirect default route

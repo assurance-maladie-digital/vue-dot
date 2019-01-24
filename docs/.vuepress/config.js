@@ -1,4 +1,5 @@
 module.exports = {
+	base: '/vue-dot/',
 	serviceWorker: true,
 	head: [
 		[

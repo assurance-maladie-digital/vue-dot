@@ -10,7 +10,7 @@
 		<div class="v-markup__copy">
 			<VSlideXTransition>
 				<span
-					v-if="copied"
+					v-show="copied"
 					class="v-markup__copied white--text"
 				>
 					Copied

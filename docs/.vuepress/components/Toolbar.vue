@@ -27,7 +27,7 @@
 			/>
 
 			<h1
-				v-if="!$vuetify.breakpoint.xsOnly"
+				v-show="!$vuetify.breakpoint.xsOnly"
 				class="ml-2 mr-2 font-weight-regular"
 			>
 				{{ $t('name') }}
@@ -85,7 +85,7 @@
 					<VListTileContent>
 						<VListTileTitle>
 							<SvgIcon
-								v-if="item.icon"
+								v-show="item.icon"
 								:icon="item.icon"
 								class="mr-2"
 								color="#888"
@@ -96,7 +96,7 @@
 					</VListTileContent>
 				</VListTile>
 
-				<VListTile v-if="$vuetify.breakpoint.xsOnly">
+				<VListTile v-show="$vuetify.breakpoint.xsOnly">
 					<VListTileContent>
 						<VListTileTitle>
 							v{{ version }}
@@ -107,7 +107,7 @@
 		</VMenu>
 
 		<VBtn
-			v-if="!$vuetify.breakpoint.xsOnly"
+			v-show="!$vuetify.breakpoint.xsOnly"
 			flat
 			class="px-3 ma-0 text-none"
 		>
@@ -155,7 +155,7 @@
 				}
 			}
 		},
-		created() {
+		mounted() {
 			Promise.all([
 				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
 				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css')
@@ -166,10 +166,7 @@
 					docsearch({
 						apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
 						indexName: 'vue-dot',
-						inputSelector: '#algolia-search-box',
-						algoliaOptions: {
-							'facetFilters': [`lang:${this.$i18n.locale}`]
-						}
+						inputSelector: '#algolia-search-box'
 					});
 				}
 			}).catch((e) => console.log(e));

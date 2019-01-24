@@ -52,7 +52,7 @@
 
 										<div
 											class="text-xs-left"
-											v-if="props.item.default"
+											v-show="props.item.default"
 										>
 											<div class="header grey--text text--darken-1">{{ $t('api.default') }}</div>
 											<div class="mono default">{{ props.item.default }}</div>
@@ -64,17 +64,17 @@
 											:class="{
 												'text-xs-right': $vuetify.breakpoint.smAndUp
 											}"
-											v-if="props.item.type"
+											v-show="props.item.type"
 										>
 											<div class="header grey--text text--darken-1">Type</div>
 											<div class="mono type">{{ typeof props.item.type === 'object' ? props.item.type.join(' | ') : props.item.type }}</div>
 										</div>
 
-										<VSpacer v-if="props.item.value" />
+										<VSpacer v-show="props.item.value" />
 
 										<div
 											class="text-xs-right"
-											v-if="props.item.value"
+											v-show="props.item.value"
 										>
 											<div class="header grey--text text--darken-1">Value</div>
 											<div class="mono type">{{ props.item.value }}</div>

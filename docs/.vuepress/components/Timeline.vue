@@ -1,6 +1,6 @@
 <template>
 	<ul
-		v-if="items.length"
+		v-show="items.length"
 		class="timeline mt-5"
 	>
 		<li

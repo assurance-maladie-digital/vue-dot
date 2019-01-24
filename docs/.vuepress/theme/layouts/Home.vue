@@ -7,22 +7,22 @@
 				justify-center
 			>
 				<img
-					v-if="config.heroImage"
+					v-show="config.heroImage"
 					class="logo"
 					height="250"
-					:src="config.heroImage"
+					:src="$withBase(config.heroImage)"
 					alt=""
 				/>
 
 				<h2
-					v-if="config.heroTitle"
+					v-show="config.heroTitle"
 					class="text-center display-3 font-weight-medium"
 				>
 					{{ config.heroTitle }}
 				</h2>
 
 				<p
-					v-if="config.heroDescription"
+					v-show="config.heroDescription"
 					class="text-center headline mt-4 grey--text text--darken-1"
 				>
 					{{ config.heroDescription }}
@@ -34,7 +34,7 @@
 					class="mt-4"
 				>
 					<VBtn
-						v-if="config.actionText && config.actionLink"
+						v-show="config.actionText && config.actionLink"
 						large
 						:to="config.actionLink"
 						color="primary"
@@ -43,7 +43,7 @@
 					</VBtn>
 
 					<VBtn
-						v-if="config.githubText && config.githubLink"
+						v-show="config.githubText && config.githubLink"
 						large
 						:href="config.githubLink"
 						target="_blank"
@@ -61,7 +61,7 @@
 				</VLayout>
 
 				<section
-					v-if="config.cards"
+					v-show="config.cards"
 					class="mt-5 section-cards"
 				>
 					<VCard
@@ -70,22 +70,22 @@
 						class="elevation-6"
 					>
 						<VImg
-							v-if="card.image"
-							:src="card.image"
+							v-show="card.image"
+							:src="$withBase(card.image)"
 							height="150"
 						/>
 
 						<VCardTitle primary-title>
 							<div>
 								<h3
-									v-if="card.title"
+									v-show="card.title"
 									class="headline mb-2 font-weight-medium"
 								>
 									{{ card.title }}
 								</h3>
 
 								<p
-									v-if="card.text"
+									v-show="card.text"
 									v-html="md(card.text)"
 									class="pa-0"
 								/>
@@ -95,7 +95,7 @@
 				</section>
 
 				<VBtn
-					v-if="config.newsletterText && config.newsletterLink"
+					v-show="config.newsletterText && config.newsletterLink"
 					large
 					outline
 					color="accent"
