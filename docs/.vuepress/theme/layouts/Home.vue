@@ -139,4 +139,14 @@
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		grid-auto-rows: minmax(300px, auto);
 	}
+
+	@media only screen and (max-width: 400px) {
+		.section-cards {
+			display: block;
+		}
+
+		.section-cards > * + * {
+			margin-top: 32px;
+		}
+	}
 </style>

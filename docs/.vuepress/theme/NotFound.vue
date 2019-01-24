@@ -35,7 +35,7 @@
 		},
 		mounted() {
 			// Redirect default route
-			if (this.$route.path === '/vue-dot/') {
+			if (this.$route.path === '/') {
 				this.$router.push(`/${this.$i18n.locale}/`);
 			}
 		}
