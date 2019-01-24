@@ -1,3 +1,0 @@
-# XLabel
-
-<ComponentDoc current="XLabel" />

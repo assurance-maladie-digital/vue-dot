@@ -1,3 +1,0 @@
-# XImg
-
-<ComponentDoc current="XImg" />

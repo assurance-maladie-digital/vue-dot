@@ -1,3 +1,0 @@
-# XFlex
-
-<ComponentDoc current="XFlex" />

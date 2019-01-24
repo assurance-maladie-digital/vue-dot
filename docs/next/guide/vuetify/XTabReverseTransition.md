@@ -1,3 +1,0 @@
-# XTabReverseTransition
-
-<ComponentDoc current="XTabReverseTransition" />

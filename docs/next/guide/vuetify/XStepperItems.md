@@ -1,3 +1,0 @@
-# XStepperItems
-
-<ComponentDoc current="XStepperItems" />

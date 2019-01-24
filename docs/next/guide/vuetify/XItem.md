@@ -1,3 +1,0 @@
-# XItem
-
-<ComponentDoc current="XItem" />

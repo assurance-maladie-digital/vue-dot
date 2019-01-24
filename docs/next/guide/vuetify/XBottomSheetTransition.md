@@ -1,3 +1,0 @@
-# XBottomSheetTransition
-
-<ComponentDoc current="XBottomSheetTransition" />

@@ -1,3 +1,0 @@
-# XTimePickerTitle
-
-<ComponentDoc current="XTimePickerTitle" />

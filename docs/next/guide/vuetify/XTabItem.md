@@ -1,3 +1,0 @@
-# XTabItem
-
-<ComponentDoc current="XTabItem" />

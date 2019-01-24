@@ -1,3 +1,0 @@
-# XIcon
-
-<ComponentDoc current="XIcon" />

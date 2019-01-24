@@ -1,3 +1,0 @@
-# XList
-
-<ComponentDoc current="XList" />

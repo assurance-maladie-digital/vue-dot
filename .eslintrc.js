@@ -20,7 +20,8 @@ module.exports = {
 			'baseIndent': 1,
 			'switchCase': 1,
 			'ignores': []
-		}]
+		}],
+		'vue/no-v-html': false
 	},
 	parserOptions: {
 		parser: 'typescript-eslint-parser'

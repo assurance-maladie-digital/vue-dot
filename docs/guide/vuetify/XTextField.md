@@ -1,3 +1,0 @@
-# XTextField
-
-<ComponentDoc current="XTextField" />

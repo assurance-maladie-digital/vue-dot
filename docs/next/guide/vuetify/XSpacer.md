@@ -1,3 +1,0 @@
-# XSpacer
-
-<ComponentDoc current="XSpacer" />

@@ -1,3 +1,0 @@
-# XBtn
-
-<ComponentDoc current="XBtn" />

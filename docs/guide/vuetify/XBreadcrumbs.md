@@ -1,3 +1,0 @@
-# XBreadcrumbs
-
-<ComponentDoc current="XBreadcrumbs" />

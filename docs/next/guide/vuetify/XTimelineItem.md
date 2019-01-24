@@ -1,3 +1,0 @@
-# XTimelineItem
-
-<ComponentDoc current="XTimelineItem" />

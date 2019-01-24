@@ -1,3 +1,0 @@
-# XEditDialog
-
-<ComponentDoc current="XEditDialog" />

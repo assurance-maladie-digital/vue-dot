@@ -1,3 +1,0 @@
-# XToolbarSideIcon
-
-<ComponentDoc current="XToolbarSideIcon" />

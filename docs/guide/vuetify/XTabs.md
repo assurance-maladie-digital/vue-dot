@@ -1,3 +1,0 @@
-# XTabs
-
-<ComponentDoc current="XTabs" />

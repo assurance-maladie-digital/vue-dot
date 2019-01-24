@@ -1,3 +1,0 @@
-# XFadeTransition
-
-<ComponentDoc current="XFadeTransition" />

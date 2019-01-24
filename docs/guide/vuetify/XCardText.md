@@ -1,3 +1,0 @@
-# XCardText
-
-<ComponentDoc current="XCardText" />

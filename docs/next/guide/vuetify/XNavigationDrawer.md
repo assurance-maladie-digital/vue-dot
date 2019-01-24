@@ -1,3 +1,0 @@
-# XNavigationDrawer
-
-<ComponentDoc current="XNavigationDrawer" />

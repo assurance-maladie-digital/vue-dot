@@ -1,3 +1,0 @@
-# XHover
-
-<ComponentDoc current="XHover" />
