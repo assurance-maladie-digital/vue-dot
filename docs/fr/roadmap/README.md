@@ -12,19 +12,19 @@ VueDot est toujours en développement. Sur cette page, vous pouvez voir ce qui e
       body: '__Couverture des tests__ à 100%.'
     },
     {
-      status: 'next',
+      status: 'pending',
       date: 'T1 2019',
       title: 'Version 1.6.x',
       body: 'Ajout du composant __FileUpload__.'
     },
     {
-      status: 'pending',
+      status: 'done',
       date: 'Janvier 2019',
       title: 'Version 1.6.0',
       body: 'Ajout du composant __DataList__.'
     },
     {
-      status: 'pending',
+      status: 'done',
       date: 'Janvier 2019',
       title: 'Documentation v2.0',
       body: '__Refonte totale de la documentation__ en utilisant un thème Vuepress personnalisé.'
