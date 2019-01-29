@@ -5,7 +5,7 @@
 			dense
 			flat
 		>
-			<VSpacer v-if="!$vuetify.breakpoint.xsOnly" />
+			<VSpacer v-show="!$vuetify.breakpoint.xsOnly" />
 
 			<VBtn
 				:aria-label="$t('codepen.invertColors')"
@@ -44,7 +44,7 @@
 
 		<VExpandTransition v-if="parsed">
 			<VCard
-				v-if="expand"
+				v-show="expand"
 				color="#2d2d2d"
 				dark
 				flat
@@ -57,7 +57,7 @@
 				>
 					<VItem
 						v-for="(section, i) in sections"
-						v-if="parsed[section]"
+						v-show="parsed[section]"
 						:key="`item-${i}`"
 						:value="section"
 					>
@@ -83,7 +83,7 @@
 				>
 					<VWindowItem
 						v-for="(section, i) in sections"
-						v-if="parsed[section]"
+						v-show="parsed[section]"
 						:key="`window-${i}`"
 						:value="section"
 					>
