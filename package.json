@@ -107,7 +107,8 @@
 		"vuetify": "^1.4.2",
 		"vuetify-loader": "^1.1.1",
 		"webpack": "^4.28.4",
-		"webpack-bundle-analyzer": "^3.0.3"
+		"webpack-bundle-analyzer": "^3.0.3",
+		"webpack-node-externals": "^1.7.2"
 	},
 	"postcss": {
 		"plugins": {
