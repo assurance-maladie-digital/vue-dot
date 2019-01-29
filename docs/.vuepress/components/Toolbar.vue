@@ -37,6 +37,7 @@
 		<VSpacer />
 
 		<VTextField
+			v-show="isClient"
 			solo
 			light
 			:label="$t('toolbar.search')"
@@ -141,7 +142,8 @@
 			return {
 				version,
 				initiated: false,
-				languages: ['en', 'fr']
+				languages: ['en', 'fr'],
+				isClient: false
 			};
 		},
 		methods: {
@@ -156,6 +158,8 @@
 			}
 		},
 		mounted() {
+			this.isClient = true;
+
 			Promise.all([
 				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
 				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css')
