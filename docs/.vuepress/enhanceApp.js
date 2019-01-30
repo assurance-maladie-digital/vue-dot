@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import Vuetify from 'vuetify';
 import VueDot from '@cnamts/vue-dot';
 import i18n from './i18n';
