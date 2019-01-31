@@ -224,6 +224,9 @@
 		text-align: center;
 	}
 
+	.v-navigation-drawer {
+		max-height: 100% !important;
+	}
 	.v-content {
 		padding-bottom: 0 !important;
 	}
