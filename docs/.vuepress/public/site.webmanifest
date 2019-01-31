@@ -1,7 +1,7 @@
 {
 	"name": "VueDot",
 	"short_name": "VueDot",
-	"start_url": "/",
+	"start_url": "/vue-dot/",
 	"icons": [
 		{
 			"src": "/vue-dot/android-chrome-192x192.png",

@@ -9,7 +9,7 @@
 		<VBtn
 			icon
 			class="mr-3 menu-btn"
-			:aria-label="$t('menu')"
+			:aria-label="t('menu')"
 			@click="$emit('drawer:update')"
 		>
 			<SvgIcon icon="menu" />
@@ -17,7 +17,7 @@
 
 		<VBtn
 			flat
-			:to="$t('home')"
+			:to="t('home')"
 			active-class="active"
 			class="px-3 ma-0 text-none"
 		>
@@ -30,7 +30,7 @@
 				v-show="!$vuetify.breakpoint.xsOnly"
 				class="ml-2 mr-2 font-weight-regular"
 			>
-				{{ $t('name') }}
+				{{ t('name') }}
 			</h1>
 		</VBtn>
 
@@ -40,7 +40,7 @@
 			v-show="isClient"
 			solo
 			light
-			:label="$t('toolbar.search')"
+			:label="t('toolbar.search')"
 			single-line
 			hide-details
 			id="algolia-search-box"
@@ -59,7 +59,7 @@
 				class="px-3 ma-0 text-none"
 			>
 				<template v-if="!$vuetify.breakpoint.xsOnly">
-					{{ $t('toolbar.ecosystem') }}
+					{{ t('toolbar.ecosystem') }}
 					<SvgIcon
 						size=".7em"
 						icon="down-arrow"
@@ -76,7 +76,7 @@
 
 			<VList>
 				<VListTile
-					v-for="item in $t('toolbar.items')"
+					v-for="item in t('toolbar.items')"
 					:key="item.title"
 					:href="item.href"
 					target="_blank"
@@ -121,7 +121,7 @@
 			menu-left
 			menu-bottom
 			:outline="false"
-			:value="$i18n.locale"
+			:value="currentLang"
 			@change="updateLang"
 			:display-text-btn="false"
 			:display-arrow="false"
@@ -134,7 +134,6 @@
 
 <script>
 	import { version } from '../../../package.json';
-	import { loadLanguageAsync } from '../i18n';
 
 	export default {
 		name: 'Toolbar',
@@ -142,24 +141,19 @@
 			return {
 				version,
 				initiated: false,
-				languages: ['en', 'fr'],
-				isClient: false
+				languages: ['en', 'fr']
 			};
 		},
 		methods: {
 			updateLang(lang) {
-				loadLanguageAsync(lang);
-
-				if (this.initiated) {
-					this.$router.push(`/${lang}/`);
-				} else {
-					this.initiated = true;
-				}
+				// if (this.initiated) {
+				// 	this.$router.push(`/${lang}/`);
+				// } else {
+				// 	this.initiated = true;
+				// }
 			}
 		},
 		mounted() {
-			this.isClient = true;
-
 			Promise.all([
 				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
 				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css')
@@ -173,7 +167,7 @@
 						inputSelector: '#algolia-search-box'
 					});
 				}
-			}).catch((e) => console.log(e));
+			}).catch((e) => console.error(e));
 		}
 	}
 </script>

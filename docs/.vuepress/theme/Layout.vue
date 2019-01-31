@@ -4,14 +4,15 @@
 			<Toolbar @drawer:update="sidebarShow = !sidebarShow" />
 
 			<VNavigationDrawer
+				v-model="sidebarShow"
 				app
 				fixed
 				clipped
 				:value="sidebar"
-				v-model="sidebarShow"
+				:class="{ 'is-not-client': !isClient, 'drawer': sidebarShow }"
 			>
 				<VList expand>
-					<template v-for="(item, index) in $t('toolbar.sidebarItems')">
+					<template v-for="(item, index) in t('toolbar.sidebarItems')">
 						<VListTile
 							v-show="!item.items"
 							:key="item.title"
@@ -39,6 +40,7 @@
 							v-show="item.items"
 							:key="`group-${index}`"
 							:group="item.group"
+							:value="!isClient"
 							no-action
 							active-class="primary--text your-class"
 						>
@@ -168,9 +170,9 @@
 		methods: {
 			guard() {
 				// If the route doesn't match selected langage, redirect
-				if (!this.$route.path.includes(this.$i18n.locale)) {
-					this.$router.push(`/${this.$i18n.locale}/`);
-				}
+				// if (!this.$route.path.includes()) {
+				// 	this.$router.push(`/${this.$i18n.locale}/`);
+				// }
 			},
 			updateSidebar() {
 				if (!this.$vuetify.breakpoint.mdAndDown) {
@@ -186,9 +188,24 @@
 		mounted() {
 			this.updateSidebar();
 
+			// TODO: move to created hook
+			// ------------ //
+
+			const accepted = [
+				'/en/',
+				'/fr/'
+			];
+
+			// TODO: find index
+			if (accepted.includes(this.$route.path)) {
+				// this.currentLang = this.$route.path;
+			}
+
+			// ------------ //
+
 			// Redirect default route
 			if (this.$route.path === '/') {
-				this.$router.push(`/${this.$i18n.locale}/`);
+				this.$router.push('/en/');
 			}
 
 			this.guard();
@@ -227,6 +244,11 @@
 	.v-navigation-drawer {
 		max-height: 100% !important;
 	}
+
+	.drawer.is-not-client {
+		transform: translateX(0px) !important;
+	}
+
 	.v-content {
 		padding-bottom: 0 !important;
 	}

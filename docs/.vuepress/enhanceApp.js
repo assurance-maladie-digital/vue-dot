@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import Vuetify from 'vuetify';
 import VueDot from '@cnamts/vue-dot';
-import i18n from './i18n';
+import SSRMixin from './mixins/ssr';
 import { default as theme } from './theme.json';
 
 import 'prismjs';
@@ -30,5 +30,5 @@ export default ({
 		theme
 	});
 
-	options.i18n = i18n;
+	Vue.mixin(SSRMixin);
 };
