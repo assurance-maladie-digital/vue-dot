@@ -7,7 +7,10 @@
 
 		<dl
 			v-if="list.length"
-			:class="{ 'column': column || $vuetify.breakpoint.xs }"
+			:class="{
+				'column': column || $vuetify.breakpoint.xs || flex,
+				'flex': flex
+			}"
 			:style="{ minWidth }"
 			class="field"
 		>
@@ -73,6 +76,10 @@
 				type: Boolean,
 				default: false
 			},
+			flex: {
+				type: Boolean,
+				default: false
+			},
 			placeholder: {
 				type: String,
 				default: '…'
@@ -105,6 +112,11 @@
 		&.column .row
 		{
 			flex-direction: column;
+		}
+
+		&.flex {
+			display: flex;
+			flex-wrap: wrap;
 		}
 
 		&:not(.column) {

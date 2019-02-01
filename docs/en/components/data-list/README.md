@@ -54,6 +54,12 @@ The `DataList` component is used to display tabular data.
         description: 'Column mode, values will appear below labels. Automatically activated on mobile.'
       },
       {
+        name: 'flex',
+        default: 'false',
+        type: 'boolean',
+        description: 'Activates flexbox and column mode.'
+      },
+      {
         name: 'placeholder',
         default: `'…'`,
         type: 'string',
@@ -82,6 +88,12 @@ The `DataList` component is used to display tabular data.
 Displays values under the labels.
 
 <Example value="en/data-list/column" />
+
+### Flex
+
+Activates flexbox on list and column mode. Sections return to the line automatically.
+
+<Example value="en/data-list/flex" />
 
 ### Customization
 

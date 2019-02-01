@@ -1,3 +1,13 @@
+### [v1.6.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0...v1.6.1) (01-02-2019)
+
+### New features
+
+-   Add `flex` option on `DataList`
+
+### Documentation
+
+-   Bug fixes
+
 ### [v1.6.0](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0-beta.3...v1.6.0) (24-01-2019)
 
 ### Breaking changes

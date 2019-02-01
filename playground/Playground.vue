@@ -115,6 +115,7 @@
 									:label-color="dark ? 'white' : '#757575'"
 									:value-color="dark ? '#ccc' : '#333'"
 									list-title="Test"
+									flex
 								/>
 							</VLayout>
 
