@@ -32,7 +32,9 @@
 								slot-scope="props"
 								class="row"
 							>
-								<h2 v-if="props.item.name === 'separator'">{{ props.item.title }}</h2>
+								<h2 v-if="props.item.name === 'separator'">
+									{{ props.item.title }}
+								</h2>
 
 								<template v-else>
 									<VLayout
@@ -46,16 +48,26 @@
 												'min-width': '20%'
 											}"
 										>
-											<div class="header grey--text text--darken-1">{{ $t('api.name') }}</div>
-											<div class="mono name">{{ props.item.name }}</div>
+											<div class="header grey--text text--darken-1">
+												{{ t('api.name') }}
+											</div>
+
+											<div class="mono name">
+												{{ props.item.name }}
+											</div>
 										</div>
 
 										<div
 											class="text-xs-left"
 											v-show="props.item.default"
 										>
-											<div class="header grey--text text--darken-1">{{ $t('api.default') }}</div>
-											<div class="mono default">{{ props.item.default }}</div>
+											<div class="header grey--text text--darken-1">
+												{{ t('api.default') }}
+											</div>
+
+											<div class="mono default">
+												{{ props.item.default }}
+											</div>
 										</div>
 
 										<VSpacer />
@@ -66,8 +78,13 @@
 											}"
 											v-show="props.item.type"
 										>
-											<div class="header grey--text text--darken-1">Type</div>
-											<div class="mono type">{{ typeof props.item.type === 'object' ? props.item.type.join(' | ') : props.item.type }}</div>
+											<div class="header grey--text text--darken-1">
+												Type
+											</div>
+
+											<div class="mono type">
+												{{ typeof props.item.type === 'object' ? props.item.type.join(' | ') : props.item.type }}
+											</div>
 										</div>
 
 										<VSpacer v-show="props.item.value" />
@@ -76,8 +93,13 @@
 											class="text-xs-right"
 											v-show="props.item.value"
 										>
-											<div class="header grey--text text--darken-1">Value</div>
-											<div class="mono type">{{ props.item.value }}</div>
+											<div class="header grey--text text--darken-1">
+												Value
+											</div>
+
+											<div class="mono type">
+												{{ props.item.value }}
+											</div>
 										</div>
 									</VLayout>
 

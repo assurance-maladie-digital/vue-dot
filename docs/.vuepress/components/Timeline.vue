@@ -25,12 +25,15 @@
 					justify-space-between
 					class="timeline-heading"
 				>
-					<h2 class="timeline-title mb-2">{{ item.title }}</h2>
+					<h2 class="timeline-title mb-2">
+						{{ item.title }}
+					</h2>
 
 					<div class="timeline-panel-date">
 						<div class="timestamp">
 							<small class="text-muted">
 								{{ item.date }}
+
 								<SvgIcon
 									small
 									icon="calendar"
@@ -39,6 +42,7 @@
 						</div>
 					</div>
 				</VLayout>
+
 				<div
 					v-html="md(item.body)"
 					class="timeline-body"
