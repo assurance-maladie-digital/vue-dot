@@ -140,7 +140,7 @@
 	};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.name {
 		font-family: monospace;
 		color: #01579b;
@@ -163,10 +163,10 @@
 
 	.row {
 		border: 1px solid #e4e4e4;
-	}
 
-	.row + .row {
-		margin-top: 15px;
+		+ .row {
+			margin-top: 15px;
+		}
 	}
 
 	code {

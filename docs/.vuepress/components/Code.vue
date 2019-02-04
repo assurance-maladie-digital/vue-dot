@@ -74,23 +74,25 @@
 	};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.markup {
 		position: relative;
-	}
 
-	.markup >>> .v-markup__copy {
-		top: 0;
-		right: 0;
-		z-index: 1;
-		opacity: 0;
-		cursor: pointer;
-		transition: .25s;
-		position: absolute;
-	}
+		/deep/ .v-markup__copy {
+			top: 0;
+			right: 0;
+			z-index: 1;
+			opacity: 0;
+			cursor: pointer;
+			transition: .25s;
+			position: absolute;
+		}
 
-	.markup:hover >>> .v-markup__copy,
-	.markup:focus >>> .v-markup__copy {
-		opacity: 1;
+		&:hover,
+		&:focus {
+			/deep/ .v-markup__copy {
+				opacity: 1;
+			}
+		}
 	}
 </style>

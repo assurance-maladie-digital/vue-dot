@@ -203,22 +203,22 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.code-window {
 		height: 100%;
 		overflow-y: auto;
 		max-height: calc(100vh - 275px);
 	}
 
-	.v-toolbar >>> .v-toolbar__content {
+	.v-toolbar /deep/ .v-toolbar__content {
 		flex-wrap: wrap;
 		height: auto !important;
 		justify-content: flex-start !important;
-	}
 
-	.v-toolbar >>> .v-toolbar__content > *:first-child.v-btn--icon,
-	.v-toolbar__content > *:last-child.v-btn--icon {
-		margin: 0 !important;
+		> *:first-child.v-btn--icon,
+		> *:last-child.v-btn--icon {
+			margin: 0 !important;
+		}
 	}
 </style>
 

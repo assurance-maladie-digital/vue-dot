@@ -133,7 +133,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.section-cards {
 		display: grid;
 		grid-gap: 32px;

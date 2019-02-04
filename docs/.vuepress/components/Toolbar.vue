@@ -192,21 +192,27 @@
 		flex: none;
 		height: 38px;
 		width: 250px;
+
+		/deep/ .v-input__slot {
+			border-radius: 50px !important;
+		}
+
+		/deep/ .v-input__control {
+			min-height: 38px !important;
+		}
 	}
 
-	.v-input.search /deep/ .v-input__slot {
-		border-radius: 50px !important;
-	}
+	.lang-btn {
+		/deep/ .v-btn {
+			margin: 0;
+			height: 100%;
+			padding: 20px;
+			min-width: 50px;
+		}
 
-	.v-input.search /deep/ .v-input__control {
-		min-height: 38px !important;
-	}
-
-	.lang-btn /deep/ .v-btn {
-		margin: 0;
-		height: 100%;
-		padding: 20px;
-		min-width: 50px;
+		/deep/ .v-menu__activator--disabled {
+			cursor: default;
+		}
 	}
 
 	@media only screen and (max-width: 1000px) {
