@@ -122,13 +122,14 @@
 			menu-left
 			menu-bottom
 			:outline="false"
+			:disabled="!isClient"
 			:value="currentLang"
-			@change="updateLang"
 			:display-text-btn="false"
 			:display-arrow="false"
 			:available-languages="languages"
 			class="ma-0 text-none lang-btn"
 			flags-url="https://res.cloudinary.com/deraw/image/upload/v1547044454/"
+			@change="updateLang"
 		/>
 	</VToolbar>
 </template>
