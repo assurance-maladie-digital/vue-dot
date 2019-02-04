@@ -1,6 +1,6 @@
 <template>
 	<div class="theme-container">
-		<VApp>
+		<VApp :class="{ 'is-not-client': !isClient, 'sidebar': sidebarShow }">
 			<Toolbar @drawer:update="sidebarShow = !sidebarShow" />
 
 			<VNavigationDrawer
@@ -152,7 +152,7 @@
 		},
 		data() {
 			return {
-				sidebarShow: false
+				sidebarShow: true
 			};
 		},
 		computed: {
@@ -168,12 +168,6 @@
 			}
 		},
 		methods: {
-			guard() {
-				// If the route doesn't match selected langage, redirect
-				// if (!this.$route.path.includes()) {
-				// 	this.$router.push(`/${this.$i18n.locale}/`);
-				// }
-			},
 			updateSidebar() {
 				if (!this.$vuetify.breakpoint.mdAndDown) {
 					this.sidebarShow = !this.$page.frontmatter.home;
@@ -185,6 +179,12 @@
 				this.updateSidebar();
 			}
 		},
+		created() {
+			// Disable sidebar on SSR on home page
+			if (this.$page.frontmatter.home) {
+				this.sidebarShow = false;
+			}
+		},
 		mounted() {
 			this.updateSidebar();
 
@@ -192,13 +192,11 @@
 			if (this.$route.path === '/') {
 				this.$router.push('/en/');
 			}
-
-			this.guard();
 		}
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.footer-content {
 		opacity: .9;
 	}
@@ -212,7 +210,7 @@
 		align-items: center;
 	}
 
-	.v-navigation-drawer >>> .v-list .v-list__tile {
+	.v-navigation-drawer /deep/ .v-list .v-list__tile {
 		transition: background .15s !important;
 	}
 
@@ -226,11 +224,21 @@
 		text-align: center;
 	}
 
+	// Fix a bug due to SSR
 	.v-navigation-drawer {
 		max-height: 100% !important;
 	}
 
+	// Apply default padding on SSR when not on home page
+	.application.is-not-client.sidebar .v-content {
+		padding: 64px 0px 0px 300px !important;
+	}
+
+	// Apply default styles on SSR
 	.drawer.is-not-client {
+		height: 100% !important;
+		width: 300px !important;
+		margin-top: 64px !important;
 		transform: translateX(0px) !important;
 	}
 
@@ -245,6 +253,14 @@
 	@media only screen and (max-width: 959px) {
 		.container {
 			padding: 16px 24px !important;
+		}
+
+		.drawer.is-not-client {
+			transform: translateX(-300px) !important;
+		}
+
+		.application.is-not-client.sidebar .v-content {
+			padding-left: 0px !important;
 		}
 	}
 </style>

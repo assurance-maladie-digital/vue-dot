@@ -27,7 +27,7 @@
 			/>
 
 			<h1
-				v-show="!$vuetify.breakpoint.xsOnly"
+				v-show="!isClient || !$vuetify.breakpoint.xsOnly"
 				class="ml-2 mr-2 font-weight-regular"
 			>
 				{{ t('name') }}
@@ -49,6 +49,7 @@
 		/>
 
 		<VMenu
+			v-show="isClient"
 			left
 			bottom
 			offset-y
@@ -172,14 +173,18 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.v-toolbar {
-		z-index: 5 !important;
+		z-index: 7 !important;
+
+		/deep/ .v-toolbar__content {
+			height: 64px !important;
+		}
 	}
 
 	.v-toolbar .v-btn:not(.v-btn--icon),
 	.v-menu,
-	.v-menu >>> .v-menu__activator {
+	.v-menu /deep/ .v-menu__activator {
 		height: 100%;
 	}
 
@@ -189,15 +194,15 @@
 		width: 250px;
 	}
 
-	.v-input.search >>> .v-input__slot {
+	.v-input.search /deep/ .v-input__slot {
 		border-radius: 50px !important;
 	}
 
-	.v-input.search >>> .v-input__control {
+	.v-input.search /deep/ .v-input__control {
 		min-height: 38px !important;
 	}
 
-	.lang-btn >>> .v-btn {
+	.lang-btn /deep/ .v-btn {
 		margin: 0;
 		height: 100%;
 		padding: 20px;
@@ -211,7 +216,7 @@
 		}
 
 		.v-toolbar .v-btn,
-		.lang-btn >>> .v-btn {
+		.lang-btn /deep/ .v-btn {
 			min-width: 0 !important;
 			padding: 0 16px !important;
 		}
@@ -223,7 +228,7 @@
 
 	@media only screen and (max-width: 400px) {
 		.v-toolbar .v-btn,
-		.lang-btn >>> .v-btn {
+		.lang-btn /deep/ .v-btn {
 			padding: 0 10px !important;
 		}
 	}
