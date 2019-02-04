@@ -7,7 +7,10 @@
 		/>
 		<slot v-else />
 
-		<div class="v-markup__copy">
+		<div
+			v-if="isClient"
+			class="v-markup__copy"
+		>
 			<VSlideXTransition>
 				<span
 					v-show="copied"
