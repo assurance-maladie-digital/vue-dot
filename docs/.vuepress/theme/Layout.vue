@@ -188,21 +188,6 @@
 		mounted() {
 			this.updateSidebar();
 
-			// TODO: move to created hook
-			// ------------ //
-
-			const accepted = [
-				'/en/',
-				'/fr/'
-			];
-
-			// TODO: find index
-			if (accepted.includes(this.$route.path)) {
-				// this.currentLang = this.$route.path;
-			}
-
-			// ------------ //
-
 			// Redirect default route
 			if (this.$route.path === '/') {
 				this.$router.push('/en/');

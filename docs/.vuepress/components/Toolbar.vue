@@ -146,11 +146,11 @@
 		},
 		methods: {
 			updateLang(lang) {
-				// if (this.initiated) {
-				// 	this.$router.push(`/${lang}/`);
-				// } else {
-				// 	this.initiated = true;
-				// }
+				if (this.initiated) {
+					this.$router.push(`/${lang}/`);
+				} else {
+					this.initiated = true;
+				}
 			}
 		},
 		mounted() {

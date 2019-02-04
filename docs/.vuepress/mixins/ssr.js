@@ -7,9 +7,25 @@ export default {
 		return {
 			en,
 			fr,
+			translations,
 			currentLang: 'en',
 			isClient: false
 		};
+	},
+	created() {
+		// Get accepted languages in url ('/en/' format)
+		const accepted = this.translations.map((lang) => {
+			return `/${lang}/`;
+		});
+
+		// Find current languahe in accepted
+		const currentLang = accepted.find((lang) => {
+			return this.$route.path.match(lang)
+		});
+
+		if (currentLang) {
+			this.currentLang = currentLang.replace(/\//g, '');
+		}
 	},
 	mounted() {
 		this.isClient = true;
