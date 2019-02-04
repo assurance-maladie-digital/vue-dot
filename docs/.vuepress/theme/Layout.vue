@@ -11,74 +11,7 @@
 				:value="sidebar"
 				:class="{ 'is-not-client': !isClient, 'drawer': sidebarShow }"
 			>
-				<VList expand>
-					<template v-for="(item, index) in t('toolbar.sidebarItems')">
-						<VListTile
-							v-show="!item.items"
-							:key="item.title"
-							:to="item.to || null"
-							:href="item.href || null"
-							:target="item.href ? '_blank' : null"
-							:rel="item.href ? 'noopener noreferrer' : null"
-							ripple
-							exact
-						>
-							<VListTileContent>
-								<VListTileTitle>
-									<SvgIcon
-										v-show="item.icon"
-										:icon="item.icon"
-										class="mr-3"
-									/>
-
-									<span>{{ item.title }}</span>
-								</VListTileTitle>
-							</VListTileContent>
-						</VListTile>
-
-						<VListGroup
-							v-show="item.items"
-							:key="`group-${index}`"
-							:group="item.group"
-							:value="!isClient"
-							no-action
-							active-class="primary--text your-class"
-						>
-							<VListTile
-								:to="item.to"
-								slot="activator"
-								ripple
-								exact
-							>
-								<VListTileContent>
-									<VListTileTitle>
-										<SvgIcon
-											v-show="item.icon"
-											:icon="item.icon"
-											class="mr-3"
-										/>
-
-										<span>{{ item.title }}</span>
-									</VListTileTitle>
-								</VListTileContent>
-							</VListTile>
-
-							<VListTile
-								v-for="item in item.items"
-								:key="`sub-${item.title}`"
-								:to="item.to"
-								ripple
-								exact
-							>
-								<VListTileContent>
-									<VListTileTitle>
-										<span>{{ item.title }}</span>
-									</VListTileTitle>
-								</VListTileContent>
-							</VListTile>
-						</VListGroup>
-					</template>
-				</VList>
+				<Sitemap />
 			</VNavigationDrawer>
 
 			<VContent>
@@ -140,6 +73,7 @@
 
 <script>
 	import Toolbar from '../components/Toolbar.vue';
+	import Sitemap from '../components/Sitemap.vue';
 	import Home from './layouts/Home.vue';
 	import Basic from './layouts/Basic.vue';
 
@@ -147,6 +81,7 @@
 		name: 'Layout',
 		components: {
 			Toolbar,
+			Sitemap,
 			Home,
 			Basic
 		},

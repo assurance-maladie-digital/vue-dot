@@ -9,7 +9,9 @@
 		<VBtn
 			icon
 			class="mr-3 menu-btn"
+			:to="isClient ? null : '/sitemap/'"
 			:aria-label="t('menu')"
+			:class="{ 'is-not-client': !isClient }"
 			@click="$emit('drawer:update')"
 		>
 			<SvgIcon icon="menu" />
@@ -216,6 +218,10 @@
 		}
 	}
 
+	.menu-btn.is-not-client {
+		display: none;
+	}
+
 	@media only screen and (max-width: 1000px) {
 		.v-input.search {
 			width: 145px;
@@ -230,6 +236,10 @@
 
 		.menu-btn {
 			margin: 0 !important;
+		}
+
+		.menu-btn.is-not-client {
+			display: flex;
 		}
 	}
 
