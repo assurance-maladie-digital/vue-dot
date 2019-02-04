@@ -38,7 +38,7 @@
 		mounted() {
 			// Redirect default route
 			if (this.$route.path === '/') {
-				this.$router.push(`/${currentLang}/`);
+				this.$router.push(`/${this.currentLang}/`);
 			}
 		}
 	};
