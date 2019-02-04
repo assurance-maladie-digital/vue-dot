@@ -116,7 +116,7 @@
 
 ### Documentation
 
--   Mise à jour et correction de la roadmap
+-   Mise à jour et correction de la feuille de route
 -   Ajout de la recherche Algolia
 -   Ajout d'un lien vers la newsletter
 -   Ajout du support de plusieurs versions

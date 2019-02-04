@@ -1,4 +1,4 @@
-# Roadmap
+# Feuille de route
 
 VueDot est toujours en développement. Sur cette page, vous pouvez voir ce qui est prévu pour l'avenir. Cette liste n'est pas exhaustive et peut être modifiée à tout moment sans préavis.
 
