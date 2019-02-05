@@ -198,6 +198,11 @@
 			padding-left: 0px !important;
 		}
 	}
+
+	// Disable transitions by default for better loading
+	* {
+		transition: none !important;
+	}
 </style>
 
 <style lang="stylus">
