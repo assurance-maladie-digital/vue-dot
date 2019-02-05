@@ -39,9 +39,9 @@ const fr = {
 				to: '/fr/contribuer/'
 			},
 			{
-				title: 'Roadmap',
+				title: 'Feuille de route',
 				icon: 'clock',
-				to: '/fr/roadmap/'
+				to: '/fr/feuille-de-route/'
 			},
 			{
 				title: 'Composants IU',

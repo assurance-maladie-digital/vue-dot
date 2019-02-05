@@ -69,11 +69,12 @@
 						:key="index"
 						class="elevation-6"
 					>
-						<VImg
+						<img
 							v-show="card.image"
 							:src="$withBase(card.image)"
 							height="150"
-						/>
+							class="home-image"
+						>
 
 						<VCardTitle primary-title>
 							<div>
@@ -132,12 +133,18 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.section-cards {
 		display: grid;
 		grid-gap: 32px;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		grid-auto-rows: minmax(300px, auto);
+	}
+
+	.home-image {
+		width: 100%;
+		display: block;
+		object-fit: cover;
 	}
 
 	@media only screen and (max-width: 400px) {

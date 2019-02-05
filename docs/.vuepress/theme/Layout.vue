@@ -1,82 +1,17 @@
 <template>
 	<div class="theme-container">
-		<VApp>
+		<VApp :class="{ 'is-not-client': !isClient, 'sidebar': sidebarShow }">
 			<Toolbar @drawer:update="sidebarShow = !sidebarShow" />
 
 			<VNavigationDrawer
+				v-model="sidebarShow"
 				app
 				fixed
 				clipped
 				:value="sidebar"
-				v-model="sidebarShow"
+				:class="{ 'is-not-client': !isClient, 'drawer': sidebarShow }"
 			>
-				<VList expand>
-					<template v-for="(item, index) in $t('toolbar.sidebarItems')">
-						<VListTile
-							v-show="!item.items"
-							:key="item.title"
-							:to="item.to || null"
-							:href="item.href || null"
-							:target="item.href ? '_blank' : null"
-							:rel="item.href ? 'noopener noreferrer' : null"
-							ripple
-							exact
-						>
-							<VListTileContent>
-								<VListTileTitle>
-									<SvgIcon
-										v-show="item.icon"
-										:icon="item.icon"
-										class="mr-3"
-									/>
-
-									<span>{{ item.title }}</span>
-								</VListTileTitle>
-							</VListTileContent>
-						</VListTile>
-
-						<VListGroup
-							v-show="item.items"
-							:key="`group-${index}`"
-							:group="item.group"
-							no-action
-							active-class="primary--text your-class"
-						>
-							<VListTile
-								:to="item.to"
-								slot="activator"
-								ripple
-								exact
-							>
-								<VListTileContent>
-									<VListTileTitle>
-										<SvgIcon
-											v-show="item.icon"
-											:icon="item.icon"
-											class="mr-3"
-										/>
-
-										<span>{{ item.title }}</span>
-									</VListTileTitle>
-								</VListTileContent>
-							</VListTile>
-
-							<VListTile
-								v-for="item in item.items"
-								:key="`sub-${item.title}`"
-								:to="item.to"
-								ripple
-								exact
-							>
-								<VListTileContent>
-									<VListTileTitle>
-										<span>{{ item.title }}</span>
-									</VListTileTitle>
-								</VListTileContent>
-							</VListTile>
-						</VListGroup>
-					</template>
-				</VList>
+				<Sitemap />
 			</VNavigationDrawer>
 
 			<VContent>
@@ -138,6 +73,7 @@
 
 <script>
 	import Toolbar from '../components/Toolbar.vue';
+	import Sitemap from '../components/Sitemap.vue';
 	import Home from './layouts/Home.vue';
 	import Basic from './layouts/Basic.vue';
 
@@ -145,12 +81,13 @@
 		name: 'Layout',
 		components: {
 			Toolbar,
+			Sitemap,
 			Home,
 			Basic
 		},
 		data() {
 			return {
-				sidebarShow: false
+				sidebarShow: true
 			};
 		},
 		computed: {
@@ -166,12 +103,6 @@
 			}
 		},
 		methods: {
-			guard() {
-				// If the route doesn't match selected langage, redirect
-				if (!this.$route.path.includes(this.$i18n.locale)) {
-					this.$router.push(`/${this.$i18n.locale}/`);
-				}
-			},
 			updateSidebar() {
 				if (!this.$vuetify.breakpoint.mdAndDown) {
 					this.sidebarShow = !this.$page.frontmatter.home;
@@ -183,20 +114,24 @@
 				this.updateSidebar();
 			}
 		},
+		created() {
+			// Disable sidebar on SSR on home page
+			if (this.$page.frontmatter.home) {
+				this.sidebarShow = false;
+			}
+		},
 		mounted() {
 			this.updateSidebar();
 
 			// Redirect default route
 			if (this.$route.path === '/') {
-				this.$router.push(`/${this.$i18n.locale}/`);
+				this.$router.push('/en/');
 			}
-
-			this.guard();
 		}
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.footer-content {
 		opacity: .9;
 	}
@@ -210,7 +145,7 @@
 		align-items: center;
 	}
 
-	.v-navigation-drawer >>> .v-list .v-list__tile {
+	.v-navigation-drawer /deep/ .v-list .v-list__tile {
 		transition: background .15s !important;
 	}
 
@@ -224,9 +159,24 @@
 		text-align: center;
 	}
 
+	// Fix a bug due to SSR
 	.v-navigation-drawer {
 		max-height: 100% !important;
 	}
+
+	// Apply default padding on SSR when not on home page
+	.application.is-not-client.sidebar .v-content {
+		padding: 64px 0px 0px 300px !important;
+	}
+
+	// Apply default styles on SSR
+	.drawer.is-not-client {
+		height: 100% !important;
+		width: 300px !important;
+		margin-top: 64px !important;
+		transform: translateX(0px) !important;
+	}
+
 	.v-content {
 		padding-bottom: 0 !important;
 	}
@@ -239,6 +189,19 @@
 		.container {
 			padding: 16px 24px !important;
 		}
+
+		.drawer.is-not-client {
+			transform: translateX(-300px) !important;
+		}
+
+		.application.is-not-client.sidebar .v-content {
+			padding-left: 0px !important;
+		}
+	}
+
+	// Disable transitions by default for better loading
+	* {
+		transition: none !important;
 	}
 </style>
 

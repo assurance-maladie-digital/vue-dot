@@ -8,7 +8,8 @@
 			<VSpacer v-show="!$vuetify.breakpoint.xsOnly" />
 
 			<VBtn
-				:aria-label="$t('codepen.invertColors')"
+				v-show="isClient"
+				:aria-label="t('codepen.invertColors')"
 				icon
 				@click="dark = !dark"
 			>
@@ -16,7 +17,8 @@
 			</VBtn>
 
 			<VBtn
-				:aria-label="$t('codepen.codepen')"
+				v-show="isClient"
+				:aria-label="t('codepen.codepen')"
 				icon
 				@click="sendToCodepen"
 			>
@@ -24,7 +26,7 @@
 			</VBtn>
 
 			<VBtn
-				:aria-label="$t('codepen.github')"
+				:aria-label="t('codepen.github')"
 				:href="`https://github.com/assurance-maladie-digital/vue-dot/tree/master/docs/examples/${file}.vue`"
 				icon
 				target="_blank"
@@ -34,7 +36,8 @@
 			</VBtn>
 
 			<VBtn
-				:aria-label="$t('codepen.code')"
+				v-show="isClient"
+				:aria-label="t('codepen.code')"
 				icon
 				@click="expand = !expand"
 			>
@@ -152,13 +155,9 @@
 		},
 		created() {
 			this.expand = Boolean(this.internalValue.show);
-		},
-		mounted() {
-			import(
-				/* webpackChunkName: "examples" */
-				/* webpackMode: "lazy-once" */
-				`../../examples/${this.file}.vue`
-			).then(comp => (this.component = comp.default));
+
+			const comp = require(`../../examples/${this.file}.vue`);
+			this.component = comp.default
 
 			import(
 				/* webpackChunkName: "examples-source" */
@@ -203,22 +202,21 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.code-window {
 		height: 100%;
 		overflow-y: auto;
 		max-height: calc(100vh - 275px);
 	}
 
-	.v-toolbar >>> .v-toolbar__content {
+	.v-toolbar /deep/ .v-toolbar__content {
 		flex-wrap: wrap;
 		height: auto !important;
 		justify-content: flex-start !important;
-	}
 
-	.v-toolbar >>> .v-toolbar__content > *:first-child.v-btn--icon,
-	.v-toolbar__content > *:last-child.v-btn--icon {
-		margin: 0 !important;
+		> *:first-child.v-btn--icon,
+		> *:last-child.v-btn--icon {
+			margin: 0 !important;
+		}
 	}
 </style>
-

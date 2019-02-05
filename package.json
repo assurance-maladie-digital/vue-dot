@@ -99,7 +99,6 @@
 		"uglifyjs-webpack-plugin": "^2.1.1",
 		"vue": "^2.5.22",
 		"vue-cli-plugin-vuetify": "^0.4.6",
-		"vue-i18n": "^8.7.0",
 		"vue-prism-component": "^1.1.1",
 		"vue-server-renderer": "^2.5.22",
 		"vue-template-compiler": "^2.5.22",
@@ -107,7 +106,8 @@
 		"vuetify": "^1.4.2",
 		"vuetify-loader": "^1.1.1",
 		"webpack": "^4.28.4",
-		"webpack-bundle-analyzer": "^3.0.3"
+		"webpack-bundle-analyzer": "^3.0.3",
+		"webpack-node-externals": "^1.7.2"
 	},
 	"postcss": {
 		"plugins": {
