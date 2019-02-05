@@ -8,6 +8,7 @@
 			<VSpacer v-show="!$vuetify.breakpoint.xsOnly" />
 
 			<VBtn
+				v-show="isClient"
 				:aria-label="t('codepen.invertColors')"
 				icon
 				@click="dark = !dark"
@@ -16,6 +17,7 @@
 			</VBtn>
 
 			<VBtn
+				v-show="isClient"
 				:aria-label="t('codepen.codepen')"
 				icon
 				@click="sendToCodepen"
@@ -34,6 +36,7 @@
 			</VBtn>
 
 			<VBtn
+				v-show="isClient"
 				:aria-label="t('codepen.code')"
 				icon
 				@click="expand = !expand"
@@ -152,13 +155,9 @@
 		},
 		created() {
 			this.expand = Boolean(this.internalValue.show);
-		},
-		mounted() {
-			import(
-				/* webpackChunkName: "examples" */
-				/* webpackMode: "lazy-once" */
-				`../../examples/${this.file}.vue`
-			).then(comp => (this.component = comp.default));
+
+			const comp = require(`../../examples/${this.file}.vue`);
+			this.component = comp.default
 
 			import(
 				/* webpackChunkName: "examples-source" */
@@ -221,4 +220,3 @@
 		}
 	}
 </style>
-
