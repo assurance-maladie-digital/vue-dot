@@ -135,10 +135,27 @@
 
 <style lang="scss">
 	.section-cards {
-		display: grid;
-		grid-gap: 32px;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		grid-auto-rows: minmax(300px, auto);
+		display: flex;
+		flex-wrap: wrap;
+
+		.v-card {
+			margin: 15px;
+			width: 300px;
+		}
+	}
+
+	@supports (display: grid) {
+		.section-cards {
+			display: grid;
+			grid-gap: 32px;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-auto-rows: minmax(300px, auto);
+
+			.v-card {
+				margin: 0;
+				width: auto;
+			}
+		}
 	}
 
 	.home-image {
