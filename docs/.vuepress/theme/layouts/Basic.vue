@@ -1,8 +1,6 @@
 <template>
-	<div>
-		<VContainer>
-			<Content />
-		</VContainer>
+	<div class="custom-ctn">
+		<Content />
 	</div>
 </template>
 

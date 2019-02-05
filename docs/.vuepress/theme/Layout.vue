@@ -186,12 +186,24 @@
 		padding-bottom: 0 !important;
 	}
 
+	.v-content__wrap {
+		display: flex;
+		justify-content: center;
+	}
+
 	.v-footer {
 		position: static !important;
 	}
 
+	.custom-ctn {
+		padding: 24px;
+		margin: 0 auto;
+		flex: 1 1 100%;
+		max-width: 1200px;
+	}
+
 	@media only screen and (max-width: 959px) {
-		.container {
+		.custom-ctn {
 			padding: 16px 24px !important;
 		}
 
