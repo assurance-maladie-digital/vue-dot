@@ -113,7 +113,7 @@ pre code {
 
 .header-anchor {
 	color: #0c4887;
-	transition: opacity .15s;
+	transition: opacity .15s !important;
 	text-decoration: none;
 	font-size: .85em;
 	float: left;

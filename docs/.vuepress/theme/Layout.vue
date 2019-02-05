@@ -200,7 +200,8 @@
 	}
 
 	// Disable transitions by default for better loading
-	* {
+	a,
+	button {
 		transition: none !important;
 	}
 </style>
