@@ -54,6 +54,12 @@ Le composant `DataList` est utilisé pour afficher des données tabulaires.
         description: 'En mode colonne, les valeurs apparaîtront sous les étiquettes. Activé automatiquement sur mobile.'
       },
       {
+        name: 'flex',
+        default: 'faux',
+        type: 'booléen',
+        description: 'Active flexbox et le mode colonne.'
+      },
+      {
         name: 'placeholder',
         default: `'…'`,
         type: 'chaîne de caractères',
@@ -82,6 +88,12 @@ Le composant `DataList` est utilisé pour afficher des données tabulaires.
 Affiche les valeurs sous les étiquettes.
 
 <Example value="fr/data-list/column" />
+
+### Flex
+
+Active flexbox sur la liste et le mode colonne. Les sections retounent à la ligne automatiquement.
+
+<Example value="fr/data-list/flex" />
 
 ### Personnalisation
 
