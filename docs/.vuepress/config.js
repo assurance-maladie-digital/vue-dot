@@ -1,6 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
+	base: '/vue-dot/',
 	head: [
 		[
 			'link',
