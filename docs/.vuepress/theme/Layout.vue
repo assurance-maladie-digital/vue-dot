@@ -164,6 +164,11 @@
 		max-height: 100% !important;
 	}
 
+	// Overlap toolbar on mobile
+	.v-navigation-drawer--is-mobile {
+		z-index: 8 !important;
+	}
+
 	// Apply default padding on SSR when not on home page
 	.application.is-not-client.sidebar .v-content {
 		padding: 64px 0px 0px 300px !important;
