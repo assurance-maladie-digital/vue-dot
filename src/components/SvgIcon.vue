@@ -1334,7 +1334,7 @@
 		computed: {
 			themeIcons(): object {
 				// If there is icons in theme
-				if (this.$theme.config && this.$theme.config.icons) {
+				if (this.$theme && this.$theme.config && this.$theme.config.icons) {
 					const filtered = this.$theme.config.icons.filter((icon: Icon) => {
 						return this.icon === icon.name && isSvg(icon.svg);
 					});
