@@ -25,7 +25,7 @@ describe('SvgIcon.vue without theme', () => {
 	it('renders correctly', () => {
 		const wrapper = build();
 
-		expect((wrapper.vm as any).themeIcons).toBe({});
+		expect((wrapper.vm as any).themeIcons).toEqual({});
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 });
