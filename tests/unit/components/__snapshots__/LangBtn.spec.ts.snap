@@ -1,0 +1,1112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LangBtn.vue renders correctly 1`] = `
+<vmenu-stub opendelay="0" closedelay="0" contentclass="" allowoverflow="true" maxwidth="auto" nudgebottom="0" nudgeleft="0" nudgeright="0" nudgetop="0" nudgewidth="0" closeonclick="true" closeoncontentclick="true" maxheight="auto" openonclick="true" offsety="true" origin="top left" transition="v-menu-transition" availablelaguages="fr,en">
+  <vbtn-stub color="currentColor" activeclass="v-btn--active" ripple="true" tag="button" depressed="true" outline="true" type="button" aria-label="Choix de la langue. Actuellement : Français">
+    <!----> <span class="ml-2">
+			Français
+		</span>
+    <svgicon-stub color="currentColor" icon="expand" size="10px" class="ml-2"></svgicon-stub>
+  </vbtn-stub>
+  <vlist-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Afar</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Аҧсуа</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Afrikaans</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Akana</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>አማርኛ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Aragonés</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>العربية</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>অসমীয়া</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Авар</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Aymar</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Azərbaycanca / آذربايجان</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Башҡорт</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Беларуская</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Български</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>भोजपुरी</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Bislama</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Bamanankan</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>বাংলা</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>བོད་ཡིག / Bod skad</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Brezhoneg</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Bosanski</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Català</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Нохчийн</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Chamoru</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Corsu</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Nehiyaw</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Česky</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>словѣньскъ / slověnĭskŭ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Чăваш</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Cymraeg</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Dansk</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Deutsch</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ދިވެހިބަސް</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ཇོང་ཁ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Ɛʋɛ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Ελληνικά</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>English</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Esperanto</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Español</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Eesti</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Euskara</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>فارسی</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Fulfulde</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Suomi</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Na Vosa Vakaviti</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Føroyskt</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Français</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Frysk</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Gaeilge</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Gàidhlig</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Galego</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Avañe'ẽ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ગુજરાતી</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Gaelg</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>هَوُسَ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>עברית</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>हिन्दी</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Hiri Motu</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Hrvatski</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Krèyol ayisyen</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Magyar</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Հայերեն</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Otsiherero</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Interlingua</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Bahasa Indonesia</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Interlingue</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Igbo</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ꆇꉙ / 四川彝语</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Iñupiak</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Ido</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Íslenska</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Italiano</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ᐃᓄᒃᑎᑐᑦ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>日本語</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Basa Jawa</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ქართული</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>KiKongo</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Gĩkũyũ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kuanyama</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Қазақша</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kalaallisut</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ភាសាខ្មែរ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ಕನ್ನಡ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>한국어</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kanuri</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>कश्मीरी / كشميري</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kurdî / كوردی</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Коми</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kernewek</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kırgızca / Кыргызча</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Latina</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Lëtzebuergesch</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Luganda</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Limburgs</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Lingála</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ລາວ / Pha xa lao</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Lietuvių</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Latviešu</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Malagasy</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kajin Majel / Ebon</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Māori</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Македонски</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>മലയാളം</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Монгол</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Moldovenească</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>मराठी</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Bahasa Melayu</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>bil-Malti</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Myanmasa</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Dorerin Naoero</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Sindebele</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>नेपाली</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Oshiwambo</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Nederlands</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Norsk (nynorsk)</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Norsk (bokmål / riksmål)</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>isiNdebele</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Diné bizaad</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Chi-Chewa</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Occitan</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ᐊᓂᔑᓈᐯᒧᐎᓐ / Anishinaabemowin</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Oromoo</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ଓଡ଼ିଆ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Иронау</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ਪੰਜਾਬੀ / पंजाबी / پنجابي</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Pāli / पाऴि</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Polski</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>پښتو</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Português</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Runa Simi</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Rumantsch</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kirundi</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Română</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Русский</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kinyarwandi</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>संस्कृतम्</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Sardu</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>सिनधि</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Sámegiella</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Sängö</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Srpskohrvatski / Српскохрватски</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>සිංහල</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Slovenčina</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Slovenščina</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Gagana Samoa</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>chiShona</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Soomaaliga</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Shqip</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Српски</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>SiSwati</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Sesotho</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Basa Sunda</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Svenska</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Kiswahili</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>தமிழ்</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>తెలుగు</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Тоҷикӣ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ไทย / Phasa Thai</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ትግርኛ</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Туркмен / تركمن</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Tagalog</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Setswana</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Lea Faka-Tonga</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Türkçe</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Xitsonga</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Tatarça</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Twi</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Reo Mā\`ohi</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Uyƣurqə / ئۇيغۇرچە</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Українська</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>اردو</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Ўзбек</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Tshivenḓa</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Tiếng Việt</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Volapük</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Walon</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Wollof</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>isiXhosa</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>ייִדיש</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Yorùbá</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>Cuengh / Tôô / 壮语</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>中文</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+    <vlisttile-stub color="currentColor" activeclass="primary--text" ripple="true" avatar="true">
+      <vbtn-stub color="currentColor" activeclass="v-btn--active" tag="button" flat="true" type="button" class="ma-0 text-none">
+        <!---->
+        <vlisttiletitle-stub>isiZulu</vlisttiletitle-stub>
+      </vbtn-stub>
+    </vlisttile-stub>
+  </vlist-stub>
+</vmenu-stub>
+`;
