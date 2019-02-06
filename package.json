@@ -142,7 +142,7 @@
 			"jest-serializer-vue"
 		],
 		"testMatch": [
-			"<rootDir>/(tests/unit/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx))"
+			"<rootDir>/(tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx))"
 		],
 		"coverageReporters": [
 			"json",
@@ -157,10 +157,12 @@
 			"**/*.{ts,vue}",
 			"!**/node_modules/**",
 			"!**/*.d.ts",
-			"!**/router.ts",
-			"!**/index.ts",
-			"!**/main.ts",
-			"!**/App.vue"
+			"!**/docs/**",
+			"!**/scripts/**"
+		],
+		"testURL": "http://localhost/",
+		"transformIgnorePatterns": [
+			"./node_modules/vuetify"
 		]
 	},
 	"remarkConfig": {
