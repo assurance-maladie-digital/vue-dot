@@ -24,6 +24,6 @@ module.exports = {
 		'vue/no-v-html': false
 	},
 	parserOptions: {
-		parser: 'typescript-eslint-parser'
+		parser: '@typescript-eslint/parser'
 	}
 };

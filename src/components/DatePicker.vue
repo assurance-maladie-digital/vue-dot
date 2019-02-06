@@ -183,7 +183,7 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import * as dayjs from 'dayjs';
+	import dayjs from 'dayjs';
 
 	import SvgIcon from '@/components/SvgIcon.vue';
 
