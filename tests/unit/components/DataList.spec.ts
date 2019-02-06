@@ -1,5 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Footer from '@/components/DataList.vue';
+import DataList from '@/components/DataList.vue';
 
 import Vuetify from 'vuetify';
 
@@ -39,7 +39,7 @@ localVue.use(Vuetify);
 
 describe('DataList.vue', () => {
 	const build = () => {
-		const wrapper = shallowMount(Footer, {
+		const wrapper = shallowMount(DataList, {
 			localVue,
 			propsData: {
 				list: testData,
