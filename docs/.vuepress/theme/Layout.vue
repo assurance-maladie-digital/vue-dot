@@ -8,6 +8,7 @@
 				app
 				fixed
 				clipped
+				v-resize="updateSidebar"
 				:value="sidebar"
 				:class="{ 'is-not-client': !isClient, 'drawer': sidebarShow }"
 			>
