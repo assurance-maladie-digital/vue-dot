@@ -654,8 +654,8 @@
 		},
 		data() {
 			return {
-				ref: 'date-picker-ref-' + Math.floor(Math.random() * 1000).toString(),
-				menuRef: 'menu-picker-ref-' + Math.floor(Math.random() * 1000).toString(),
+				ref: 'date-picker-ref',
+				menuRef: 'menu-picker-ref',
 				date: this.value || '',
 				menu: false,
 				dateFormatted: '',
