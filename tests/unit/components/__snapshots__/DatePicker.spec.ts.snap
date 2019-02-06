@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker.vue renders correctly 1`] = `
+<div>
+  <vtextfield-stub color="primary" clear-icon="$vuetify.icons.clear" error-count="1" error-messages="" hint="Format JJ/MM/AAAA" label="Date" mask="##/##/####" persistent-hint="true" return-masked-value="true" rules="" success-messages="" type="text" value="">
+    <vbtn-stub activeclass="v-btn--active" ripple="true" tag="button" icon="true" type="button" slot="prepend" aria-label="Sélection de la date" class="ma-0 activator-icon-menu-picker-ref">
+      <svgicon-stub color="#808080" icon="calendar" size=""></svgicon-stub>
+    </vbtn-stub>
+  </vtextfield-stub>
+  <vmenu-stub opendelay="0" closedelay="0" lazy="true" attach=".activator-icon-menu-picker-ref" contentclass="" maxwidth="auto" minwidth="300px" nudgebottom="55" nudgeleft="0" nudgeright="40" nudgetop="0" nudgewidth="0" offsetoverflow="true" zindex="1" closeonclick="true" maxheight="auto" openonclick="true" offsety="true" origin="top left" transition="scale-transition">
+    <vdatepicker-stub color="primary" notitle="true" width="300" eventcolor="warning" firstdayofweek="1" locale="fr-fr" max="2019-02-06" nexticon="$vuetify.icons.next" previcon="$vuetify.icons.prev" showcurrent="true" type="date" value=""></vdatepicker-stub>
+  </vmenu-stub>
+</div>
+`;
