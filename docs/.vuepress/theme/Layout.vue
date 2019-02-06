@@ -218,7 +218,7 @@
 
 	// Disable transitions by default for better loading
 	a,
-	button {
+	button:not(.transition) {
 		transition: none !important;
 	}
 
