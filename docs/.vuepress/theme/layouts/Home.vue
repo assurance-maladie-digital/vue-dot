@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="home-container">
 		<VContainer>
 			<VLayout
 				column
@@ -100,7 +100,7 @@
 					large
 					outline
 					color="accent"
-					class="mt-5"
+					class="mt-5 newsletter"
 					:href="config.newsletterLink"
 					target="_blank"
 					rel="noopener noreferrer"
@@ -164,13 +164,36 @@
 		object-fit: cover;
 	}
 
-	@media only screen and (max-width: 400px) {
+	.newsletter {
+		overflow: hidden;
+		min-height: 48px;
+		height: auto !important;
+
+		.v-btn__content {
+			padding: 10px 5px;
+			white-space: normal;
+
+			.x-svg-icon {
+				min-width: 1.35em;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 430px) {
 		.section-cards {
 			display: block;
 		}
 
 		.section-cards > * + * {
-			margin-top: 32px;
+			margin-top: 32px !important;
+		}
+
+		.newsletter {
+			text-align: center;
+
+			.x-svg-icon {
+				display: none;
+			}
 		}
 	}
 </style>
