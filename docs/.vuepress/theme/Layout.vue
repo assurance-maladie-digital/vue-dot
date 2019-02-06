@@ -221,6 +221,10 @@
 	button {
 		transition: none !important;
 	}
+
+	* {
+		max-width: 100%;
+	}
 </style>
 
 <style lang="stylus">
