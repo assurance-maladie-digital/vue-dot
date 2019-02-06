@@ -118,7 +118,7 @@
 
 -   Mise à jour et correction de la feuille de route
 -   Ajout de la recherche Algolia
--   Ajout d'un lien vers la newsletter
+-   Ajout d'un lien vers la lettre d'information
 -   Ajout du support de plusieurs versions
 -   Avertissement sur l'installation de Vuetify
 -   Utilisation du préfixe X

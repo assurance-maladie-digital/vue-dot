@@ -17,7 +17,7 @@ const fr = {
 				href: 'https://www.npmjs.com/package/@cnamts/vue-dot'
 			},
 			{
-				title: 'Newsletter',
+				title: 'Lettre d\'information',
 				icon: 'write-email',
 				href: 'https://www.getrevue.co/profile/vue-dot'
 			}
