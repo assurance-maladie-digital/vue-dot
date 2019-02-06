@@ -158,7 +158,8 @@
 			"!**/node_modules/**",
 			"!**/*.d.ts",
 			"!**/docs/**",
-			"!**/scripts/**"
+			"!**/scripts/**",
+			"!**/playground/**"
 		],
 		"testURL": "http://localhost/",
 		"transformIgnorePatterns": [
