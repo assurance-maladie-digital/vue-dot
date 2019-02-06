@@ -13,24 +13,27 @@ export default {
 		};
 	},
 	created() {
-		// Get accepted languages in url ('/en/' format)
-		const accepted = this.translations.map((lang) => {
-			return `/${lang}/`;
-		});
-
-		// Find current languahe in accepted
-		const currentLang = accepted.find((lang) => {
-			return this.$route.path.match(lang)
-		});
-
-		if (currentLang) {
-			this.currentLang = currentLang.replace(/\//g, '');
-		}
+		this.setLang();
 	},
 	mounted() {
 		this.isClient = true;
 	},
 	methods: {
+		setLang() {
+			// Get accepted languages in url ('/en/' format)
+			const accepted = this.translations.map((lang) => {
+				return `/${lang}/`;
+			});
+
+			// Find current languahe in accepted
+			const currentLang = accepted.find((lang) => {
+				return this.$route.path.match(lang)
+			});
+
+			if (currentLang) {
+				this.currentLang = currentLang.replace(/\//g, '');
+			}
+		},
 		// Find in object by passing a string
 		deepFind(obj, str) {
 			// Convert indexes to properties

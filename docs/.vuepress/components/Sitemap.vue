@@ -3,7 +3,7 @@
 		expand
 		:class="{ 'transparent': transparentBg }"
 	>
-		<template v-for="(item, index) in t('toolbar.sidebarItems')">
+		<template v-for="(item, index) in items">
 			<VListTile
 				v-show="!item.items"
 				:key="item.title"
@@ -75,10 +75,29 @@
 <script>
 	export default {
 		name: 'Sitemap',
+		data() {
+			return {
+				items: []
+			};
+		},
 		props: {
 			transparentBg: {
 				type: Boolean,
 				default: false
+			}
+		},
+		watch: {
+			$page: {
+				handler() {
+					this.setLang();
+					this.updateItems();
+				},
+				immediate: true
+			}
+		},
+		methods: {
+			updateItems() {
+				this.items = this.t('toolbar.sidebarItems');
 			}
 		}
 	};
