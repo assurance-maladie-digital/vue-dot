@@ -36,10 +36,12 @@
 </template>
 
 <script>
+	import Prism from 'vue-prism-component';
+
 	export default {
 		name: 'Code',
 		components: {
-			Prism: () => import('vue-prism-component')
+			Prism
 		},
 		data() {
 			return {
