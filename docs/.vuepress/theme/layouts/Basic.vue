@@ -6,7 +6,7 @@
 
 		<VFabTransition>
 			<VBtn
-				v-show="offsetTop > 0"
+				v-show="offsetTop > 0 && isClient"
 				color="accent"
 				dark
 				fixed
