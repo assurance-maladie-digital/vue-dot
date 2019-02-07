@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import DataList from '@/components/DataList.vue';
 
@@ -35,7 +36,7 @@ const testData = [
 ];
 
 const localVue = createLocalVue();
-localVue.use(Vuetify);
+Vue.use(Vuetify);
 
 describe('DataList.vue', () => {
 	const build = () => {

@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import DatePicker from '@/components/DatePicker.vue';
 
@@ -6,7 +7,7 @@ import VueDot from '@/index';
 import { default as theme } from '../theme.json';
 
 const localVue = createLocalVue();
-localVue.use(Vuetify);
+Vue.use(Vuetify);
 
 localVue.use(VueDot, {
 	theme

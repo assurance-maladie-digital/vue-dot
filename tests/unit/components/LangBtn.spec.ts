@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { mount, createLocalVue } from '@vue/test-utils';
 import LangBtn from '@/components/LangBtn.vue';
 
@@ -6,7 +7,7 @@ import VueDot from '@/index';
 import { default as theme } from '../theme.json';
 
 const localVue = createLocalVue();
-localVue.use(Vuetify);
+Vue.use(Vuetify);
 
 localVue.use(VueDot, {
 	theme
