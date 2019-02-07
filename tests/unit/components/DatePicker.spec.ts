@@ -30,4 +30,12 @@ describe('DatePicker.vue', () => {
 
 		expect(wrapper.html()).toMatchSnapshot();
 	});
+
+	it('updates the date when blurred', () => {
+		const wrapper = build();
+
+		(wrapper.vm as any).date = '11-01-2001';
+
+		expect((wrapper.vm as any).computedDateFormatted).toBe('01/11/2001');
+	});
 });
