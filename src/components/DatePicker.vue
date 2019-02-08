@@ -773,7 +773,9 @@
 		},
 		methods: {
 			// Save the date, see https://vuetifyjs.com/en/components/date-pickers#example-date-dialog-and-menu
+			/* istanbul ignore next */
 			save(date: string): void {
+				/* istanbul ignore next */
 				(this.$refs[this.menuRef] as any).save(date);
 			},
 			// Format the date with `dateFormat` (default 'DD/MM/YYYY')
