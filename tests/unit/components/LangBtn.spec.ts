@@ -15,6 +15,8 @@ localVue.use(VueDot, {
 
 describe('LangBtn.vue', () => {
 	const build = () => {
+		document.body.setAttribute('data-app', 'true');
+
 		const wrapper = mount(LangBtn, {
 			localVue,
 			propsData: {
