@@ -1,7 +1,5 @@
 <template>
-	<div
-		class="custom-ctn"
-	>
+	<div class="custom-ctn">
 		<Content />
 
 		<VFabTransition>

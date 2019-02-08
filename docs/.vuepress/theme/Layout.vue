@@ -1,16 +1,21 @@
 <template>
 	<div class="theme-container">
-		<VApp :class="{ 'is-not-client': !isClient, 'sidebar': sidebarShow }">
-			<Toolbar @drawer:update="sidebarShow = !sidebarShow" />
+		<VApp
+			:class="{
+				'is-not-client': !isClient,
+				'sidebar': sidebar
+			}"
+		>
+			<Toolbar @drawer:update="sidebar = !sidebar" />
 
 			<VNavigationDrawer
-				v-model="sidebarShow"
+				v-if="!$page.frontmatter.home"
+				v-model="sidebar"
 				app
 				fixed
 				clipped
-				v-resize="updateSidebar"
 				:value="sidebar"
-				:class="{ 'is-not-client': !isClient, 'drawer': sidebarShow }"
+				:class="{ 'is-not-client': !isClient, 'drawer': sidebar }"
 			>
 				<Sitemap />
 			</VNavigationDrawer>
@@ -88,7 +93,7 @@
 		},
 		data() {
 			return {
-				sidebarShow: true
+				sidebar: !this.$vuetify.breakpoint.mdAndDown
 			};
 		},
 		computed: {
@@ -98,32 +103,9 @@
 				}
 
 				return this.$page.frontmatter.layout || 'Basic'
-			},
-			sidebar() {
-				return this.sidebarShow;
-			}
-		},
-		methods: {
-			updateSidebar() {
-				if (!this.$vuetify.breakpoint.mdAndDown) {
-					this.sidebarShow = !this.$page.frontmatter.home;
-				}
-			}
-		},
-		watch: {
-			$page() {
-				this.updateSidebar();
-			}
-		},
-		created() {
-			// Disable sidebar on SSR on home page
-			if (this.$page.frontmatter.home) {
-				this.sidebarShow = false;
 			}
 		},
 		mounted() {
-			this.updateSidebar();
-
 			// Redirect default route
 			if (this.$route.path === '/') {
 				this.$router.push('/en/');
@@ -201,6 +183,12 @@
 		margin: 0 auto;
 		flex: 1 1 100%;
 		max-width: 1200px;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.custom-ctn {
+			max-width: 100%;
+		}
 	}
 
 	@media only screen and (max-width: 959px) {
