@@ -768,12 +768,12 @@
 		},
 		created() {
 			this.loadLocale();
+			/* istanbul ignore next */
 			this.dateFormatted = this.value ? this.formatDate(this.date) : '';
 			this.$emit('change', this.formatDateForReturn(this.date));
 		},
 		methods: {
 			// Save the date, see https://vuetifyjs.com/en/components/date-pickers#example-date-dialog-and-menu
-			/* istanbul ignore next */
 			save(date: string): void {
 				/* istanbul ignore next */
 				(this.$refs[this.menuRef] as any).save(date);
@@ -814,6 +814,7 @@
 			},
 			loadLocale(this: any): void {
 				// Check if we need locale for `formatDate` or `formatDateReturn`
+				/* istanbul ignore next */
 				if (this.checkIfLocaleNeeded(this.dateFormat) || this.checkIfLocaleNeeded(this.dateFormatReturn)) {
 					// We want to load only locales from dayjs that really exists
 					// but the locale can be any ISO 8601 string

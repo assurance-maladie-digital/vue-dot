@@ -22,6 +22,10 @@ describe('DatePicker.vue', () => {
 			}
 		});
 
+		const app = document.createElement('div');
+		app.setAttribute('class', 'activator-icon-menu-picker-ref');
+		document.body.append(app);
+
 		return wrapper;
 	};
 
@@ -107,6 +111,7 @@ describe('DatePicker.vue', () => {
 		});
 
 		(wrapper.vm as any).menu = true;
+		(wrapper.vm as any).save();
 
 		expect(wrapper.html()).toMatchSnapshot();
 	});
