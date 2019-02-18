@@ -17,6 +17,8 @@ const VueDot: VueDotPlugin = {
 	}
 };
 
+// Ignore the next block in unit test
+/* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
 	window.Vue.use(VueDot);
 }

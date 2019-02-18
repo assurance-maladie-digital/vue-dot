@@ -136,13 +136,14 @@
 			"^.+\\.tsx?$": "ts-jest"
 		},
 		"moduleNameMapper": {
-			"^@/(.*)$": "<rootDir>/src/$1"
+			"^@/(.*)$": "<rootDir>/src/$1",
+			"^vue$": "<rootDir>/node_modules/vue/dist/vue.common.js"
 		},
 		"snapshotSerializers": [
 			"jest-serializer-vue"
 		],
 		"testMatch": [
-			"<rootDir>/(tests/unit/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx))"
+			"<rootDir>/(tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx))"
 		],
 		"coverageReporters": [
 			"json",
@@ -157,10 +158,13 @@
 			"**/*.{ts,vue}",
 			"!**/node_modules/**",
 			"!**/*.d.ts",
-			"!**/router.ts",
-			"!**/index.ts",
-			"!**/main.ts",
-			"!**/App.vue"
+			"!**/docs/**",
+			"!**/scripts/**",
+			"!**/playground/**"
+		],
+		"testURL": "http://localhost/",
+		"transformIgnorePatterns": [
+			"./node_modules/vuetify"
 		]
 	},
 	"remarkConfig": {

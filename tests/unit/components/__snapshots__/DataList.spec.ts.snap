@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataList.vue renders correctly 1`] = `
+<div class="subheading">
+  <div>
+    <h4 class="mb-3 headline">Informations</h4>
+  </div>
+  <dl class="field">
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        Civility
+      </dt>
+      <dd class="value body-1">
+        Mr
+      </dd>
+    </div>
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        Name
+      </dt>
+      <dd class="value body-1">
+        Dupont
+      </dd>
+    </div>
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        First name
+      </dt>
+      <dd class="value body-1">
+        Paul
+      </dd>
+    </div>
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        Birth date
+      </dt>
+      <dd class="value body-1">
+        09/24/1970
+      </dd>
+    </div>
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        Nationality
+      </dt>
+      <dd class="value body-1">
+        French
+      </dd>
+    </div>
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        Native country
+      </dt>
+      <dd class="value body-1">
+        France
+      </dd>
+    </div>
+    <div class="row mb-2"><dt class="key body-1" style="width: 200px; color: rgb(117, 117, 117);">
+        Date of registration
+      </dt>
+      <dd class="value body-1">
+        …
+      </dd>
+    </div>
+  </dl>
+</div>
+`;

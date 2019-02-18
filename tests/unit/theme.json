@@ -1,0 +1,35 @@
+{
+	"name": "vue-dot-test-unit",
+	"version": "0.0.1",
+	"config": {
+		"styles": {
+			".v-alert": {
+				"top": "0",
+				"width": "100%",
+				"position": "absolute"
+			}
+		},
+		"typography": {
+			"styles": {
+				".application" : {
+					"font-family": "'Open Sans', sans-serif"
+				}
+			}
+		},
+		"colors": {
+			"primary": "#0c4887",
+			"secondary": "#01579b",
+			"accent": "#0079bc",
+			"error": "#e54d42",
+			"info": "#0077c5",
+			"success": "#2d9437",
+			"warning": "#977000"
+		},
+		"icons": [
+			{
+				"name": "vuejs",
+				"svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><path fill=\"#4dba87\" d=\"M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z\"/><path fill=\"#435466\" d=\"M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z\"/></svg>"
+			}
+		]
+	}
+}

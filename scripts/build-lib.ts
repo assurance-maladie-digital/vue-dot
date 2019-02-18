@@ -41,7 +41,7 @@ execSync(
 	{ stdio: 'inherit' }
 );
 
-import * as glob from 'glob';
+import glob from 'glob';
 
 glob('src/**/*.vue', {}, (er, files) => {
 	files.forEach((file: string) => {

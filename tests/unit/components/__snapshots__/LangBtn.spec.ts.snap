@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LangBtn.vue renders available languages 1`] = `
+<div class="v-menu v-menu--inline">
+  <div class="v-menu__activator"><button type="button" class="v-btn v-btn--outline v-btn--depressed theme--light currentColor--text" aria-label="Choix de la langue. Actuellement : Français">
+      <div class="v-btn__content">
+        <!----> <span class="ml-2">
+			Français
+		</span> <span aria-hidden="true" class="x-svg-icon ml-2 custom-color" style="width: 10px; height: 10px;"><svg viewBox="0 0 24 24"><path d="M24 7.4l-2.8-2.8-9.2 9.2-9.2-9.2L0 7.4l12 12z"></path></svg> </span></div>
+    </button></div>
+</div>
+`;
+
+exports[`LangBtn.vue renders correctly 1`] = `
+<div class="v-menu v-menu--inline">
+  <div class="v-menu__activator"><button type="button" class="v-btn v-btn--outline v-btn--depressed theme--light currentColor--text" aria-label="Choix de la langue. Actuellement : Français">
+      <div class="v-btn__content">
+        <!----> <span class="ml-2">
+			Français
+		</span> <span aria-hidden="true" class="x-svg-icon ml-2 custom-color" style="width: 10px; height: 10px;"><svg viewBox="0 0 24 24"><path d="M24 7.4l-2.8-2.8-9.2 9.2-9.2-9.2L0 7.4l12 12z"></path></svg> </span></div>
+    </button></div>
+</div>
+`;

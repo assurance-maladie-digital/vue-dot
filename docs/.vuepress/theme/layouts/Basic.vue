@@ -1,12 +1,10 @@
 <template>
-	<div
-		class="custom-ctn"
-	>
+	<div class="custom-ctn">
 		<Content />
 
 		<VFabTransition>
 			<VBtn
-				v-show="offsetTop > 0"
+				v-show="offsetTop > 0 && isClient"
 				color="accent"
 				dark
 				fixed

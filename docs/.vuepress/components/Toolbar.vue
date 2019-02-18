@@ -8,7 +8,7 @@
 	>
 		<VBtn
 			icon
-			class="mr-3 menu-btn"
+			class="pa-0 mr-3 menu-btn"
 			:to="isClient ? null : '/sitemap/'"
 			:aria-label="t('menu')"
 			:class="{ 'is-not-client': !isClient }"
@@ -234,8 +234,10 @@
 			padding: 0 16px !important;
 		}
 
-		.menu-btn {
+		.v-toolbar .menu-btn {
 			margin: 0 !important;
+			padding: 0 !important;
+			margin-right: 15px !important;
 		}
 
 		.menu-btn.is-not-client {
@@ -243,14 +245,14 @@
 		}
 	}
 
-	@media only screen and (max-width: 400px) {
+	@media only screen and (max-width: 500px) {
 		.v-toolbar .v-btn,
 		.lang-btn /deep/ .v-btn {
 			padding: 0 10px !important;
 		}
 	}
 
-	@media only screen and (max-width: 360px) {
+	@media only screen and (max-width: 400px) {
 		.v-input.search {
 			display: none;
 		}
