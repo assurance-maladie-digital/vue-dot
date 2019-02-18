@@ -1,43 +1,35 @@
-import Vue from 'vue';
-import { shallowMount, createLocalVue } from '@vue/test-utils';
-
 import debounce from '@/directives/debounce';
 
-const Component = {
-	template:
-`<input
-	v-debounce="1000"
-
-	placeholder="Type here"
-	class="simple-input"
->`
-};
-
-import Vuetify from 'vuetify';
-import VueDot from '@/index';
-import { default as theme } from '../theme.json';
-
-const localVue = createLocalVue();
-Vue.use(Vuetify);
-
-localVue.use(VueDot, {
-	theme
-});
-
-localVue.directive('debounce', debounce as any);
+jest.useFakeTimers();
 
 describe('v-debounce', () => {
-	const build = () => {
-		const wrapper = shallowMount(Component, {
-			localVue
-		});
-
-		return wrapper;
-	};
-
 	it('renders correctly', () => {
-		const wrapper = build();
+		const input = document.createElement('input');
 
-		expect(wrapper.html()).toMatchSnapshot();
+		debounce.inserted(input, {
+			modifiers: 1000
+		});
+	});
+
+	it('renders correctly when the input element is in a div', () => {
+		const div = document.createElement('div');
+		const input = document.createElement('input');
+
+		div.appendChild(input);
+
+		debounce.inserted(div as any, {
+			modifiers: 1000
+		});
+	});
+
+	it('updates when the value is modified', () => {
+		const div = document.createElement('div');
+
+		debounce.inserted(div as any, {
+			modifiers: {
+				value: 1000,
+				oldValue: 200
+			}
+		});
 	});
 });

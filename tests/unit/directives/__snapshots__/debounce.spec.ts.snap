@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`v-debounce renders correctly 1`] = `<input placeholder="Type here" class="simple-input">`;
