@@ -1,0 +1,24 @@
+{
+	"private": true,
+	"name": "@cnamts/vue-dot-website",
+	"version": "1.6.1",
+	"description": "VueDot documentation website",
+	"license": "MIT",
+	"author": "Dylan Broussard <deraw@outlook.fr>",
+	"scripts": {
+		"docs:dev": "vuepress dev",
+		"docs:build": "vuepress build docs"
+	},
+	"dependencies": {
+		"@cnamts/vue-dot": "file:../vue-dot",
+		"@sentry/browser": "^4.6.1",
+		"dayjs": "^1.8.6",
+		"html-webpack-plugin": "^3.2.0",
+		"languages": "^0.1.3",
+		"prismjs": "^1.15.0",
+		"vue": "^2.6.6",
+		"vue-prism-component": "^1.1.1",
+		"vuepress": "^0.14.9",
+		"vuetify": "^1.5.1"
+	}
+}

@@ -1,13 +1,10 @@
 .DS_Store
 node_modules/
-/dist/
+dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/tests/unit/coverage
-/tests/e2e/reports
-selenium-debug.log
-/src/config/
+lerna-debug.log*
 
 # Editor directories and files
 .idea
@@ -15,5 +12,3 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
-
-docs/\.vuepress/dist/
