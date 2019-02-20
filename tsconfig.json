@@ -6,6 +6,7 @@
 		"jsx": "preserve",
 		"importHelpers": true,
 		"moduleResolution": "node",
+		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
 		"baseUrl": ".",
@@ -14,7 +15,7 @@
 			"jest"
 		],
 		"paths": {
-			"@/*": [
+			"vue-dot-src/*": [
 				"src/*"
 			]
 		},

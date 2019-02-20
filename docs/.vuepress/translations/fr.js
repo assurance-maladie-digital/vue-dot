@@ -2,6 +2,7 @@ const fr = {
 	name: 'VueDot',
 	home: '/fr/',
 	menu: 'Menu',
+	backToTop: 'Retour en haut',
 	toolbar: {
 		search: 'Rechercher',
 		ecosystem: 'Écosystème',
@@ -17,7 +18,7 @@ const fr = {
 				href: 'https://www.npmjs.com/package/@cnamts/vue-dot'
 			},
 			{
-				title: 'Newsletter',
+				title: 'Lettre d\'information',
 				icon: 'write-email',
 				href: 'https://www.getrevue.co/profile/vue-dot'
 			}
@@ -39,9 +40,9 @@ const fr = {
 				to: '/fr/contribuer/'
 			},
 			{
-				title: 'Roadmap',
+				title: 'Feuille de route',
 				icon: 'clock',
-				to: '/fr/roadmap/'
+				to: '/fr/feuille-de-route/'
 			},
 			{
 				title: 'Composants IU',

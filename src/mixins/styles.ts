@@ -36,6 +36,7 @@ const generator = (tags: any, validate: boolean): string => {
 	Object.keys(tags).map((currentTag: any) => {
 		const isClass = currentTag.match(/^\.[a-z- ]+$/gm);
 
+		/* istanbul ignore next */
 		if (!validate || (validate && allowedTags.includes(currentTag) || isClass)) {
 			const classBody = tags[currentTag];
 
@@ -60,6 +61,7 @@ const generator = (tags: any, validate: boolean): string => {
 };
 
 const append = (tags: any, style: any, id: string) => {
+	/* istanbul ignore next */
 	if (typeof document !== 'undefined') {
 		const sheet = document.createElement('style');
 		sheet.id = `vue-dot-theme-${id}`;
@@ -71,6 +73,7 @@ const append = (tags: any, style: any, id: string) => {
 const styles = {
 	mounted(this: Vue) {
 		// only do it once
+		/* istanbul ignore next */
 		if (typeof window !== 'undefined' && !window.VueDotInit) {
 			window.VueDotInit = true;
 

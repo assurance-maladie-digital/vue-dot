@@ -14,11 +14,6 @@
 			"inquirer",
 			"semver"
 		],
-		"paths": {
-			"@/*": [
-				"src/*"
-			]
-		},
 		"lib": [
 			"es2017",
 			"es2015",

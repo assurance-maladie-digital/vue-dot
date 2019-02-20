@@ -24,7 +24,7 @@ Expliquez le problème et incluez des détails supplémentaires pour aider les r
 
 Les suggestions d'amélioration sont suivies en tant [qu'issues GitHub](https://guides.github.com/features/issues/).
 
-Avant de créer des suggestions d’amélioration, consultez la Roadmap pour voir si ce que vous voulez est déjà planifié. Si vous ne voyez pas votre suggestion, [créez une nouvelle issue](#soumettre-un-bon-rapport-de-bogue).
+Avant de créer des suggestions d’amélioration, consultez la feuille de route pour voir si ce que vous voulez est déjà planifié. Si vous ne voyez pas votre suggestion, [créez une nouvelle issue](#soumettre-un-bon-rapport-de-bogue).
 
 ## Contribution de code
 

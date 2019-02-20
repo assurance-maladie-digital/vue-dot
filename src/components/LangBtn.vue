@@ -115,7 +115,7 @@
 				<VBtn
 					:color="color"
 					flat
-					class="ma-0 text-none"
+					class="ma-0 text-none trigger-btn"
 					@click="changeLang(lang)"
 				>
 					<VListTileAvatar v-if="flags">

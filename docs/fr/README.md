@@ -30,7 +30,7 @@ cards:
   image: /img/tools.png
   text: Nous fournissons des composants __hautement configurables__ et __personnalisables__, et si ils ne correspondent pas à vos exigences, demandez-nous ou créez une pull request !
 
-newsletterText: Recevez la newsletter
+newsletterText: Recevez la lettre d'information
 newsletterLink: https://www.getrevue.co/profile/vue-dot
 
 # footer

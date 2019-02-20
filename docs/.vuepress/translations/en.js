@@ -2,6 +2,7 @@ const en = {
 	name: 'VueDot',
 	home: '/en/',
 	menu: 'Menu',
+	backToTop: 'Back to top',
 	toolbar: {
 		search: 'Search',
 		ecosystem: 'Ecosystem',

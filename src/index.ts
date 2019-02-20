@@ -1,6 +1,6 @@
-import components from '@/components';
-import directives from '@/directives';
-import mixins from '@/mixins';
+import components from './components';
+import directives from './directives';
+import mixins from './mixins';
 
 import { VueConstructor } from 'vue';
 import { VueDot as VueDotPlugin, VueDotUseOptions } from 'types';
@@ -17,6 +17,8 @@ const VueDot: VueDotPlugin = {
 	}
 };
 
+// Ignore the next block in unit test
+/* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
 	window.Vue.use(VueDot);
 }

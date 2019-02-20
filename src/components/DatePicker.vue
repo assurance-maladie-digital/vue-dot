@@ -183,9 +183,9 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import * as dayjs from 'dayjs';
+	import dayjs from 'dayjs';
 
-	import SvgIcon from '@/components/SvgIcon.vue';
+	import SvgIcon from './SvgIcon.vue';
 
 	export default Vue.extend({
 		name: 'DatePicker',
@@ -654,8 +654,8 @@
 		},
 		data() {
 			return {
-				ref: 'date-picker-ref-' + Math.floor(Math.random() * 1000).toString(),
-				menuRef: 'menu-picker-ref-' + Math.floor(Math.random() * 1000).toString(),
+				ref: 'date-picker-ref',
+				menuRef: 'menu-picker-ref',
 				date: this.value || '',
 				menu: false,
 				dateFormatted: '',
@@ -768,12 +768,14 @@
 		},
 		created() {
 			this.loadLocale();
+			/* istanbul ignore next */
 			this.dateFormatted = this.value ? this.formatDate(this.date) : '';
 			this.$emit('change', this.formatDateForReturn(this.date));
 		},
 		methods: {
 			// Save the date, see https://vuetifyjs.com/en/components/date-pickers#example-date-dialog-and-menu
 			save(date: string): void {
+				/* istanbul ignore next */
 				(this.$refs[this.menuRef] as any).save(date);
 			},
 			// Format the date with `dateFormat` (default 'DD/MM/YYYY')
@@ -812,6 +814,7 @@
 			},
 			loadLocale(this: any): void {
 				// Check if we need locale for `formatDate` or `formatDateReturn`
+				/* istanbul ignore next */
 				if (this.checkIfLocaleNeeded(this.dateFormat) || this.checkIfLocaleNeeded(this.dateFormatReturn)) {
 					// We want to load only locales from dayjs that really exists
 					// but the locale can be any ISO 8601 string

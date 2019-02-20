@@ -1,5 +1,6 @@
 const htmlCommentRegex = /<!--([\s\S]*?)-->/g;
 
+/* istanbul ignore next */
 function isBinary(buf: any) {
 	const isBuf = Buffer.isBuffer(buf);
 

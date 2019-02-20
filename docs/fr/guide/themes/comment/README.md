@@ -100,7 +100,7 @@ const allowedTags = [
 const generator = (tags: any, validate: boolean): string => {
 	let style = ``;
 
-	// CSS from tags in theme
+	// CSS à partir de balises dans le thème
 	Object.keys(tags).map((currentTag: any) => {
 		const isClass = currentTag.match(/^\.[a-z- ]+$/gm);
 
@@ -136,7 +136,7 @@ const append = (tags: any, style: any, id: string) => {
 
 const styles = {
 	created(this: Vue) {
-		// only do it once
+		// ne le faire qu'une fois
 		if (!window.VueDotInit) {
 			window.VueDotInit = true;
 

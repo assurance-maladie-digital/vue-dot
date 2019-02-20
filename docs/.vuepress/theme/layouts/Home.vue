@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="home-container">
 		<VContainer>
 			<VLayout
 				column
@@ -69,11 +69,12 @@
 						:key="index"
 						class="elevation-6"
 					>
-						<VImg
+						<img
 							v-show="card.image"
 							:src="$withBase(card.image)"
 							height="150"
-						/>
+							class="home-image"
+						>
 
 						<VCardTitle primary-title>
 							<div>
@@ -99,7 +100,7 @@
 					large
 					outline
 					color="accent"
-					class="mt-5"
+					class="mt-5 newsletter"
 					:href="config.newsletterLink"
 					target="_blank"
 					rel="noopener noreferrer"
@@ -132,21 +133,67 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.section-cards {
-		display: grid;
-		grid-gap: 32px;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		grid-auto-rows: minmax(300px, auto);
+		display: flex;
+		flex-wrap: wrap;
+
+		.v-card {
+			margin: 15px;
+			width: 300px;
+		}
 	}
 
-	@media only screen and (max-width: 400px) {
+	@supports (display: grid) {
+		.section-cards {
+			display: grid;
+			grid-gap: 32px;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-auto-rows: minmax(300px, auto);
+
+			.v-card {
+				margin: 0;
+				width: auto;
+			}
+		}
+	}
+
+	.home-image {
+		width: 100%;
+		display: block;
+		object-fit: cover;
+	}
+
+	.newsletter {
+		overflow: hidden;
+		min-height: 48px;
+		height: auto !important;
+
+		.v-btn__content {
+			padding: 10px 5px;
+			white-space: normal;
+
+			.x-svg-icon {
+				min-width: 1.35em;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 430px) {
 		.section-cards {
 			display: block;
 		}
 
 		.section-cards > * + * {
-			margin-top: 32px;
+			margin-top: 32px !important;
+		}
+
+		.newsletter {
+			text-align: center;
+
+			.x-svg-icon {
+				display: none;
+			}
 		}
 	}
 </style>

@@ -1,6 +1,7 @@
+const nodeExternals = require('webpack-node-externals');
+
 module.exports = {
 	base: '/vue-dot/',
-	serviceWorker: true,
 	head: [
 		[
 			'link',
@@ -98,5 +99,17 @@ module.exports = {
 			description: 'Bibliothèque de composants officielle de la CNAM',
 		}
 	},
-	plugins: ['@vuepress/i18n-ui']
+	configureWebpack: (config, isServer) => {
+		const myConfig = {
+			externals: {}
+		};
+
+		if (isServer) {
+			myConfig.externals = nodeExternals({
+				whitelist: [/vuetify/, /prismjs/, /vue\-dot/]
+			});
+		}
+
+		return myConfig;
+	}
 };

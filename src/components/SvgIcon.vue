@@ -1292,7 +1292,7 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import isSvg from '@/functions/isSvg';
+	import isSvg from '../functions/isSvg';
 
 	interface Icon extends Object {
 		name: string;
@@ -1334,7 +1334,7 @@
 		computed: {
 			themeIcons(): object {
 				// If there is icons in theme
-				if (this.$theme.config && this.$theme.config.icons) {
+				if (this.$theme && this.$theme.config && this.$theme.config.icons) {
 					const filtered = this.$theme.config.icons.filter((icon: Icon) => {
 						return this.icon === icon.name && isSvg(icon.svg);
 					});
