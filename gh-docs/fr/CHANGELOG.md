@@ -1,3 +1,9 @@
+### [v1.6.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.1...v1.6.2) (20-02-2019)
+
+### Corrections de bugs
+
+-   Suppression des alias pour Ã©viter les collisions
+
 ### [v1.6.1](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.0...v1.6.1) (01-02-2019)
 
 ### Nouvelles fonctionnalitÃ©s
