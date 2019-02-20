@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import { mount, createLocalVue } from '@vue/test-utils';
-import DatePicker from '@/components/DatePicker.vue';
+import DatePicker from 'vue-dot-src/components/DatePicker.vue';
 
 import Vuetify from 'vuetify';
-import VueDot from '@/index';
+import VueDot from 'vue-dot-src/index';
 import { default as theme } from '../theme.json';
 
 const localVue = createLocalVue();

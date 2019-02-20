@@ -1,4 +1,4 @@
-import debounce from '@/directives/debounce';
+import debounce from 'vue-dot-src/directives/debounce';
 
 jest.useFakeTimers();
 

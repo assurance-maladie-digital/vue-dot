@@ -1292,7 +1292,7 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import isSvg from '@/functions/isSvg';
+	import isSvg from '../functions/isSvg';
 
 	interface Icon extends Object {
 		name: string;

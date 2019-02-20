@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import DataList from '@/components/DataList.vue';
+import DataList from 'vue-dot-src/components/DataList.vue';
 
 import Vuetify from 'vuetify';
 

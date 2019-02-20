@@ -1,5 +1,5 @@
 // tell jest to mock all timeout functions
-import debounce from '@/functions/debounce';
+import debounce from 'vue-dot-src/functions/debounce';
 
 jest.useFakeTimers();
 

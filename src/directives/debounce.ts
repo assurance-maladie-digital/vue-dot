@@ -1,4 +1,4 @@
-import debounceFn from '@/functions/debounce';
+import debounceFn from '../functions/debounce';
 
 const debounce = {
 	inserted(el: HTMLInputElement, binding: any) {

@@ -136,7 +136,7 @@
 			"^.+\\.tsx?$": "ts-jest"
 		},
 		"moduleNameMapper": {
-			"^@/(.*)$": "<rootDir>/src/$1",
+			"^vue-dot-src/(.*)$": "<rootDir>/src/$1",
 			"^vue$": "<rootDir>/node_modules/vue/dist/vue.common.js"
 		},
 		"snapshotSerializers": [

@@ -20,7 +20,7 @@ exports[`DatePicker.vue renders correctly 1`] = `
     </div>
   </div>
   <div class="v-menu">
-    <div class="v-menu__content theme--light " style="max-height: auto; min-width: 300px; max-width: auto; top: 55px; left: 40px; z-index: 1; display: none;"></div>
+    <div class="v-menu__content theme--light " style="max-height: auto; min-width: 300px; max-width: auto; top: 55px; left: 40px; transform-origin: top left; z-index: 1; display: none;"></div>
   </div>
 </div>
 `;
@@ -89,7 +89,7 @@ exports[`DatePicker.vue works with a custom icon 1`] = `
     </div>
   </div>
   <div class="v-menu">
-    <div class="v-menu__content theme--light " style="max-height: auto; min-width: 300px; max-width: auto; top: 55px; left: 40px; z-index: 1; display: none;"></div>
+    <div class="v-menu__content theme--light " style="max-height: auto; min-width: 300px; max-width: auto; top: 55px; left: 40px; transform-origin: top left; z-index: 1; display: none;"></div>
   </div>
 </div>
 `;
@@ -114,7 +114,7 @@ exports[`DatePicker.vue works with a mask 1`] = `
     </div>
   </div>
   <div class="v-menu">
-    <div class="v-menu__content theme--light " style="max-height: auto; min-width: 300px; max-width: auto; top: 55px; left: 40px; z-index: 1; display: none;"></div>
+    <div class="v-menu__content theme--light " style="max-height: auto; min-width: 300px; max-width: auto; top: 55px; left: 40px; transform-origin: top left; z-index: 1; display: none;"></div>
   </div>
 </div>
 `;

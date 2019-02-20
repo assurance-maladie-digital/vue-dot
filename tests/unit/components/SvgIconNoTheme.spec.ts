@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import SvgIcon from '@/components/SvgIcon.vue';
+import SvgIcon from 'vue-dot-src/components/SvgIcon.vue';
 
 import Vuetify from 'vuetify';
-import VueDot from '@/index';
+import VueDot from 'vue-dot-src/index';
 
 const localVue = createLocalVue();
 Vue.use(Vuetify);

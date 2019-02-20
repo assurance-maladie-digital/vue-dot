@@ -15,7 +15,7 @@
 			"jest"
 		],
 		"paths": {
-			"@/*": [
+			"vue-dot-src/*": [
 				"src/*"
 			]
 		},
