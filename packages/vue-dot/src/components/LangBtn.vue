@@ -38,6 +38,7 @@
 		:transition="transition"
 		:value="menuValue"
 		:z-index="zIndex"
+		class="lang-btn"
 	>
 		<VBtn
 			slot="activator"

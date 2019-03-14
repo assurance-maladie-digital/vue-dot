@@ -1,9 +1,10 @@
 <template>
 	<div class="subheading">
-		<div
-			v-if="listTitle"
-			v-html="getTitle(titleLevel, listTitle)"
-		/>
+		<slot name="title">
+			<h4 :class="titleClass">
+				{{ listTitle }}
+			</h4>
+		</slot>
 
 		<dl
 			v-if="list.length"
@@ -48,14 +49,6 @@
 				type: String,
 				default: 'mb-3 headline'
 			},
-			titleLevel: {
-				type: Number,
-				default: 4,
-				validator(level: number) {
-					// level is in 6-1
-					return level <= 6 && level >= 1;
-				}
-			},
 			list: {
 				type: Array,
 				required: true
@@ -91,11 +84,6 @@
 			width: {
 				type: String,
 				default: '200px'
-			}
-		},
-		methods: {
-			getTitle(level: number, text: string) {
-				return `<h${level} class="${this.titleClass}">${text}</h${level}>`;
 			}
 		}
 	});

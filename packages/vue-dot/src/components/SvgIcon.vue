@@ -12,7 +12,7 @@
 			width: size,
 			height: size
 		}"
-		class="x-svg-icon"
+		class="svg-icon"
 		aria-hidden="true"
 	>
 		<slot>
@@ -1292,7 +1292,7 @@
 <script lang="ts">
 	import Vue from 'vue';
 
-	import isSvg from '@/functions/isSvg';
+	import isSvg from '../functions/isSvg';
 
 	interface Icon extends Object {
 		name: string;
@@ -1380,7 +1380,7 @@
 	$large: 1.85em;
 	$xLarge: 2.25em;
 
-	.x-svg-icon {
+	.svg-icon {
 		width: $default;
 		height: $default;
 		position: relative;
