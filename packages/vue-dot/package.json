@@ -156,10 +156,5 @@
 			"vue-cli-service lint",
 			"git add"
 		]
-	},
-	"vuePlugins": {
-		"ui": [
-			"./vue-cli-plugin-vue-dot-internal/ui.js"
-		]
 	}
 }
