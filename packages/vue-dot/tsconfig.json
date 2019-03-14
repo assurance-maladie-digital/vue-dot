@@ -16,12 +16,8 @@
 			"jest"
 		],
 		"paths": {
-			"*": ["types/*"],
-			"@/*": [
+			"vue-dot-src/*": [
 				"src/*"
-			],
-			"tests-unit/*": [
-				"tests/unit/*"
 			]
 		},
 		"lib": [

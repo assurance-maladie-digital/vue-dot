@@ -37,7 +37,6 @@
 		"@babel/polyfill": "^7.2.5",
 		"@typescript-eslint/parser": "^1.4.2",
 		"@vue/cli-plugin-babel": "^3.5.1",
-		"@vue/cli-plugin-e2e-nightwatch": "^3.5.1",
 		"@vue/cli-plugin-eslint": "^3.5.1",
 		"@vue/cli-plugin-typescript": "^3.5.1",
 		"@vue/cli-plugin-unit-jest": "^3.5.1",
@@ -79,8 +78,7 @@
 		"demo:build": "vue-cli-service build ./demo/main --mode demo",
 		"lib:build": "vue-cli-service build --target lib --name vue-dot ./src/index.ts",
 		"lib:lint": "vue-cli-service lint",
-		"lib:test:unit": "vue-cli-service test:unit",
-		"lib:test:e2e": "vue-cli-service test:e2e"
+		"lib:test:unit": "vue-cli-service test:unit"
 	},
 	"peerDependencies": {
 		"dayjs": "^1.7.7",
@@ -108,8 +106,7 @@
 			"^.+\\.tsx?$": "ts-jest"
 		},
 		"moduleNameMapper": {
-			"^@/(.*)$": "<rootDir>/src/$1",
-			"^vue$": "<rootDir>/node_modules/vue/dist/vue.common.js"
+			"^vue-dot-src/(.*)$": "<rootDir>/src/$1"
 		},
 		"snapshotSerializers": [
 			"jest-serializer-vue"

@@ -2,20 +2,6 @@
 	"name": "vue-dot-test-unit",
 	"version": "0.0.1",
 	"config": {
-		"styles": {
-			".v-alert": {
-				"top": "0",
-				"width": "100%",
-				"position": "absolute"
-			}
-		},
-		"typography": {
-			"styles": {
-				".application" : {
-					"font-family": "'Open Sans', sans-serif"
-				}
-			}
-		},
 		"colors": {
 			"primary": "#0c4887",
 			"secondary": "#01579b",

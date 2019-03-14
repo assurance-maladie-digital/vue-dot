@@ -1,11 +1,8 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack = require('webpack');
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
 let webpackConfig = {};
-
-console.log(typeof process.env.DEMO);
 
 if (process.env.DEMO === 'true') {
 	// Configuaration for demo
@@ -37,12 +34,6 @@ if (process.env.DEMO === 'true') {
 			output: {
 				libraryExport: 'default'
 			},
-			// optimization: {
-				// minimize: true,
-				// minimizer: [new UglifyJsPlugin({
-					// include: /\.min\.js$/
-				// })]
-			// },
 			plugins: [
 				// Don't split chunks
 				new webpack.optimize.LimitChunkCountPlugin({
@@ -66,7 +57,7 @@ if (process.env.DEMO === 'true') {
 							amd: 'vuetify/lib',
 							root: 'Vuetify'
 						}
-					},
+					}
 					// /dayjs/,
 					// /^languages/
 				]

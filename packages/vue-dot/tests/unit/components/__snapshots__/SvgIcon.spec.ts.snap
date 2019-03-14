@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SvgIcon.vue renders an icon from the theme correctly 1`] = `<span aria-hidden="true" class="x-svg-icon custom-color"><svg viewBox="0 0 24 24"><!----></svg> <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path fill="#4dba87" d="M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z"></path><path fill="#435466" d="M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z"></path></svg></div></span>`;
+exports[`SvgIcon.vue renders an icon from the theme correctly 1`] = `<span aria-hidden="true" class="svg-icon custom-color"><svg viewBox="0 0 24 24"><!----></svg> <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path fill="#4dba87" d="M237.42 86.66L207.19 139l-30.22-52.35H76.3l130.9 226.69L338.07 86.66z"></path><path fill="#435466" d="M237.42 86.66L207.19 139l-30.22-52.35h-48.3l78.52 136 78.53-136z"></path></svg></div></span>`;
 
-exports[`SvgIcon.vue renders correctly 1`] = `<span aria-hidden="true" class="x-svg-icon custom-color"><svg viewBox="0 0 24 24"><path d="M12 1.8L0 12.6h3.6v9.6h6V15h4.8v7.2h6v-9.6H24z"></path></svg> </span>`;
+exports[`SvgIcon.vue renders correctly 1`] = `<span aria-hidden="true" class="svg-icon custom-color"><svg viewBox="0 0 24 24"><path d="M12 1.8L0 12.6h3.6v9.6h6V15h4.8v7.2h6v-9.6H24z"></path></svg> </span>`;

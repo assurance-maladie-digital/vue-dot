@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import Vuetify from 'vuetify';
 import VueDot from '@cnamts/vue-dot';
 import SSRMixin from './mixins/ssr';
-import { default as theme } from './theme.json';
+import theme from './theme.json';
 
 import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
