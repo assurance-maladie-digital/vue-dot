@@ -14,8 +14,8 @@
 </template>
 
 <script>
-	import { version, devDependencies } from '../../package.json';
-	const vuetify = devDependencies.vuetify.substr(1);
+	import { version, dependencies } from '../../package.json';
+	const vuetify = dependencies.vuetify.substr(1);
 	const title = 'VueDot Example Pen';
 
 	const cssResources = [
