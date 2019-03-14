@@ -1,5 +1,8 @@
 {
 	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
 		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release"
 	},
@@ -61,14 +64,5 @@
 		"webpack": "^4.29.5",
 		"webpack-bundle-analyzer": "^3.0.3",
 		"webpack-node-externals": "^1.7.2"
-	},
-	"name": "vue-dot",
-	"workspaces": [
-		"packages/*"
-	],
-	"dependencies": {
-		"@cnamts/vue-cli-plugin-vue-dot-internal": "file:packages/vue-cli-plugin-vue-dot-internal",
-		"@cnamts/vue-dot": "file:packages/vue-dot",
-		"@cnamts/vue-dot-website": "file:packages/website"
 	}
 }

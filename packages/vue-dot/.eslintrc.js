@@ -3,7 +3,7 @@ module.exports = {
 	env: {
 		node: true
 	},
-	'extends': [
+	extends: [
 		'plugin:vue/recommended',
 		'eslint:recommended',
 		'@vue/typescript'
@@ -21,8 +21,28 @@ module.exports = {
 			'switchCase': 1,
 			'ignores': []
 		}],
-		'vue/no-v-html': false
+		'comma-dangle': ['error', 'never'],
+		'space-before-blocks': ['error', 'always'],
+		'keyword-spacing': ['error', { 'before': true }],
+		'vue/component-name-in-template-casing': ['error', 'PascalCase', {
+			'ignores': [
+				'transition'
+			]
+		}],
+		'quotes': ['error', 'single'],
+		'no-trailing-spaces': 'error',
+		'brace-style': ['error', '1tbs']
 	},
+	overrides: [
+		{
+			files: ['*.ts'],
+			rules: {
+				'vue/script-indent': 'off',
+				'indent': ['error', 'tab'],
+				'semi': 'off'
+			}
+		}
+	],
 	parserOptions: {
 		parser: '@typescript-eslint/parser'
 	}

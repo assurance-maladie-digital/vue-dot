@@ -13,8 +13,7 @@
 		"baseUrl": ".",
 		"types": [
 			"node",
-			"jest",
-			"lodash.clonedeep"
+			"jest"
 		],
 		"paths": {
 			"*": ["types/*"],
