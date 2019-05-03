@@ -193,7 +193,7 @@
 			SvgIcon
 		},
 		model: {
-			prop: 'model',
+			prop: 'value',
 			event: 'change'
 		},
 		props: {
@@ -655,7 +655,7 @@
 		data() {
 			return {
 				ref: 'date-picker-ref',
-				menuRef: 'menu-picker-ref',
+				menuRef: 'menu-picker-ref-' + Math.random().toString(36).substr(2, 9),
 				date: this.value || '',
 				menu: false,
 				dateFormatted: '',
@@ -764,6 +764,13 @@
 			},
 			locale(val: string) {
 				this.loadLocale();
+			},
+			value(val: string) {
+				// If the value is falsy, we want to reset
+				/* istanbul ignore next */
+				if (!val) {
+					this.date = '';
+				}
 			}
 		},
 		created() {
