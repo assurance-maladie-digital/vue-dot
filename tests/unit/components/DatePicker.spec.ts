@@ -19,6 +19,11 @@ describe('DatePicker.vue', () => {
 			localVue,
 			propsData: {
 				locale
+			},
+			data() {
+				return {
+					menuRef: 'menu-picker-ref'
+				};
 			}
 		});
 

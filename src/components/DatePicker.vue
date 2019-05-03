@@ -655,7 +655,7 @@
 		data() {
 			return {
 				ref: 'date-picker-ref',
-				menuRef: 'menu-picker-ref',
+				menuRef: 'menu-picker-ref-' + Math.random().toString(36).substr(2, 9),
 				date: this.value || '',
 				menu: false,
 				dateFormatted: '',
