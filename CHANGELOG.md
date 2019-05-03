@@ -1,3 +1,11 @@
+### [v1.6.3](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.2...v1.6.3) (03-05-2019)
+
+### Bug fixes
+
+-   Fix `DatePicker` reset
+-   Fix `DatePicker` menu having same refs
+-   Update `LangBtn` class
+
 ### [v1.6.2](https://github.com/assurance-maladie-digital/vue-dot/compare/v1.6.1...v1.6.2) (20-02-2019)
 
 ### Bug fixes
