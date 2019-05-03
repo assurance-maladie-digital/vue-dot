@@ -41,11 +41,21 @@ describe('DatePicker.vue', () => {
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 
-	it('cumputea a date', () => {
+	it('computes a date', () => {
 		const wrapper = build('fr');
 
 		(wrapper.vm as any).date = '11-01-2001';
 		expect((wrapper.vm as any).computedDateFormatted).toBe('01/11/2001');
+	});
+
+	it('resets the date when value prop is falsy', () => {
+		const wrapper = build('fr');
+
+		(wrapper.vm as any).date = '11/01/2001';
+		expect((wrapper.vm as any).computedDateFormatted).toBe('01/11/2001');
+
+		wrapper.setProps({ value: '' });
+		expect((wrapper.vm as any).date).toBe('');
 	});
 
 	it('handles a non-valid date', () => {

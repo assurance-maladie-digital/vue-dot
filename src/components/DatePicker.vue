@@ -767,6 +767,7 @@
 			},
 			value(val: string) {
 				// If the value is falsy, we want to reset
+				/* istanbul ignore next */
 				if (!val) {
 					this.date = '';
 				}
