@@ -193,7 +193,7 @@
 			SvgIcon
 		},
 		model: {
-			prop: 'model',
+			prop: 'value',
 			event: 'change'
 		},
 		props: {
@@ -764,6 +764,12 @@
 			},
 			locale(val: string) {
 				this.loadLocale();
+			},
+			value(val: string) {
+				// If the value is falsy, we want to reset
+				if (!val) {
+					this.date = '';
+				}
 			}
 		},
 		created() {
