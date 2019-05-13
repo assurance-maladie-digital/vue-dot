@@ -7,7 +7,6 @@
 		:close-delay="closeDelay"
 		:close-on-click="closeOnClick"
 		:close-on-content-click="closeOnContentClick"
-		:content-class="contentClass"
 		:dark="dark"
 		:disable-keys="disableKeys"
 		:disabled="disabled"
@@ -38,6 +37,8 @@
 		:transition="transition"
 		:value="menuValue"
 		:z-index="zIndex"
+		content-class="lang-btn"
+		class="lang-btn"
 	>
 		<VBtn
 			slot="activator"
@@ -474,28 +475,30 @@
 	});
 </script>
 
-<style lang="scss" scoped>
-	.v-avatar img {
-		border-radius: 0%;
-	}
-
-	.v-menu__content {
-		overflow: auto;
-		max-height: 300px;
-	}
-
-	.v-list {
-		.v-btn {
-			width: 100%;
-			height: 100%;
+<style lang="scss">
+	.lang-btn {
+		.v-avatar img {
+			border-radius: 0%;
 		}
 
-		/deep/ .v-list__tile {
-			padding: 0;
+		.v-menu__content {
+			overflow: auto;
+			max-height: 300px;
 		}
-	}
 
-	.current-flag {
-		width: 30px;
+		.v-list {
+			.v-btn {
+				width: 100%;
+				height: 100%;
+			}
+
+			.v-list__tile {
+				padding: 0;
+			}
+		}
+
+		.current-flag {
+			width: 30px;
+		}
 	}
 </style>

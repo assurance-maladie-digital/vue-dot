@@ -38,18 +38,6 @@
 
 		<VSpacer />
 
-		<VTextField
-			v-show="isClient"
-			solo
-			light
-			:label="t('toolbar.search')"
-			single-line
-			hide-details
-			id="algolia-search-box"
-			class="search mr-3"
-			append-icon="search"
-		/>
-
 		<VMenu
 			v-show="isClient"
 			left
@@ -129,6 +117,7 @@
 			:display-text-btn="false"
 			:display-arrow="false"
 			:available-languages="languages"
+			content-class="lang-btn"
 			class="ma-0 text-none lang-btn"
 			flags-url="https://res.cloudinary.com/deraw/image/upload/v1547044454/"
 			@change="updateLang"
@@ -156,22 +145,6 @@
 					this.initiated = true;
 				}
 			}
-		},
-		mounted() {
-			Promise.all([
-				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
-				import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css')
-			]).then(([docsearch]) => {
-				docsearch = docsearch.default;
-
-				if (typeof docsearch === 'function') {
-					docsearch({
-						apiKey: '7bea1acb34d336b5535e2287c1a9de8d',
-						indexName: 'vue-dot',
-						inputSelector: '#algolia-search-box'
-					});
-				}
-			}).catch((e) => console.error(e));
 		}
 	}
 </script>
@@ -189,20 +162,6 @@
 	.v-menu,
 	.v-menu /deep/ .v-menu__activator {
 		height: 100%;
-	}
-
-	.v-input.search {
-		flex: none;
-		height: 38px;
-		width: 250px;
-
-		/deep/ .v-input__slot {
-			border-radius: 50px !important;
-		}
-
-		/deep/ .v-input__control {
-			min-height: 38px !important;
-		}
 	}
 
 	.lang-btn {
@@ -223,11 +182,6 @@
 	}
 
 	@media only screen and (max-width: 1000px) {
-		.v-input.search {
-			width: 145px;
-			margin: 0 10px !important;
-		}
-
 		.v-toolbar .v-btn,
 		.lang-btn /deep/ .v-btn {
 			min-width: 0 !important;
@@ -249,12 +203,6 @@
 		.v-toolbar .v-btn,
 		.lang-btn /deep/ .v-btn {
 			padding: 0 10px !important;
-		}
-	}
-
-	@media only screen and (max-width: 400px) {
-		.v-input.search {
-			display: none;
 		}
 	}
 </style>

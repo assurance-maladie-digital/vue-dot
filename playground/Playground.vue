@@ -157,6 +157,10 @@
 								Date: {{ date }}
 							</p>
 
+							<VBtn @click="date = ''">
+								Reset date
+							</VBtn>
+
 							<VDivider class="my-5" />
 
 							<h1>Playground</h1>

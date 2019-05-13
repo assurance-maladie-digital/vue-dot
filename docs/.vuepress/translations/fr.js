@@ -4,7 +4,6 @@ const fr = {
 	menu: 'Menu',
 	backToTop: 'Retour en haut',
 	toolbar: {
-		search: 'Rechercher',
 		ecosystem: 'Écosystème',
 		items: [
 			{
