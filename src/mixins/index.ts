@@ -2,7 +2,11 @@ import theme from './theme';
 
 import { VueConstructor } from 'vue';
 
-const mixins: any = {
+interface Mixin {
+	[key: string]: object;
+}
+
+const mixins: Mixin = {
 	theme
 };
 
