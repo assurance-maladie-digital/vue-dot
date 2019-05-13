@@ -1,6 +1,9 @@
 import Vue from 'vue';
-// Import local VueDot
+// Import VueDot from src
 import VueDot from '../../src/';
+
+// Import dayjs locale
+import 'dayjs/locale/fr';
 
 // Import the theme
 import theme from '../theme/theme.json';

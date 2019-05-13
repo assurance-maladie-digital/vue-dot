@@ -819,7 +819,7 @@
 			checkIfLocaleNeeded(format: string): boolean {
 				return !!format.match(/MMM|MM|dddd|ddd|dd|A|a|Do/gm);
 			},
-			loadLocale(this: any): void {
+			loadLocale(): void {
 				// Check if we need locale for `formatDate` or `formatDateReturn`
 				/* istanbul ignore next */
 				if (this.checkIfLocaleNeeded(this.dateFormat) || this.checkIfLocaleNeeded(this.dateFormatReturn)) {
@@ -847,11 +847,9 @@
 
 					// If the locale really exists, load it
 					if (this.dayjsLocales.includes(locale)) {
-						import(`dayjs/locale/${locale}`).then((e) => {
-							dayjs.locale(locale);
-							// Emit change event to refresh date with new locale
-							this.$emit('change', this.formatDateForReturn(this.date));
-						});
+						dayjs.locale(locale);
+						// Emit change event to refresh date with new locale
+						this.$emit('change', this.formatDateForReturn(this.date));
 					}
 				}
 			}
