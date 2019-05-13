@@ -36,7 +36,6 @@
 		"lint": "vue-cli-service lint",
 		"lint:md": "remark gh-docs -o ; remark CHANGELOG.md -o; remark CONTRIBUTING.md -o ; remark CODE_OF_CONDUCT.md -o ; remark PULL_REQUEST_TEMPLATE.md -o ; remark README.md -o",
 		"test:unit": "vue-cli-service test:unit",
-		"test:e2e": "vue-cli-service test:e2e",
 		"docs:dev": "vuepress dev docs",
 		"docs:build": "vuepress build docs",
 		"release": "ts-node --project ./scripts/tsconfig.json --files ./scripts/release"
