@@ -1,8 +1,7 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const webpack = require('webpack');
 
-const webpackConfig = {
+module.exports = {
+	productionSourceMap: false,
 	css: {
 		extract: true
 	},
@@ -11,15 +10,15 @@ const webpackConfig = {
 		output: {
 			libraryExport: 'default'
 		},
+		node: {
+			Buffer: false
+		},
 		optimization: {
-			minimize: true,
-			minimizer: [new UglifyJsPlugin({
-				include: /\.min\.js$/
-			})]
+			minimize: true
 		},
 		plugins: [
 			new webpack.optimize.LimitChunkCountPlugin({
-				maxChunks:  process.env.NODE_ENV === 'production' ? 1 : 9999
+				maxChunks: process.env.NODE_ENV === 'production' ? 1 : 9999
 			})
 		],
 		// see https://github.com/vuetifyjs/vuetify/issues/4068#issuecomment-394890573
@@ -38,9 +37,9 @@ const webpackConfig = {
 						amd: 'vuetify/lib',
 						root: 'Vuetify'
 					}
-				}
-				// /dayjs/,
-				// /^languages/
+				},
+				/^dayjs/,
+				/^languages/
 			]
 			: []
 	},
@@ -61,9 +60,3 @@ const webpackConfig = {
 		}
 	}
 };
-
-// if (process.env.NODE_ENV === 'production') {
-// 	webpackConfig.configureWebpack.plugins.push(new BundleAnalyzerPlugin());
-// }
-
-module.exports = webpackConfig;
