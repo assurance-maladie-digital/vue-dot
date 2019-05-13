@@ -52,7 +52,7 @@ let tag: any;
 
 function createVersionOption(name: any) {
 	const prerelease = (semver.prerelease(latestGit) || [])[0];
-	const version = semver.inc(latestGit, name.toLowerCase(), false, prerelease || 'beta');
+	const version = semver.inc(latestGit, name.toLowerCase(), false, prerelease || 'beta') || '';
 
 	return {
 		name: `${name} (${version})`,
@@ -62,30 +62,31 @@ function createVersionOption(name: any) {
 }
 
 function promptForVersion() {
-	return inquirer.prompt({
-		type: 'list',
-		name: 'version',
-		message: 'Select new version:',
-		choices: [
-			createVersionOption('Major'),
-			createVersionOption('Minor'),
-			createVersionOption('Patch'),
-			createVersionOption('Prerelease'),
-			createVersionOption('Premajor'),
-			createVersionOption('Preminor'),
-			createVersionOption('Prepatch'),
-			{
-				name: 'Other',
-				value: 'other'
-			}
-		],
-		default: () => (
-			semver.prerelease(latestGit) == null
-				? createVersionOption('Patch').value
-				: createVersionOption('Prerelease').value
-		),
-		pageSize: 8
-	})
+	return inquirer
+		.prompt([{
+			type: 'list',
+			name: 'version',
+			message: 'Select new version:',
+			choices: [
+				createVersionOption('Major'),
+				createVersionOption('Minor'),
+				createVersionOption('Patch'),
+				createVersionOption('Prerelease'),
+				createVersionOption('Premajor'),
+				createVersionOption('Preminor'),
+				createVersionOption('Prepatch'),
+				{
+					name: 'Other',
+					value: 'other'
+				}
+			],
+			default: () => (
+				semver.prerelease(latestGit) == null
+					? createVersionOption('Patch').value
+					: createVersionOption('Prerelease').value
+			),
+			pageSize: 8
+		}])
 		.then((answers: any) => {
 			if (answers.version === 'other') {
 				return inquirer.prompt({
@@ -266,7 +267,7 @@ function deployDocs() {
 promptForVersion()
 	.then(verifyBranch)
 	.then(confirmVersion)
-	.then((version) => {
+	.then((version: string) => {
 		lint();
 		build();
 		changelog(version)
