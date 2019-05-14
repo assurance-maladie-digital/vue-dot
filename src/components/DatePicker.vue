@@ -185,12 +185,12 @@
 
 	import dayjs from 'dayjs';
 
-	import SvgIcon from './SvgIcon.vue';
+	// import SvgIcon from './SvgIcon.vue';
 
 	export default Vue.extend({
 		name: 'DatePicker',
 		components: {
-			SvgIcon
+			// SvgIcon
 		},
 		model: {
 			prop: 'value',

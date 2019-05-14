@@ -104,12 +104,12 @@
 
 				<VDivider class="my-4" />
 
-				<!-- SvgIcon -->
+				<!-- CustomIcon -->
 				<h3 class="primary--text mb-3 font-weight-medium headline">
-					SvgIcon
+					CustomIcon
 				</h3>
 
-				<SvgIcon
+				<CustomIcon
 					icon="vuejs"
 					size="50px"
 				/>

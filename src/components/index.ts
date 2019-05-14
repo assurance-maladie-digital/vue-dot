@@ -1,6 +1,6 @@
 import DatePicker from './DatePicker.vue';
 import LangBtn from './LangBtn.vue';
-import SvgIcon from './SvgIcon.vue';
+import CustomIcon from './CustomIcon.vue';
 import DataList from './DataList.vue';
 
 import { VueConstructor } from 'vue';
@@ -12,7 +12,7 @@ interface Components {
 const components: Components = {
 	DatePicker,
 	LangBtn,
-	SvgIcon,
+	CustomIcon,
 	DataList
 };
 

@@ -12,7 +12,7 @@
 			width: size,
 			height: size
 		}"
-		class="vd-svg-icon"
+		class="vd-custom-icon"
 		aria-hidden="true"
 	>
 		<slot>
@@ -37,7 +37,7 @@
 	}
 
 	export default Vue.extend({
-		name: 'SvgIcon',
+		name: 'CustomIcon',
 		props: {
 			color: {
 				type: String,
@@ -92,7 +92,7 @@
 	$large: 1.85em;
 	$xLarge: 2.25em;
 
-	.vd-svg-icon {
+	.vd-custom-icon {
 		width: $default;
 		height: $default;
 		position: relative;
