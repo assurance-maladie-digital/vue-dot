@@ -10,9 +10,6 @@ module.exports = {
 		output: {
 			libraryExport: 'default'
 		},
-		node: {
-			Buffer: false
-		},
 		optimization: {
 			minimize: true
 		},
