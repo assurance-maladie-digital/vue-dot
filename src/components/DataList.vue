@@ -1,5 +1,5 @@
 <template>
-	<div class="subheading">
+	<div class="vd-data-list">
 		<slot name="title">
 			<h4 :class="titleClass">
 				{{ listTitle }}
@@ -9,28 +9,28 @@
 		<dl
 			v-if="list.length"
 			:class="{
-				'column': column || $vuetify.breakpoint.xs || flex,
-				'flex': flex
+				'vd-column': column || $vuetify.breakpoint.xs || flex,
+				'vd-flex': flex
 			}"
 			:style="{ minWidth }"
-			class="field"
+			class="vd-field"
 		>
 			<div
 				v-for="(item, index) in list"
 				:key="index"
-				class="row mb-2"
+				class="vd-row mb-2"
 			>
 				<dt
 					v-if="item.key"
 					:style="{ width, color: labelColor }"
-					class="key body-1"
+					class="vd-key body-1"
 				>
 					{{ item.key }}
 				</dt>
 
 				<dd
 					:style="{ color: valueColor }"
-					class="value body-1"
+					class="vd-value body-1"
 				>
 					{{ item.value || placeholder }}
 				</dd>
@@ -90,30 +90,30 @@
 </script>
 
 <style lang="scss" scoped>
-	.field {
-		.row
+	.vd-field {
+		.vd-row
 		{
 			display: flex;
 			flex-wrap: wrap;
 		}
 
-		&.column .row
+		&.vd-column .vd-row
 		{
 			flex-direction: column;
 		}
 
-		&.flex {
+		&.vd-flex {
 			display: flex;
 			flex-wrap: wrap;
 		}
 
-		&:not(.column) {
-			.key::after
+		&:not(.vd-column) {
+			.vd-key::after
 			{
 				content: " :";
 			}
 
-			.value {
+			.vd-value {
 				align-self: flex-end;
 			}
 		}

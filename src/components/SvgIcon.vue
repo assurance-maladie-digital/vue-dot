@@ -1,18 +1,18 @@
 <template>
 	<span
 		:class="{
-			'large': large,
-			'medium': medium,
-			'small': small,
-			'x-large': xLarge,
-			'custom-color': color
+			'vd-large': large,
+			'vd-medium': medium,
+			'vd-small': small,
+			'vd-x-large': xLarge,
+			'vd-custom-color': color
 		}"
 		:style="{
 			color,
 			width: size,
 			height: size
 		}"
-		class="x-svg-icon"
+		class="vd-svg-icon"
 		aria-hidden="true"
 	>
 		<slot>
@@ -92,7 +92,7 @@
 	$large: 1.85em;
 	$xLarge: 2.25em;
 
-	.x-svg-icon {
+	.vd-svg-icon {
 		width: $default;
 		height: $default;
 		position: relative;
@@ -108,26 +108,26 @@
 			transition: fill .25s;
 		}
 
-		&.custom-color svg {
+		&.vd-custom-color svg {
 			fill: currentColor;
 		}
 
-		&.small {
+		&.vd-small {
 			width: $small;
 			height: $small;
 		}
 
-		&.medium {
+		&.vd-medium {
 			width: $medium;
 			height: $medium;
 		}
 
-		&.large {
+		&.vd-large {
 			width: $large;
 			height: $large;
 		}
 
-		&.x-large {
+		&.vd-x-large {
 			width: $xLarge;
 			height: $xLarge;
 		}
