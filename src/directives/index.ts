@@ -1,9 +1,9 @@
 import debounce from './debounce';
 
-import { VueConstructor } from 'vue';
+import { VueConstructor, DirectiveOptions } from 'vue';
 
 interface Directives {
-	[key: string]: object;
+	[key: string]: DirectiveOptions;
 }
 
 const directives: Directives = {

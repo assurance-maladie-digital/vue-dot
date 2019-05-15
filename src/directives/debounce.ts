@@ -1,7 +1,8 @@
+import { DirectiveOptions } from 'vue';
 import debounceFn from '../functions/debounce';
 
-const debounce = {
-	inserted(el: HTMLInputElement, binding: any) {
+const debounce: DirectiveOptions = {
+	inserted(el, binding) {
 		if (el.tagName !== 'INPUT') {
 			const input = el.querySelector('input');
 
@@ -17,7 +18,9 @@ const debounce = {
 			/* istanbul ignore next */
 			el.oninput = debounceFn(() => {
 				if (typeof binding.value === 'function') {
-					binding.value(el.value);
+					const inputValue = (el as HTMLInputElement).value;
+
+					binding.value(inputValue);
 				} else {
 					el.dispatchEvent(new Event('change'));
 				}
